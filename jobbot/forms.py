@@ -230,6 +230,20 @@ def resolve_value(
             return value, f"resume field ({semantic})"
         return None, f"not present in resume ({semantic}) - skipped, never faked"
 
+    # Answers the user confirmed on the dashboard for this exact question.
+    try:
+        from . import learn
+        taught = learn.lookup(getattr(identity, "id", ""), label)
+    except Exception:
+        taught = None
+    if taught:
+        if options:
+            picked = brain.choose_option(taught, options)
+            if picked:
+                return picked, "answer you confirmed on the dashboard"
+        else:
+            return taught, "answer you confirmed on the dashboard"
+
     rule_answer = _answer_rules(label, answers)
     if rule_answer == "ANSWER_SKIP":
         return None, "configured as skip"

@@ -360,15 +360,23 @@ export async function startRun(candidate: RunTarget, limit: number): Promise<Sta
     "apply",
     "--candidate",
     candidate,
-    "--limit",
-    String(limit),
-    "--per-company",
-    "4",
+    "--continuous",
+    "--workers",
+    String(Math.max(1, Math.min(4, Number(process.env.JOBBOT_WORKERS) || 2))),
     "--india-remote-only",
+    "--min-score",
+    "50",
+    "--min-score-floor",
+    "40",
+    "--skip-ats",
+    "greenhouse",
   ];
   const command = `${uv} ${args.join(" ")}`;
 
   await fsp.mkdir(PATHS.logDir, { recursive: true });
+  // A previous Stop leaves STOP marker files behind; clear them so this run lives.
+  await clearStopMarkers();
+  void limit;
   await ensureTail();
   await appendLog(
     `[dashboard] ${new Date().toISOString()} starting ${candidateLabel(candidate)} (limit ${limit}): ${command}`,
@@ -421,6 +429,57 @@ export async function startRun(candidate: RunTarget, limit: number): Promise<Sta
   await handle.close().catch(() => undefined);
 
   return { ok: true, status: await getStatus(), command };
+}
+
+/* ---------------------------------------------------------------------- stop */
+
+function stopMarkerDir(): string {
+  return path.join(PATHS.root, "data");
+}
+
+async function clearStopMarkers(): Promise<void> {
+  const dir = stopMarkerDir();
+  for (const name of ["STOP", "STOP-harshank", "STOP-divya"]) {
+    await fsp.rm(path.join(dir, name), { force: true }).catch(() => undefined);
+  }
+}
+
+async function allBotPids(): Promise<number[]> {
+  try {
+    const { stdout } = await execFileAsync("pgrep", ["-f", "jobbot\\.cli (apply|run)"], {
+      timeout: 2_000,
+    });
+    return stdout
+      .split(/\s+/)
+      .map((value) => Number.parseInt(value, 10))
+      .filter((value) => Number.isInteger(value) && value > 0 && value !== process.pid);
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Stops every running bot (dashboard- or terminal-started). Writes data/STOP so
+ * the workers exit cleanly, then terminates the processes so Chrome closes.
+ */
+export async function stopRun(): Promise<{ stopped: number[]; status: RunStatus }> {
+  await fsp.mkdir(stopMarkerDir(), { recursive: true }).catch(() => undefined);
+  await fsp.writeFile(path.join(stopMarkerDir(), "STOP"), new Date().toISOString(), "utf8");
+  const reg = registry();
+  const pids = new Set(await allBotPids());
+  if (reg.pid !== null) pids.add(reg.pid);
+  for (const pid of pids) {
+    try {
+      process.kill(pid, "SIGTERM");
+    } catch {
+      /* already gone */
+    }
+  }
+  reg.externalAt = 0;
+  await appendLog(`[dashboard] ${new Date().toISOString()} stop requested (pids ${[...pids].join(", ") || "none"})`);
+  await new Promise((resolve) => setTimeout(resolve, 1500));
+  if (reg.pid !== null && !pidAlive(reg.pid)) finishRun(null, "stopped by user");
+  return { stopped: [...pids], status: await getStatus() };
 }
 
 export const LOG_FILE = PATHS.log;

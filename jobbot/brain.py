@@ -330,6 +330,7 @@ def answer(
         _authorization,
         _citizenship,
         _misc_policy,
+        _min_years,
         _years,
         _salary,
         _notice_and_start,
@@ -367,6 +368,19 @@ def _eeo(low, identity, job, options, target, why):
     return None, "brain: demographic question and the form offers no decline option - left blank"
 
 
+def _authorized_in(identity, target):
+    """Countries the candidate personally confirmed (data/private_profile.json)."""
+    c = getattr(identity, "_c", {}) or {}
+    raw = c.get("work_authorized_countries") or []
+    names = {str(x).strip().lower() for x in raw}
+    t = (target or "").strip().lower()
+    if t.startswith("the "):
+        t = t[4:]
+    alias = {"united states": {"us", "usa", "united states", "united states of america"}}
+    want = alias.get(t, {t})
+    return bool(names & want)
+
+
 def _sponsorship(low, identity, job, options, target, why):
     needles = (
         "require sponsorship", "need sponsorship", "visa sponsorship",
@@ -376,6 +390,11 @@ def _sponsorship(low, identity, job, options, target, why):
     )
     if not any(n in low for n in needles):
         return None, ""
+    if target and target != "India" and _authorized_in(identity, target):
+        value = _no(options)
+        if value is None:
+            return None, "brain: answer is No but the form offers no such option"
+        return value, f"brain: candidate confirmed work authorisation in {target}, no sponsorship needed ({why})"
     if target == "India":
         value = _no(options)
         reason = (
@@ -410,6 +429,9 @@ def _authorization(low, identity, job, options, target, why):
     if target == "India":
         value, verdict = _yes(options), "Yes"
         reason = f"brain: Indian citizen, authorised to work in India ({why})"
+    elif target and _authorized_in(identity, target):
+        value, verdict = _yes(options), "Yes"
+        reason = f"brain: candidate confirmed work authorisation in {target} ({why})"
     elif target is None:
         return None, (
             "brain: work-authorisation answer depends on the country and the "
@@ -608,6 +630,40 @@ def _years(low, identity, job, options, target, why):
         return picked, f"{note}; mapped onto the form's option {picked!r}"
     return None, f"{note}; but no form option covers {years}"
 
+
+
+_MIN_YEARS_RE = re.compile(
+    r"(?:minimum of|min\.?|at least|over|more than|atleast)\s*(\d+(?:\.\d+)?)\s*\+?\s*(?:years|yrs|year)"
+    r"|(\d+(?:\.\d+)?)\s*\+\s*(?:years|yrs|year)"
+    r"|(\d+(?:\.\d+)?)\s*(?:or more|and above)\s*(?:years|yrs)"
+)
+
+
+def _min_years(low, identity, job, options, target, why):
+    """Yes/No 'do you have N+ years ...' questions, answered from the resume total."""
+    m = _MIN_YEARS_RE.search(low)
+    if not m:
+        return None, ""
+    if options and not any(_low(o).startswith(("yes", "no")) for o in options):
+        return None, ""
+    need = float(next(g for g in m.groups() if g))
+    try:
+        have = float(getattr(identity, "_c", {}).get("years_experience") or 0)
+    except (TypeError, ValueError):
+        have = float(getattr(identity, "years_experience", 0) or 0)
+    techs = _techs_in(low)
+    unknown = [t for t in techs if not _knows(identity, t)]
+    ok = have >= need and not unknown
+    why_txt = (
+        f"brain: resume shows {have:g} year(s)"
+        + (f"; {', '.join(unknown)} not on resume" if unknown else "")
+        + f" vs {need:g}+ asked -> {'Yes' if ok else 'No'}"
+    )
+    val = "Yes" if ok else "No"
+    if options:
+        picked = choose_option(val, options)
+        return (picked, why_txt) if picked else (None, why_txt)
+    return val, why_txt
 
 _RANGE = re.compile(r"(\d+)\s*(?:\+|-|–|to)?\s*(\d+)?")
 

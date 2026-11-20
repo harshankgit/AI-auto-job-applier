@@ -13,6 +13,7 @@ import argparse
 import sys
 import threading
 import time
+import zlib
 
 from . import applier, browser, matcher, report, sheets, sources, store
 from .config import DATA_DIR, REPORTS_DIR, SHOTS_DIR, get_candidate, load_answers, load_profiles
@@ -101,6 +102,7 @@ def cmd_apply(args) -> int:
     log("")
 
     report_lock = threading.Lock()
+    _learn_state: dict = {}
 
     def _write_reports(push_sheet: bool):
         hist = store.history_results()
@@ -108,6 +110,14 @@ def cmd_apply(args) -> int:
         report.write_markdown(hist, _identities("both"), stats)
         if push_sheet:
             sheets.try_push(hist, _identities("both"))
+        now = time.time()
+        if now - _learn_state.get("at", 0) > 120:
+            _learn_state["at"] = now
+            try:
+                from . import learn as _learn
+                _learn.write_reports()
+            except Exception as exc:
+                log(f"[learn] could not refresh failure report: {exc}")
 
     def _run_candidate(cid, ident):
         cand = get_candidate(cid)
@@ -133,12 +143,35 @@ def cmd_apply(args) -> int:
                     log(f"    [{cid}] report write failed: {exc}")
             log(f"    [{cid}] logged -> markdown + sheet ({result.job.company} / {result.status})")
 
-        profile = None if cid == ALL_CANDIDATES[0] else DATA_DIR / f"chrome-profile-{cid}"
         target = int(getattr(args, "target_submitted", 0) or 0)
+        continuous = bool(getattr(args, "continuous", False))
+        if target > 0 or continuous:
+            nworkers = max(1, int(getattr(args, "workers", 1) or 1))
+            base = len(store.submitted_companies(cid))
+            goal = base + (target or 200)
+            log(f"=== {ident.full_name}: {'CONTINUOUS' if continuous else 'TARGET'} mode - {base} companies "
+                f"already submitted, goal {goal}, {nworkers} parallel browser(s) ===")
+
+            def _worker(k):
+                prof = _profile_for(cid, k)
+                while not _should_stop(cid, goal):
+                    try:
+                        with browser.BrowserSession(headless=headless, offscreen=not show, profile_dir=prof) as session:
+                            _run_until_target(cid, ident, cand, session, goal, _flush, k, nworkers)
+                    except Exception as exc:
+                        log(f"[{cid}#{k}] browser crashed ({type(exc).__name__}: {exc}); restarting in 20s")
+                        time.sleep(20)
+
+            ws = [threading.Thread(target=_worker, args=(k,), name=f"{cid}-w{k}") for k in range(nworkers)]
+            for t in ws:
+                t.start()
+                time.sleep(2)
+            for t in ws:
+                t.join()
+            log(f"=== {ident.full_name}: stopped - {len(store.submitted_companies(cid))} companies submitted ===")
+            return
+        profile = None if cid == ALL_CANDIDATES[0] else DATA_DIR / f"chrome-profile-{cid}"
         with browser.BrowserSession(headless=headless, offscreen=not show, profile_dir=profile) as session:
-            if target > 0:
-                _run_until_target(cid, ident, cand, session, target, _flush)
-                return
             out = applier.run_batch(
                 session, ranked, ident, answers,
                 limit=args.limit, per_company=args.per_company,
@@ -187,17 +220,27 @@ def cmd_apply(args) -> int:
             rounds.extend(layer)
         return rounds
 
-    def _run_until_target(cid, ident, cand, session, target, _flush):
-        base = len(store.submitted_companies(cid))
-        goal = base + target
+    def _profile_for(cid, k):
+        if k == 0:
+            return None if cid == ALL_CANDIDATES[0] else DATA_DIR / f"chrome-profile-{cid}"
+        return DATA_DIR / f"chrome-profile-{cid}-w{k}"
+
+    def _should_stop(cid, goal):
+        if (DATA_DIR / "STOP").exists() or (DATA_DIR / f"STOP-{cid}").exists():
+            return True
+        if getattr(args, "continuous", False):
+            return False
+        return len(store.submitted_companies(cid)) >= goal
+
+    def _run_until_target(cid, ident, cand, session, goal, _flush, k=0, n=1):
+        tag = cid if n == 1 else f"{cid}#{k}"
         min_score = float(args.min_score)
         floor = float(getattr(args, "min_score_floor", 40.0))
         idle_rounds = 0
         rnd = 0
-        log(f"=== {ident.full_name}: TARGET mode - {base} companies already submitted, goal {goal} ===")
 
         def reached():
-            return len(store.submitted_companies(cid)) >= goal
+            return _should_stop(cid, goal)
 
         while not reached():
             rnd += 1
@@ -208,8 +251,16 @@ def cmd_apply(args) -> int:
             )
             done_cos = store.submitted_companies(cid)
             blocked = store.blocked_companies(cid, 2)
+            try:
+                from . import learn as _learn
+                blocked -= _learn.learned_companies(cid)
+            except Exception:
+                pass
             ordered = _ordered(ranked, done_cos | blocked)
-            log(f"[{cid}] round {rnd}: {len(ordered)} candidate jobs at {len({m.job.company for m in ordered})} "
+            if n > 1:
+                ordered = [m for m in ordered
+                           if zlib.crc32((m.job.company or "").strip().lower().encode()) % n == k]
+            log(f"[{tag}] round {rnd}: {len(ordered)} candidate jobs at {len({m.job.company for m in ordered})} "
                 f"new companies (min score {min_score:g}) - submitted {len(done_cos)}/{goal}")
 
             def _flush_progress(result, _f=_flush):
@@ -219,7 +270,7 @@ def cmd_apply(args) -> int:
             out = applier.run_batch(
                 session, ordered, ident, answers,
                 limit=10 ** 6, per_company=1, max_tries_per_company=2,
-                dry_run=args.dry_run, progress=lambda m, _c=cid: log(f"[{_c}] {m}"),
+                dry_run=args.dry_run, progress=lambda m, _c=tag: log(f"[{_c}] {m}"),
                 on_result=_flush_progress, stop=reached,
             )
             if reached():
@@ -230,12 +281,13 @@ def cmd_apply(args) -> int:
             idle_rounds += 1
             if min_score > floor:
                 min_score = max(floor, min_score - 5)
-                log(f"[{cid}] pool exhausted - widening match to min score {min_score:g}")
+                log(f"[{tag}] pool exhausted - widening match to min score {min_score:g}")
                 continue
-            wait = 600
-            log(f"[{cid}] every matching job tried; waiting {wait // 60} min for new postings...")
-            time.sleep(wait)
-        log(f"=== {ident.full_name}: TARGET reached - {len(store.submitted_companies(cid))} companies submitted ===")
+            log(f"[{tag}] every matching job tried; waiting 10 min for new postings...")
+            for _ in range(60):
+                if reached():
+                    break
+                time.sleep(10)
 
     items = list(identities.items())
     if len(items) > 1 and not args.sequential:
@@ -380,6 +432,8 @@ def build_parser() -> argparse.ArgumentParser:
     a.add_argument("--target-submitted", type=int, default=0,
                    help="keep finding + applying until N more DISTINCT companies are SUBMITTED")
     a.add_argument("--min-score-floor", type=float, default=40.0)
+    a.add_argument("--continuous", action="store_true", help="never stop on target; stop only via data/STOP")
+    a.add_argument("--workers", type=int, default=1, help="parallel Chrome workers per candidate")
     a.set_defaults(func=cmd_apply)
 
     r = common(sub.add_parser("run", help="alias for apply"))
@@ -392,6 +446,8 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument("--sequential", action="store_true")
     r.add_argument("--target-submitted", type=int, default=0)
     r.add_argument("--min-score-floor", type=float, default=40.0)
+    r.add_argument("--continuous", action="store_true")
+    r.add_argument("--workers", type=int, default=1)
     r.set_defaults(func=cmd_apply)
 
     rp = sub.add_parser("report", help="rebuild markdown/CSV/sheet from the full audit history")

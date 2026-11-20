@@ -33,7 +33,7 @@ class Identity:
     REQUIRED = ("id", "full_name", "first_name", "last_name", "email", "phone", "resume")
 
     def __init__(self, cand: dict):
-        self._c = dict(cand)
+        self._c = {**dict(cand), **_private_overrides(str(cand.get("id") or ""))}
         self._verify()
 
     # ------------------------------------------------------------------ checks
@@ -193,7 +193,7 @@ class Identity:
             "ANSWER_PORTFOLIO": self.portfolio,
             "ANSWER_COMPANY": self.current_company,
             "ANSWER_TITLE": self.current_title,
-            "ANSWER_YEARS": str(self.years_experience) if self.years_experience else "",
+            "ANSWER_YEARS": str(self._c.get("years_experience") or "") ,
             "ANSWER_SCHOOL": self.school,
             "ANSWER_DEGREE": self.degree,
             "ANSWER_DISCIPLINE": self.discipline,
@@ -221,6 +221,22 @@ class Identity:
             "portfolio": self.portfolio,
             "resume_file": self.resume,
         }
+
+
+def _private_overrides(cid: str) -> dict:
+    """Facts the user confirmed in chat but does not want on the site or in git.
+
+    Stored in data/private_profile.json (data/ is git-ignored, never snapshotted).
+    """
+    import json
+    from pathlib import Path
+
+    path = Path(__file__).resolve().parent.parent / "data" / "private_profile.json"
+    try:
+        data = json.loads(path.read_text())
+    except Exception:
+        return {}
+    return dict(data.get(cid) or {})
 
 
 def load_identity(cand: dict) -> Identity:

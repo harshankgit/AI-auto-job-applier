@@ -85,6 +85,24 @@ export function Dashboard() {
     })();
   }, []);
 
+  const [stopping, setStopping] = useState(false);
+  const onStop = useCallback(async () => {
+    setStopping(true);
+    try {
+      const res = await fetch("/api/stop", { method: "POST" });
+      const data = (await res.json()) as { stopped?: boolean; error?: string; status?: RunStatus };
+      if (!res.ok || !data.stopped) {
+        setError(data.error ?? `failed to stop (HTTP ${res.status})`);
+      } else if (data.status) {
+        setStatus(data.status);
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "failed to stop");
+    } finally {
+      setStopping(false);
+    }
+  }, []);
+
   const blocked = status?.running ?? false;
   const externalRun = status?.running && status.source === "external";
 
@@ -115,11 +133,39 @@ export function Dashboard() {
         )}
       </section>
 
-      {/* External run banner */}
+      {/* Run controls: start both candidates (continuous) / stop */}
+      <section className="flex flex-wrap items-center gap-3 rounded-lg border border-zinc-800 bg-zinc-900/50 px-4 py-3">
+        <div className="mr-auto text-sm text-zinc-300">
+          {status?.running ? (
+            <span className="text-emerald-300">
+              Auto-apply is running{status.candidate ? ` (${status.candidate})` : ""} — it keeps finding and applying until you press Stop.
+            </span>
+          ) : (
+            <span>Auto-apply is idle. Start a candidate below, or both at once.</span>
+          )}
+        </div>
+        <button
+          type="button"
+          disabled={blocked || stopping}
+          onClick={() => void onRun("both")}
+          className="rounded-md bg-emerald-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-emerald-500 disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          Start both (continuous)
+        </button>
+        <button
+          type="button"
+          disabled={!status?.running || stopping}
+          onClick={() => void onStop()}
+          className="rounded-md bg-rose-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-rose-500 disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          {stopping ? "Stopping…" : "Stop"}
+        </button>
+      </section>
+
       {externalRun ? (
         <div className="rounded-lg border border-amber-900/60 bg-amber-950/30 px-4 py-3">
           <p className="text-sm font-medium text-amber-200">
-            A run started from a terminal is currently active. Dashboard triggers are disabled.
+            A run started from a terminal is active. Use Stop to end it before starting a new one.
           </p>
         </div>
       ) : null}

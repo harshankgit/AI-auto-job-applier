@@ -437,6 +437,11 @@ def run_batch(
     # last edited - adding a missing answer makes those roles eligible again.
     answers_file = config.CONFIG_DIR / "answers.yaml"
     answers_mtime = answers_file.stat().st_mtime if answers_file.exists() else 0
+    try:
+        from . import learn as _learn
+        answers_mtime = max(answers_mtime, _learn.mtime())
+    except Exception:
+        pass
     answers_since = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime(answers_mtime))
 
     company_tries: dict[str, int] = {}

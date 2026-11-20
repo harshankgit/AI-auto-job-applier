@@ -61,6 +61,11 @@ export const PATHS = {
   profiles: pick(path.join(PROJECT_ROOT, "config", "profiles.yaml"), "profiles.yaml"),
   resumeUploads: path.join(PROJECT_ROOT, "data", "resumes"),
   chromeProfile: path.join(PROJECT_ROOT, "data", "chrome-profile"),
+  failures: pick(path.join(PROJECT_ROOT, "reports", "failures.json"), "failures.json"),
+  cityMap: pick(path.join(PROJECT_ROOT, "reports", "jobs_by_city.json"), "jobs_by_city.json"),
+  learned: path.join(PROJECT_ROOT, "data", "learned_answers.json"),
+  privateProfile: path.join(PROJECT_ROOT, "data", "private_profile.json"),
+  dataDir: path.join(PROJECT_ROOT, "data"),
 } as const;
 
 /** True when the project root actually exists on this machine (false on Vercel). */

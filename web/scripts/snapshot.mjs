@@ -13,6 +13,7 @@ fs.mkdirSync(out, { recursive: true });
 const files = [
   ["reports/applications.csv", "applications.csv"],
   ["reports/APPLICATIONS.md", "APPLICATIONS.md"],
+  ["reports/failures.json", "failures.json"],
   ["config/profiles.yaml", "profiles.yaml"],
 ];
 for (const [src, dst] of files) {
