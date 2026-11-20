@@ -8,6 +8,7 @@ import { ErrorNote, Spinner, StatCard } from "@/components/ui";
 import { candidateIds, candidateMeta } from "@/lib/candidates";
 import { formatUtc } from "@/lib/format";
 import type { Application, ApplicationsPayload, RunStatus } from "@/lib/types";
+import { isRemoteHost } from "@/lib/remote-fetch";
 
 type LoadState = "loading" | "ready" | "error";
 
@@ -19,29 +20,57 @@ export function Dashboard() {
   const [resumePaths, setResumePaths] = useState<Record<string, string | null>>({});
   const [error, setError] = useState<string | null>(null);
 
-  // Load applications and status on mount, then poll status every 2s.
+  // Status is small and polled often; the applications list is large, so it is
+  // refreshed less often (much less when the data travels over the Mac tunnel)
+  // and never overlaps with a request that is still in flight.
   useEffect(() => {
-    const load = async () => {
+    const remote = isRemoteHost();
+    let alive = true;
+    let statusBusy = false;
+    let appsBusy = false;
+
+    const loadStatus = async () => {
+      if (statusBusy) return;
+      statusBusy = true;
       try {
-        const [appRes, statusRes] = await Promise.all([
-          fetch("/api/applications", { cache: "no-store" }),
-          fetch("/api/status", { cache: "no-store" }),
-        ]);
-        const appData = (await appRes.json()) as ApplicationsPayload;
-        const statusData = (await statusRes.json()) as RunStatus;
-        setPayload(appData);
-        setStatus(statusData);
-        setLoadState("ready");
-        setError(null);
-      } catch (err) {
-        setLoadState("error");
-        setError(err instanceof Error ? err.message : "failed to load data");
+        const res = await fetch("/api/status", { cache: "no-store" });
+        const data = (await res.json()) as RunStatus;
+        if (alive) setStatus(data);
+      } catch {
+        /* transient; next poll retries */
+      } finally {
+        statusBusy = false;
       }
     };
 
-    void load();
-    const interval = setInterval(() => void load(), 2000);
-    return () => clearInterval(interval);
+    const loadApps = async () => {
+      if (appsBusy) return;
+      appsBusy = true;
+      try {
+        const res = await fetch("/api/applications", { cache: "no-store" });
+        const data = (await res.json()) as ApplicationsPayload;
+        if (!alive) return;
+        setPayload(data);
+        setLoadState("ready");
+        setError(null);
+      } catch (err) {
+        if (!alive) return;
+        setLoadState((prev) => (prev === "ready" ? prev : "error"));
+        setError(err instanceof Error ? err.message : "failed to load data");
+      } finally {
+        appsBusy = false;
+      }
+    };
+
+    void loadStatus();
+    void loadApps();
+    const statusTimer = setInterval(() => void loadStatus(), remote ? 4000 : 2000);
+    const appsTimer = setInterval(() => void loadApps(), remote ? 60000 : 5000);
+    return () => {
+      alive = false;
+      clearInterval(statusTimer);
+      clearInterval(appsTimer);
+    };
   }, []);
 
   const onRun = useCallback(
