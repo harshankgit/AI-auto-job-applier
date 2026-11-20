@@ -1,10 +1,10 @@
 # AI Job Application Report
 
-**Report updated (UTC):** 2026-11-20 10:58:58
-**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-20 10:58:58
-**Companies applied to (all candidates):** 87
-**Applications submitted (page-confirmed):** 99
-**Total attempts logged:** 570
+**Report updated (UTC):** 2026-11-20 11:00:44
+**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-20 11:00:44
+**Companies applied to (all candidates):** 89
+**Applications submitted (page-confirmed):** 101
+**Total attempts logged:** 577
 
 > Only applications the job site itself confirmed are counted as done.
 > Every form value came from the candidate's own resume or their
@@ -14,8 +14,8 @@
 
 | Candidate | Companies done | Applications submitted | Total attempts | Not gone through | Dry runs |
 | --- | --- | --- | --- | --- | --- |
-| **Harshank Kanungo** | **41** | 48 | 295 | 235 | 10 |
-| **Divya Kanungo** | **46** | 51 | 275 | 212 | 10 |
+| **Harshank Kanungo** | **41** | 48 | 297 | 237 | 10 |
+| **Divya Kanungo** | **48** | 53 | 280 | 215 | 10 |
 
 ## Every company applied to - full details
 
@@ -108,6 +108,8 @@
 | 85 | Divya Kanungo | **Careway Health** | Software Engineer (Remote) | India | Tech | 2026-11-20 10:55:54 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 8 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/careway/f7bc5fce-abe3-490e-ab6b-d3eb1e7be423/application) |
 | 86 | Divya Kanungo | **Enterpret** | [Backend, Onsite] Software Engineering Intern | Bengaluru, Onsite | Tech | 2026-11-20 10:58:31 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 9 | [APPLIED] SUBMITTED | [open](https://job-boards.greenhouse.io/enterpret/jobs/7847134003) |
 | 87 | Harshank Kanungo | **Freehand** | Backend Engineer (India) | India | Tech | 2026-11-20 10:58:58 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 3 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/freehand/99739dc4-cbbf-4584-a100-1747e5fc3418/application) |
+| 88 | Divya Kanungo | **Glean** | Software Engineer, Backend | Bangalore, India | Tech | 2026-11-20 10:59:55 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 11 | [APPLIED] SUBMITTED | [open](https://job-boards.greenhouse.io/gleanwork/jobs/4006731005) |
+| 89 | Divya Kanungo | **Overview Corporation** | Application Engineer, Bengaluru | Bengaluru | Tech | 2026-11-20 11:00:35 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 3 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/overview/771d32f3-5c04-44c2-b0a0-de1ddb4c6b43/application) |
 
 ## Job discovery (latest run)
 
@@ -123,9 +125,9 @@
 
 | Outcome | Count | Meaning |
 | --- | --- | --- |
-| [INCOMPLETE] FAILED_VALIDATION | 359 | Form asked something we had no resume fact for - not submitted |
-| [APPLIED] SUBMITTED | 99 | Application sent and confirmed by the company's site |
-| [CAPTCHA] CAPTCHA_BLOCKED | 57 | Form was filled but a captcha needs a human to clear it |
+| [INCOMPLETE] FAILED_VALIDATION | 362 | Form asked something we had no resume fact for - not submitted |
+| [APPLIED] SUBMITTED | 101 | Application sent and confirmed by the company's site |
+| [CAPTCHA] CAPTCHA_BLOCKED | 59 | Form was filled but a captcha needs a human to clear it |
 | [ERROR] ERROR | 26 | Technical failure - not submitted |
 | [DRY RUN] SKIPPED | 20 | Dry run - filled but deliberately not submitted |
 | [CLOSED] CLOSED | 5 | Posting was closed by the time we opened it |
@@ -151,7 +153,7 @@
 | Experience | 3 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2024) |
 
-### Companies done: 41 (50 applications out of 295 attempts)
+### Companies done: 41 (50 applications out of 297 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -310,7 +312,7 @@
 - **MiQ Digital**: Thank you for applying. Your application has been received. If there is a fit, someone will be getting back to you. View more jobs at MiQ Digital Back to job post
 - **Freehand**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 
-### Attempts that did not go through (245)
+### Attempts that did not go through (247)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -559,6 +561,8 @@
 | 2026-11-20 10:56:52 | Talkdesk | Software Engineer II - Mobile Developer | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you currently residing in bengaluru?* | 11 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Are you currently residing in bengaluru?* (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/talkdesk2/jobs/8241903) | missing-talkdesk2.png |
 | 2026-11-20 10:57:41 | Appian Corporation | Software Engineer II | Chennai, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you currently authorized to work in the city/country where this position is located? *, I | 11 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Are you currently authorized to work in the city/country where this position is located? * (could not set), If yes, will you now or in the future require Appian to file a petition or application for employment-based visa status on your behalf to begin or continue employment with our company? (Please note that if you are in F-1 OPT/STEM OPT, H-1B, H-4 EAD, L-2 EAD, or other EAD conferring status such as DA (could not set), Gender (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/appian/jobs/8142092) | missing-appian.png |
 | 2026-11-20 10:58:29 | Doxel | Full Stack Software Engineer, India | Bengaluru, Karnataka | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 9 | Gender Select ... Male Female Decline to self-identify (EEO/demographic field - intentionally not answered), Race Select ... Hispanic or Latino White (Not Hispanic or Latino) Black or African American (Not Hispanic or Latino) Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino) Asian (Not Hispanic or Latino) American Indian or Alaska Native (Not Hispanic or Latino) Two or More Races (Not Hisp (EEO/demographic field - intentionally not answered), Veteran status Select ... I am a veteran I am not a veteran Decline to self-identify (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/doxel/7f6b2263-f6f3-4c85-8bbf-6238bc017e5c/apply) | after-doxel-7f6b2263-f6f3-4c85-8bbf-6238bc017e5c.png |
+| 2026-11-20 10:59:45 | Glean | Software Engineer, Backend | Bangalore, India | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (recaptcha widget visible (256x60)) - a human must clear it | 11 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Gender (EEO/demographic field - intentionally not answered), Are you Hispanic/Latino? (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/gleanwork/jobs/4006731005) | after-gleanwork-4006731005.png |
+| 2026-11-20 11:00:44 | Jobgether | Graduate Software Engineer, Open Source and Linux, Canonical Ubuntu | India | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 6 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/jobgether/7ee769c9-defd-4860-b1b4-ff4e3444854f/apply) | after-jobgether-7ee769c9-defd-4860-b1b4-ff4e3444854f.png |
 
 ### Companies touched for this candidate
 
@@ -732,10 +736,12 @@
 | Appian Corporation | greenhouse | no | 1 | 0 | not yet |
 | Doxel | lever | no | 1 | 0 | not yet |
 | Freehand | ashby | no | 1 | 1 | DONE |
+| Glean | greenhouse | no | 1 | 0 | not yet |
+| Jobgether | lever | no | 1 | 0 | not yet |
 
 ---
 
-## Divya Kanungo - 46 companies done
+## Divya Kanungo - 48 companies done
 
 ### Contact details used on every form
 
@@ -753,7 +759,7 @@
 | Experience | 1 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2026) |
 
-### Companies done: 46 (53 applications out of 275 attempts)
+### Companies done: 48 (55 applications out of 280 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -810,6 +816,8 @@
 | 51 | 2026-11-20 10:54:50 | **Pippin Technologies India** | JavaScript Developer - Front-end | Bengaluru, Karnataka, India | greenhouse | Tech | 60 | attached | 8 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://job-boards.greenhouse.io/pippintitleindia/jobs/4897310004) |
 | 52 | 2026-11-20 10:55:54 | **Careway Health** | Software Engineer (Remote) | India | ashby | Tech | 59 | attached | 8 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/careway/f7bc5fce-abe3-490e-ab6b-d3eb1e7be423/application) |
 | 53 | 2026-11-20 10:58:31 | **Enterpret** | [Backend, Onsite] Software Engineering Intern | Bengaluru, Onsite | greenhouse | Tech | 59 | attached | 9 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://job-boards.greenhouse.io/enterpret/jobs/7847134003) |
+| 54 | 2026-11-20 10:59:55 | **Glean** | Software Engineer, Backend | Bangalore, India | greenhouse | Tech | 59 | attached | 11 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://job-boards.greenhouse.io/gleanwork/jobs/4006731005) |
+| 55 | 2026-11-20 11:00:35 | **Overview Corporation** | Application Engineer, Bengaluru | Bengaluru | ashby | Tech | 59 | attached | 3 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/overview/771d32f3-5c04-44c2-b0a0-de1ddb4c6b43/application) |
 
 #### Why each of those jobs was chosen
 
@@ -866,6 +874,8 @@
 51. **Pippin Technologies India - JavaScript Developer - Front-end** (score 60): core role match 'front-end'; 1 resume skills in posting (javascript); India location (Bengaluru, Karnataka, India)
 52. **Careway Health - Software Engineer (Remote)** (score 59): core role match 'software engineer'; AI mentioned in description; India location (India)
 53. **Enterpret - [Backend, Onsite] Software Engineering Intern** (score 59): core role match 'software engineer'; AI mentioned in description; India location (Bengaluru, Onsite)
+54. **Glean - Software Engineer, Backend** (score 59): core role match 'software engineer'; AI mentioned in description; India location (Bangalore, India)
+55. **Overview Corporation - Application Engineer, Bengaluru** (score 59): core role match 'application engineer'; AI mentioned in description; India location (Bengaluru)
 
 #### Confirmation text shown by the company site
 
@@ -920,8 +930,10 @@
 - **Pippin Technologies India**: Thank you for applying. Your application has been received. If there is a fit, someone will be getting back to you. View more jobs at Pippin Technologies India Back to job post Track your applicati
 - **Careway Health**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Enterpret**: Thank you for applying. Your application has been received. If there is a fit, someone will be getting back to you. View more jobs at Enterpret Back to job post Track your application Sign in to k
+- **Glean**: Thank you for applying. Your application has been received. If there is a fit, someone will be getting back to you. View more jobs at Glean Back to job post Track your application Sign in to keep
+- **Overview Corporation**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 
-### Attempts that did not go through (222)
+### Attempts that did not go through (225)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1147,6 +1159,9 @@
 | 2026-11-20 10:55:40 | Beghou Consulting | Full Stack Developer | Pune | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Less than 30 days, Yes | 12 | Which location are you applying for? (brain: no resume fact or job fact grounds this question), He/him (brain: no resume fact or job fact grounds this question), She/her (brain: no resume fact or job fact grounds this question), They/them (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/beghouconsulting/1eec2140-fed6-4f56-8049-0ee22d3c9d51/apply) | missing-beghouconsulting.png |
 | 2026-11-20 10:58:11 | Coinbase | Software Engineer, Security Platform | Remote - India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Title*, Which of the following best describes how you use AI tools today?*, Are you a close r | 15 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Title* (brain: no resume fact or job fact grounds this question), Have you previously been employed by Coinbase in any capacity?* (could not set), Please confirm receipt of the above linked Global Data Privacy Notice and US Arbitration Agreement.* (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/coinbase/jobs/8165441) | missing-coinbase.png |
 | 2026-11-20 10:58:21 | Dscout | Software Engineer - India | Remote - India | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (recaptcha widget visible (256x60)) - a human must clear it | 9 | Attach (optional cover-letter upload - the resume belongs in the resume slot) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/dscout/jobs/4370266009) | after-dscout-4370266009.png |
+| 2026-11-20 10:59:28 | Eudia | Software Engineer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you okay with working from the office location stated in this job posting 5 days a week?* | 9 | Attach (optional cover-letter upload - the resume belongs in the resume slot), GitHub (not present in resume (github) - skipped, never faked), Are you okay with working from the office location stated in this job posting 5 days a week?* (could not set), If you do not live within a reasonable commute from the stated office location, are you willing to relocate? (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/eudia/jobs/4020070009) | missing-eudia.png |
+| 2026-11-20 11:00:04 | Instawork | Video Platform Engineer - E3 | Bengaluru, Karnataka, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Which programming languages are you comfortable with? * - Python, Which programming languages | 11 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Which programming languages are you comfortable with? * - Python (brain: no resume fact or job fact grounds this question), Which programming languages are you comfortable with? * - Java (brain: no resume fact or job fact grounds this question), Which programming languages are you comfortable with? * - GoLang (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/instawork/jobs/4713756006) | missing-instawork.png |
+| 2026-11-20 11:00:42 | Parspec | Software Engineer - 2 (Backend) | Hybrid - Bangalore, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What is the earliest by when you can join Parspec? | 11 | What is the earliest by when you can join Parspec? (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/parspec/55ae4708-5bca-4b9f-b3d4-c9f75ca288d5/application) | missing-parspec.png |
 
 ### Companies touched for this candidate
 
@@ -1178,6 +1193,7 @@
 | Anyscale | ashby | no | 2 | 2 | DONE |
 | Mindtickle | lever | no | 2 | 0 | not yet |
 | Coinbase | greenhouse | no | 2 | 0 | not yet |
+| Eudia | greenhouse | no | 2 | 0 | not yet |
 | Truveta | greenhouse | no | 2 | 2 | DONE |
 | Hevo Data | lever | yes | 2 | 0 | not yet |
 | Bolna AI | ashby | yes | 2 | 2 | DONE |
@@ -1197,7 +1213,6 @@
 | Baseten | ashby | yes | 1 | 1 | DONE |
 | Quora | ashby | no | 1 | 0 | not yet |
 | Unstructured | ashby | no | 1 | 0 | not yet |
-| Eudia | greenhouse | no | 1 | 0 | not yet |
 | Togetherai | greenhouse | no | 1 | 0 | not yet |
 | Planetscale | greenhouse | no | 1 | 0 | not yet |
 | Phantom | ashby | no | 1 | 0 | not yet |
@@ -1309,6 +1324,10 @@
 | Careway Health | ashby | no | 1 | 1 | DONE |
 | Dscout | greenhouse | no | 1 | 0 | not yet |
 | Enterpret | greenhouse | no | 1 | 1 | DONE |
+| Glean | greenhouse | no | 1 | 1 | DONE |
+| Instawork | greenhouse | no | 1 | 0 | not yet |
+| Overview Corporation | ashby | no | 1 | 1 | DONE |
+| Parspec | ashby | no | 1 | 0 | not yet |
 
 ---
 
