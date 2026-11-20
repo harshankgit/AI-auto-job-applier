@@ -1,10 +1,10 @@
 # AI Job Application Report
 
-**Report updated (UTC):** 2026-11-20 09:03:45
-**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-20 09:03:44
-**Companies applied to (all candidates):** 16
-**Applications submitted (page-confirmed):** 27
-**Total attempts logged:** 210
+**Report updated (UTC):** 2026-11-20 09:18:49
+**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-20 09:18:49
+**Companies applied to (all candidates):** 17
+**Applications submitted (page-confirmed):** 29
+**Total attempts logged:** 246
 
 > Only applications the job site itself confirmed are counted as done.
 > Every form value came from the candidate's own resume or their
@@ -14,8 +14,8 @@
 
 | Candidate | Companies done | Applications submitted | Total attempts | Not gone through | Dry runs |
 | --- | --- | --- | --- | --- | --- |
-| **Harshank Kanungo** | **9** | 16 | 117 | 91 | 10 |
-| **Divya Kanungo** | **7** | 11 | 93 | 72 | 10 |
+| **Harshank Kanungo** | **10** | 17 | 139 | 112 | 10 |
+| **Divya Kanungo** | **7** | 12 | 107 | 85 | 10 |
 
 ## Every company applied to - full details
 
@@ -37,6 +37,7 @@
 | 14 | Harshank Kanungo | **Turing** | Software Engineer | Bengaluru, Karnataka, India | AI company | 2026-11-20 08:47:56 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 11 | [APPLIED] SUBMITTED | [open](https://job-boards.greenhouse.io/turing/jobs/6115695004) |
 | 15 | Divya Kanungo | **Anyscale** | Software Engineer, Ray Data | Bengaluru, Karnataka | Tech | 2026-11-20 08:54:53 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 10 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/anyscale/2d76cfa2-f857-42b2-9c74-c07beca01458/application) |
 | 16 | Harshank Kanungo | **Anyscale** | Software Engineer, Platform Infrastructure (Foundations) | Bengaluru, Karnataka | Tech | 2026-11-20 09:03:18 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 11 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/anyscale/316cf655-f3f1-40c2-823f-34f1fce54fdc/application) |
+| 17 | Harshank Kanungo | **Truveta** | Software Engineer - Data Quality | Hyderabad, India | Tech | 2026-11-20 09:09:08 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 9 | [APPLIED] SUBMITTED | [open](https://job-boards.greenhouse.io/truveta/jobs/6240382004) |
 
 ## Job discovery (latest run)
 
@@ -52,16 +53,16 @@
 
 | Outcome | Count | Meaning |
 | --- | --- | --- |
-| [INCOMPLETE] FAILED_VALIDATION | 128 | Form asked something we had no resume fact for - not submitted |
-| [APPLIED] SUBMITTED | 27 | Application sent and confirmed by the company's site |
+| [INCOMPLETE] FAILED_VALIDATION | 160 | Form asked something we had no resume fact for - not submitted |
+| [APPLIED] SUBMITTED | 29 | Application sent and confirmed by the company's site |
 | [ERROR] ERROR | 25 | Technical failure - not submitted |
 | [DRY RUN] SKIPPED | 20 | Dry run - filled but deliberately not submitted |
-| [CAPTCHA] CAPTCHA_BLOCKED | 7 | Form was filled but a captcha needs a human to clear it |
-| [CLOSED] CLOSED | 3 | Posting was closed by the time we opened it |
+| [CAPTCHA] CAPTCHA_BLOCKED | 8 | Form was filled but a captcha needs a human to clear it |
+| [CLOSED] CLOSED | 4 | Posting was closed by the time we opened it |
 
 ---
 
-## Harshank Kanungo - 9 companies done
+## Harshank Kanungo - 10 companies done
 
 ### Contact details used on every form
 
@@ -79,7 +80,7 @@
 | Experience | 3 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2024) |
 
-### Companies done: 9 (16 applications out of 117 attempts)
+### Companies done: 10 (17 applications out of 139 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -99,6 +100,7 @@
 | 14 | 2026-11-20 08:59:14 | **Supabase** | Software Engineer - Postgres Tooling | Remote, Global | ashby | Tech | 67 | attached | 10 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/supabase/2184cfbd-927e-4d3c-b34a-f2301d3e8281/application) |
 | 15 | 2026-11-20 09:03:18 | **Anyscale** | Software Engineer, Platform Infrastructure (Foundations) | Bengaluru, Karnataka | ashby | Tech | 64 | attached | 11 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/anyscale/316cf655-f3f1-40c2-823f-34f1fce54fdc/application) |
 | 16 | 2026-11-20 09:03:37 | **Anyscale** | Software Engineer, Ray Data | Bengaluru, Karnataka | ashby | Tech | 64 | attached | 11 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/anyscale/2d76cfa2-f857-42b2-9c74-c07beca01458/application) |
+| 17 | 2026-11-20 09:09:08 | **Truveta** | Software Engineer - Data Quality | Hyderabad, India | greenhouse | Tech | 64 | attached | 9 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://job-boards.greenhouse.io/truveta/jobs/6240382004) |
 
 #### Why each of those jobs was chosen
 
@@ -118,6 +120,7 @@
 14. **Supabase - Software Engineer - Postgres Tooling** (score 67): core role match 'software engineer'; 3 resume skills in posting (git, supabase, typescript); remote, globally open (Remote, Global)
 15. **Anyscale - Software Engineer, Platform Infrastructure (Foundations)** (score 64): core role match 'software engineer'; 1 resume skills in posting (authentication); AI mentioned in description; India location (Bengaluru, Karnataka)
 16. **Anyscale - Software Engineer, Ray Data** (score 64): core role match 'software engineer'; 1 resume skills in posting (html); AI mentioned in description; India location (Bengaluru, Karnataka)
+17. **Truveta - Software Engineer - Data Quality** (score 64): core role match 'software engineer'; 1 resume skills in posting (git); AI mentioned in description; India location (Hyderabad, India)
 
 #### Confirmation text shown by the company site
 
@@ -137,8 +140,9 @@
 - **Supabase**: plication Success Your application was successfully submitted. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Anyscale**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Anyscale**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Truveta**: Thank you for applying! We received your application and are looking forward to reviewing it. Our hiring team will contact you if there is a fit. View more jobs at Truveta Back to job post Track y
 
-### Attempts that did not go through (101)
+### Attempts that did not go through (122)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -243,24 +247,48 @@
 | 2026-11-20 09:01:57 | MongoDB | Application Engineer | Bengaluru | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (recaptcha widget visible (256x60)) - a human must clear it | 14 | Attach (optional cover-letter upload - the resume belongs in the resume slot), How did you learn about this job? (could not set), If you answered MongoDB Employee, MongoDB Event, or Other, please specify here: (conditional follow-up field - not applicable to our answers), Gender Identity (Select one)* (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/mongodb/jobs/8143980) | after-mongodb-8143980.png |
 | 2026-11-20 09:02:18 | Sumo Logic | Software Engineer II | Noida , Uttar Pradesh , India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you open to work from Noida?*, Which cloud platforms and infrastructure technologies have | 15 | Attach (optional cover-letter upload - the resume belongs in the resume slot), How many years of experience you have?* (could not set), Are you open to work from Noida?* (brain: no resume fact or job fact grounds this question), Which cloud platforms and infrastructure technologies have you worked with? * (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/sumologic/jobs/8402011) | missing-sumologic.png |
 | 2026-11-20 09:02:52 | Alan | Fullstack Software Engineer (x/f/m) - Care Expert Copilot | Anywhere in France, Belgium, Spain | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you currently able to legally work for any employer in either France, Belgium, Spain or C | 15 | Twitter (brain: no resume fact or job fact grounds this question), Other (brain: no resume fact or job fact grounds this question), If you selected "Employee Referral", "Podcast" or "Other", could you please specify? (conditional follow-up field - not applicable to our answers), Are you currently able to legally work for any employer in either France, Belgium, Spain or Canada ? (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/alan/0ff78ea3-64c0-4b4e-ad0f-72d54175b132/application) | missing-alan.png |
+| 2026-11-20 09:06:13 | Coinbase | Software Engineer, Security Platform | Remote - India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Title*, Which of the following best describes how you use AI tools today?*, Are you a close r | 15 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Title* (brain: no resume fact or job fact grounds this question), Have you previously been employed by Coinbase in any capacity?* (could not set), Please confirm receipt of the above linked Global Data Privacy Notice and US Arbitration Agreement.* (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/coinbase/jobs/8165441) | missing-coinbase.png |
+| 2026-11-20 09:07:24 | GitLab | Intermediate Backend Engineer , Security Factory | Bangalore, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you subject to any employment agreements and/or post-employment restrictions with your cu | 13 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Are you subject to any employment agreements and/or post-employment restrictions with your current employer or a past employer?* (could not set), It is important to us to create an accessible and inclusive interview experience. Please let us know if there are any adjustments we can make to assist you during the hiring and interview process. (brain: no resume fact or job fact grounds this question), Will you now or in the future require sponsorship for a visa to remain in your current location?* (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/gitlab/jobs/8890971002) | missing-gitlab.png |
+| 2026-11-20 09:08:31 | IMC Trading | Software Engineer (Java) - Global Research Platform | Mumbai, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Title*, What is your most recent bonus pay/unvested stock option? (in INR)*, What is your non | 21 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Title* (brain: no resume fact or job fact grounds this question), Base Salary Currency* (could not set), What is your most recent bonus pay/unvested stock option? (in INR)* (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/imc/jobs/4976994101) | missing-imc.png |
+| 2026-11-20 09:08:57 | Togetherai | Technical Support Engineer (Inference) - India Weekends | Pune or Bangalore, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you legally authorized to work in the country where the job is located?*, Will you now or | 8 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Are you legally authorized to work in the country where the job is located?* (could not set), Will you now or in the future require company sponsorship to retain or extend your work authorization in the country where the job is located?* (could not set), How would you describe your gender identity? (mark all that apply) (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/togetherai/jobs/5069532007) | missing-togetherai.png |
+| 2026-11-20 09:09:26 | ElevenLabs | Full-Stack Engineer (Frontend Leaning) - Studio | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What is your current notice period? | 10 | If other, please specify below (conditional follow-up field - not applicable to our answers), What is your current notice period? (brain: notice period is 30 days but no form option matches) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/e6924f60-c8cc-42b3-9d05-2442ec30e12d/application) | missing-elevenlabs.png |
+| 2026-11-20 09:09:43 | ElevenLabs | Full-Stack Engineer - ElevenAPI | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What is your current notice period? | 10 | If other, please specify below (conditional follow-up field - not applicable to our answers), What is your current notice period? (brain: notice period is 30 days but no form option matches) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/108c99e6-ba2b-44a0-b830-7d535e14a152/application) | missing-elevenlabs.png |
+| 2026-11-20 09:10:09 | ElevenLabs | Full-Stack Engineer - Productions | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What is your current notice period? | 10 | If other, please specify below (conditional follow-up field - not applicable to our answers), What is your current notice period? (brain: notice period is 30 days but no form option matches) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/10e6475e-67ef-4621-8718-7b087c354651/application) | missing-elevenlabs.png |
+| 2026-11-20 09:10:54 | Storyblok | Technical Support Engineer II - Costa Rica, Colombia, Mexico | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Do you have any personal or professional connections to current employees at Storyblok?*, If  | 21 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Will you need employer visa sponsorship and assistance now or in the future? Unfortunately, Storyblok does not sponsor employee visas at this time.* (could not set), What is your notice period/availability to join?* (could not set), Do you have any personal or professional connections to current employees at Storyblok?* (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/storyblok/jobs/4961256101) | missing-storyblok.png |
+| 2026-11-20 09:11:49 | Mindtickle | AI Product Engineer | Pune, Maharashtra | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 16 | Which location are you applying for? (brain: no resume fact or job fact grounds this question), Twitter URL (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/mindtickle/864ac315-d7c5-4cd5-ab44-0e33d08f48f1/apply) | after-mindtickle-864ac315-d7c5-4cd5-ab44-0e33d08f48f1.png |
+| 2026-11-20 09:11:54 | Cursor (Anysphere) | Forward Deployed Engineer - India | Bengaluru | [CLOSED] CLOSED | posting closed ('page not found') | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b/application) | closed-cursor.png |
+| 2026-11-20 09:12:31 | Planetscale | Software Engineer - PlanetScale Postgres | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 10 | Attach (optional cover-letter upload - the resume belongs in the resume slot) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/planetscale/jobs/4251150009) | after-planetscale-4251150009.png |
+| 2026-11-20 09:13:02 | Alan | Fullstack Software Engineer (x/f/m) -Automated Resolution | Anywhere in France, Belgium, Spain | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you currently able to legally work for any employer in either France, Belgium, Spain or C | 15 | Twitter (brain: no resume fact or job fact grounds this question), Other (brain: no resume fact or job fact grounds this question), If you selected "Employee Referral", "Podcast" or "Other", could you please specify? (conditional follow-up field - not applicable to our answers), Are you currently able to legally work for any employer in either France, Belgium, Spain or Canada ? (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/alan/2dc99c53-9cc7-4c3f-a682-1f79bfa38ce6/application) | missing-alan.png |
+| 2026-11-20 09:13:21 | Phantom | Software Engineer, Backend (Trading) | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: We currently support remote work from North America, South America, and Europe. Which of thes | 10 | We currently support remote work from North America, South America, and Europe. Which of these three locations will you be working from? (brain: answer is Yes but the form offers no Yes option), Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/phantom/d8ee7f59-0f80-437f-908e-bfe603cb078a/application) | missing-phantom.png |
+| 2026-11-20 09:14:26 | GitLab | Intermediate Backend Engineer, India | Bangalore, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you located in India?*, What is your primary programming language and/or framework? *, Ar | 9 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Are you located in India?* (brain: no resume fact or job fact grounds this question), Are you subject to any employment agreements and/or post-employment restrictions with your current employer or a past employer?* (could not set), It is important to us to create an accessible and inclusive interview experience. Please let us know if there are any adjustments we can make to assist you during the hiring and interview process. (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/gitlab/jobs/8775507002) | missing-gitlab.png |
+| 2026-11-20 09:14:59 | GitLab | Software Engineer, Delivery : Release | Bangalore, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: This role requires candidate to be present in Bengaluru, what best describe your situation *, | 8 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Are you subject to any employment agreements and/or post-employment restrictions with your current employer or a past employer?* (could not set), It is important to us to create an accessible and inclusive interview experience. Please let us know if there are any adjustments we can make to assist you during the hiring and interview process. (brain: no resume fact or job fact grounds this question), How many years of professional backend software engineering experience do you have?* (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/gitlab/jobs/8916232002) | missing-gitlab.png |
+| 2026-11-20 09:15:20 | Okta | Solutions Engineer, Okta | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Do you have any outside business activity(ies) (advisory, consulting, or board roles, or side | 12 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Are you legally authorized to work in the country you reside?* (could not set), If yes, please identify name of person / vendor and describe relationship / association: (conditional follow-up field - not applicable to our answers), Do you have any outside business activity(ies) (advisory, consulting, or board roles, or side businesses) that you would continue engaging in or plan to engage in if you joined Okta in this role? * (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/okta/jobs/8168822) | missing-okta.png |
+| 2026-11-20 09:16:00 | Paxos | Data Platform Engineer | Remote - India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 8 | Cover Letter (optional cover-letter upload - the resume belongs in the resume slot) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/paxos/f8cbcedf-5b3a-463c-82d1-0d80b9c34e42/application) | after-paxos-f8cbcedf-5b3a-463c-82d1-0d80b9c34e42.png |
+| 2026-11-20 09:16:17 | Paytm | Backend - TL/STL | Bangalore, Karnataka | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Which location are you applying for? ✱ | 10 | Which location are you applying for? ✱ (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/paytm/fffdcfb1-fd6e-4401-b059-500838a6db0e/apply) | missing-paytm.png |
+| 2026-11-20 09:16:48 | Rubrik | Software Engineer | bangalore | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Is your primary programming language Go? *, Do you have hands-on experience with Identity & A | 15 | Attach (optional cover-letter upload - the resume belongs in the resume slot), I acknowledge that I have read Rubrik’s Candidate Privacy Notice and understand that the information I submit as part of this application will be used in accordance with this policy.* (could not set), Is your primary programming language Go? * (brain: no resume fact or job fact grounds this question), Do you have hands-on experience with Identity & Access Management (IAM) ? * (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/rubrik/jobs/8349847) | missing-rubrik.png |
+| 2026-11-20 09:17:16 | Rubrik | Software Engineer - IAM | Pune | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Is your primary programming language Go? *, Do you have hands-on experience with Identity & A | 15 | Attach (optional cover-letter upload - the resume belongs in the resume slot), I acknowledge that I have read Rubrik’s Candidate Privacy Notice and understand that the information I submit as part of this application will be used in accordance with this policy.* (could not set), Is your primary programming language Go? * (brain: no resume fact or job fact grounds this question), Do you have hands-on experience with Identity & Access Management (IAM) ? * (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/rubrik/jobs/7956918) | missing-rubrik.png |
+| 2026-11-20 09:17:33 | Singlestore | Cloud Platform Engineer | India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: How many years of professional experience do you have in DevOps, Cloud Engineering, or Infras | 8 | Attach (optional cover-letter upload - the resume belongs in the resume slot), How many years of professional experience do you have in DevOps, Cloud Engineering, or Infrastructure Engineering?* (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/singlestore/jobs/7573638) | missing-singlestore.png |
 
 ### Companies touched for this candidate
 
 | Company | Source | AI company | Attempts | Submitted | Result |
 | --- | --- | --- | --- | --- | --- |
 | MongoDB | greenhouse | no | 13 | 0 | not yet |
+| ElevenLabs | ashby | no | 11 | 0 | not yet |
 | Mercor | ashby | no | 11 | 1 | DONE |
 | Bitgo | greenhouse | no | 9 | 0 | not yet |
-| ElevenLabs | ashby | no | 8 | 0 | not yet |
 | Writer | ashby | no | 8 | 0 | not yet |
 | Supabase | ashby | no | 8 | 4 | DONE |
-| Alan | ashby | no | 6 | 0 | not yet |
+| Alan | ashby | no | 7 | 0 | not yet |
 | OpenAI | ashby | no | 5 | 3 | DONE |
+| GitLab | greenhouse | no | 4 | 0 | not yet |
 | Sarvam AI | ashby | yes | 4 | 2 | DONE |
 | Turing | greenhouse | no | 3 | 1 | DONE |
 | Dust | ashby | no | 3 | 0 | not yet |
 | Scale AI | greenhouse | no | 3 | 0 | not yet |
 | Starburst | greenhouse | no | 2 | 0 | not yet |
+| Coinbase | greenhouse | no | 2 | 0 | not yet |
+| Cursor (Anysphere) | ashby | no | 2 | 0 | not yet |
 | Databricks | greenhouse | no | 2 | 0 | not yet |
 | Suno | ashby | no | 2 | 0 | not yet |
 | Quora | ashby | no | 2 | 0 | not yet |
@@ -273,9 +301,7 @@
 | TrueFoundry | greenhouse | yes | 2 | 1 | DONE |
 | Tekion | ashby | no | 2 | 0 | not yet |
 | Anyscale | ashby | no | 2 | 2 | DONE |
-| Coinbase | greenhouse | no | 1 | 0 | not yet |
-| GitLab | greenhouse | no | 1 | 0 | not yet |
-| Cursor (Anysphere) | ashby | no | 1 | 0 | not yet |
+| Rubrik | greenhouse | no | 2 | 0 | not yet |
 | LangChain | ashby | no | 1 | 1 | DONE |
 | Baseten | ashby | no | 1 | 0 | not yet |
 | Mercury | greenhouse | no | 1 | 0 | not yet |
@@ -283,6 +309,17 @@
 | Character.AI | ashby | no | 1 | 0 | not yet |
 | SpotDraft | ashby | yes | 1 | 0 | not yet |
 | Sumo Logic | greenhouse | no | 1 | 0 | not yet |
+| IMC Trading | greenhouse | no | 1 | 0 | not yet |
+| Togetherai | greenhouse | no | 1 | 0 | not yet |
+| Truveta | greenhouse | no | 1 | 1 | DONE |
+| Storyblok | greenhouse | no | 1 | 0 | not yet |
+| Mindtickle | lever | no | 1 | 0 | not yet |
+| Planetscale | greenhouse | no | 1 | 0 | not yet |
+| Phantom | ashby | no | 1 | 0 | not yet |
+| Okta | greenhouse | no | 1 | 0 | not yet |
+| Paxos | ashby | no | 1 | 0 | not yet |
+| Paytm | lever | no | 1 | 0 | not yet |
+| Singlestore | greenhouse | no | 1 | 0 | not yet |
 
 ---
 
@@ -304,7 +341,7 @@
 | Experience | 1 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2026) |
 
-### Companies done: 7 (11 applications out of 93 attempts)
+### Companies done: 7 (12 applications out of 107 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -319,6 +356,7 @@
 | 9 | 2026-11-20 08:44:01 | **TrueFoundry** | Backend Interns | India | greenhouse | AI company | 76 | attached | 11 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://job-boards.greenhouse.io/truefoundry/jobs/5126892008) |
 | 10 | 2026-11-20 08:44:15 | **Turing** | Software Engineer | Bengaluru, Karnataka, India | greenhouse | AI company | 76 | attached | 11 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://job-boards.greenhouse.io/turing/jobs/6115695004) |
 | 11 | 2026-11-20 08:54:53 | **Anyscale** | Software Engineer, Ray Data | Bengaluru, Karnataka | ashby | Tech | 64 | attached | 10 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/anyscale/2d76cfa2-f857-42b2-9c74-c07beca01458/application) |
+| 12 | 2026-11-20 09:07:22 | **Anyscale** | Software Engineer, Ray Core | Bengaluru, Karnataka | ashby | Tech | 59 | attached | 10 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/anyscale/8b29c5e5-d56f-4c52-8887-a6a1827cf042/application) |
 
 #### Why each of those jobs was chosen
 
@@ -333,6 +371,7 @@
 9. **TrueFoundry - Backend Interns** (score 76): core role match 'backend'; 1 resume skills in posting (rest api); AI company; AI mentioned in description; India location (India)
 10. **Turing - Software Engineer** (score 76): core role match 'software engineer'; 1 resume skills in posting (node); AI company; AI mentioned in description; India location (Bengaluru, Karnataka, India)
 11. **Anyscale - Software Engineer, Ray Data** (score 64): core role match 'software engineer'; 1 resume skills in posting (html); AI mentioned in description; India location (Bengaluru, Karnataka)
+12. **Anyscale - Software Engineer, Ray Core** (score 59): core role match 'software engineer'; AI mentioned in description; India location (Bengaluru, Karnataka)
 
 #### Confirmation text shown by the company site
 
@@ -347,8 +386,9 @@
 - **TrueFoundry**: Thank you for applying. Your application has been received. If there is a fit, someone will be getting back to you. View more jobs at TrueFoundry Back to job post Track your application Sign in to
 - **Turing**: Thank you for applying. Your application has been received. If there is a fit, someone will be getting back to you. View more jobs at Turing Back to job post Track your application Sign in to keep
 - **Anyscale**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Anyscale**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 
-### Attempts that did not go through (82)
+### Attempts that did not go through (95)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -434,6 +474,19 @@
 | 2026-11-20 09:02:00 | Alan | Fullstack Software Engineer (x/f/m) -Automated Resolution | Anywhere in France, Belgium, Spain | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you currently able to legally work for any employer in either France, Belgium, Spain or C | 14 | Twitter (brain: no resume fact or job fact grounds this question), GitHub (not present in resume (github) - skipped, never faked), Other (brain: no resume fact or job fact grounds this question), If you selected "Employee Referral", "Podcast" or "Other", could you please specify? (conditional follow-up field - not applicable to our answers) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/alan/2dc99c53-9cc7-4c3f-a682-1f79bfa38ce6/application) | missing-alan.png |
 | 2026-11-20 09:03:14 | MongoDB | Application Engineer | Bengaluru | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (recaptcha widget visible (256x60)) - a human must clear it | 14 | Attach (optional cover-letter upload - the resume belongs in the resume slot), How did you learn about this job? (could not set), If you answered MongoDB Employee, MongoDB Event, or Other, please specify here: (conditional follow-up field - not applicable to our answers), Gender Identity (Select one)* (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/mongodb/jobs/8143980) | after-mongodb-8143980.png |
 | 2026-11-20 09:03:44 | Rubrik | Software Engineer | bangalore | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Is your primary programming language Go? *, Do you have hands-on experience with Identity & A | 15 | Attach (optional cover-letter upload - the resume belongs in the resume slot), I acknowledge that I have read Rubrik’s Candidate Privacy Notice and understand that the information I submit as part of this application will be used in accordance with this policy.* (could not set), Is your primary programming language Go? * (brain: no resume fact or job fact grounds this question), Do you have hands-on experience with Identity & Access Management (IAM) ? * (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/rubrik/jobs/8349847) | missing-rubrik.png |
+| 2026-11-20 09:04:13 | Rubrik | Software Engineer - IAM | Pune | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Is your primary programming language Go? *, Do you have hands-on experience with Identity & A | 15 | Attach (optional cover-letter upload - the resume belongs in the resume slot), I acknowledge that I have read Rubrik’s Candidate Privacy Notice and understand that the information I submit as part of this application will be used in accordance with this policy.* (could not set), Is your primary programming language Go? * (brain: no resume fact or job fact grounds this question), Do you have hands-on experience with Identity & Access Management (IAM) ? * (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/rubrik/jobs/7956918) | missing-rubrik.png |
+| 2026-11-20 09:05:25 | Stripe | Software Engineer, Intern | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Internship Information: please select the cohort dates that work best for you. * - January to | 21 | Attach (optional cover-letter upload - the resume belongs in the resume slot), As part of our commitment to understanding candidates' backgrounds, we invite you to share your GPA if you feel comfortable. This information is optional and will help us in evaluating your application alongside your other qualifications. (brain: no resume fact or job fact grounds this question), Pronouns (EEO/demographic field - intentionally not answered), Internship Information: please select the cohort dates that work best for you. * - January to June (6 months) (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/stripe/jobs/8031833) | missing-stripe.png |
+| 2026-11-20 09:06:26 | Stripe | Software Engineer, New Grad | Bangalore | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('is required') | 23 | Attach (optional cover-letter upload - the resume belongs in the resume slot), As part of our commitment to understanding candidates' backgrounds, we invite you to share your SAT or ACT score if you feel comfortable. This information is optional and will help us in evaluating your application alongside your other qualifications. (brain: no resume fact or job fact grounds this question), Similarly, we also invite you to provide your GPA, this can help us further understand your academic experience. (brain: no resume fact or job fact grounds this question), Pronouns (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/stripe/jobs/8130876) | after-stripe-8130876.png |
+| 2026-11-20 09:06:49 | Supabase | AI Platform Engineer | Remote, Global | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Github Profile | 9 | Twitter / X profile (brain: no resume fact or job fact grounds this question), Github Profile (not present in resume (github) - skipped, never faked), Have you made any open source contributions in the past that you'd like to share with us? (optional free-text question with no grounded answer - left blank) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/supabase/3b5d54ca-741b-45ac-bd3f-31605a0d3541/application) | missing-supabase.png |
+| 2026-11-20 09:07:04 | Supabase | Storage Platform Engineer | Remote, Global | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Github Profile | 9 | Twitter / X profile (brain: no resume fact or job fact grounds this question), Github Profile (not present in resume (github) - skipped, never faked), Have you made any open source contributions in the past that you'd like to share with us? (optional free-text question with no grounded answer - left blank) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/supabase/463d8cd7-3092-44eb-b80e-8d21008e569e/application) | missing-supabase.png |
+| 2026-11-20 09:10:02 | Coinbase | Software Engineer, Security Platform | Remote - India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Title*, Which of the following best describes how you use AI tools today?*, Are you a close r | 15 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Title* (brain: no resume fact or job fact grounds this question), Have you previously been employed by Coinbase in any capacity?* (could not set), Please confirm receipt of the above linked Global Data Privacy Notice and US Arbitration Agreement.* (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/coinbase/jobs/8165441) | missing-coinbase.png |
+| 2026-11-20 09:11:09 | Eudia | Software Engineer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you okay with working from the office location stated in this job posting 5 days a week?* | 9 | Attach (optional cover-letter upload - the resume belongs in the resume slot), GitHub (not present in resume (github) - skipped, never faked), Are you okay with working from the office location stated in this job posting 5 days a week?* (could not set), If you do not live within a reasonable commute from the stated office location, are you willing to relocate? (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/eudia/jobs/4020070009) | missing-eudia.png |
+| 2026-11-20 09:12:08 | GitLab | Intermediate Backend Engineer , Security Factory | Bangalore, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you subject to any employment agreements and/or post-employment restrictions with your cu | 13 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Are you subject to any employment agreements and/or post-employment restrictions with your current employer or a past employer?* (could not set), It is important to us to create an accessible and inclusive interview experience. Please let us know if there are any adjustments we can make to assist you during the hiring and interview process. (brain: no resume fact or job fact grounds this question), Will you now or in the future require sponsorship for a visa to remain in your current location?* (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/gitlab/jobs/8890971002) | missing-gitlab.png |
+| 2026-11-20 09:13:16 | IMC Trading | C++ Software Engineer | Mumbai, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Title*, What is your most recent bonus pay/unvested stock option? (in INR)*, What is your non | 21 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Title* (brain: no resume fact or job fact grounds this question), Base Salary Currency* (could not set), What is your most recent bonus pay/unvested stock option? (in INR)* (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/imc/jobs/4983375101) | missing-imc.png |
+| 2026-11-20 09:14:35 | IMC Trading | Java Software Engineer (Strategy) | Mumbai, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Title*, What is your most recent bonus pay/unvested stock option? (in INR)*, What is your non | 21 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Title* (brain: no resume fact or job fact grounds this question), Base Salary Currency* (could not set), What is your most recent bonus pay/unvested stock option? (in INR)* (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/imc/jobs/4986187101) | missing-imc.png |
+| 2026-11-20 09:15:47 | IMC Trading | Software Engineer (Java) - Research Data Platform | Mumbai, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Title*, What is your most recent bonus pay/unvested stock option? (in INR)*, What is your non | 21 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Title* (brain: no resume fact or job fact grounds this question), Base Salary Currency* (could not set), What is your most recent bonus pay/unvested stock option? (in INR)* (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/imc/jobs/4988565101) | missing-imc.png |
+| 2026-11-20 09:18:21 | Stripe | Software Engineer, Core Technology | Bangalore | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Do you opt-in to receive WhatsApp messages from Stripe Recruiting?*, Are you authorized to wo | 40 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Are you authorized to work in the location(s) you selected in your previous response?* (could not set), Will you require Stripe to sponsor you for a work permit now or in the future for the location(s) you selected in in your previous response? * (could not set), If this role offers the option to work from a remote location, do you plan to work remotely?* (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/stripe/jobs/7618977) | missing-stripe.png |
+| 2026-11-20 09:18:49 | Togetherai | Technical Support Engineer (Inference) - India Weekends | Pune or Bangalore, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you legally authorized to work in the country where the job is located?*, Will you now or | 8 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Are you legally authorized to work in the country where the job is located?* (could not set), Will you now or in the future require company sponsorship to retain or extend your work authorization in the country where the job is located?* (could not set), How would you describe your gender identity? (mark all that apply) (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/togetherai/jobs/5069532007) | missing-togetherai.png |
 
 ### Companies touched for this candidate
 
@@ -441,8 +494,8 @@
 | --- | --- | --- | --- | --- | --- |
 | ElevenLabs | ashby | no | 13 | 0 | not yet |
 | Mercor | ashby | yes | 10 | 2 | DONE |
+| Supabase | ashby | no | 10 | 0 | not yet |
 | Bitgo | greenhouse | no | 8 | 0 | not yet |
-| Supabase | ashby | no | 8 | 0 | not yet |
 | Alan | ashby | no | 7 | 0 | not yet |
 | Turing | greenhouse | no | 4 | 1 | DONE |
 | LangChain | ashby | yes | 4 | 0 | not yet |
@@ -450,21 +503,26 @@
 | Writer | ashby | yes | 4 | 0 | not yet |
 | TrueFoundry | greenhouse | yes | 4 | 2 | DONE |
 | Sarvam AI | ashby | yes | 4 | 2 | DONE |
+| IMC Trading | greenhouse | no | 4 | 0 | not yet |
 | Starburst | greenhouse | no | 3 | 0 | not yet |
+| Stripe | greenhouse | no | 3 | 0 | not yet |
 | Cursor (Anysphere) | ashby | no | 2 | 0 | not yet |
 | Scale AI | greenhouse | yes | 2 | 0 | not yet |
 | Suno | ashby | yes | 2 | 0 | not yet |
 | Smallest AI | ashby | yes | 2 | 0 | not yet |
 | Agoda | greenhouse | no | 2 | 0 | not yet |
 | Databricks | greenhouse | yes | 2 | 0 | not yet |
+| Anyscale | ashby | no | 2 | 2 | DONE |
+| Rubrik | greenhouse | no | 2 | 0 | not yet |
 | Baseten | ashby | yes | 1 | 1 | DONE |
 | Quora | ashby | no | 1 | 0 | not yet |
 | Unstructured | ashby | no | 1 | 0 | not yet |
-| Anyscale | ashby | no | 1 | 1 | DONE |
-| IMC Trading | greenhouse | no | 1 | 0 | not yet |
 | Mindtickle | lever | no | 1 | 0 | not yet |
 | MongoDB | greenhouse | no | 1 | 0 | not yet |
-| Rubrik | greenhouse | no | 1 | 0 | not yet |
+| Coinbase | greenhouse | no | 1 | 0 | not yet |
+| Eudia | greenhouse | no | 1 | 0 | not yet |
+| GitLab | greenhouse | no | 1 | 0 | not yet |
+| Togetherai | greenhouse | no | 1 | 0 | not yet |
 
 ---
 
