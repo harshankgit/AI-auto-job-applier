@@ -500,6 +500,51 @@ greenhouse:
 - token: vonage
   name: Vonage
   ai: false
+- token: agoda
+  name: Agoda
+- token: cloudsek
+  name: CloudSEK
+  ai: true
+- token: commvault
+  name: Commvault
+- token: glance
+  name: Glance
+  ai: true
+- token: highradius
+  name: HighRadius
+  ai: true
+- token: inmobi
+  name: InMobi
+  ai: true
+- token: sigmoid
+  name: Sigmoid
+  ai: true
+- token: slice
+  name: slice
+- token: stage
+  name: STAGE
+- token: startree
+  name: StarTree
+- token: truefoundry
+  name: TrueFoundry
+  ai: true
+- token: typeface
+  name: Typeface
+  ai: true
+- token: zenoti
+  name: Zenoti
+- token: groupon
+  name: Groupon
+- token: imc
+  name: IMC Trading
+- token: jumptrading
+  name: Jump Trading
+- token: newrelic
+  name: New Relic
+- token: pagerduty
+  name: PagerDuty
+- token: sumologic
+  name: Sumo Logic
 lever:
 - token: palantir
   name: Palantir
@@ -585,6 +630,19 @@ lever:
 - token: wealthfront
   name: Wealthfront
   ai: false
+- token: 100ms
+  name: 100ms
+- token: fampay
+  name: FamPay
+- token: hevodata
+  name: Hevo Data
+  ai: true
+- token: mindtickle
+  name: Mindtickle
+- token: pocketfm
+  name: Pocket FM
+- token: zeta
+  name: Zeta
 ashby:
 - token: openai
   name: OpenAI
@@ -994,3 +1052,36 @@ ashby:
 - token: ycombinator
   name: Ycombinator
   ai: false
+- token: bolna
+  name: Bolna AI
+  ai: true
+- token: bounce
+  name: Bounce
+- token: composio
+  name: Composio
+  ai: true
+- token: ditto
+  name: Ditto Insurance
+- token: gigaml
+  name: Giga ML
+  ai: true
+- token: sarvam
+  name: Sarvam AI
+  ai: true
+- token: smallest
+  name: Smallest AI
+  ai: true
+- token: spotdraft
+  name: SpotDraft
+  ai: true
+- token: yotta
+  name: Yotta
+  ai: true
+- token: oyster
+  name: Oyster HR
+- token: sophos
+  name: Sophos
+- token: tekion
+  name: Tekion
+- token: thoughtworks
+  name: Thoughtworks

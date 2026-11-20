@@ -70,7 +70,8 @@ SEMANTICS: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("github", ("github", "git hub")),
     ("portfolio", ("portfolio", "website", "personal site", "blog", "url", "web page")),
     ("company", ("current company", "current employer", "employer", "company")),
-    ("title", ("current title", "current role", "job title", "your title")),
+    ("title", ("current title", "current role", "job title", "your title",
+               "current designation", "designation", "current position")),
     ("location", ("location", "city", "where are you based", "current city")),
     ("country", ("country",)),
     ("school", ("school", "university", "college", "institution")),
@@ -79,7 +80,9 @@ SEMANTICS: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("grad_year", ("graduation", "grad year", "year of completion", "end date")),
     # Bare "name" only after school/company/etc. so "School Name" is a school.
     ("full_name", ("name",)),
-    ("years", ("years of experience", "how many years", "total experience", "yoe")),
+    ("years", ("years of experience", "how many years", "total experience", "yoe",
+               "total professional experience", "relevant professional experience",
+               "experience in years", "experience (in years)")),
     ("resume", ("resume", "cv", "attach", "upload")),
     ("cover_letter", ("cover letter", "why do you want", "why are you interested",
                       "tell us about", "what interests you", "what about",
@@ -171,6 +174,39 @@ def _answer_rules(label: str, answers: dict) -> str | None:
     return None
 
 
+_EDU_DATE_RE = re.compile(r"^(start|end) date (month|year)$")
+_MONTHS = ("January", "February", "March", "April", "May", "June", "July",
+           "August", "September", "October", "November", "December")
+
+
+def _edu_date_answer(label: str, identity: Identity, options: list[str] | None) -> str | None:
+    """Greenhouse education block: 'Start date month/year', 'End date month/year'.
+
+    These used to collide with the 'start date' (notice) rule and the
+    grad_year semantic. Derive them from the graduation year: a 4-year degree
+    starting in August and ending in May of the graduation year.
+    """
+    m = _EDU_DATE_RE.match(_lower(label))
+    if not m:
+        return None
+    grad = identity.resolve_token("ANSWER_GRAD_YEAR") or ""
+    if not str(grad).strip().isdigit():
+        return None
+    grad_y = int(str(grad).strip())
+    which, part = m.group(1), m.group(2)
+    if part == "year":
+        value = str(grad_y - 4 if which == "start" else grad_y)
+    else:
+        value = "August" if which == "start" else "May"
+    if options:
+        picked = brain.choose_option(value, options)
+        if not picked and part == "month":
+            num = str(_MONTHS.index(value) + 1)
+            picked = next((o for o in options if o.strip() in (num, num.zfill(2))), None)
+        return picked
+    return value
+
+
 def resolve_value(
     label: str, semantic: str, identity: Identity, answers: dict, job=None,
     options: list[str] | None = None,
@@ -182,6 +218,10 @@ def resolve_value(
     """
     if is_eeo(label):
         return None, "EEO/demographic field - intentionally not answered"
+
+    edu = _edu_date_answer(label, identity, options)
+    if edu is not None:
+        return edu, "education dates derived from graduation year"
 
     if semantic in IDENTITY_KEYS and not options:
         token = IDENTITY_TOKEN[semantic]
@@ -957,6 +997,14 @@ def _combobox_queries(value: str) -> list[str]:
         out.append(f"{parts[0]}, {parts[-1]}")
     if parts:
         out.append(parts[0])
+    # Many ATS city lists still use the old name; try it after the real one.
+    aliases = {"gurugram": "Gurgaon", "bengaluru": "Bangalore", "mumbai": "Bombay",
+               "medicaps university": "Medi-Caps University"}
+    if parts and parts[0].lower() in aliases:
+        alt = aliases[parts[0].lower()]
+        if len(parts) >= 2:
+            out.append(f"{alt}, {parts[-1]}")
+        out.append(alt)
     seen: list[str] = []
     for q in out:
         if q and q not in seen:
@@ -1275,6 +1323,13 @@ def apply_plan(page: Page, plans: list[FieldPlan]) -> dict[str, Any]:
             audit.append({"label": plan.label, "status": "skipped", "reason": plan.reason})
             continue
 
+        # The resume upload makes Greenhouse's React form remount, which
+        # detaches every locator captured during planning. Re-query first.
+        # Plan locators are positional (nth=N); filling earlier comboboxes
+        # shifts the DOM, so N then points at a different control.
+        if plan.kind not in ("radio", "buttons"):
+            plan.locator = _relocate(page, plan)
+
         ok = False
         if plan.value == DECLINE_SENTINEL:
             ok = _pick_decline(page, plan.locator, plan.kind)
@@ -1290,6 +1345,13 @@ def apply_plan(page: Page, plans: list[FieldPlan]) -> dict[str, Any]:
             ok = _pick_option(plan.locator, plan.value)
         elif plan.kind == "combobox":
             ok = _fill_combobox(page, plan.locator, plan.value)
+            if not ok:
+                for alt in _combobox_fallbacks(plan):
+                    if _fill_combobox(page, plan.locator, alt):
+                        ok = True
+                        plan.reason = f"{plan.reason}; list lacked '{plan.value}', chose '{alt}'"
+                        plan.value = alt
+                        break
         elif plan.kind == "checkbox":
             ok = _set_checkbox(plan.locator, plan.value)
         elif plan.kind == "buttons":
@@ -1366,6 +1428,32 @@ def apply_plan(page: Page, plans: list[FieldPlan]) -> dict[str, Any]:
     }
 
 
+_HEAR_FALLBACKS = ("Company Website", "Website", "Careers Page", "Career Site",
+                   "Job Posting", "Job Board", "LinkedIn", "Other")
+
+
+def _combobox_fallbacks(plan: FieldPlan) -> list[str]:
+    """Honest second choices when a dropdown does not list our exact answer.
+
+    Never swaps in a different fact (another city, another school): only the
+    form's own catch-all ('Other') or a synonym of the same answer.
+    """
+    low = _lower(plan.label)
+    if any(k in low for k in ("hear", "come to know", "get to know", "find out", "referral source")):
+        return list(_HEAR_FALLBACKS)
+    if plan.semantic == "degree":
+        return ["Bachelor of Technology", "B.Tech", "Bachelor of Engineering",
+                "Bachelor's", "Bachelors", "Other"]
+    if plan.semantic == "discipline":
+        return ["Computer Science and Engineering", "Computer Engineering",
+                "Information Technology", "Engineering", "Other"]
+    if plan.semantic in ("school", "location") or "location" in low or "city" in low:
+        return ["Other - Not Listed", "Other"]
+    if plan.required:
+        return ["Other"]
+    return []
+
+
 def _relocate(page: Page, plan: FieldPlan) -> Locator:
     """Fresh locator for a planned field, by id when the ATS gave us one.
 
@@ -1407,7 +1495,10 @@ def _readback(plan: FieldPlan, el: Locator | None = None) -> bool:
     target = el if el is not None else plan.locator
     try:
         if plan.kind == "combobox":
-            return bool(_combobox_value(target).strip())
+            # Greenhouse's '#country' is the phone dial-code picker: a correct
+            # 'India +91' pick renders as just '+91'.
+            dial_ok = ((plan.meta or {}).get("id") or "") == "country"
+            return bool(_combobox_value(target, allow_dial=dial_ok).strip())
         if plan.kind == "select":
             return bool((target.input_value() or "").strip())
         current = (target.input_value() or "").strip()

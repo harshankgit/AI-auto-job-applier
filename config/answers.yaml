@@ -24,14 +24,16 @@ rules:
   # Education / qualification free-text (seen on Turing's Greenhouse form).
   - {match: ["highest qualification", "highest education", "qualification, colle", "degree and college", "education details", "college name", "university name", "graduation year"], answer: "ANSWER_EDUCATION"}
   - {match: ["notice", "resign"], answer: "30 days"}
-  - {match: ["how did you hear", "how did you find", "how did you learn", "referral source", "where did you hear"], answer: "Company careers page"}
+  - {match: ["before our reach", "did you know about"], answer: "Yes"}
+  - {match: ["how did you hear", "how did you find", "how did you learn", "referral source", "where did you hear", "come to know", "get to know about"], answer: "Company careers page"}
   - {match: ["stay up to date", "receive alerts", "similar jobs", "marketing email", "talent community", "newsletter"], answer: "No"}
-  - {match: ["years of experience", "how many years"], answer: "ANSWER_BRAIN"}
+  - {match: ["years of experience", "how many years", "total professional experience", "relevant professional experience", "experience in years", "experience (in years)", "total experience"], answer: "ANSWER_BRAIN"}
+  - {match: ["one word that comes to your mind", "describe us in one word", "in one word"], answer: "Innovation"}
   - {match: ["linkedin"], answer: "ANSWER_LINKEDIN"}
   - {match: ["github", "git hub"], answer: "ANSWER_GITHUB"}
   - {match: ["portfolio", "personal website", "website", "blog"], answer: "ANSWER_PORTFOLIO"}
   - {match: ["current company", "present employer", "current employer"], answer: "ANSWER_COMPANY"}
-  - {match: ["current title", "current role", "job title"], answer: "ANSWER_TITLE"}
+  - {match: ["current title", "current role", "job title", "designation", "current position"], answer: "ANSWER_TITLE"}
   - {match: ["city", "where are you based", "current location", "location"], answer: "ANSWER_BRAIN"}
   - {match: ["country"], answer: "India"}
   - {match: ["phone", "mobile", "contact number"], answer: "ANSWER_PHONE"}
