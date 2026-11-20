@@ -1,3 +1,4 @@
+import { withMac } from "@/lib/mac-proxy";
 import fsp from "node:fs/promises";
 import { NextResponse } from "next/server";
 
@@ -24,7 +25,7 @@ async function load(): Promise<Private> {
   }
 }
 
-export async function GET(req: Request) {
+async function handleGET(req: Request) {
   if (!rootIsPresent()) return NextResponse.json({ details: {}, readOnly: true });
   const cid = new URL(req.url).searchParams.get("candidate") ?? "";
   if (!isCandidateId(cid)) return NextResponse.json({ error: "unknown candidate" }, { status: 400 });
@@ -38,7 +39,7 @@ export async function GET(req: Request) {
   return NextResponse.json({ details, readOnly: false }, { headers: { "cache-control": "no-store" } });
 }
 
-export async function POST(req: Request) {
+async function handlePOST(req: Request) {
   if (!rootIsPresent()) {
     return NextResponse.json({ error: "details can only be saved on the machine that runs the bot" }, { status: 503 });
   }
@@ -67,3 +68,6 @@ export async function POST(req: Request) {
   await fsp.rename(tmp, PATHS.privateProfile);
   return NextResponse.json({ saved: true, note: "the running bot picks this up on its next restart" });
 }
+
+export const GET = withMac(handleGET);
+export const POST = withMac(handlePOST);

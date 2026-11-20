@@ -1,3 +1,4 @@
+import { withMac } from "@/lib/mac-proxy";
 import { NextResponse } from "next/server";
 
 import { computeStats, loadApplications } from "@/lib/applications";
@@ -7,7 +8,7 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 /** Always 200: an unreadable source degrades to an empty set plus `error`. */
-export async function GET() {
+async function handleGET() {
   try {
     const payload = await loadApplications();
     return NextResponse.json(payload, {
@@ -23,3 +24,5 @@ export async function GET() {
     return NextResponse.json(fallback, { headers: { "cache-control": "no-store" } });
   }
 }
+
+export const GET = withMac(handleGET);

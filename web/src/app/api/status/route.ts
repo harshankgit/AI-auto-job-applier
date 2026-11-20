@@ -1,3 +1,4 @@
+import { withMac } from "@/lib/mac-proxy";
 import { NextResponse } from "next/server";
 
 import { getStatus } from "@/lib/runner";
@@ -6,7 +7,7 @@ import type { RunStatus } from "@/lib/types";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+async function handleGET() {
   try {
     const status = await getStatus();
     return NextResponse.json(status, { headers: { "cache-control": "no-store" } });
@@ -22,3 +23,5 @@ export async function GET() {
     return NextResponse.json(idle, { headers: { "cache-control": "no-store" } });
   }
 }
+
+export const GET = withMac(handleGET);

@@ -1,3 +1,4 @@
+import { withMac } from "@/lib/mac-proxy";
 import { rootIsPresent } from "@/lib/paths";
 import { getStatus } from "@/lib/runner";
 import fs from "node:fs";
@@ -8,7 +9,7 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 /** Cheap liveness probe used by the site badge, the tunnel loop and the self-test loop. */
-export async function GET() {
+async function handleGET() {
   const root = rootIsPresent();
   let selftest: unknown = null;
   if (root && PROJECT_ROOT) {
@@ -26,3 +27,5 @@ export async function GET() {
   }
   return Response.json({ ok: true, root, running, at: new Date().toISOString(), selftest });
 }
+
+export const GET = withMac(handleGET);

@@ -1,3 +1,4 @@
+import { withMac } from "@/lib/mac-proxy";
 import fsp from "node:fs/promises";
 import { NextResponse } from "next/server";
 
@@ -29,14 +30,14 @@ async function readJson<T>(file: string, fallback: T): Promise<T> {
 }
 
 /** Answers are stored only on the bot machine (data/ is git-ignored), never in the repo. */
-export async function GET() {
+async function handleGET() {
   if (!rootIsPresent()) return NextResponse.json({ learned: {}, readOnly: true });
   const data = await readJson<Learned>(PATHS.learned, {});
   // Only expose which questions are answered, plus the answers themselves for the owner's machine.
   return NextResponse.json({ learned: data, readOnly: false }, { headers: { "cache-control": "no-store" } });
 }
 
-export async function POST(req: Request) {
+async function handlePOST(req: Request) {
   if (!rootIsPresent()) {
     return NextResponse.json(
       { error: "answers can only be saved on the machine that runs the bot (open the dashboard on that Mac)" },
@@ -79,3 +80,6 @@ export async function POST(req: Request) {
   await fsp.rename(tmp, PATHS.learned);
   return NextResponse.json({ saved: clean.length, candidate });
 }
+
+export const GET = withMac(handleGET);
+export const POST = withMac(handlePOST);

@@ -1,3 +1,4 @@
+import { withMac } from "@/lib/mac-proxy";
 import fsp from "node:fs/promises";
 import { NextResponse } from "next/server";
 
@@ -7,7 +8,7 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 /** Success / failure breakdown written by `python -m jobbot.learn` (and by every live run). */
-export async function GET() {
+async function handleGET() {
   try {
     const [raw, stat] = await Promise.all([fsp.readFile(PATHS.failures, "utf8"), fsp.stat(PATHS.failures)]);
     return NextResponse.json(
@@ -21,3 +22,5 @@ export async function GET() {
     );
   }
 }
+
+export const GET = withMac(handleGET);

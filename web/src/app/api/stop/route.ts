@@ -1,3 +1,4 @@
+import { withMac } from "@/lib/mac-proxy";
 import { NextResponse } from "next/server";
 
 import { rootIsPresent } from "@/lib/paths";
@@ -6,7 +7,7 @@ import { stopRun } from "@/lib/runner";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export async function POST() {
+async function handlePOST() {
   if (!rootIsPresent()) {
     return NextResponse.json(
       { error: "the jobbot project root is not reachable from this server, so there is no run to stop here" },
@@ -23,3 +24,5 @@ export async function POST() {
     );
   }
 }
+
+export const POST = withMac(handlePOST);

@@ -1,3 +1,4 @@
+import { withMac } from "@/lib/mac-proxy";
 import fsp from "node:fs/promises";
 import path from "node:path";
 
@@ -28,7 +29,7 @@ function stamp(): string {
  * candidate's `resume:` value in config/profiles.yaml at the new file. The YAML
  * is edited line-wise, so comments, key order and formatting all survive.
  */
-export async function POST(request: Request) {
+async function handlePOST(request: Request) {
   if (!rootIsPresent()) {
     return NextResponse.json(
       { error: "the jobbot project root is not reachable from this server" },
@@ -110,3 +111,5 @@ export async function POST(request: Request) {
     bytes: file.size,
   });
 }
+
+export const POST = withMac(handlePOST);

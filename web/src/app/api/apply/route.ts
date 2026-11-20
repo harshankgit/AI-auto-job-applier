@@ -1,3 +1,4 @@
+import { withMac } from "@/lib/mac-proxy";
 import { NextResponse } from "next/server";
 
 import { candidateLabel, isRunTarget } from "@/lib/candidates";
@@ -22,7 +23,7 @@ function parseLimit(value: unknown): number {
  * Never with --show (Chrome stays parked off-screen) and never --dry-run.
  * One run at a time, because the bot drives a single shared Chrome profile.
  */
-export async function POST(request: Request) {
+async function handlePOST(request: Request) {
   let body: unknown;
   try {
     body = await request.json();
@@ -78,3 +79,5 @@ export async function POST(request: Request) {
     status: outcome.status,
   });
 }
+
+export const POST = withMac(handlePOST);

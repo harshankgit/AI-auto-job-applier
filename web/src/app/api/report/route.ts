@@ -1,3 +1,4 @@
+import { withMac } from "@/lib/mac-proxy";
 import fsp from "node:fs/promises";
 
 import { NextResponse } from "next/server";
@@ -7,7 +8,7 @@ import { PATHS } from "@/lib/paths";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+async function handleGET() {
   let markdown = "";
   let updatedAt: string | null = null;
   try {
@@ -22,3 +23,5 @@ export async function GET() {
     { headers: { "cache-control": "no-store" } },
   );
 }
+
+export const GET = withMac(handleGET);
