@@ -23,6 +23,8 @@ const OFFLINE_MSG = "The Mac is not reachable right now (it has to be on and onl
 type Resolved = { url: string | null; anyMessage: boolean; at: number };
 const cache = new Map<string, Resolved>();
 
+const DEFAULT_KEY = "7a5d7e02ff468d4897bc2b2e5b28ccf3";
+
 async function hmacHex(key: string, data: string): Promise<string> {
   const enc = new TextEncoder();
   const k = await crypto.subtle.importKey("raw", enc.encode(key), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
@@ -127,7 +129,9 @@ async function forward(req: Request, body: ArrayBuffer | undefined, base: string
 /** Returns a proxied response, or null when the local handler should answer (with `link` to tag it). */
 async function proxyToMac(req: Request): Promise<{ res: Response | null; link: string }> {
   const src = new URL(req.url);
-  const key = req.headers.get("x-jobbot-key") || src.searchParams.get("key") || "";
+  // Built-in default so the hosted site connects without the user typing anything.
+  const key =
+    req.headers.get("x-jobbot-key") || src.searchParams.get("key") || process.env.JOBBOT_ACCESS_KEY || DEFAULT_KEY;
   if (!key) return { res: null, link: "nokey" };
   const isRead = req.method === "GET" || req.method === "HEAD";
   const body = isRead ? undefined : await req.arrayBuffer();
