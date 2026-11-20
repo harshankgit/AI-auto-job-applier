@@ -17,6 +17,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import shutil
 import subprocess
 import time
 import urllib.error
@@ -92,16 +93,22 @@ class Run:
 
 
 def check_dashboard(r: Run) -> bool:
-    code, _, body = http(f"{LOCAL}/api/health")
-    if r.check("local dashboard", code == 200, f"HTTP {code}"):
+    bad = []
+    body = ""
+    for path in ("/api/health", "/api/status", "/api/applications", "/"):
+        code, _, body = http(f"{LOCAL}{path}", timeout=90)
+        if code != 200:
+            bad.append(f"{path} HTTP {code}")
+    if r.check("local dashboard", not bad, "; ".join(bad) or "all endpoints 200"):
         return True
-    r.fix("restarting local dashboard (port 3001)")
-    subprocess.run("lsof -ti tcp:3001 | xargs kill", shell=True, check=False)
+    r.fix("restarting local dashboard (port 3001) with a clean .next cache")
+    subprocess.run("pkill -f 'next dev --port 3001'; lsof -ti tcp:3001 | xargs kill", shell=True, check=False)
     time.sleep(3)
+    shutil.rmtree(ROOT / "web" / ".next", ignore_errors=True)
     sh("bash", "-c", "cd web && nohup npx next dev --port 3001 > ../logs/dashboard.log 2>&1 &")
     for _ in range(40):
         time.sleep(3)
-        if http(f"{LOCAL}/api/health")[0] == 200:
+        if http(f"{LOCAL}/api/status", timeout=90)[0] == 200:
             return r.check("local dashboard after fix", True)
     return r.check("local dashboard after fix", False, body)
 

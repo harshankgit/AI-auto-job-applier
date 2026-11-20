@@ -10,8 +10,8 @@ wheels/
 .venv
 
 # Runtime data (chrome profiles, DB, screenshots, logs)
-data/
-logs/
+/data/
+/logs/
 # Secrets
 .env*
 config/service_account.json
