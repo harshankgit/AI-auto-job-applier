@@ -224,7 +224,7 @@ def fetch_remoteok() -> list[Job]:
 def discover(
     sources: Iterable[str] = ("greenhouse", "lever", "ashby"),
     include_aggregators: bool = True,
-    workers: int = 24,
+    workers: int = 64,
     progress=None,
 ) -> tuple[list[Job], dict[str, Any]]:
     """Fetch every configured board in parallel.

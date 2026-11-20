@@ -11,6 +11,18 @@ defaults:
   how_did_you_hear: "Company careers page"
 
 rules:
+  - {match: ["whatsapp", "text message", "sms updates"], answer: "No"}
+  - {match: ["cuba, iran", "north korea", "sanctioned countr"], answer: "No"}
+  - {match: ["previous employment at", "employed by", "employment agreement", "post-employment"], answer: "No"}
+  - {match: ["are you located in india", "based in india", "reside in india", "currently located in india", "living in india"], answer: "Yes"}
+  - {match: ["how or where did you", "find out about", "learn about this", "hear about this"], answer: "Company careers page"}
+  - {match: ["most recent employer", "current or previous employer"], answer: "ANSWER_COMPANY"}
+  - {match: ["educational qualification", "highest degree", "your degree"], answer: "ANSWER_EDUCATION"}
+  - {match: ["how soon", "join us", "joining time", "time to join", "can you join"], answer: "30 days"}
+  - {match: ["know any existing", "existing employee", "know anyone", "relatives working", "connections to current employees", "family members employed"], answer: "No"}
+  - {match: ["job board on which you found", "name of employee or recruiter"], answer: "Company careers page"}
+  - {match: ["are you currently working", "currently employed", "are you employed"], answer: "Yes"}
+  - {match: ["years of work experience", "total work experience"], answer: "ANSWER_BRAIN"}
   - {match: ["sponsorship", "sponsor"], answer: "ANSWER_BRAIN"}
   - {match: ["legally authorized", "authorized to work", "work authorization", "right to work"], answer: "ANSWER_BRAIN"}
   - {match: ["notice period"], answer: "30 days"}

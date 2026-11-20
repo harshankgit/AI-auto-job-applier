@@ -319,3 +319,28 @@ def history_results(candidate_ids: Iterable[str] | None = None) -> list[Applicat
             match_reasons=_repair_reasons(str(_get(r, "match_reasons"))),
         ))
     return out
+
+
+def submitted_companies(candidate_id: str) -> set[str]:
+    """Distinct companies (lower-cased name) with at least one SUBMITTED application."""
+    with closing(_connect()) as conn:
+        rows = conn.execute(
+            "SELECT DISTINCT lower(trim(company)) AS c FROM attempts WHERE candidate_id=? AND status=?",
+            (candidate_id, SUBMITTED),
+        ).fetchall()
+    return {r["c"] for r in rows if r["c"]}
+
+
+def blocked_companies(candidate_id: str, min_fails: int = 2) -> set[str]:
+    """Companies (lower-cased names) where this candidate hit >= min_fails
+    failed/captcha/error attempts and never submitted - the same blocker
+    (required GitHub, captcha, foreign work-auth) repeats on every role there,
+    so target mode moves on to fresh companies instead."""
+    with closing(_connect()) as conn:
+        rows = conn.execute(
+            "SELECT lower(trim(company)) AS co, "
+            "SUM(status IN ('FAILED_VALIDATION','CAPTCHA_BLOCKED','ERROR')) AS bad, "
+            "SUM(status='SUBMITTED') AS ok FROM attempts WHERE candidate_id=? GROUP BY co",
+            (candidate_id,),
+        ).fetchall()
+    return {r["co"] for r in rows if r["co"] and (r["ok"] or 0) == 0 and (r["bad"] or 0) >= min_fails}

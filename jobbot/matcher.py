@@ -124,7 +124,7 @@ def classify_geo(job) -> tuple[str, str]:
     if not loc:
         return GEO_UNKNOWN, "location not stated on the posting"
 
-    india_word = _has(loc, INDIA_WORDS)
+    india_word = _has_word(loc, INDIA_WORDS)
     remote_word = _has(loc, REMOTE_WORDS)
 
     if india_word:
@@ -145,6 +145,22 @@ def classify_geo(job) -> tuple[str, str]:
         return GEO_REMOTE_OPEN, f"remote, no country restriction stated ({job.location})"
 
     return GEO_ABROAD, f"onsite abroad - would need relocation/visa ({job.location})"
+
+
+_WORD_RE_CACHE: dict[str, re.Pattern] = {}
+
+
+def _has_word(text: str, needles) -> str | None:
+    """Like _has but whole-word, so 'india' does not match 'Indiana'."""
+    for n in needles:
+        if not n:
+            continue
+        rx = _WORD_RE_CACHE.get(n)
+        if rx is None:
+            rx = _WORD_RE_CACHE[n] = re.compile(r"(?<![a-z])" + re.escape(n) + r"(?![a-z])")
+        if rx.search(text):
+            return n
+    return None
 
 
 def _has(text: str, needles) -> str | None:

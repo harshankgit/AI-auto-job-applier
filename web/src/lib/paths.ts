@@ -37,14 +37,28 @@ function discoverRoot(): string {
 
 export const PROJECT_ROOT = discoverRoot();
 
+/**
+ * Read-only copy of the reports bundled at build time (scripts/snapshot.mjs).
+ * Used when the bot's project root is absent, e.g. on Vercel, so the hosted
+ * dashboard still shows the latest pushed applications instead of crashing.
+ */
+export const SNAPSHOT_DIR = path.join(process.cwd(), "snapshot");
+const HAS_ROOT = looksLikeRoot(PROJECT_ROOT);
+
+function pick(live: string, snapshotName: string): string {
+  if (HAS_ROOT) return live;
+  const snap = path.join(SNAPSHOT_DIR, snapshotName);
+  return fs.existsSync(snap) ? snap : live;
+}
+
 export const PATHS = {
   root: PROJECT_ROOT,
   db: path.join(PROJECT_ROOT, "data", "applications.db"),
-  csv: path.join(PROJECT_ROOT, "reports", "applications.csv"),
-  markdown: path.join(PROJECT_ROOT, "reports", "APPLICATIONS.md"),
+  csv: pick(path.join(PROJECT_ROOT, "reports", "applications.csv"), "applications.csv"),
+  markdown: pick(path.join(PROJECT_ROOT, "reports", "APPLICATIONS.md"), "APPLICATIONS.md"),
   log: path.join(PROJECT_ROOT, "logs", "realrun.log"),
   logDir: path.join(PROJECT_ROOT, "logs"),
-  profiles: path.join(PROJECT_ROOT, "config", "profiles.yaml"),
+  profiles: pick(path.join(PROJECT_ROOT, "config", "profiles.yaml"), "profiles.yaml"),
   resumeUploads: path.join(PROJECT_ROOT, "data", "resumes"),
   chromeProfile: path.join(PROJECT_ROOT, "data", "chrome-profile"),
 } as const;

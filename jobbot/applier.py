@@ -423,6 +423,8 @@ def run_batch(
     dry_run: bool = False,
     progress=None,
     on_result=None,
+    stop=None,
+    max_tries_per_company: int = 0,
 ) -> list[ApplicationResult]:
     """Apply down a ranked list. Never the same role twice; different roles at
     one company are fine (up to per_company each run+history)."""
@@ -437,11 +439,16 @@ def run_batch(
     answers_mtime = answers_file.stat().st_mtime if answers_file.exists() else 0
     answers_since = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime(answers_mtime))
 
+    company_tries: dict[str, int] = {}
     for match in matches:
         if done >= limit:
             break
+        if stop is not None and stop():
+            break
         job = match.job
         token = job.company_token
+        if max_tries_per_company and company_tries.get(token, 0) >= max_tries_per_company:
+            continue
 
         if not is_appliable(job):
             # Aggregator listing - no fillable form on the other end.
@@ -471,6 +478,7 @@ def run_batch(
         tried_this_run.add(role_id)
         results.append(result)
         done += 1
+        company_tries[token] = company_tries.get(token, 0) + 1
 
         if result.submitted or "clicked submit" in (result.detail or ""):
             company_hits[token] = company_hits.get(token, 0) + 1

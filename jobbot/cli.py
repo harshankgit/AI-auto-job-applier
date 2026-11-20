@@ -12,12 +12,14 @@ from __future__ import annotations
 import argparse
 import sys
 import threading
+import time
 
 from . import applier, browser, matcher, report, sheets, sources, store
 from .config import DATA_DIR, REPORTS_DIR, SHOTS_DIR, get_candidate, load_answers, load_profiles
 from .identity import load_identity
 
 ALL_CANDIDATES = ("harshank", "divya")
+NCR_WORDS = ("gurugram", "gurgaon", "delhi", "noida", "ncr", "faridabad", "ghaziabad")
 
 
 def log(msg: str = "") -> None:
@@ -127,7 +129,11 @@ def cmd_apply(args) -> int:
             log(f"    [{cid}] logged -> markdown + sheet ({result.job.company} / {result.status})")
 
         profile = None if cid == ALL_CANDIDATES[0] else DATA_DIR / f"chrome-profile-{cid}"
+        target = int(getattr(args, "target_submitted", 0) or 0)
         with browser.BrowserSession(headless=headless, offscreen=not show, profile_dir=profile) as session:
+            if target > 0:
+                _run_until_target(cid, ident, cand, session, target, _flush)
+                return
             out = applier.run_batch(
                 session, ranked, ident, answers,
                 limit=args.limit, per_company=args.per_company,
@@ -135,6 +141,96 @@ def cmd_apply(args) -> int:
             )
         log(f"  {ident.full_name}: {len(out)} attempts recorded")
         log("")
+
+    jobs_state = {"jobs": jobs, "at": time.time()}
+    jobs_lock = threading.Lock()
+
+    def _fresh_jobs(max_age: float):
+        with jobs_lock:
+            if time.time() - jobs_state["at"] > max_age:
+                log("[target] re-discovering job boards for new postings...")
+                try:
+                    new_jobs, new_stats = _discover(args)
+                    jobs_state["jobs"], jobs_state["at"] = new_jobs, time.time()
+                    stats.update(new_stats)
+                except Exception as exc:
+                    log(f"[target] re-discovery failed: {exc}")
+            return jobs_state["jobs"]
+
+    def _ordered(ranked, skip_companies):
+        """One job per company first (best company first, Gurugram/NCR then India
+        then remote), then second-best roles, and so on."""
+        per: dict[str, list] = {}
+        for m in ranked:
+            co = (m.job.company or "").strip().lower()
+            if not co or co in skip_companies:
+                continue
+            per.setdefault(co, []).append(m)
+
+        def pri(m):
+            loc = (m.job.location or "").lower()
+            ncr = any(w in loc for w in NCR_WORDS)
+            return (0 if ncr else 1 if m.geo == matcher.GEO_INDIA else 2, -m.score)
+
+        for lst in per.values():
+            lst.sort(key=pri)
+        rounds: list = []
+        depth = max((len(v) for v in per.values()), default=0)
+        for i in range(depth):
+            layer = [v[i] for v in per.values() if len(v) > i]
+            layer.sort(key=pri)
+            rounds.extend(layer)
+        return rounds
+
+    def _run_until_target(cid, ident, cand, session, target, _flush):
+        base = len(store.submitted_companies(cid))
+        goal = base + target
+        min_score = float(args.min_score)
+        floor = float(getattr(args, "min_score_floor", 40.0))
+        idle_rounds = 0
+        rnd = 0
+        log(f"=== {ident.full_name}: TARGET mode - {base} companies already submitted, goal {goal} ===")
+
+        def reached():
+            return len(store.submitted_companies(cid)) >= goal
+
+        while not reached():
+            rnd += 1
+            pool = _fresh_jobs(max_age=1800 if idle_rounds == 0 else 0)
+            ranked = matcher.rank(
+                pool, cand, min_score=min_score, require_ai=args.ai_only,
+                india_or_remote_only=args.india_remote_only,
+            )
+            done_cos = store.submitted_companies(cid)
+            blocked = store.blocked_companies(cid, 2)
+            ordered = _ordered(ranked, done_cos | blocked)
+            log(f"[{cid}] round {rnd}: {len(ordered)} candidate jobs at {len({m.job.company for m in ordered})} "
+                f"new companies (min score {min_score:g}) - submitted {len(done_cos)}/{goal}")
+
+            def _flush_progress(result, _f=_flush):
+                _f(result)
+                log(f"[{cid}] PROGRESS {len(store.submitted_companies(cid))}/{goal} companies submitted")
+
+            out = applier.run_batch(
+                session, ordered, ident, answers,
+                limit=10 ** 6, per_company=1, max_tries_per_company=2,
+                dry_run=args.dry_run, progress=lambda m, _c=cid: log(f"[{_c}] {m}"),
+                on_result=_flush_progress, stop=reached,
+            )
+            if reached():
+                break
+            if out:
+                idle_rounds = 0
+                continue
+            idle_rounds += 1
+            if min_score > floor:
+                min_score = max(floor, min_score - 5)
+                log(f"[{cid}] pool exhausted - widening match to min score {min_score:g}")
+                continue
+            wait = 600
+            log(f"[{cid}] every matching job tried; waiting {wait // 60} min for new postings...")
+            time.sleep(wait)
+        log(f"=== {ident.full_name}: TARGET reached - {len(store.submitted_companies(cid))} companies submitted ===")
 
     items = list(identities.items())
     if len(items) > 1 and not args.sequential:
@@ -275,6 +371,9 @@ def build_parser() -> argparse.ArgumentParser:
                    help="bring the Chrome window on screen (default: parked off-screen)")
     a.add_argument("--no-sheet", action="store_true")
     a.add_argument("--sequential", action="store_true", help="run candidates one after another, not in parallel")
+    a.add_argument("--target-submitted", type=int, default=0,
+                   help="keep finding + applying until N more DISTINCT companies are SUBMITTED")
+    a.add_argument("--min-score-floor", type=float, default=40.0)
     a.set_defaults(func=cmd_apply)
 
     r = common(sub.add_parser("run", help="alias for apply"))
@@ -285,6 +384,8 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument("--show", action="store_true")
     r.add_argument("--no-sheet", action="store_true")
     r.add_argument("--sequential", action="store_true")
+    r.add_argument("--target-submitted", type=int, default=0)
+    r.add_argument("--min-score-floor", type=float, default=40.0)
     r.set_defaults(func=cmd_apply)
 
     rp = sub.add_parser("report", help="rebuild markdown/CSV/sheet from the full audit history")
