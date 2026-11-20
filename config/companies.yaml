@@ -545,6 +545,33 @@ greenhouse:
   name: PagerDuty
 - token: sumologic
   name: Sumo Logic
+- token: capco
+  name: Capco
+  ai: false
+- token: anaplan
+  name: Anaplan
+  ai: false
+- token: energyexemplarllc
+  name: Energy Exemplar 
+  ai: false
+- token: toast
+  name: Toast
+  ai: false
+- token: deepintent
+  name: DeepIntent
+  ai: false
+- token: veeamsoftware
+  name: Veeam Software
+  ai: false
+- token: connectwise
+  name: ‎ConnectWise
+  ai: false
+- token: 6sense
+  name: 6sense
+  ai: false
+- token: binance
+  name: Binance
+  ai: false
 lever:
 - token: palantir
   name: Palantir
@@ -643,6 +670,51 @@ lever:
   name: Pocket FM
 - token: zeta
   name: Zeta
+- token: brillio-2
+  name: Brillio
+  ai: false
+- token: weekdayworks
+  name: Weekday (recruiter)
+  ai: false
+- token: extremenetworks
+  name: Extreme Networks
+  ai: false
+- token: kobie
+  name: Kobie
+  ai: false
+- token: safe
+  name: Safe Security
+  ai: false
+- token: levelai
+  name: Level AI
+  ai: true
+- token: wmg
+  name: Warner Music Group
+  ai: false
+- token: stable-money1
+  name: Stable Money
+  ai: false
+- token: acceldata
+  name: Acceldata
+  ai: false
+- token: nium
+  name: Nium
+  ai: false
+- token: valgenesis
+  name: ValGenesis
+  ai: false
+- token: zimperium
+  name: Zimperium
+  ai: false
+- token: omnidian
+  name: Omnidian
+  ai: false
+- token: crypto
+  name: Crypto.com
+  ai: false
+- token: rapidai
+  name: RapidAI
+  ai: true
 ashby:
 - token: openai
   name: OpenAI
@@ -1085,3 +1157,36 @@ ashby:
   name: Tekion
 - token: thoughtworks
   name: Thoughtworks
+- token: surveymonkey
+  name: SurveyMonkey
+  ai: false
+- token: handshake
+  name: Handshake
+  ai: false
+- token: uptimeai
+  name: Uptime AI
+  ai: true
+- token: aiprise
+  name: AiPrise
+  ai: true
+- token: cardboard
+  name: Cardboard
+  ai: false
+- token: allwyn-corp
+  name: Allwyn
+  ai: false
+- token: hinge-health
+  name: Hinge Health
+  ai: false
+- token: pravah
+  name: Pravah
+  ai: false
+- token: diagrid
+  name: Diagrid
+  ai: false
+- token: ripplestreet
+  name: Ripple Street
+  ai: false
+- token: provenirinc
+  name: Provenir
+  ai: false

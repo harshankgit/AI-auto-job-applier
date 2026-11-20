@@ -67,7 +67,11 @@ AI_ROLE_WORDS = (
 INDIA_WORDS = (
     "india", "bangalore", "bengaluru", "hyderabad", "pune", "gurugram",
     "gurgaon", "noida", "delhi", "mumbai", "chennai", "ahmedabad", "indore",
-    "kolkata", "jaipur", "remote - india", "apac",
+    "kolkata", "jaipur", "kochi", "coimbatore", "chandigarh", "mohali",
+    "trivandrum", "thiruvananthapuram", "nagpur", "bhopal", "vadodara",
+    "surat", "lucknow", "bhubaneswar", "mysore", "mysuru", "visakhapatnam",
+    "faridabad", "ghaziabad", "thane", "navi mumbai", "gandhinagar",
+    "remote - india", "apac",
 )
 
 REMOTE_WORDS = ("remote", "anywhere", "distributed", "work from home", "wfh")
