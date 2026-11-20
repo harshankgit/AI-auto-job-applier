@@ -1,0 +1,65 @@
+# Screening-question answer bank. Keys are matched against the question LABEL TEXT
+# (lowercased substring match), in order. First match wins.
+defaults:
+  work_authorization: "Yes"
+  requires_sponsorship: "No"
+  notice_period: "30 days"
+  willing_to_relocate: "Yes"
+  remote_ok: "Yes"
+  salary: "ANSWER_EXPECTED_CTC"
+  start_date: "30 days from offer"
+  how_did_you_hear: "Company careers page"
+
+rules:
+  - {match: ["sponsorship", "sponsor"], answer: "ANSWER_BRAIN"}
+  - {match: ["legally authorized", "authorized to work", "work authorization", "right to work"], answer: "ANSWER_BRAIN"}
+  - {match: ["notice period"], answer: "30 days"}
+  - {match: ["when can you start", "start date", "earliest start", "availability"], answer: "30 days from offer"}
+  - {match: ["relocat"], answer: "Yes"}
+  - {match: ["remote", "work from home", "hybrid"], answer: "Yes"}
+  # Salary: the user set explicit expectations (Harshank 14-15 LPA, Divya 4-5 LPA).
+  # Current-CTC questions are matched BEFORE expected-CTC ones so they don't collide.
+  - {match: ["current ctc", "current salary", "current compensation", "present ctc", "existing ctc", "current fixed"], answer: "ANSWER_CURRENT_CTC"}
+  - {match: ["expected ctc", "expected salary", "expected compensation", "salary expectation", "compensation expectation", "desired salary", "desired compensation", "expected pay", "rate expectation", "salary requirement", "ctc", "salary", "compensation"], answer: "ANSWER_EXPECTED_CTC"}
+  # Education / qualification free-text (seen on Turing's Greenhouse form).
+  - {match: ["highest qualification", "highest education", "qualification, colle", "degree and college", "education details", "college name", "university name", "graduation year"], answer: "ANSWER_EDUCATION"}
+  - {match: ["notice", "resign"], answer: "30 days"}
+  - {match: ["how did you hear", "how did you find", "how did you learn", "referral source", "source"], answer: "Company careers page"}
+  - {match: ["stay up to date", "receive alerts", "similar jobs", "marketing email", "talent community", "newsletter"], answer: "No"}
+  - {match: ["years of experience", "how many years"], answer: "ANSWER_BRAIN"}
+  - {match: ["linkedin"], answer: "ANSWER_LINKEDIN"}
+  - {match: ["github", "git hub"], answer: "ANSWER_GITHUB"}
+  - {match: ["portfolio", "personal website", "website", "blog"], answer: "ANSWER_PORTFOLIO"}
+  - {match: ["current company", "present employer", "current employer"], answer: "ANSWER_COMPANY"}
+  - {match: ["current title", "current role", "job title"], answer: "ANSWER_TITLE"}
+  - {match: ["city", "where are you based", "current location", "location"], answer: "ANSWER_BRAIN"}
+  - {match: ["country"], answer: "India"}
+  - {match: ["phone", "mobile", "contact number"], answer: "ANSWER_PHONE"}
+  - {match: ["pronoun"], answer: "ANSWER_SKIP"}
+  - {match: ["gender", "race", "ethnic", "veteran", "disability", "hispanic", "lgbt"], answer: "ANSWER_SKIP"}
+  - {match: ["visa", "immigration status"], answer: "ANSWER_BRAIN"}
+  - {match: ["criminal", "convicted", "background check"], answer: "No"}
+  - {match: ["non-compete", "noncompete", "restrictive covenant"], answer: "No"}
+  - {match: ["previously worked", "former employee", "worked at", "ever been employed"], answer: "No"}
+  - {match: ["referred by", "employee referral"], answer: "No"}
+  - {match: ["agree", "consent", "acknowledge", "confirm", "certify", "privacy", "terms"], answer: "Yes"}
+
+# Free-text / essay fallback. Used when a required textarea has no rule match.
+cover_letter_template: |
+  Hi,
+
+  I am applying for the {title} role at {company}. I am a {current_title} with
+  {years}+ years of hands-on experience building production web applications with
+  React, Next.js, Node.js, Express and MongoDB.
+
+  Recent work includes multi-vendor e-commerce platforms with real-time auction
+  bidding, role-based access control systems, and internal ERP dashboards used by
+  live clients. I work daily with AI-assisted development tooling and I am keen to
+  build products where AI is core to the experience.
+
+  My resume is attached with full details. I am based in India and available to
+  start within 30 days.
+
+  Thank you for your time.
+  {full_name}
+  {email} | {phone}

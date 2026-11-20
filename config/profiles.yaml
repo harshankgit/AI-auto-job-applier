@@ -1,0 +1,77 @@
+candidates:
+  - id: harshank
+    full_name: Harshank Kanungo
+    first_name: Harshank
+    last_name: Kanungo
+    email: harshankkanungo259@gmail.com
+    phone: "+918109774968"
+    phone_display: "+91 8109774968"
+    city: Gurugram
+    state: Haryana
+    country: India
+    location: "Gurugram, Haryana, India"
+    linkedin: "https://linkedin.com/in/harshank-kanungo-a4b178251"
+    github: "https://github.com/harshankgit"
+    portfolio: "https://auto-dealer-beige.vercel.app"
+    resume: "/Users/apple/Desktop/AI/harshank/Harshank_Kanungo_Full_Stack_Developer_ATS.pdf"
+    years_experience: 3
+    current_company: "Ethara AI"
+    current_title: "Software Engineer"
+    school: "Medicaps University, Indore"
+    degree: "Bachelor's Degree"
+    discipline: "Computer Science"
+    grad_year: 2024
+    # Salary expectation the user confirmed for Harshank: 14-15 LPA.
+    expected_ctc: "14-15 LPA"
+    expected_ctc_min_lpa: 14
+    expected_ctc_max_lpa: 15
+    expected_ctc_inr: "1500000"
+    current_ctc: "As per market standard - open to discuss"
+    # role keywords this candidate is a genuine fit for
+    role_include: [full stack, fullstack, full-stack, software engineer, software developer, backend,
+                   frontend, front end, web developer, mern, react, next.js, nextjs, node,
+                   javascript, typescript, application engineer, product engineer,
+                   ai engineer, forward deployed, solutions engineer, platform engineer]
+    seniority_ok: [associate, "", junior, mid, "mid-level", ii, "2", i, "1"]
+    seniority_block: [senior, sr, "sr.", staff, principal, "senior staff", director, vp, "vice president", head of,
+                      manager, lead, architect, fellow, distinguished, intern, internship]
+    skill_keywords: [react, next.js, node, express, mongodb, javascript, typescript, redux,
+                     rest api, supabase, html, css, git, rbac, authentication]
+
+  - id: divya
+    full_name: Divya Kanungo
+    first_name: Divya
+    last_name: Kanungo
+    email: divyakanungo008@gmail.com
+    phone: "+919109625701"
+    phone_display: "+91 9109625701"
+    city: Gurugram
+    state: Haryana
+    country: India
+    location: "Gurugram, Haryana, India"
+    linkedin: "https://linkedin.com/in/divya-kanungo-29b407339"
+    github: ""
+    portfolio: "https://auto-dealer-beige.vercel.app"
+    resume: "/Users/apple/Desktop/AI/resume/Divya_Kanungo_MERN_Stack_Developer.pdf"
+    years_experience: 1
+    current_company: "CMARIX Infotech"
+    current_title: "Junior Software Developer"
+    school: "Medi-Caps University, Indore"
+    degree: "Bachelor's Degree"
+    discipline: "Computer Science"
+    grad_year: 2026
+    # Salary expectation the user confirmed for Divya: 4-5 LPA.
+    expected_ctc: "4-5 LPA"
+    expected_ctc_min_lpa: 4
+    expected_ctc_max_lpa: 5
+    expected_ctc_inr: "500000"
+    current_ctc: "As per market standard - open to discuss"
+    role_include: [mern, react, frontend, front end, front-end, javascript, typescript,
+                   web developer, ui engineer, ui developer, full stack, fullstack, full-stack,
+                   node, software engineer, software developer, junior, associate, graduate,
+                   next.js, nextjs]
+    seniority_ok: [junior, associate, graduate, entry, trainee, "", i, "1", new grad]
+    seniority_block: [senior, sr, "sr.", staff, principal, "senior staff", director, vp, "vice president", head of,
+                      manager, lead, architect, fellow, distinguished, ii, iii, "3", "4", "5"]
+    skill_keywords: [react, next.js, node, express, mongodb, mongoose, javascript, typescript,
+                     redux, tailwind, jwt, rest api, html, css, vite, formik]

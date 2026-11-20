@@ -1,0 +1,34 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Runtime data (chrome profiles, DB, screenshots, logs)
+data/
+logs/
+# Secrets
+.env*
+config/service_account.json
+*service_account*.json
+config/*.bak
+# Web build output
+web/node_modules/
+web/.next/
+# Scratch / debug probes
+_found.yaml
+_merge_found.py
+_probe*.py
+*probe*.py
+framecheck.py
+framedebug.py
+ghcombo.py
+ghcountry.py
+ghdebug.py
+ghreal.py
+readback.py

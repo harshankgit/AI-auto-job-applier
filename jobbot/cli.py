@@ -1,0 +1,308 @@
+"""Command line entry point.
+
+  uv run python -m jobbot.cli discover
+  uv run python -m jobbot.cli match --candidate harshank --top 25
+  uv run python -m jobbot.cli run --dry-run --limit 3
+  uv run python -m jobbot.cli run --limit 10 --per-company 2
+  uv run python -m jobbot.cli report
+"""
+
+from __future__ import annotations
+
+import argparse
+import sys
+import threading
+
+from . import applier, browser, matcher, report, sheets, sources, store
+from .config import DATA_DIR, REPORTS_DIR, SHOTS_DIR, get_candidate, load_answers, load_profiles
+from .identity import load_identity
+
+ALL_CANDIDATES = ("harshank", "divya")
+
+
+def log(msg: str = "") -> None:
+    print(msg, flush=True)
+
+
+def _identities(which: str) -> dict:
+    ids = {}
+    for cid in (ALL_CANDIDATES if which == "both" else (which,)):
+        ids[cid] = load_identity(get_candidate(cid))
+    return ids
+
+
+def _discover(args) -> tuple[list, dict]:
+    log("Searching company job boards for real openings...")
+    jobs, stats = sources.discover(include_aggregators=not args.no_aggregators, progress=None)
+    log(f"  boards queried      : {stats['boards_queried']}")
+    log(f"  raw postings        : {stats['raw_jobs']}")
+    log(f"  real postings kept  : {stats['real_jobs']}")
+    log(f"  fake/test rejected  : {stats['rejected_fake']}")
+    if stats["failures"]:
+        log(f"  boards that failed  : {len(stats['failures'])}")
+    log(f"  postings at AI companies: {sum(1 for j in jobs if j.company_is_ai)}")
+    log("")
+    return jobs, stats
+
+
+def cmd_discover(args) -> int:
+    jobs, stats = _discover(args)
+    top = sorted(stats["per_company"].items(), key=lambda kv: -kv[1])[:15]
+    log("Biggest boards:")
+    for name, count in top:
+        log(f"  {count:>5}  {name}")
+    return 0
+
+
+def cmd_match(args) -> int:
+    jobs, _ = _discover(args)
+    for cid, ident in _identities(args.candidate).items():
+        cand = get_candidate(cid)
+        ranked = matcher.rank(
+            jobs, cand,
+            min_score=args.min_score,
+            require_ai=args.ai_only,
+            india_or_remote_only=args.india_remote_only,
+        )
+        summary = matcher.summarize(ranked)
+        log(f"=== {ident.full_name} ===")
+        log(f"  matches {summary['total']} across {summary['companies']} companies "
+            f"| AI {summary['ai_jobs']} | India/remote {summary['india_or_remote']} | top {summary['top_score']}")
+        for m in ranked[: args.top]:
+            flag = "AI" if m.job.company_is_ai else "  "
+            log(f"  {m.score:5.1f} {flag} {m.job.company:<22} {m.job.title[:52]:<52} {m.job.location[:26]}")
+        log("")
+    return 0
+
+
+def cmd_apply(args) -> int:
+    store.init()
+    jobs, stats = _discover(args)
+    identities = _identities(args.candidate)
+    answers = load_answers()
+    results = []
+
+    mode = "DRY RUN (fills the form, does NOT submit)" if args.dry_run else "LIVE (fills AND submits)"
+    log(f"Mode: {mode}")
+    show = getattr(args, "show", False)
+    headless = not show
+    if headless:
+        where = "real Chrome, HEADLESS (no window, never touches your screen)"
+    else:
+        where = "real Chrome, visible on screen (--show)"
+    log(f"Browser: {where}")
+    log("")
+
+    report_lock = threading.Lock()
+
+    def _write_reports(push_sheet: bool):
+        hist = store.history_results()
+        report.write_csv(hist)
+        report.write_markdown(hist, _identities("both"), stats)
+        if push_sheet:
+            sheets.try_push(hist, _identities("both"))
+
+    def _run_candidate(cid, ident):
+        cand = get_candidate(cid)
+        ranked = matcher.rank(
+            jobs, cand,
+            min_score=args.min_score,
+            require_ai=args.ai_only,
+            india_or_remote_only=args.india_remote_only,
+        )
+        log(f"=== {ident.full_name}: {len(ranked)} eligible jobs, applying to at most {args.limit} ===")
+        if not ranked:
+            log(f"  [{cid}] nothing cleared the score threshold")
+            return
+
+        def _flush(result):
+            # Rewrite from the full DB history so reports always show every
+            # company ever applied to, not just this run.
+            with report_lock:
+                results.append(result)
+                try:
+                    _write_reports(not args.no_sheet)
+                except Exception as exc:  # reporting must never stop applying
+                    log(f"    [{cid}] report write failed: {exc}")
+            log(f"    [{cid}] logged -> markdown + sheet ({result.job.company} / {result.status})")
+
+        profile = None if cid == ALL_CANDIDATES[0] else DATA_DIR / f"chrome-profile-{cid}"
+        with browser.BrowserSession(headless=headless, offscreen=not show, profile_dir=profile) as session:
+            out = applier.run_batch(
+                session, ranked, ident, answers,
+                limit=args.limit, per_company=args.per_company,
+                dry_run=args.dry_run, progress=lambda m, _c=cid: log(f"[{_c}] {m}"), on_result=_flush,
+            )
+        log(f"  {ident.full_name}: {len(out)} attempts recorded")
+        log("")
+
+    items = list(identities.items())
+    if len(items) > 1 and not args.sequential:
+        log(f"Running {len(items)} candidates in parallel (one Chrome each)")
+        errors = []
+
+        def _safe(cid, ident):
+            try:
+                _run_candidate(cid, ident)
+            except Exception as exc:
+                errors.append((cid, exc))
+                log(f"[{cid}] crashed: {type(exc).__name__}: {exc}")
+
+        threads = [threading.Thread(target=_safe, args=it, name=f"apply-{it[0]}") for it in items]
+        for t in threads:
+            t.start()
+        for t in threads:
+            t.join()
+    else:
+        for cid, ident in items:
+            _run_candidate(cid, ident)
+
+    _finish(results, identities, stats, args)
+    return 0
+
+
+def _finish(results, identities, stats, args) -> None:
+    hist = store.history_results()
+    if not results:
+        log("No new attempts this run.")
+    if not hist:
+        log("No attempts recorded, so no report was written.")
+        return
+
+    all_ids = _identities("both")
+    csv_path = report.write_csv(hist)
+    md_path = report.write_markdown(hist, all_ids, stats)
+    if not results:
+        results = hist
+
+    log("=" * 70)
+    log(report.console_summary(results))
+    log("=" * 70)
+    log(f"Markdown report : {md_path}")
+    log(f"CSV             : {csv_path}")
+    log(f"Screenshots     : {SHOTS_DIR}")
+    log(f"Audit database  : {DATA_DIR}/applications.db")
+
+    if args.no_sheet:
+        log("Google Sheet    : skipped (--no-sheet)")
+        return
+    ok, msg = sheets.try_push(hist, all_ids)
+    if ok:
+        log(f"Google Sheet    : {msg}")
+    else:
+        log(f"Google Sheet    : NOT written -> {msg}")
+
+
+def cmd_report(args) -> int:
+    store.init()
+    counts = store.stats()
+    if not counts:
+        log("No attempts recorded yet.")
+        return 0
+    log(f"Recorded attempts ({store.total_attempts()} total):")
+    for status, count in sorted(counts.items(), key=lambda kv: -kv[1]):
+        log(f"  {status:<18} {count}")
+    log("")
+
+    hist = store.history_results()
+    ids = _identities("both")
+    md_path = report.write_markdown(hist, ids)
+    csv_path = report.write_csv(hist)
+    done = {(r.candidate_id, r.job.company) for r in hist if r.status in report.DONE_STATUSES}
+    for cid in ALL_CANDIDATES:
+        log(f"  {ids[cid].full_name:<24} companies done: {sum(1 for c, _ in done if c == cid)}")
+    log(f"Markdown report : {md_path}")
+    log(f"CSV             : {csv_path}")
+    if not getattr(args, "no_sheet", False):
+        ok, msg = sheets.try_push(hist, ids)
+        log(f"Google Sheet    : {msg if ok else 'NOT written -> ' + msg}")
+    return 0
+
+
+def cmd_sheet(args) -> int:
+    log("Checking Google Sheets access...")
+    ok, msg = sheets.try_push([], {})
+    log(msg)
+    from .config import sheets_credentials_path
+
+    path = sheets_credentials_path()
+    log(f"credentials: {path or 'NOT FOUND'}")
+    return 0 if path else 1
+
+
+def cmd_profiles(args) -> int:
+    for cid in ALL_CANDIDATES:
+        ident = load_identity(get_candidate(cid))
+        log(f"=== {ident.full_name} ({cid}) ===")
+        for label, value in (
+            ("email", ident.email), ("phone", ident.phone_display),
+            ("location", ident.location), ("linkedin", ident.linkedin),
+            ("github", ident.github), ("portfolio", ident.portfolio),
+            ("resume", ident.resume), ("experience", f"{ident.years_experience} yr"),
+            ("current", f"{ident.current_title} at {ident.current_company}"),
+        ):
+            log(f"  {label:<11}: {value or '(absent in resume - will be left blank)'}")
+        log("")
+    return 0
+
+
+def build_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(prog="jobbot", description="Find real AI-company jobs and apply with resume data only.")
+    sub = p.add_subparsers(dest="cmd", required=True)
+
+    def common(sp):
+        sp.add_argument("--candidate", default="both", choices=[*ALL_CANDIDATES, "both"])
+        sp.add_argument("--min-score", type=float, default=62.0)
+        sp.add_argument("--ai-only", action="store_true", help="only AI companies/roles")
+        sp.add_argument("--india-remote-only", action="store_true", help="only India or remote postings")
+        sp.add_argument("--no-aggregators", action="store_true")
+        return sp
+
+    d = sub.add_parser("discover", help="search boards, show what is live")
+    d.add_argument("--no-aggregators", action="store_true")
+    d.set_defaults(func=cmd_discover)
+
+    m = common(sub.add_parser("match", help="rank jobs per candidate"))
+    m.add_argument("--top", type=int, default=20)
+    m.set_defaults(func=cmd_match)
+
+    a = common(sub.add_parser("apply", help="fill and submit applications"))
+    a.add_argument("--limit", type=int, default=5, help="max applications per candidate")
+    a.add_argument("--per-company", type=int, default=1, help="max applications per company per candidate")
+    a.add_argument("--dry-run", action="store_true", help="fill the form but never submit")
+    a.add_argument("--headless", action="store_true", help="hide the browser (lowers captcha pass rate)")
+    a.add_argument("--show", action="store_true",
+                   help="bring the Chrome window on screen (default: parked off-screen)")
+    a.add_argument("--no-sheet", action="store_true")
+    a.add_argument("--sequential", action="store_true", help="run candidates one after another, not in parallel")
+    a.set_defaults(func=cmd_apply)
+
+    r = common(sub.add_parser("run", help="alias for apply"))
+    r.add_argument("--limit", type=int, default=5)
+    r.add_argument("--per-company", type=int, default=1)
+    r.add_argument("--dry-run", action="store_true")
+    r.add_argument("--headless", action="store_true")
+    r.add_argument("--show", action="store_true")
+    r.add_argument("--no-sheet", action="store_true")
+    r.add_argument("--sequential", action="store_true")
+    r.set_defaults(func=cmd_apply)
+
+    rp = sub.add_parser("report", help="rebuild markdown/CSV/sheet from the full audit history")
+    rp.add_argument("--no-sheet", action="store_true")
+    rp.set_defaults(func=cmd_report)
+    sub.add_parser("sheet", help="check Google Sheets credentials").set_defaults(func=cmd_sheet)
+    sub.add_parser("profiles", help="show the resume data that will be used").set_defaults(func=cmd_profiles)
+    return p
+
+
+def main(argv=None) -> int:
+    args = build_parser().parse_args(argv)
+    try:
+        return args.func(args)
+    except KeyboardInterrupt:
+        log("\ninterrupted - nothing further was submitted")
+        return 130
+
+
+if __name__ == "__main__":
+    sys.exit(main())
