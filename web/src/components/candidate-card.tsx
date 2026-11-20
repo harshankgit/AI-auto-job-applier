@@ -84,8 +84,8 @@ export function CandidateCard({
                 {basename(resumeInUse)}
               </span>
               {usingFallback ? (
-                <span className="text-[11px] text-amber-300/80">
-                  (config/profiles.yaml unreadable — showing the configured default)
+                <span className="text-[11px] text-zinc-500">
+                  (default resume from profile — drop a PDF below to replace)
                 </span>
               ) : null}
             </div>
