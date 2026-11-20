@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { isRemoteHost } from "@/lib/remote-fetch";
 
 import { Spinner } from "@/components/ui";
 
@@ -38,6 +39,28 @@ export function LogPanel({
   stickRef.current = stick;
 
   useEffect(() => {
+    if (isRemoteHost()) {
+      // Remote (Vercel) view: EventSource cannot send the access key header and
+      // long-lived streams do not survive the proxy, so poll the tail instead.
+      let stopped = false;
+      const poll = async () => {
+        try {
+          const res = await fetch("/api/logs?tail=300", { cache: "no-store" });
+          const payload = (await res.json()) as { lines?: string[] };
+          if (stopped) return;
+          setLines((payload.lines ?? []).slice(-MAX_LINES));
+          setState(res.headers.get("x-jobbot-link") === "live" ? "live" : "closed");
+        } catch {
+          if (!stopped) setState("error");
+        }
+      };
+      void poll();
+      const t = setInterval(() => void poll(), 4000);
+      return () => {
+        stopped = true;
+        clearInterval(t);
+      };
+    }
     let source: EventSource | null = null;
     try {
       source = new EventSource("/api/logs");

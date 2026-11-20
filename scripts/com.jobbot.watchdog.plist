@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>Label</key><string>com.jobbot.watchdog</string>
+<key>ProgramArguments</key><array><string>/bin/bash</string><string>/Users/apple/jobbot/scripts/start_bot.sh</string><string>watchdog</string></array>
+<key>WorkingDirectory</key><string>/Users/apple/jobbot</string>
+<key>StartInterval</key><integer>1800</integer><key>RunAtLoad</key><true/>
+<key>AbandonProcessGroup</key><true/>
+<key>EnvironmentVariables</key><dict><key>PATH</key><string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string><key>HOME</key><string>/Users/apple</string></dict>
+<key>StandardOutPath</key><string>/Users/apple/jobbot/logs/launchd-watchdog.log</string>
+<key>StandardErrorPath</key><string>/Users/apple/jobbot/logs/launchd-watchdog.log</string>
+</dict></plist>

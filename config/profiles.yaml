@@ -13,7 +13,7 @@ candidates:
     linkedin: "https://linkedin.com/in/harshank-kanungo-a4b178251"
     github: "https://github.com/harshankgit"
     portfolio: "https://auto-dealer-beige.vercel.app"
-    resume: "/Users/apple/Desktop/AI/harshank/Harshank_Kanungo_Full_Stack_Developer_ATS.pdf"
+    resume: "/Users/apple/jobbot/data/resumes/Harshank_Kanungo_Full_Stack_Developer_ATS.pdf"
     years_experience: 3
     current_company: "Ethara AI"
     current_title: "Software Engineer"
@@ -52,7 +52,7 @@ candidates:
     linkedin: "https://linkedin.com/in/divya-kanungo-29b407339"
     github: ""
     portfolio: "https://auto-dealer-beige.vercel.app"
-    resume: "/Users/apple/Desktop/AI/resume/Divya_Kanungo_MERN_Stack_Developer.pdf"
+    resume: "/Users/apple/jobbot/data/resumes/Divya_Kanungo_MERN_Stack_Developer.pdf"
     years_experience: 1.5
     current_company: "CMARIX Infotech"
     current_title: "Junior Software Developer"

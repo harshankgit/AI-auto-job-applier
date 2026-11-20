@@ -29,7 +29,7 @@ export const CANDIDATES: readonly CandidateMeta[] = [
     email: "harshankkanungo259@gmail.com",
     phone: "+91 8109774968",
     location: "Gurugram, Haryana, India",
-    defaultResume: "/Users/apple/Desktop/AI/harshank/Harshank_Kanungo_Full_Stack_Developer_ATS.pdf",
+    defaultResume: "/Users/apple/jobbot/data/resumes/Harshank_Kanungo_Full_Stack_Developer_ATS.pdf",
   },
   {
     id: "divya",
@@ -40,7 +40,7 @@ export const CANDIDATES: readonly CandidateMeta[] = [
     email: null,
     phone: null,
     location: "Gurugram, Haryana, India",
-    defaultResume: "/Users/apple/Desktop/AI/resume/Divya_Kanungo_MERN_Stack_Developer.pdf",
+    defaultResume: "/Users/apple/jobbot/data/resumes/Divya_Kanungo_MERN_Stack_Developer.pdf",
   },
 ];
 

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { LinkStatus } from "@/components/link-status";
 
 const LINKS = [
   { href: "/", label: "Dashboard" },
@@ -46,6 +47,7 @@ export function Nav() {
             );
           })}
         </nav>
+        <LinkStatus />
       </div>
     </header>
   );
