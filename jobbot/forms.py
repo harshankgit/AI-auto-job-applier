@@ -387,9 +387,20 @@ _FIELD_CONTEXT_JS = """
         out.required = /\\*\\s*$/.test(lg.innerText || '');
       }
     }
+    // Lever: <li class="application-question"><div class="application-label"><div class="text">Q<span class="required">*</span>
+    if (!out.question) {
+      const lq = node.closest('.application-question, li.application-question, .custom-question');
+      if (lq) {
+        const lab = lq.querySelector('.application-label .text, .application-label, .text');
+        if (lab && !lab.contains(node)) {
+          out.question = clean(lab.innerText);
+          out.required = !!lq.querySelector('.required') || /[\u2731*]\\s*$/.test(lab.innerText || '');
+        }
+      }
+    }
   }
   if (node.type === 'radio' && node.name) {
-    const scope = entry || node.closest('fieldset') || document;
+    const scope = entry || node.closest('fieldset') || node.closest('.application-question, .custom-question') || document;
     const esc = (window.CSS && CSS.escape) ? CSS.escape(node.name) : node.name;
     out.options = Array.from(scope.querySelectorAll(`input[type=radio][name="${esc}"]`))
       .map((r) => {

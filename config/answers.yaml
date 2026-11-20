@@ -23,6 +23,10 @@ rules:
   - {match: ["job board on which you found", "name of employee or recruiter"], answer: "Company careers page"}
   - {match: ["are you currently working", "currently employed", "are you employed"], answer: "Yes"}
   - {match: ["years of work experience", "total work experience"], answer: "ANSWER_BRAIN"}
+  - {match: ["were you referred", "referred to ", "referred by", "referral from"], answer: "No"}
+  - {match: ["first hear", "hear about", "how did you find", "source of application"], answer: "Company careers page"}
+  - {match: ["before submitting", "please review the below", "data will be processed", "be advised", "data transfer", "you confirm that", "by submitting", "by applying"], answer: "Yes"}
+  - {match: ["date can you start", "start by", "last working day"], answer: "30 days from offer"}
   - {match: ["sponsorship", "sponsor"], answer: "ANSWER_BRAIN"}
   - {match: ["legally authorized", "authorized to work", "work authorization", "right to work"], answer: "ANSWER_BRAIN"}
   - {match: ["notice period"], answer: "30 days"}

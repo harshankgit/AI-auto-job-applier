@@ -191,7 +191,9 @@ DECLINE_OPTION_WORDS = (
     "prefer not to say", "choose not to", "not disclose", "i don't want to answer",
 )
 
-YES_OPTION_WORDS = ("yes", "y", "true", "i agree", "agree", "i consent", "confirm", "i do")
+YES_OPTION_WORDS = ("yes", "y", "true", "i agree", "agree", "i consent", "confirm", "i do",
+                    "i acknowledge", "acknowledge", "i have read", "i understand", "i accept",
+                    "accept", "understood", "i confirm")
 NO_OPTION_WORDS = ("no", "n", "false", "i do not", "i don't", "none", "not applicable", "n/a")
 
 
