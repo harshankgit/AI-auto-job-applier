@@ -1,10 +1,10 @@
 # AI Job Application Report
 
-**Report updated (UTC):** 2026-11-20 11:00:44
-**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-20 11:00:44
-**Companies applied to (all candidates):** 89
-**Applications submitted (page-confirmed):** 101
-**Total attempts logged:** 577
+**Report updated (UTC):** 2026-11-20 11:07:42
+**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-20 11:07:41
+**Companies applied to (all candidates):** 90
+**Applications submitted (page-confirmed):** 102
+**Total attempts logged:** 601
 
 > Only applications the job site itself confirmed are counted as done.
 > Every form value came from the candidate's own resume or their
@@ -14,8 +14,8 @@
 
 | Candidate | Companies done | Applications submitted | Total attempts | Not gone through | Dry runs |
 | --- | --- | --- | --- | --- | --- |
-| **Harshank Kanungo** | **41** | 48 | 297 | 237 | 10 |
-| **Divya Kanungo** | **48** | 53 | 280 | 215 | 10 |
+| **Harshank Kanungo** | **42** | 49 | 306 | 245 | 10 |
+| **Divya Kanungo** | **48** | 53 | 295 | 230 | 10 |
 
 ## Every company applied to - full details
 
@@ -110,24 +110,25 @@
 | 87 | Harshank Kanungo | **Freehand** | Backend Engineer (India) | India | Tech | 2026-11-20 10:58:58 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 3 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/freehand/99739dc4-cbbf-4584-a100-1747e5fc3418/application) |
 | 88 | Divya Kanungo | **Glean** | Software Engineer, Backend | Bangalore, India | Tech | 2026-11-20 10:59:55 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 11 | [APPLIED] SUBMITTED | [open](https://job-boards.greenhouse.io/gleanwork/jobs/4006731005) |
 | 89 | Divya Kanungo | **Overview Corporation** | Application Engineer, Bengaluru | Bengaluru | Tech | 2026-11-20 11:00:35 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 3 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/overview/771d32f3-5c04-44c2-b0a0-de1ddb4c6b43/application) |
+| 90 | Harshank Kanungo | **Springboard** | Product Engineer (Full Stack, IC) | India (Remote) | Tech | 2026-11-20 11:01:59 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 9 | [APPLIED] SUBMITTED | [open](https://job-boards.greenhouse.io/springboardmentors/jobs/6206300004) |
 
 ## Job discovery (latest run)
 
 | Metric | Value |
 | --- | --- |
 | Company boards queried | 2323 |
-| Raw postings fetched | 148133 |
-| Real postings kept | 146877 |
-| Fake / demo / test postings rejected | 1256 |
-| Rejection reasons | title contains blacklisted word 'test' (1004), title contains blacklisted word 'testing' (230), title contains blacklisted word 'demo' (14), title contains blacklisted word 'sample' (4), title contains blacklisted word 'dummy' (2), empty title (2) |
+| Raw postings fetched | 152409 |
+| Real postings kept | 151139 |
+| Fake / demo / test postings rejected | 1270 |
+| Rejection reasons | title contains blacklisted word 'test' (1136), title contains blacklisted word 'testing' (112), title contains blacklisted word 'demo' (14), title contains blacklisted word 'sample' (4), title contains blacklisted word 'dummy' (2), empty title (2) |
 
 ## Outcome summary (all runs)
 
 | Outcome | Count | Meaning |
 | --- | --- | --- |
-| [INCOMPLETE] FAILED_VALIDATION | 362 | Form asked something we had no resume fact for - not submitted |
-| [APPLIED] SUBMITTED | 101 | Application sent and confirmed by the company's site |
-| [CAPTCHA] CAPTCHA_BLOCKED | 59 | Form was filled but a captcha needs a human to clear it |
+| [INCOMPLETE] FAILED_VALIDATION | 380 | Form asked something we had no resume fact for - not submitted |
+| [APPLIED] SUBMITTED | 102 | Application sent and confirmed by the company's site |
+| [CAPTCHA] CAPTCHA_BLOCKED | 64 | Form was filled but a captcha needs a human to clear it |
 | [ERROR] ERROR | 26 | Technical failure - not submitted |
 | [DRY RUN] SKIPPED | 20 | Dry run - filled but deliberately not submitted |
 | [CLOSED] CLOSED | 5 | Posting was closed by the time we opened it |
@@ -135,7 +136,7 @@
 
 ---
 
-## Harshank Kanungo - 41 companies done
+## Harshank Kanungo - 42 companies done
 
 ### Contact details used on every form
 
@@ -153,7 +154,7 @@
 | Experience | 3 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2024) |
 
-### Companies done: 41 (50 applications out of 297 attempts)
+### Companies done: 42 (51 applications out of 306 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -207,6 +208,7 @@
 | 48 | 2026-11-20 10:54:46 | **Metaforms** | Product Engineer | Bengaluru | ashby | Tech | 65 | attached | 6 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/metaforms/fbaa4289-1ec2-4e48-a83f-ddd090715cd6/application) |
 | 49 | 2026-11-20 10:54:58 | **MiQ Digital** | Software Engineer II | Bengaluru | greenhouse | Tech | 65 | attached | 9 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://job-boards.greenhouse.io/miqdigital/jobs/8189071002) |
 | 50 | 2026-11-20 10:58:58 | **Freehand** | Backend Engineer (India) | India | ashby | Tech | 64 | attached | 3 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/freehand/99739dc4-cbbf-4584-a100-1747e5fc3418/application) |
+| 51 | 2026-11-20 11:01:59 | **Springboard** | Product Engineer (Full Stack, IC) | India (Remote) | greenhouse | Tech | 64 | attached | 9 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://job-boards.greenhouse.io/springboardmentors/jobs/6206300004) |
 
 #### Why each of those jobs was chosen
 
@@ -260,6 +262,7 @@
 48. **Metaforms - Product Engineer** (score 65): core role match 'product engineer'; 2 resume skills in posting (react, typescript); India location (Bengaluru)
 49. **MiQ Digital - Software Engineer II** (score 65): core role match 'software engineer'; seniority suits candidate ('ii'); 2 resume skills in posting (javascript, react); India location (Bengaluru)
 50. **Freehand - Backend Engineer (India)** (score 64): core role match 'backend'; 1 resume skills in posting (node); AI mentioned in description; India location (India)
+51. **Springboard - Product Engineer (Full Stack, IC)** (score 64): core role match 'full stack'; 1 resume skills in posting (react); AI mentioned in description; remote within India (India (Remote))
 
 #### Confirmation text shown by the company site
 
@@ -311,8 +314,9 @@
 - **Metaforms**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **MiQ Digital**: Thank you for applying. Your application has been received. If there is a fit, someone will be getting back to you. View more jobs at MiQ Digital Back to job post
 - **Freehand**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Springboard**: Thank you for applying. Your application has been received. Please check your email for a detailed overview of next steps. If there is a fit, someone will be getting back to you. View more jobs at
 
-### Attempts that did not go through (247)
+### Attempts that did not go through (255)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -563,6 +567,14 @@
 | 2026-11-20 10:58:29 | Doxel | Full Stack Software Engineer, India | Bengaluru, Karnataka | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 9 | Gender Select ... Male Female Decline to self-identify (EEO/demographic field - intentionally not answered), Race Select ... Hispanic or Latino White (Not Hispanic or Latino) Black or African American (Not Hispanic or Latino) Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino) Asian (Not Hispanic or Latino) American Indian or Alaska Native (Not Hispanic or Latino) Two or More Races (Not Hisp (EEO/demographic field - intentionally not answered), Veteran status Select ... I am a veteran I am not a veteran Decline to self-identify (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/doxel/7f6b2263-f6f3-4c85-8bbf-6238bc017e5c/apply) | after-doxel-7f6b2263-f6f3-4c85-8bbf-6238bc017e5c.png |
 | 2026-11-20 10:59:45 | Glean | Software Engineer, Backend | Bangalore, India | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (recaptcha widget visible (256x60)) - a human must clear it | 11 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Gender (EEO/demographic field - intentionally not answered), Are you Hispanic/Latino? (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/gleanwork/jobs/4006731005) | after-gleanwork-4006731005.png |
 | 2026-11-20 11:00:44 | Jobgether | Graduate Software Engineer, Open Source and Linux, Canonical Ubuntu | India | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 6 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/jobgether/7ee769c9-defd-4860-b1b4-ff4e3444854f/apply) | after-jobgether-7ee769c9-defd-4860-b1b4-ff4e3444854f.png |
+| 2026-11-20 11:01:41 | Litmus | Customer Success Application Engineer (Litmus GCC) | Pune, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Which industrial systems or technologies have you worked with—such as PLC, SCADA, MES, OPC UA | 15 | Which industrial systems or technologies have you worked with—such as PLC, SCADA, MES, OPC UA/DA, MQTT, Modbus, historians, industrial gateways, or edge platforms? (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/litmus/cd657661-7f6b-46a6-86ad-3b883280f892/application) | missing-litmus.png |
+| 2026-11-20 11:01:47 | Parspec | Software Engineer - 2 (Backend) | Hybrid - Bangalore, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What is the earliest by when you can join Parspec? | 11 | What is the earliest by when you can join Parspec? (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/parspec/55ae4708-5bca-4b9f-b3d4-c9f75ca288d5/application) | missing-parspec.png |
+| 2026-11-20 11:02:20 | Togetherai | Technical Support Engineer (Inference) - India Weekends | Pune or Bangalore, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you legally authorized to work in the country where the job is located?*, Will you now or | 8 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Are you legally authorized to work in the country where the job is located?* (could not set), Will you now or in the future require company sponsorship to retain or extend your work authorization in the country where the job is located?* (could not set), How would you describe your gender identity? (mark all that apply) (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://job-boards.greenhouse.io/togetherai/jobs/5069532007) | missing-togetherai.png |
+| 2026-11-20 11:02:32 | ValGenesis | Calling all Software Engineers! | Chennai | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: AI/ML, What is your preferred working location? ✱, Yes, No | 15 | Which location are you applying for? (brain: no resume fact or job fact grounds this question), Twitter URL (brain: no resume fact or job fact grounds this question), AI/ML (brain: no resume fact or job fact grounds this question), AI/ML (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/valgenesis/f2d220b5-abc4-4dc7-b00c-c6b657768739/apply) | missing-valgenesis.png |
+| 2026-11-20 11:05:40 | ION Group | Software Developer, 2027 Leadership Development Program, ION Group, India | Noida | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: University Name ✱ | 33 | Which location are you applying for? (brain: no resume fact or job fact grounds this question), Gender ✱ (EEO/demographic field - intentionally not answered), University Name ✱ (brain: resume school is not among the form's options) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/ion/6f66cbb4-c882-4234-b84e-68baea56e1ea/apply) | missing-ion.png |
+| 2026-11-20 11:06:25 | Weekday (recruiter) | Founding Platform Engineer | Delhi NCR | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 9 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/weekdayworks/32eb2095-ca56-44c0-8ed7-4155b3d956ea/apply) | after-weekdayworks-32eb2095-ca56-44c0-8ed7-4155b3d956ea.png |
+| 2026-11-20 11:06:34 | Z1 Tech | Frontend Developer | Gurgaon | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: How much experience do you have with JavaScript Animation? ✱, How much experience do you have | 13 | Twitter URL (brain: no resume fact or job fact grounds this question), How much experience do you have with JavaScript Animation? ✱ (brain: no resume fact or job fact grounds this question), How much experience do you have with UI/UX? ✱ (brain: no resume fact or job fact grounds this question), Where are you based out of? ✱ (brain: resume location is not among the form's options) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/z1tech/38960f0e-34cd-47b9-95e8-e6eb05342f5e/apply) | missing-z1tech.png |
+| 2026-11-20 11:07:20 | Extreme Networks | Full-Stack Software Engineer – GoLang- Flutter-UI  --10532 | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 12 | Gender Select ... Male Female Decline to self-identify (EEO/demographic field - intentionally not answered), Hispanic or Latino A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin regardless of race. (EEO/demographic field - intentionally not answered), Veteran status Select ... I identify as one or more of the classifications of protected veteran listed above I am not a protected veteran I decline to self-identify for protected veteran status (EEO/demographic field - intentionally not answered), Disability status Select ... Yes, I have a disability, or have had one in the past No, I do not have a disability and have not had one in the past I do not want to answer (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/extremenetworks/31c2e5ec-febe-4123-a96b-b2013f0f51ea/apply) | after-extremenetworks-31c2e5ec-febe-4123-a96b-b2013f0f51ea.png |
 
 ### Companies touched for this candidate
 
@@ -600,6 +612,7 @@
 | Tekion | ashby | no | 2 | 0 | not yet |
 | Sumo Logic | greenhouse | no | 2 | 0 | not yet |
 | Anyscale | ashby | no | 2 | 2 | DONE |
+| Togetherai | greenhouse | no | 2 | 0 | not yet |
 | Truveta | greenhouse | no | 2 | 2 | DONE |
 | HighRadius | greenhouse | yes | 2 | 2 | DONE |
 | Zeta | lever | no | 2 | 0 | not yet |
@@ -619,13 +632,16 @@
 | PayPay India | greenhouse | no | 2 | 0 | not yet |
 | Portcast | lever | no | 2 | 0 | not yet |
 | Level AI | lever | yes | 2 | 0 | not yet |
+| ION Group | lever | no | 2 | 0 | not yet |
+| Weekday (recruiter) | lever | no | 2 | 0 | not yet |
+| Z1 Tech | lever | no | 2 | 0 | not yet |
+| Extreme Networks | lever | no | 2 | 0 | not yet |
 | LangChain | ashby | no | 1 | 1 | DONE |
 | Baseten | ashby | no | 1 | 0 | not yet |
 | Mercury | greenhouse | no | 1 | 0 | not yet |
 | Tanium | greenhouse | no | 1 | 0 | not yet |
 | Character.AI | ashby | no | 1 | 0 | not yet |
 | SpotDraft | ashby | yes | 1 | 0 | not yet |
-| Togetherai | greenhouse | no | 1 | 0 | not yet |
 | Storyblok | greenhouse | no | 1 | 0 | not yet |
 | Mindtickle | lever | no | 1 | 0 | not yet |
 | Planetscale | greenhouse | no | 1 | 0 | not yet |
@@ -645,12 +661,9 @@
 | Thoughtworks | ashby | no | 1 | 0 | not yet |
 | Ramp | ashby | no | 1 | 0 | not yet |
 | RevenueBase Inc | ashby | no | 1 | 1 | DONE |
-| ION Group | lever | no | 1 | 0 | not yet |
 | Insurity India | greenhouse | no | 1 | 0 | not yet |
 | Ownwell | greenhouse | no | 1 | 0 | not yet |
 | Quantiq | greenhouse | no | 1 | 0 | not yet |
-| Weekday (recruiter) | lever | no | 1 | 0 | not yet |
-| Z1 Tech | lever | no | 1 | 0 | not yet |
 | AiDASH, Inc. | greenhouse | no | 1 | 0 | not yet |
 | Twin Health | greenhouse | no | 1 | 1 | DONE |
 | Vyn | ashby | no | 1 | 0 | DONE |
@@ -659,7 +672,6 @@
 | Hyperproof | greenhouse | no | 1 | 0 | not yet |
 | BusPatrol | ashby | no | 1 | 1 | DONE |
 | Ema | ashby | no | 1 | 1 | DONE |
-| Extreme Networks | lever | no | 1 | 0 | not yet |
 | GoGuardian | greenhouse | no | 1 | 1 | DONE |
 | Pear VC | ashby | no | 1 | 0 | not yet |
 | Provenir | ashby | no | 1 | 0 | not yet |
@@ -738,6 +750,10 @@
 | Freehand | ashby | no | 1 | 1 | DONE |
 | Glean | greenhouse | no | 1 | 0 | not yet |
 | Jobgether | lever | no | 1 | 0 | not yet |
+| Litmus | ashby | no | 1 | 0 | not yet |
+| Parspec | ashby | no | 1 | 0 | not yet |
+| Springboard | greenhouse | no | 1 | 1 | DONE |
+| ValGenesis | lever | no | 1 | 0 | not yet |
 
 ---
 
@@ -759,7 +775,7 @@
 | Experience | 1 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2026) |
 
-### Companies done: 48 (55 applications out of 280 attempts)
+### Companies done: 48 (55 applications out of 295 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -933,7 +949,7 @@
 - **Glean**: Thank you for applying. Your application has been received. If there is a fit, someone will be getting back to you. View more jobs at Glean Back to job post Track your application Sign in to keep
 - **Overview Corporation**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 
-### Attempts that did not go through (225)
+### Attempts that did not go through (240)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1162,6 +1178,21 @@
 | 2026-11-20 10:59:28 | Eudia | Software Engineer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you okay with working from the office location stated in this job posting 5 days a week?* | 9 | Attach (optional cover-letter upload - the resume belongs in the resume slot), GitHub (not present in resume (github) - skipped, never faked), Are you okay with working from the office location stated in this job posting 5 days a week?* (could not set), If you do not live within a reasonable commute from the stated office location, are you willing to relocate? (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/eudia/jobs/4020070009) | missing-eudia.png |
 | 2026-11-20 11:00:04 | Instawork | Video Platform Engineer - E3 | Bengaluru, Karnataka, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Which programming languages are you comfortable with? * - Python, Which programming languages | 11 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Which programming languages are you comfortable with? * - Python (brain: no resume fact or job fact grounds this question), Which programming languages are you comfortable with? * - Java (brain: no resume fact or job fact grounds this question), Which programming languages are you comfortable with? * - GoLang (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/instawork/jobs/4713756006) | missing-instawork.png |
 | 2026-11-20 11:00:42 | Parspec | Software Engineer - 2 (Backend) | Hybrid - Bangalore, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What is the earliest by when you can join Parspec? | 11 | What is the earliest by when you can join Parspec? (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/parspec/55ae4708-5bca-4b9f-b3d4-c9f75ca288d5/application) | missing-parspec.png |
+| 2026-11-20 11:01:03 | Togetherai | Technical Support Engineer (Inference) - India Weekends | Pune or Bangalore, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you legally authorized to work in the country where the job is located?*, Will you now or | 8 | Attach (optional cover-letter upload - the resume belongs in the resume slot), Are you legally authorized to work in the country where the job is located?* (could not set), Will you now or in the future require company sponsorship to retain or extend your work authorization in the country where the job is located?* (could not set), How would you describe your gender identity? (mark all that apply) (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://job-boards.greenhouse.io/togetherai/jobs/5069532007) | missing-togetherai.png |
+| 2026-11-20 11:01:13 | ValGenesis | Calling all Software Engineers! | Chennai | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: AI/ML, What is your preferred working location? ✱, Yes, No | 14 | Which location are you applying for? (brain: no resume fact or job fact grounds this question), Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked), AI/ML (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/valgenesis/f2d220b5-abc4-4dc7-b00c-c6b657768739/apply) | missing-valgenesis.png |
+| 2026-11-20 11:01:42 | Warner Music Group | Software Engineer - Data Platform | Bangalore | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Working Model Preference ✱ | 11 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked), Working Model Preference ✱ (brain: no resume fact or job fact grounds this question), White / Caucasian (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/wmg/742bb482-120a-40bb-bec2-65f44e179dd0/apply) | missing-wmg.png |
+| 2026-11-20 11:02:29 | Zimperium | Java Engineer (Back-End & Microservices) - Bangalore, India | Bangalore, India | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 8 | GitHub URL (not present in resume (github) - skipped, never faked) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/zimperium/6b50bb8b-2a86-4e93-8c17-39b66f3e0789/apply) | after-zimperium-6b50bb8b-2a86-4e93-8c17-39b66f3e0789.png |
+| 2026-11-20 11:04:14 | Portcast | Backend Engineer | Delhi | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Yes, No | 8 | Where are you currently based, and do you have the legal right to work in that location? (brain: answer is Yes but the form offers no such option), GitHub URL (not present in resume (github) - skipped, never faked), Yes (brain: no resume fact or job fact grounds this question), No (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/portcast/1f6381eb-03dd-451a-a8cc-2c862cec3fe3/apply) | missing-portcast.png |
+| 2026-11-20 11:05:01 | Weekday (recruiter) | Founding Platform Engineer | Delhi NCR | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 9 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/weekdayworks/32eb2095-ca56-44c0-8ed7-4155b3d956ea/apply) | after-weekdayworks-32eb2095-ca56-44c0-8ed7-4155b3d956ea.png |
+| 2026-11-20 11:05:11 | Z1 Tech | Frontend Developer | Gurgaon | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: How much experience do you have with JavaScript Animation? ✱, How much experience do you have | 12 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked), How much experience do you have with JavaScript Animation? ✱ (brain: no resume fact or job fact grounds this question), How much experience do you have with UI/UX? ✱ (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/z1tech/38960f0e-34cd-47b9-95e8-e6eb05342f5e/apply) | missing-z1tech.png |
+| 2026-11-20 11:05:35 | Pear VC | Founding Engineer - Frontend - Oodle (Bangalore, India) | Bangalore | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Do you have at least 5+ years of professional experience as a software engineer? | 9 | Do you have at least 5+ years of professional experience as a software engineer? (brain: resume states 1 year(s) of experience; but no form option covers 1) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/Pear-VC/4ecca650-ccbe-45eb-911d-211e877812ca/application) | missing-pear-vc.png |
+| 2026-11-20 11:05:49 | Provenir | Full-Stack Software Engineer | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Work Authorization, Availability for shift work | 13 | Please upload cover letter or work sample (optional cover-letter upload - the resume belongs in the resume slot), Work Authorization (brain: answer is Yes but the form offers no such option), Availability for shift work (brain: availability is 30 days from offer but no form option matches) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/ProvenirInc/d5773a1e-c403-4413-ac2b-c61c35823cf8/application) | missing-provenirinc.png |
+| 2026-11-20 11:05:55 | Plane Software, Inc. | Software Engineer, Frontend (React) | India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: GitHub/ Behance/ any other links to your work., If available immediately, what was your last  | 10 | GitHub/ Behance/ any other links to your work. (not present in resume (github) - skipped, never faked), Do you have hands-on experience with AI coding agents (e.g., Claude Code, Cursor, GitHub Copilot) as part of your development workflow? (rule needs ANSWER_GITHUB but resume lacks it - skipped), If available immediately, what was your last working day in the previous organisation? (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/plane/15cf6387-af74-4616-924f-3659fb76de01/application) | missing-plane.png |
+| 2026-11-20 11:06:05 | Plotline | Frontend Engineer (SDE-2) | Bengaluru Office | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: GitHub / portfolio / personal site | 3 | GitHub / portfolio / personal site (not present in resume (github) - skipped, never faked), This role offers compensation in 80:20 ratio (Fixed:Variable). Please share your total expected compensation (Fixed+Variable) (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/plotlineso/6f9ce704-359c-4eba-9423-e6b356a78e9c/application) | missing-plotlineso.png |
+| 2026-11-20 11:06:28 | 3Y Health | AI Product Engineer | Remote – India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What percent of your work is hands-on?, Have you recently used or built an AI agent harness,  | 8 | What percent of your work is hands-on? (brain: no resume fact or job fact grounds this question), Have you recently used or built an AI agent harness, beyond simply calling an LLM API? (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/3y-health/7fcd0173-7424-44b1-9a79-0063b36504d5/application) | missing-3y-health.png |
+| 2026-11-20 11:07:12 | Drivetrain | Frontend Engineer | India | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 7 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/drivetrain/cd39cc4e-056e-444c-8c17-9f97e34ddbce/apply) | after-drivetrain-cd39cc4e-056e-444c-8c17-9f97e34ddbce.png |
+| 2026-11-20 11:07:31 | Merge Money Ltd. | Frontend Developer - Payments Fintech | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Have you worked in fintech, payments, crypto, stablecoins or blockchain?, Video introduction  | 14 | Have you worked in fintech, payments, crypto, stablecoins or blockchain? (brain: no resume fact or job fact grounds this question), Video introduction (up to 1 minute) (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/mergemoney/763a7a53-07c6-401f-8a48-61f429a5de78/application) | missing-mergemoney.png |
+| 2026-11-20 11:07:41 | Entrata | Software Engineer ( PHP, Node.js & React ) | Pune, India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Naukri, Yes, Under 30 days | 18 | He/him (brain: no resume fact or job fact grounds this question), She/her (brain: no resume fact or job fact grounds this question), They/them (brain: no resume fact or job fact grounds this question), Xe/xem (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/entrata/56e76067-109c-4f3b-87c2-4374a96eb51f/apply) | missing-entrata.png |
 
 ### Companies touched for this candidate
 
@@ -1194,6 +1225,7 @@
 | Mindtickle | lever | no | 2 | 0 | not yet |
 | Coinbase | greenhouse | no | 2 | 0 | not yet |
 | Eudia | greenhouse | no | 2 | 0 | not yet |
+| Togetherai | greenhouse | no | 2 | 0 | not yet |
 | Truveta | greenhouse | no | 2 | 2 | DONE |
 | Hevo Data | lever | yes | 2 | 0 | not yet |
 | Bolna AI | ashby | yes | 2 | 2 | DONE |
@@ -1210,10 +1242,20 @@
 | Level AI | lever | yes | 2 | 0 | not yet |
 | ION Group | lever | no | 2 | 0 | not yet |
 | Ownwell | greenhouse | no | 2 | 0 | not yet |
+| Portcast | lever | no | 2 | 0 | not yet |
+| Weekday (recruiter) | lever | no | 2 | 0 | not yet |
+| Z1 Tech | lever | no | 2 | 0 | not yet |
+| Pear VC | ashby | no | 2 | 0 | not yet |
+| Provenir | ashby | no | 2 | 0 | not yet |
+| Plane Software, Inc. | ashby | no | 2 | 0 | not yet |
+| Plotline | ashby | no | 2 | 0 | not yet |
+| 3Y Health | ashby | no | 2 | 0 | not yet |
+| Drivetrain | lever | no | 2 | 0 | not yet |
+| Merge Money Ltd. | ashby | no | 2 | 0 | not yet |
+| Entrata | lever | no | 2 | 0 | not yet |
 | Baseten | ashby | yes | 1 | 1 | DONE |
 | Quora | ashby | no | 1 | 0 | not yet |
 | Unstructured | ashby | no | 1 | 0 | not yet |
-| Togetherai | greenhouse | no | 1 | 0 | not yet |
 | Planetscale | greenhouse | no | 1 | 0 | not yet |
 | Phantom | ashby | no | 1 | 0 | not yet |
 | Adyen | greenhouse | no | 1 | 1 | DONE |
@@ -1231,36 +1273,25 @@
 | Notion | ashby | no | 1 | 0 | not yet |
 | Okta | greenhouse | no | 1 | 0 | not yet |
 | PayPay India | greenhouse | no | 1 | 0 | not yet |
-| Portcast | lever | no | 1 | 0 | not yet |
 | Quantiq | greenhouse | no | 1 | 1 | DONE |
 | RevenueBase Inc | ashby | no | 1 | 1 | DONE |
-| Weekday (recruiter) | lever | no | 1 | 0 | not yet |
-| Z1 Tech | lever | no | 1 | 0 | not yet |
 | Vyn | ashby | no | 1 | 0 | DONE |
 | AiPrise | ashby | yes | 1 | 1 | DONE |
 | Celonis | greenhouse | no | 1 | 0 | not yet |
-| Pear VC | ashby | no | 1 | 0 | not yet |
-| Provenir | ashby | no | 1 | 0 | not yet |
 | Soulside AI | ashby | no | 1 | 1 | DONE |
 | CrashPlan | greenhouse | no | 1 | 0 | not yet |
 | DeepIntent | greenhouse | no | 1 | 1 | DONE |
 | Particle41 | greenhouse | no | 1 | 0 | not yet |
-| Plane Software, Inc. | ashby | no | 1 | 0 | not yet |
-| Plotline | ashby | no | 1 | 0 | not yet |
 | VML Enterprise Solutions | greenhouse | no | 1 | 0 | not yet |
 | BusPatrol | ashby | no | 1 | 1 | DONE |
 | Ema | ashby | no | 1 | 1 | DONE |
 | Lyric | ashby | no | 1 | 1 | DONE |
 | Razorpay Software Private Limited | greenhouse | no | 1 | 0 | not yet |
-| 3Y Health | ashby | no | 1 | 0 | not yet |
 | Hyperproof | greenhouse | no | 1 | 0 | not yet |
 | Smartsheet | greenhouse | no | 1 | 0 | not yet |
 | Avathon | greenhouse | no | 1 | 0 | not yet |
-| Drivetrain | lever | no | 1 | 0 | not yet |
 | Energy Exemplar | greenhouse | no | 1 | 1 | DONE |
-| Merge Money Ltd. | ashby | no | 1 | 0 | not yet |
 | Avoca | ashby | no | 1 | 1 | DONE |
-| Entrata | lever | no | 1 | 0 | not yet |
 | Instead | greenhouse | no | 1 | 0 | not yet |
 | Mico | greenhouse | no | 1 | 1 | DONE |
 | Plume | greenhouse | no | 1 | 1 | DONE |
@@ -1328,6 +1359,9 @@
 | Instawork | greenhouse | no | 1 | 0 | not yet |
 | Overview Corporation | ashby | no | 1 | 1 | DONE |
 | Parspec | ashby | no | 1 | 0 | not yet |
+| ValGenesis | lever | no | 1 | 0 | not yet |
+| Warner Music Group | lever | no | 1 | 0 | not yet |
+| Zimperium | lever | no | 1 | 0 | not yet |
 
 ---
 

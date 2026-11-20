@@ -36,6 +36,11 @@ def _identities(which: str) -> dict:
 def _discover(args) -> tuple[list, dict]:
     log("Searching company job boards for real openings...")
     jobs, stats = sources.discover(include_aggregators=not args.no_aggregators, progress=None)
+    skip_ats = {s.strip().lower() for s in (getattr(args, "skip_ats", "") or "").split(",") if s.strip()}
+    if skip_ats:
+        before = len(jobs)
+        jobs = [j for j in jobs if (j.source or "").lower() not in skip_ats]
+        log(f"  skipping ATS {sorted(skip_ats)}: dropped {before - len(jobs)} postings")
     log(f"  boards queried      : {stats['boards_queried']}")
     log(f"  raw postings        : {stats['raw_jobs']}")
     log(f"  real postings kept  : {stats['real_jobs']}")
@@ -352,6 +357,7 @@ def build_parser() -> argparse.ArgumentParser:
         sp.add_argument("--ai-only", action="store_true", help="only AI companies/roles")
         sp.add_argument("--india-remote-only", action="store_true", help="only India or remote postings")
         sp.add_argument("--no-aggregators", action="store_true")
+        sp.add_argument("--skip-ats", default="", help="comma list of ATS to skip, e.g. greenhouse")
         return sp
 
     d = sub.add_parser("discover", help="search boards, show what is live")
