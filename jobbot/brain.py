@@ -287,7 +287,12 @@ def _knows(identity, tech: str) -> bool:
 
 def _techs_in(label: str) -> list[str]:
     low = f" {_low(label)} "
-    found = [t for t in TECH_VOCAB if t.strip() and t in low]
+    # Whole-word match: plain substrings made "r " fire on "either", "ember"
+    # on "member", "rust" on "trust", "git" on "digital".
+    found = [
+        t for t in TECH_VOCAB if t.strip()
+        and re.search(r"(?<![a-z0-9])" + re.escape(t.strip()) + r"(?![a-z0-9+#])", low)
+    ]
     # Drop generic substrings when a more specific sibling matched
     # ('react' vs 'react native', 'node' vs 'node.js').
     return [t for t in found if not any(t != o and t in o for o in found)]
@@ -322,6 +327,7 @@ def answer(
         _sponsorship,
         _authorization,
         _citizenship,
+        _misc_policy,
         _years,
         _salary,
         _notice_and_start,
@@ -351,7 +357,7 @@ def _eeo(low, identity, job, options, target, why):
         "latino", "lgbt", "pronoun", "sexual orientation", "transgender",
         "self-identif", "self identif",
     )
-    if not any(w in low for w in words):
+    if not re.search(r"\b(?:" + "|".join(re.escape(w) for w in words) + r")", low):
         return None, ""
     picked = decline_option(options)
     if picked:
@@ -433,6 +439,136 @@ def _citizenship(low, identity, job, options, target, why):
         if picked:
             return picked, "brain: resume facts - Indian citizen based in India"
         return None, "brain: visa-status options do not include 'Indian citizen / no visa required'"
+    return None, ""
+
+
+def _misc_policy(low, identity, job, options, target, why):
+    """Logistics questions common on Ashby/Lever forms, answered by confirmed policy."""
+    def yes(reason):
+        value = _yes(options)
+        if value:
+            return value, reason
+        return None, f"{reason} - but the form offers no Yes option"
+
+    if any(n in low for n in ("18 years of age", "18 years old", "over 18", "age of 18",
+                              "18 or older", "18+")) and "experience" not in low:
+        return yes("brain: candidate is an adult (18+)")
+    if any(n in low for n in ("live coding", "coding interview", "technical interview",
+                              "take-home", "take home assignment", "coding assessment",
+                              "coding challenge", "without ai assistance")):
+        return yes("brain: candidate will complete the interview process as asked")
+    if "new grad" in low or "recent graduate" in low or "recent grad" in low:
+        # 'Student or New Grad?' - yes only when the degree finished within the last year.
+        grad = identity.resolve_token("ANSWER_GRAD_YEAR") or ""
+        years = [int(y) for y in re.findall(r"(?:19|20)\d{2}", str(grad))]
+        import datetime as _dt
+        if years:
+            recent = _dt.date.today().year - max(years) <= 1
+            value = _yes(options) if recent else _no(options)
+            if value or not options:
+                return (value or ("Yes" if recent else "No"),
+                        f"brain: resume shows graduation in {max(years)}")
+        return None, "brain: resume does not show a graduation year"
+    if any(n in low for n in ("full-time education", "full time education",
+                              "currently a student", "currently enrolled",
+                              "currently pursuing a degree")):
+        grad = identity.resolve_token("ANSWER_GRAD_YEAR") or ""
+        years = [int(y) for y in re.findall(r"(?:19|20)\d{2}", str(grad))]
+        import datetime as _dt
+        if years and max(years) <= _dt.date.today().year:
+            value = _no(options)
+            if value or not options:
+                return value or "No", f"brain: resume shows graduation in {max(years)} - not a student"
+        return None, "brain: resume does not show a completed degree"
+    if any(n in low for n in ("requires someone to be located", "must be located in",
+                              "be located in", "must be based in", "need to be based in",
+                              "requires you to be based")):
+        if options:
+            return yes("brain: candidate is open to relocating for the role (confirmed answer policy)")
+        return ("Yes - I confirm I am open to relocating and working from the required location.",
+                "brain: candidate is open to relocating for the role (confirmed answer policy)")
+    if any(n in low for n in ("located within", "miles of", "km of", "commut")):
+        if options:
+            for opt in options:
+                if "relocat" in _low(opt):
+                    return opt, "brain: candidate is open to relocation (confirmed answer policy)"
+        return yes("brain: candidate is open to relocating / commuting (confirmed answer policy)")
+    if any(n in low for n in ("in person", "in-person", "in the office", "days per week",
+                              "days a week", "on-site", "on site", "from our",
+                              "office based", "office-based", "days office",
+                              "days in office", "return to office")):
+        return yes("brain: candidate works on-site or hybrid alike (confirmed answer policy)")
+    if any(n in low for n in ("percentage of your day", "hands-on coding", "% of your time")):
+        if options:
+            for opt in options:
+                if "75" in opt:
+                    return opt, "brain: hands-on individual-contributor developer"
+            best = max(options, key=lambda o: max([int(n) for n in re.findall(r"\d+", o)] or [-1]))
+            return best, "brain: hands-on individual-contributor developer - highest coding share"
+        return "75%", "brain: hands-on individual-contributor developer"
+    if (any(n in low for n in ("timezone", "time zone", "overlap", "pacific time",
+                               "coordination hours", "working hours", "core hours"))
+            or " pst" in low or " est " in low):
+        return yes("brain: candidate can work overlapping hours (confirmed answer policy)")
+    if any(n in low for n in ("current or most recent employer", "current employer",
+                              "most recent employer", "current company")):
+        value = identity.current_company
+        picked = choose_option(value, options) if options else value
+        if picked:
+            return picked, f"brain: resume current employer ({value})"
+        return None, "brain: no current employer on the resume"
+    if any(n in low for n in ("technical stack", "tech stack", "core stack", "primary stack")):
+        if options:
+            return None, ""
+        raw = getattr(identity, "raw", {}) or {}
+        skills = [str(s).strip() for s in (raw.get("skill_keywords") or []) if str(s).strip()]
+        if skills:
+            return ", ".join(skills[:12]), "brain: resume skill list"
+        return None, "brain: no skill list on the resume"
+    # Multi-checkbox office pickers ("Which office ... - San Francisco"): the
+    # candidate is open to relocating, so every office box gets ticked.
+    if "which office" in low or "which of our offices" in low or (
+            "work out of" in low and " - " in low and not options):
+        if options and not _yes(options):
+            return options[0], "brain: candidate is open to relocating to any office - first listed office"
+        return yes("brain: candidate is open to relocating to any office (confirmed answer policy)")
+    if any(n in low for n in ("intend to work", "work out of", "where will you work",
+                              "from where do you", "currently located", "where are you located",
+                              "where do you live", "where are you currently")):
+        value = identity.location
+        picked = choose_option(value, options) if options else value
+        if not picked and options:
+            for alt in (identity.city, identity.country):
+                picked = choose_option(alt, options)
+                if picked:
+                    break
+        if picked:
+            return picked, f"brain: resume location ({identity.location})"
+        return None, "brain: resume location is not among the form's options"
+    if "which country" in low:
+        picked = choose_option(identity.country or "India", options)
+        if picked:
+            return picked, f"brain: resume country ({identity.country or 'India'})"
+        return None, "brain: resume country is not among the form's options"
+    if low.startswith(("have you built", "have you worked with", "have you used",
+                       "have you developed", "do you have experience",
+                       "do you have hands-on", "have you shipped")):
+        skills = _skills(identity)
+        known = [s for s in skills if s in low]
+        if "api" in low and any("api" in s for s in skills):
+            known.append("rest api")
+        if known:
+            return yes(f"brain: resume lists {', '.join(sorted(set(known)))}")
+        techs = _techs_in(low)
+        if techs and not any(_knows(identity, t) for t in techs):
+            value = _no(options)
+            if value:
+                return value, f"brain: {', '.join(techs)} is not on the resume - honest No"
+        if not techs and "product" in low:
+            # "Have you used <Company> products?" - nothing on the resume says so.
+            value = _no(options)
+            if value or not options:
+                return value or "No", "brain: nothing on the resume shows use of these products - honest No"
     return None, ""
 
 
@@ -540,6 +676,8 @@ def _notice_and_start(low, identity, job, options, target, why):
         "when can you start", "start date", "earliest start", "availability",
         "available to start", "how soon can you", "joining date", "date of joining",
         "when would you be able to start", "notice", "available from",
+        "could you start", "start working", "able to start",
+        "when are you available", "start a new role",
     )
     if any(n in low for n in starters):
         text = "30 days from offer"
@@ -655,13 +793,16 @@ _ESSAY_NEEDLES = (
     "anything else you", "additional information", "why our", "why join",
     "what draws you", "share more about", "describe your experience",
     "give examples", "relevant experience", "your background",
+    "interests you", "excited about", "why are you applying", "aligns with",
+    "example from your professional", "tell us", "describe a",
+    "share an example",
 )
 
 
 def _free_text(low, identity, job, options, target, why):
     if options:  # an essay answer can never be a dropdown choice
         return None, ""
-    if not any(n in low for n in _ESSAY_NEEDLES):
+    if not (any(n in low for n in _ESSAY_NEEDLES) or low.startswith("why ")):
         return None, ""
     text = compose_statement(identity, job)
     if text:
@@ -733,7 +874,7 @@ _CONSENT_NEEDLES = (
     "acknowledge", "i certify", "certify", "privacy policy", "privacy notice",
     "terms and conditions", "terms of use", "data protection", "gdpr",
     "i authorize", "i authorise", "i confirm", "do you confirm",
-    "by checking", "by submitting", "i understand and", "consent to",
+    "by checking", "by submitting", "i understand", "consent to",
     "permission to", "i have read",
 )
 

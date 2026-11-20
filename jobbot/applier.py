@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import time
 
-from . import browser, forms, store
+from . import browser, config, forms, store
 from .identity import Identity
 from .models import (
     ALREADY_APPLIED,
@@ -42,6 +42,10 @@ CONFIRM_PHRASES = (
     "we will be in touch",
     "we'll be in touch",
     "thank you for your interest",
+    "thanks, got it",
+    "you'll hear from us",
+    "you will hear from us",
+    "we'll review your application",
 )
 
 ALREADY_PHRASES = (
@@ -303,7 +307,10 @@ def apply_to_job(
             btn.scroll_into_view_if_needed(timeout=5000)
         except Exception:
             pass
-        browser.human_pause(0.4, 0.9)
+        # Ashby runs reCAPTCHA Enterprise + a device fingerprint and is still
+        # processing the resume upload for a few seconds - a click made too soon
+        # is silently ignored. Give it time before submitting.
+        browser.human_pause(3.0, 4.0)
 
         try:
             btn.click(timeout=15000)
@@ -315,6 +322,18 @@ def apply_to_job(
             )
 
         after = _wait_for_outcome(page)
+        if not _has_phrase(after, CONFIRM_PHRASES) and not _has_phrase(after, VALIDATION_HINTS):
+            # Form still sitting there with no error: the first click was swallowed.
+            # Safe to click again - a successful submit replaces the form, so a
+            # visible submit button means nothing was sent.
+            again = _find_submit(container)
+            if again is not None:
+                try:
+                    browser.human_pause(2.0, 3.0)
+                    again.click(timeout=15000)
+                    after = _wait_for_outcome(page, timeout_s=25.0)
+                except Exception:
+                    pass
         post_shot = browser.shoot(page, f"after-{job.company_token}-{job.job_id}")
         confirm = _has_phrase(after, CONFIRM_PHRASES)
 
@@ -405,11 +424,18 @@ def run_batch(
     progress=None,
     on_result=None,
 ) -> list[ApplicationResult]:
-    """Apply down a ranked list, skipping anything already submitted."""
+    """Apply down a ranked list. Never the same role twice; different roles at
+    one company are fine (up to per_company each run+history)."""
     store.init()
     results: list[ApplicationResult] = []
     company_hits: dict[str, int] = {}
+    tried_this_run: set[tuple[str, str]] = set()
     done = 0
+    # Failures only count against a role if they happened AFTER answers.yaml was
+    # last edited - adding a missing answer makes those roles eligible again.
+    answers_file = config.CONFIG_DIR / "answers.yaml"
+    answers_mtime = answers_file.stat().st_mtime if answers_file.exists() else 0
+    answers_since = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime(answers_mtime))
 
     for match in matches:
         if done >= limit:
@@ -421,12 +447,20 @@ def run_batch(
             # Aggregator listing - no fillable form on the other end.
             continue
 
-        if store.already_submitted(identity.id, job.key):
+        role_id = (token, store._norm_title(job.title))
+        if role_id in tried_this_run:
+            continue
+        used = store.role_already_used(identity.id, job.key, token, job.company, job.title)
+        if used:
+            continue
+        if store.failed_attempts_since(identity.id, job.key, answers_since) >= 2:
+            # Two honest tries already failed with the current answers: a third
+            # identical try just burns time. Edit answers.yaml and it retries.
             continue
         prior = store.company_attempt_count(identity.id, token)
         if company_hits.get(token, 0) + prior >= per_company:
             if progress:
-                progress(f"    (skip {job.company}: already applied there, moving to the next company)")
+                progress(f"    (skip {job.company}: {per_company} roles there already, moving on)")
             continue
 
         if progress:
@@ -434,10 +468,11 @@ def run_batch(
 
         result = apply_to_job(session, match, identity, answers, dry_run=dry_run)
         store.record(result)
+        tried_this_run.add(role_id)
         results.append(result)
         done += 1
 
-        if result.submitted:
+        if result.submitted or "clicked submit" in (result.detail or ""):
             company_hits[token] = company_hits.get(token, 0) + 1
 
         if progress:
@@ -452,6 +487,6 @@ def run_batch(
                 if progress:
                     progress(f"    (report flush failed: {exc})")
 
-        browser.human_pause(1.5, 3.0)
+        browser.human_pause(0.5, 1.2)
 
     return results

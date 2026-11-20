@@ -186,6 +186,47 @@ def company_attempt_count(candidate_id: str, company_token: str) -> int:
     return int(row["n"]) if row else 0
 
 
+def failed_attempts_since(candidate_id: str, job_key: str, since_utc: str) -> int:
+    """Attempts at one role recorded after `since_utc` ('YYYY-MM-DD HH:MM:SS')."""
+    with closing(_connect()) as conn:
+        row = conn.execute(
+            "SELECT COUNT(*) AS n FROM attempts WHERE candidate_id=? AND job_key=? AND applied_at>=?",
+            (candidate_id, job_key, since_utc),
+        ).fetchone()
+    return int(row["n"]) if row else 0
+
+
+def _norm_title(title: str) -> str:
+    return " ".join("".join(ch if ch.isalnum() else " " for ch in (title or "").lower()).split())
+
+
+def role_already_used(candidate_id: str, job_key: str, company_token: str,
+                      company_name: str = "", title: str = "") -> str | None:
+    """Never apply to the same role twice. Different roles at one company are fine.
+
+    A role counts as used when we got SUBMITTED / ALREADY_APPLIED, OR the submit
+    button was clicked but the page never confirmed - those may well have gone
+    through (Writer's success page did), so retrying would double-apply.
+    'Same role' = same posting id, or the same title at the same company (one
+    role is often posted twice, e.g. once per city).
+    Returns the reason, or None if the role is still free.
+    """
+    name = (company_name or "").strip().lower()
+    want = _norm_title(title)
+    with closing(_connect()) as conn:
+        rows = conn.execute(
+            "SELECT job_key, status, title FROM attempts "
+            "WHERE candidate_id=? AND (job_key=? OR job_key LIKE ? OR (?<>'' AND lower(trim(company))=?)) "
+            "AND (status IN (?,?) OR detail LIKE '%clicked submit%')",
+            (candidate_id, job_key, f"%:{company_token}:%", name, name, SUBMITTED, ALREADY_APPLIED),
+        ).fetchall()
+    for row in rows:
+        if row["job_key"] == job_key or (want and _norm_title(row["title"]) == want):
+            kind = row["status"] if row["status"] in (SUBMITTED, ALREADY_APPLIED) else "submit clicked"
+            return f"{kind} earlier"
+    return None
+
+
 def total_attempts() -> int:
     with closing(_connect()) as conn:
         row = conn.execute("SELECT COUNT(*) AS n FROM attempts").fetchone()

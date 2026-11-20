@@ -51,7 +51,7 @@ export function Dashboard() {
         const res = await fetch("/api/apply", {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ candidate, limit: 20 }),
+          body: JSON.stringify({ candidate, limit: 40 }),
         });
         const data = (await res.json()) as { started?: boolean; error?: string };
         if (!res.ok || !data.started) {

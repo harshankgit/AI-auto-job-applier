@@ -7,7 +7,7 @@ import { getStatus, startRun } from "@/lib/runner";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const DEFAULT_LIMIT = 20;
+const DEFAULT_LIMIT = 40;
 const MAX_LIMIT = 100;
 
 function parseLimit(value: unknown): number {

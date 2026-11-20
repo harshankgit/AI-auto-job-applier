@@ -33,8 +33,10 @@ SKIP = "__SKIP__"
 EEO_WORDS = (
     "gender", "race", "ethnic", "veteran", "disability", "hispanic", "latino",
     "lgbt", "pronoun", "sexual orientation", "transgender", "self-identif",
-    "self identif", "protected veteran", "accommodation",
+    "self identif", "protected veteran",
 )
+# Leading word boundary so "race" does not fire inside "embrace"/"grace".
+_EEO_RE = re.compile(r"\b(?:" + "|".join(re.escape(w) for w in EEO_WORDS) + r")")
 
 # Honest escape hatch for EEO dropdowns the board marks as required.
 DECLINE_SENTINEL = "__DECLINE__"
@@ -61,7 +63,7 @@ def is_conditional(label: str) -> bool:
 SEMANTICS: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("first_name", ("first name", "given name", "firstname", "legal first")),
     ("last_name", ("last name", "family name", "surname", "lastname", "legal last")),
-    ("full_name", ("full name", "your name", "name", "candidate name")),
+    ("full_name", ("full name", "your name", "candidate name", "legal name")),
     ("email", ("email", "e-mail")),
     ("phone", ("phone", "mobile", "contact number", "telephone", "cell")),
     ("linkedin", ("linkedin",)),
@@ -75,6 +77,8 @@ SEMANTICS: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("degree", ("degree",)),
     ("discipline", ("discipline", "major", "field of study")),
     ("grad_year", ("graduation", "grad year", "year of completion", "end date")),
+    # Bare "name" only after school/company/etc. so "School Name" is a school.
+    ("full_name", ("name",)),
     ("years", ("years of experience", "how many years", "total experience", "yoe")),
     ("resume", ("resume", "cv", "attach", "upload")),
     ("cover_letter", ("cover letter", "why do you want", "why are you interested",
@@ -137,7 +141,7 @@ def _lower(text: str | None) -> str:
 
 def is_eeo(label: str) -> bool:
     low = _lower(label)
-    return any(word in low for word in EEO_WORDS)
+    return bool(_EEO_RE.search(low))
 
 
 def classify(label: str, name: str = "", el_id: str = "") -> str:
@@ -168,13 +172,18 @@ def _answer_rules(label: str, answers: dict) -> str | None:
 
 
 def resolve_value(
-    label: str, semantic: str, identity: Identity, answers: dict, job=None
+    label: str, semantic: str, identity: Identity, answers: dict, job=None,
+    options: list[str] | None = None,
 ) -> tuple[str | None, str]:
-    """Return (value, reason). value None means skip -- never a guess."""
+    """Return (value, reason). value None means skip -- never a guess.
+
+    `options` is the control's own list of choices (select / radio / button
+    group). When given, the returned value is always one of those strings.
+    """
     if is_eeo(label):
         return None, "EEO/demographic field - intentionally not answered"
 
-    if semantic in IDENTITY_KEYS:
+    if semantic in IDENTITY_KEYS and not options:
         token = IDENTITY_TOKEN[semantic]
         value = identity.resolve_token(token)
         if value:
@@ -184,28 +193,45 @@ def resolve_value(
     rule_answer = _answer_rules(label, answers)
     if rule_answer == "ANSWER_SKIP":
         return None, "configured as skip"
+    # ANSWER_BRAIN must be checked BEFORE the generic ANSWER_ token lookup:
+    # resolve_token('ANSWER_BRAIN') is None, which silently skipped every
+    # sponsorship / authorization / years / location question.
+    if rule_answer == "ANSWER_BRAIN":
+        value, reason = brain.answer(label, identity, job, options or [])
+        if value is not None:
+            return value, reason
+        return None, reason or f"brain could not ground {semantic}"
     if rule_answer:
         if rule_answer.startswith("ANSWER_"):
             resolved = identity.resolve_token(rule_answer)
             if resolved:
-                return resolved, f"resume field via rule ({rule_answer})"
-            return None, f"rule needs {rule_answer} but resume lacks it - skipped"
-        if rule_answer == "ANSWER_BRAIN":
-            # Delegate to brain for country-aware, tech-scoped answers
-            if job:
-                value, reason = brain.answer(label, identity, job, [])
-                if value is not None:
-                    return value, reason
-            return None, f"brain cannot answer {semantic} without job context"
-        return rule_answer, "confirmed answer from answers.yaml"
+                if options:
+                    picked = brain.choose_option(resolved, options)
+                    if picked:
+                        return picked, f"resume field via rule ({rule_answer})"
+                else:
+                    return resolved, f"resume field via rule ({rule_answer})"
+            else:
+                return None, f"rule needs {rule_answer} but resume lacks it - skipped"
+        elif options:
+            picked = brain.choose_option(rule_answer, options)
+            if picked:
+                return picked, "confirmed answer from answers.yaml"
+        else:
+            return rule_answer, "confirmed answer from answers.yaml"
 
-    # Final fallback: try brain if job is available
-    if job:
-        value, reason = brain.answer(label, identity, job, [])
-        if value is not None:
-            return value, reason
+    if semantic in IDENTITY_KEYS and options:
+        token = IDENTITY_TOKEN[semantic]
+        value = identity.resolve_token(token)
+        picked = brain.choose_option(value, options) if value else None
+        if picked:
+            return picked, f"resume field ({semantic})"
 
-    return None, "no resume fact or confirmed answer matches this question"
+    value, reason = brain.answer(label, identity, job, options or [])
+    if value is not None:
+        return value, reason
+
+    return None, reason or "no resume fact or confirmed answer matches this question"
 
 
 def cover_letter_text(identity: Identity, answers: dict, title: str, company: str) -> str:
@@ -289,6 +315,71 @@ def _attrs(el: Locator) -> dict[str, str]:
         return {}
 
 
+# Ashby (and some other React ATS) render every question as a field-entry div.
+# The question text lives in the entry's heading <label>, and REQUIRED is shown
+# only by a `_required_` class on that heading - the inputs themselves carry no
+# required / aria-required attribute. Yes/No questions are two <button>s over a
+# HIDDEN checkbox. This helper reads all of that in one round-trip.
+_FIELD_CONTEXT_JS = """
+(node) => {
+  const clean = (s) => (s || '').replace(/\\s+/g, ' ').trim();
+  const out = {question: '', required: false, buttons: [], options: [], ashby: false};
+  if (node.tagName === 'SELECT') {
+    out.options = Array.from(node.options).map((o) => clean(o.text)).filter(Boolean);
+  }
+  const entry = node.closest('.ashby-application-form-field-entry, [class*="_fieldEntry"]');
+  if (entry) {
+    out.ashby = true;
+    const head = entry.querySelector('[class*="_heading_"]') || entry.querySelector('label');
+    if (head) {
+      out.question = clean(head.innerText);
+      out.required = /required/i.test(head.className || '') || /\\*\\s*$/.test(head.innerText || '');
+    }
+    out.buttons = Array.from(entry.querySelectorAll('button'))
+      .filter((b) => b.offsetParent !== null || b.getClientRects().length > 0)
+      .map((b) => clean(b.innerText)).filter(Boolean);
+  } else {
+    const fs = node.closest('fieldset');
+    if (fs) {
+      const lg = fs.querySelector('legend');
+      if (lg) {
+        out.question = clean(lg.innerText);
+        out.required = /\\*\\s*$/.test(lg.innerText || '');
+      }
+    }
+  }
+  if (node.type === 'radio' && node.name) {
+    const scope = entry || node.closest('fieldset') || document;
+    const esc = (window.CSS && CSS.escape) ? CSS.escape(node.name) : node.name;
+    out.options = Array.from(scope.querySelectorAll(`input[type=radio][name="${esc}"]`))
+      .map((r) => {
+        let t = '';
+        if (r.id) {
+          const l = document.querySelector(`label[for="${CSS.escape(r.id)}"]`);
+          if (l) t = clean(l.innerText);
+        }
+        if (!t && r.closest('label')) t = clean(r.closest('label').innerText);
+        return t || clean(r.value);
+      }).filter(Boolean);
+  }
+  return out;
+}
+"""
+
+
+def field_context(el: Locator) -> dict[str, Any]:
+    try:
+        return el.evaluate(_FIELD_CONTEXT_JS) or {}
+    except Exception:
+        return {}
+
+
+ENTRY_XPATH = (
+    "xpath=ancestor::div[contains(@class,'ashby-application-form-field-entry') "
+    "or contains(@class,'_fieldEntry')][1]"
+)
+
+
 SKIP_INPUT_TYPES = {"hidden", "submit", "button", "image", "reset", "search"}
 
 
@@ -360,6 +451,7 @@ def plan_fields(
     answers = load_answers()
     plans: list[FieldPlan] = []
     seen_radio_groups: set[str] = set()
+    seen_button_groups: set[str] = set()
 
     controls = page.locator(
         "form input, form textarea, form select, form [role='combobox'], "
@@ -393,32 +485,86 @@ def plan_fields(
         else:
             kind = "text"
 
+        ctx = field_context(el) if kind != "file" else {}
+        is_ashby = bool(ctx.get("ashby"))
+        name, el_id = a.get("name", ""), a.get("id", "")
+
+        # Ashby Yes/No question: two visible buttons over a HIDDEN checkbox.
+        # The hidden checkbox is what the form validates, so it must not be
+        # dropped by the visibility filter below - we answer by clicking.
+        buttons = [b for b in (ctx.get("buttons") or []) if len(b) <= 40]
+        if kind == "checkbox" and not a.get("visible") and is_ashby and len(buttons) >= 2:
+            question = ctx.get("question") or label_for(page, el)
+            key = f"{question}|{name}"
+            if key in seen_button_groups:
+                continue
+            seen_button_groups.add(key)
+            required = bool(a.get("required")) or bool(ctx.get("required"))
+            semantic = classify(question, name, el_id)
+            value, reason = resolve_value(question, semantic, identity, answers, job, buttons)
+            plans.append(FieldPlan(
+                kind="buttons", label=question, semantic=semantic, required=required,
+                value=value, action="fill" if value else "skip", reason=reason,
+                locator=el.locator(ENTRY_XPATH),
+                meta={"name": name, "id": el_id, "options": buttons},
+            ))
+            continue
+
         if not a.get("visible") and kind != "file":
             continue
 
         # Skip react-select decoy inputs: hidden validation inputs with empty
         # id/name/type/role but visible=1. These are duplicates of the real combobox.
+        # (Ashby's location autocomplete also has no type - it is NOT a decoy.)
         if (tag == "input" and a.get("visible") and not a.get("id") and
-            not a.get("name") and not ftype and not a.get("role")):
+            not a.get("name") and not ftype and not a.get("role") and not is_ashby):
             continue
         label = label_for(page, el)
-        name, el_id = a.get("name", ""), a.get("id", "")
-        required = bool(a.get("required"))
-
+        required = bool(a.get("required")) or bool(ctx.get("required"))
+        question = ctx.get("question") or ""
+        options: list[str] = []
         if kind == "radio":
             group = name or label
             if group in seen_radio_groups:
                 continue
             seen_radio_groups.add(group)
+            # label_for() on a radio returns the OPTION text ('7+ years'); the
+            # question is the group heading / legend.
+            options = [o for o in (ctx.get("options") or [])]
+            if question:
+                label = question
+        elif kind == "select":
+            options = [
+                o for o in (ctx.get("options") or [])
+                if not _lower(o).startswith(("select", "choose", "please select", "--"))
+            ]
+            if question and is_ashby:
+                label = question
+        elif kind == "checkbox":
+            if question and _lower(label) not in _lower(question):
+                label = f"{question} - {label}" if label else question
+        elif question and is_ashby:
+            label = question
+
 
         if kind == "file":
+            # Ashby's "Autofill from resume" pane re-parses the PDF and rewrites
+            # fields asynchronously, possibly after we have filled them. The real
+            # resume slot (_systemfield_resume) is a separate input - use only that.
+            try:
+                in_autofill = bool(el.evaluate(
+                    "e => !!e.closest('[class*=\"autofill\"]')"))
+            except Exception:
+                in_autofill = False
+            if in_autofill:
+                continue
             # Greenhouse ships #resume AND #cover_letter as file inputs that are
             # BOTH labelled 'Attach', so the label cannot tell them apart. Route
             # on id/name instead: the resume goes to the resume input, and an
             # optional cover-letter upload is left alone rather than being fed a
             # duplicate resume PDF.
             slot = f"{el_id} {name}".lower()
-            if "cover" in slot or "letter" in slot:
+            if "cover" in slot or "letter" in slot or "cover letter" in _lower(label):
                 plans.append(FieldPlan(
                     kind="file", label=label or "Cover letter", semantic="cover_letter",
                     required=required, value="", action="skip",
@@ -434,7 +580,22 @@ def plan_fields(
             ))
             continue
 
-        semantic = classify(label, name, el_id)
+        # A checkbox's own option text ("New York City") must not drive the
+        # semantic - classify on the group question it belongs to.
+        if kind == "checkbox":
+            # (name/id too: Ashby bakes the option value into the checkbox id.)
+            semantic = classify(question or label.split(" - ")[0])
+        else:
+            semantic = classify(label, name, el_id)
+        if kind in ("text", "textarea") and re.search(r"\btwitter\b|\bx\.com\b|\bx \(twitter", _lower(label)):
+            semantic = "question"   # not the portfolio site - never cross-filled
+        # A long sentence that merely mentions "location"/"company" is a real
+        # question ("This role requires someone in Pune... confirm your
+        # location"), not a plain profile field - let the brain read it.
+        if (kind in ("text", "textarea") and len(_lower(label)) > 80 and semantic in (
+                "location", "country", "company", "title", "school", "degree",
+                "discipline", "full_name")):
+            semantic = "question"
 
         # Conditional follow-ups ("If other, please specify") belong to a branch
         # we did not take - answering them would be noise, so leave them blank.
@@ -447,18 +608,26 @@ def plan_fields(
             ))
             continue
 
-        # Long free-text that reads like an essay -> cover-letter style answer.
+        # Long free-text: specific questions (start date, salary, stack...) get
+        # the brain's grounded answer; real essays get the cover-letter text.
         if kind == "textarea" and semantic in ("question", "cover_letter"):
             text = cover_letter_text(identity, answers, title, company)
-            rule = _answer_rules(label, answers)
-            if rule and rule != "ANSWER_SKIP" and not rule.startswith("ANSWER_"):
-                value, reason = rule, "confirmed answer from answers.yaml"
-            elif is_eeo(label):
+            if is_eeo(label):
                 value, reason = None, "EEO/demographic - intentionally not answered"
-            elif text:
-                value, reason = text, "cover-letter template built from resume facts"
             else:
-                value, reason = None, "no confirmed answer for this free-text question"
+                value, reason = resolve_value(label, "question", identity, answers, job)
+                essay = value is None or reason.startswith("brain: short statement")
+                # A bare Yes/No in a box that asks you to *describe* something is a
+                # keyword-rule misfire ("remote" in "tell us about remote work").
+                yes_no_q = _lower(label).startswith(
+                    ("are ", "do ", "does ", "will ", "can ", "is ", "have ", "has ", "would "))
+                misfire = bool(value) and value.strip().lower() in ("yes", "no") and not yes_no_q
+                if (value is None or misfire) and not required:
+                    value, reason = None, "optional free-text question with no grounded answer - left blank"
+                elif (essay or misfire) and text:
+                    value, reason = text, "cover-letter template built from resume facts"
+                elif value is None:
+                    reason = reason or "no confirmed answer for this free-text question"
             plans.append(FieldPlan(
                 kind="textarea", label=label, semantic="cover_letter",
                 required=required, value=value,
@@ -467,7 +636,7 @@ def plan_fields(
             ))
             continue
 
-        value, reason = resolve_value(label, semantic, identity, answers, job)
+        value, reason = resolve_value(label, semantic, identity, answers, job, options or None)
 
         # Some boards mark EEO/demographic dropdowns as required. We never invent
         # personal characteristics, but "decline to self-identify" is a real,
@@ -1040,19 +1209,56 @@ def _set_radio(page: Page, el: Locator, label: str, value: str) -> bool:
     except Exception:
         total = 1
     want = _lower(value)
-    for idx in range(min(total, 12)):
-        radio = group.nth(idx)
-        text = _lower(label_for(page, radio))
-        if text and (want == text or want in text or text in want):
+    radios = [group.nth(idx) for idx in range(min(total, 14))]
+    texts = [_lower(label_for(page, r)) for r in radios]
+    # Exact option text first: 'No' must never land on 'Not yet' or 'Yes, now'.
+    order = [i for i, t in enumerate(texts) if t == want]
+    order += [i for i, t in enumerate(texts) if t and i not in order and (want in t or t in want)]
+    for idx in order:
+        radio = radios[idx]
+        try:
+            radio.check(timeout=5000)
+            return True
+        except Exception:
             try:
-                radio.check(timeout=5000)
+                radio.click(timeout=4000, force=True)
                 return True
             except Exception:
-                try:
-                    radio.click(timeout=4000)
-                    return True
-                except Exception:
-                    continue
+                continue
+    return False
+
+
+def _click_choice_button(entry: Locator, value: str) -> bool:
+    """Ashby Yes/No: click the button in this field entry whose text matches."""
+    want = _lower(value)
+    try:
+        btns = entry.locator("button")
+        total = min(btns.count(), 10)
+    except Exception:
+        return False
+    texts = []
+    for idx in range(total):
+        try:
+            texts.append(_lower(btns.nth(idx).inner_text(timeout=2000)))
+        except Exception:
+            texts.append("")
+    order = [i for i, t in enumerate(texts) if t == want]
+    order += [i for i, t in enumerate(texts) if t and i not in order and t.startswith(want)]
+    for idx in order:
+        btn = btns.nth(idx)
+        try:
+            btn.scroll_into_view_if_needed(timeout=3000)
+        except Exception:
+            pass
+        try:
+            btn.click(timeout=5000)
+            return True
+        except Exception:
+            try:
+                btn.click(timeout=3000, force=True)
+                return True
+            except Exception:
+                continue
     return False
 
 
@@ -1086,6 +1292,8 @@ def apply_plan(page: Page, plans: list[FieldPlan]) -> dict[str, Any]:
             ok = _fill_combobox(page, plan.locator, plan.value)
         elif plan.kind == "checkbox":
             ok = _set_checkbox(plan.locator, plan.value)
+        elif plan.kind == "buttons":
+            ok = _click_choice_button(plan.locator, plan.value)
         elif plan.kind == "radio":
             ok = _set_radio(page, plan.locator, plan.label, plan.value)
         else:
@@ -1117,7 +1325,7 @@ def apply_plan(page: Page, plans: list[FieldPlan]) -> dict[str, Any]:
     for plan in plans:
         if plan.action == "skip" or not plan.value or plan.kind == "file":
             continue
-        if plan.kind in ("checkbox", "radio") or plan.value == DECLINE_SENTINEL:
+        if plan.kind in ("checkbox", "radio", "buttons") or plan.value == DECLINE_SENTINEL:
             continue
         # React remounts these forms during validation, which detaches the
         # locator we captured while planning - so always re-query by id first.

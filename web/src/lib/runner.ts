@@ -363,7 +363,7 @@ export async function startRun(candidate: RunTarget, limit: number): Promise<Sta
     "--limit",
     String(limit),
     "--per-company",
-    "1",
+    "4",
     "--india-remote-only",
   ];
   const command = `${uv} ${args.join(" ")}`;
