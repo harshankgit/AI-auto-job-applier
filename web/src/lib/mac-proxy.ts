@@ -200,7 +200,17 @@ function accessKey(req: Request): string {
   );
 }
 
+const NTFY_CACHE = new Map<string, { at: number; msgs: string[] }>();
+
 async function ntfyMessages(topic: string): Promise<string[]> {
+  const hit = NTFY_CACHE.get(topic);
+  if (hit && Date.now() - hit.at < 15_000) return hit.msgs;
+  const msgs = await ntfyFetch(topic);
+  NTFY_CACHE.set(topic, { at: Date.now(), msgs });
+  return msgs;
+}
+
+async function ntfyFetch(topic: string): Promise<string[]> {
   try {
     const res = await fetch(`https://ntfy.sh/${topic}/json?poll=1&since=12h`, {
       cache: "no-store",
@@ -249,6 +259,7 @@ async function lastControl(key: string): Promise<{ cmd: string; at: number }> {
 /** Tell the cloud runner (and the Mac watchdog) to start or pause. */
 export async function publishControl(cmd: "start" | "stop", key: string): Promise<boolean> {
   const ts = String(Math.floor(Date.now() / 1000));
+  NTFY_CACHE.delete(`${TOPIC}-ctl`);
   try {
     const res = await fetch(`https://ntfy.sh/${TOPIC}-ctl`, {
       method: "POST",
@@ -314,11 +325,29 @@ async function cloudAnswer(req: Request, key: string): Promise<{ res: Response |
   if (req.method === "GET" && path === "/api/logs" && new URL(req.url).searchParams.has("tail")) {
     const lines = hb?.tail?.length
       ? [`[cloud runner${hb.run ? " " + hb.run : ""} · heartbeat ${new Date(hb.at * 1000).toISOString()}]`, ...hb.tail]
-      : ["[Mac offline — no cloud run yet]"];
+      : [hb ? `[cloud runner ${hb.note ?? ""} · ${new Date(hb.at * 1000).toISOString()} — log lines arrive with the next heartbeat (~6 min)]` : "[Mac offline — no cloud run yet]"];
     return { res: json({ lines, running: status.running, status }, link), link };
   }
   if (req.method === "GET" || req.method === "HEAD") return { res: null, link };
   return { res: jsonError(502, OFFLINE_MSG, "offline"), link: "offline" };
+}
+
+/** If the Mac says "idle" for /api/status or /api/logs?tail while the cloud runner is applying, answer from the cloud. */
+async function withCloud(req: Request, res: Response): Promise<Response> {
+  const url = new URL(req.url);
+  const isStatus = req.method === "GET" && url.pathname === "/api/status";
+  const isTail = req.method === "GET" && url.pathname === "/api/logs" && url.searchParams.has("tail");
+  if (!res.ok || (!isStatus && !isTail)) return res;
+  try {
+    const body = (await res.clone().json()) as { running?: boolean; status?: { running?: boolean } };
+    const macRunning = isStatus ? !!body.running : !!body.status?.running;
+    if (macRunning) return res;
+    const cloud = await cloudAnswer(req, accessKey(req));
+    if (cloud.res && cloud.link === "cloud") return cloud.res;
+  } catch {
+    /* keep the Mac answer */
+  }
+  return res;
 }
 
 type Handler = (req: Request) => Response | Promise<Response>;
@@ -327,6 +356,9 @@ type Handler = (req: Request) => Response | Promise<Response>;
  * Wrap a route handler: on the Mac (project root present) it runs unchanged;
  * on the hosted site it forwards keyed requests to the Mac and otherwise
  * answers from the snapshot, tagging every response with x-jobbot-link.
+ *
+ * When the Mac answers "idle" but the cloud runner is applying, the cloud
+ * status is shown instead so the dashboard never claims nothing is running.
  */
 export function withMac(handler: Handler): (req: Request) => Promise<Response> {
   return async (req: Request) => {
@@ -336,12 +368,12 @@ export function withMac(handler: Handler): (req: Request) => Promise<Response> {
       const res = await handler(req);
       // Mirror Start/Stop to the cloud runner so it pauses/resumes too.
       if (control && res.ok) await publishControl(path === "/api/stop" ? "stop" : "start", accessKey(req));
-      return res;
+      return withCloud(req, res);
     }
     const { res, link } = await proxyToMac(control ? req.clone() : req);
     if (res && link === "live") {
       if (control && res.ok) await publishControl(path === "/api/stop" ? "stop" : "start", accessKey(req));
-      return res;
+      return withCloud(req, res);
     }
     if (link === "offline") {
       const cloud = await cloudAnswer(req, accessKey(req));
