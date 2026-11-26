@@ -1,6 +1,6 @@
 # Why applications failed
 
-_Generated 2026-11-26 21:14:48_
+_Generated 2026-11-26 21:45:02_
 
 ## Harshank
 
