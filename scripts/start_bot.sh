@@ -22,7 +22,12 @@ if pgrep -f "jobbot\.cli (apply|run)" >/dev/null; then
     echo "$(ts) [$MODE] bot log idle >25 min -> killing frozen bot" >> "$WLOG"
     pkill -f "jobbot\.cli (apply|run)"; sleep 5; pkill -9 -f "jobbot\.cli (apply|run)"
   else
-    echo "$(ts) [$MODE] bot running OK" >> "$WLOG"; exit 0
+    echo "$(ts) [$MODE] bot running OK" >> "$WLOG"
+    # share progress with the cloud runner every ~30 min
+    if [ ! -f data/last_push ] || [ $(( $(date +%s) - $(stat -f %m data/last_push) )) -gt 1700 ]; then
+      .venv/bin/python scripts/state_sync.py push >> "$WLOG" 2>&1 && touch data/last_push
+    fi
+    exit 0
   fi
 fi
 
@@ -30,7 +35,12 @@ if [ "$MODE" = "daily" ]; then
   rm -f data/STOP data/STOP-harshank data/STOP-divya
 elif [ -f data/STOP ]; then
   echo "$(ts) [$MODE] user pressed Stop -> not restarting" >> "$WLOG"; exit 0
+elif .venv/bin/python scripts/cloud.py paused >/dev/null 2>&1; then
+  echo "$(ts) [$MODE] paused from the website -> not restarting" >> "$WLOG"; exit 0
 fi
+
+# pick up whatever the cloud runner applied while the Mac was off
+.venv/bin/python scripts/state_sync.py pull >> "$WLOG" 2>&1 || echo "$(ts) [$MODE] state pull failed" >> "$WLOG"
 
 # diagnose why it died (last errors from the previous log)
 if [ -f logs/realrun.log ]; then

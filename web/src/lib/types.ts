@@ -78,7 +78,7 @@ export interface ApplicationsPayload {
   error: string | null;
 }
 
-export type RunSource = "dashboard" | "external";
+export type RunSource = "dashboard" | "external" | "cloud";
 
 export interface LastRunInfo {
   candidate: string | null;

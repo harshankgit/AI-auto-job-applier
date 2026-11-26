@@ -3,14 +3,15 @@
 import { useCallback, useEffect, useState } from "react";
 import { KEY_STORAGE, getKey, isRemoteHost } from "@/lib/remote-fetch";
 
-type Link = "checking" | "local" | "live" | "snapshot" | "offline" | "badkey";
+type Link = "checking" | "local" | "live" | "snapshot" | "offline" | "badkey" | "cloud";
 
 const LABEL: Record<Link, string> = {
   checking: "Checking…",
   local: "Live · this Mac",
   live: "Live · Mac connected",
   snapshot: "Snapshot · connect Mac",
-  offline: "Mac offline",
+  offline: "Mac offline · cloud idle",
+  cloud: "Live · cloud runner",
   badkey: "Wrong access key",
 };
 
@@ -21,6 +22,7 @@ const TONE: Record<Link, string> = {
   snapshot: "bg-zinc-800/60 text-zinc-300 ring-zinc-600",
   offline: "bg-amber-500/10 text-amber-300 ring-amber-500/40",
   badkey: "bg-red-500/10 text-red-300 ring-red-500/40",
+  cloud: "bg-sky-500/10 text-sky-300 ring-sky-500/40",
 };
 
 export function LinkStatus() {
@@ -35,6 +37,7 @@ export function LinkStatus() {
       const body = (await res.json().catch(() => ({}))) as { root?: boolean };
       if (header === "live") setLink("live");
       else if (header === "badkey") setLink("badkey");
+      else if (header === "cloud") setLink("cloud");
       else if (header === "offline") setLink("offline");
       else if (body.root && !isRemoteHost()) setLink("local");
       else if (body.root) setLink("live");

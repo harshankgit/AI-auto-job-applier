@@ -1,0 +1,79 @@
+name: auto-apply (cloud)
+
+# Keeps applying while the Mac is offline. Every 30 min the gate checks:
+#   - Mac bot running (via its signed tunnel)  -> skip, the Mac has priority
+#   - Stop pressed on the website              -> skip
+#   - another cloud run already heartbeating   -> skip
+# Otherwise it restores the shared encrypted state, runs the bot for up to
+# ~5 h, pushes state back and commits fresh reports (Vercel redeploys).
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      minutes:
+        description: "How long to apply (minutes)"
+        default: "300"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jobbot-cloud
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    env:
+      JOBBOT_STATE_KEY: ${{ secrets.JOBBOT_STATE_KEY }}
+      JOBBOT_ACCESS_KEY: ${{ secrets.JOBBOT_ACCESS_KEY }}
+      GH_TOKEN: ${{ github.token }}
+      JOBBOT_REPO: ${{ github.repository }}
+      JOBBOT_SITE: cloud
+      JOBBOT_RUN_MINUTES: ${{ github.event.inputs.minutes || '300' }}
+      JOBBOT_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen || uv sync
+
+      - name: Gate (Mac busy / paused?)
+        id: gate
+        run: |
+          if uv run python scripts/cloud.py gate; then echo "go=1" >> "$GITHUB_OUTPUT"; else echo "go=0" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Install Chrome
+        if: steps.gate.outputs.go == '1'
+        run: uv run playwright install --with-deps chrome || uv run playwright install --with-deps chromium
+
+      - name: Apply
+        if: steps.gate.outputs.go == '1'
+        run: uv run python scripts/cloud.py run
+
+      - name: Reports
+        if: always() && steps.gate.outputs.go == '1'
+        run: |
+          uv run python -m jobbot.cli report --no-sheet || true
+          uv run python -c "from jobbot import learn; learn.write_reports()" || true
+
+      - name: Commit reports
+        if: always() && steps.gate.outputs.go == '1'
+        run: |
+          git config user.name "jobbot-cloud"
+          git config user.email "jobbot-cloud@users.noreply.github.com"
+          git add reports/
+          if git diff --cached --quiet; then echo "no report changes"; exit 0; fi
+          git commit -m "Update application reports (cloud run)"
+          for i in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push origin HEAD:main && break
+            sleep 10
+          done

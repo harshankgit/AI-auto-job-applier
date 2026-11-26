@@ -199,6 +199,15 @@ export function Dashboard() {
         </div>
       ) : null}
 
+      {status?.running && status.source === "cloud" ? (
+        <div className="rounded-lg border border-sky-900/60 bg-sky-950/30 px-4 py-3">
+          <p className="text-sm font-medium text-sky-200">
+            The Mac is offline, so the cloud runner (GitHub Actions) is applying. A new run starts within ~30 min of
+            pressing Start; Stop pauses it.
+          </p>
+        </div>
+      ) : null}
+
       {/* Error banner */}
       {error ? <ErrorNote title="Error" body={error} /> : null}
 

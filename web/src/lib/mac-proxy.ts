@@ -173,6 +173,154 @@ async function proxyToMac(req: Request): Promise<{ res: Response | null; link: s
   return { res: jsonError(502, OFFLINE_MSG, "offline"), link: "offline" };
 }
 
+/* ------------------------------------------------------------ cloud runner */
+// When the Mac is offline the GitHub Actions runner (scripts/cloud.py) applies
+// instead. It publishes signed heartbeats to <topic>-cloud and obeys signed
+// "start"/"stop" commands on <topic>-ctl.
+
+type Heartbeat = {
+  running: boolean;
+  source: "cloud";
+  candidate: string;
+  startedAt: string;
+  at: number;
+  note?: string;
+  run?: string;
+  submittedCompanies?: Record<string, number>;
+  tail?: string[];
+};
+const HEARTBEAT_FRESH_S = 15 * 60;
+
+function accessKey(req: Request): string {
+  return (
+    req.headers.get("x-jobbot-key") ||
+    new URL(req.url).searchParams.get("key") ||
+    process.env.JOBBOT_ACCESS_KEY ||
+    DEFAULT_KEY
+  );
+}
+
+async function ntfyMessages(topic: string): Promise<string[]> {
+  try {
+    const res = await fetch(`https://ntfy.sh/${topic}/json?poll=1&since=12h`, {
+      cache: "no-store",
+      signal: AbortSignal.timeout(8000),
+    });
+    const out: string[] = [];
+    for (const line of (await res.text()).split("\n")) {
+      try {
+        const m = JSON.parse(line) as { event?: string; message?: string };
+        if (m.event === "message" && m.message) out.push(m.message);
+      } catch {
+        /* skip */
+      }
+    }
+    return out.reverse();
+  } catch {
+    return [];
+  }
+}
+
+async function lastHeartbeat(key: string): Promise<Heartbeat | null> {
+  for (const msg of await ntfyMessages(`${TOPIC}-cloud`)) {
+    const cut = msg.lastIndexOf("\n");
+    if (cut < 0) continue;
+    const body = msg.slice(0, cut);
+    if ((await hmacHex(key, body)) !== msg.slice(cut + 1).trim()) continue;
+    try {
+      return JSON.parse(body) as Heartbeat;
+    } catch {
+      /* skip */
+    }
+  }
+  return null;
+}
+
+async function lastControl(key: string): Promise<{ cmd: string; at: number }> {
+  for (const msg of await ntfyMessages(`${TOPIC}-ctl`)) {
+    const [cmd, ts, sig] = msg.trim().split(/\s+/);
+    if ((cmd === "start" || cmd === "stop") && ts && sig && (await hmacHex(key, `${cmd} ${ts}`)) === sig) {
+      return { cmd, at: Number(ts) };
+    }
+  }
+  return { cmd: "", at: 0 };
+}
+
+/** Tell the cloud runner (and the Mac watchdog) to start or pause. */
+export async function publishControl(cmd: "start" | "stop", key: string): Promise<boolean> {
+  const ts = String(Math.floor(Date.now() / 1000));
+  try {
+    const res = await fetch(`https://ntfy.sh/${TOPIC}-ctl`, {
+      method: "POST",
+      body: `${cmd} ${ts} ${await hmacHex(key, `${cmd} ${ts}`)}`,
+      signal: AbortSignal.timeout(8000),
+    });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+function json(data: unknown, link: string, status = 200): Response {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: { "content-type": "application/json", "x-jobbot-link": link, "cache-control": "no-store" },
+  });
+}
+
+/** Answers status/logs/apply/stop from the cloud runner while the Mac is offline. */
+async function cloudAnswer(req: Request, key: string): Promise<{ res: Response | null; link: string }> {
+  const path = new URL(req.url).pathname;
+  const [hb, ctl] = await Promise.all([lastHeartbeat(key), lastControl(key)]);
+  const fresh = !!hb && Date.now() / 1000 - hb.at < HEARTBEAT_FRESH_S;
+  const running = fresh && !!hb?.running && ctl.cmd !== "stop";
+  const pending = !running && ctl.cmd === "start" && Date.now() / 1000 - ctl.at < 45 * 60;
+  const link = running || pending ? "cloud" : "offline";
+  const status = {
+    running: running || pending,
+    pid: null,
+    startedAt: running ? hb!.startedAt : pending ? new Date(ctl.at * 1000).toISOString() : null,
+    candidate: "both",
+    source: running || pending ? "cloud" : null,
+    lastRun: null,
+    cloud: hb
+      ? { at: hb.at, note: hb.note ?? "", run: hb.run ?? "", submittedCompanies: hb.submittedCompanies ?? {}, pending }
+      : { pending },
+  };
+  if (req.method === "POST" && path === "/api/apply") {
+    const ok = await publishControl("start", key);
+    if (!ok) return { res: jsonError(502, "Could not reach the cloud runner queue (ntfy).", "offline"), link: "offline" };
+    return {
+      res: json(
+        {
+          started: true,
+          candidate: "both",
+          candidateLabel: "Both (cloud runner)",
+          limit: 0,
+          command: "GitHub Actions cloud runner (starts within ~30 min while the Mac is offline)",
+          status: { ...status, running: true, source: "cloud", startedAt: status.startedAt ?? new Date().toISOString() },
+        },
+        "cloud",
+      ),
+      link: "cloud",
+    };
+  }
+  if (req.method === "POST" && path === "/api/stop") {
+    const ok = await publishControl("stop", key);
+    if (!ok) return { res: jsonError(502, "Could not reach the cloud runner queue (ntfy).", "offline"), link: "offline" };
+    return { res: json({ stopped: true, pids: [], status: { ...status, running: false, source: null } }, "offline"), link: "offline" };
+  }
+  if (req.method === "GET" && path === "/api/status") return { res: json(status, link), link };
+  if (req.method === "GET" && path === "/api/logs" && new URL(req.url).searchParams.has("tail")) {
+    const lines = hb?.tail?.length
+      ? [`[cloud runner${hb.run ? " " + hb.run : ""} · heartbeat ${new Date(hb.at * 1000).toISOString()}]`, ...hb.tail]
+      : ["[Mac offline — no cloud run yet]"];
+    return { res: json({ lines, running: status.running, status }, link), link };
+  }
+  if (req.method === "GET" || req.method === "HEAD") return { res: null, link };
+  return { res: jsonError(502, OFFLINE_MSG, "offline"), link: "offline" };
+}
+
 type Handler = (req: Request) => Response | Promise<Response>;
 
 /**
@@ -182,8 +330,24 @@ type Handler = (req: Request) => Response | Promise<Response>;
  */
 export function withMac(handler: Handler): (req: Request) => Promise<Response> {
   return async (req: Request) => {
-    if (rootIsPresent()) return handler(req);
-    const { res, link } = await proxyToMac(req);
+    const path = new URL(req.url).pathname;
+    const control = req.method === "POST" && (path === "/api/apply" || path === "/api/stop");
+    if (rootIsPresent()) {
+      const res = await handler(req);
+      // Mirror Start/Stop to the cloud runner so it pauses/resumes too.
+      if (control && res.ok) await publishControl(path === "/api/stop" ? "stop" : "start", accessKey(req));
+      return res;
+    }
+    const { res, link } = await proxyToMac(control ? req.clone() : req);
+    if (res && link === "live") {
+      if (control && res.ok) await publishControl(path === "/api/stop" ? "stop" : "start", accessKey(req));
+      return res;
+    }
+    if (link === "offline") {
+      const cloud = await cloudAnswer(req, accessKey(req));
+      if (cloud.res) return cloud.res;
+      return tag(await handler(req), cloud.link);
+    }
     if (res) return res;
     return tag(await handler(req), link);
   };

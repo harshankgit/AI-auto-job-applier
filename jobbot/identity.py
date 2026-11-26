@@ -111,7 +111,14 @@ class Identity:
 
     @property
     def resume(self) -> str:
-        return str(self._c["resume"]).strip()
+        raw = str(self._c["resume"]).strip()
+        if raw and not os.path.isfile(raw):
+            # Portable fallback (cloud runner): same file name under data/resumes/.
+            here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            alt = os.path.join(here, "data", "resumes", os.path.basename(raw))
+            if os.path.isfile(alt):
+                return alt
+        return raw
 
     @property
     def years_experience(self) -> int:

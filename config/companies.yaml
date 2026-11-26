@@ -3491,6 +3491,27 @@ greenhouse:
 - token: whitetech
   name: "WhiteTech"
   ai: false
+- token: zetaglobal
+  name: Zeta Global
+  ai: false
+- token: hubspotjobs
+  name: HubSpot
+  ai: false
+- token: contentstack
+  name: Contentstack
+  ai: false
+- token: godaddy
+  name: GoDaddy
+  ai: false
+- token: klaviyo
+  name: Klaviyo
+  ai: false
+- token: pendo
+  name: Pendo
+  ai: false
+- token: linkedinjobs
+  name: LinkedIn
+  ai: false
 lever:
 - token: palantir
   name: Palantir
@@ -6976,4 +6997,19 @@ ashby:
   ai: false
 - token: zeely
   name: "Zeely Inc."
+  ai: false
+- token: sitecore
+  name: Sitecore
+  ai: false
+- token: fullstory
+  name: FullStory
+  ai: false
+- token: prosus
+  name: Prosus
+  ai: false
+- token: vitally
+  name: Vitally
+  ai: false
+- token: neon
+  name: Neon (DB)
   ai: false
