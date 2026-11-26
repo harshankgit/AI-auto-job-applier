@@ -1,39 +1,39 @@
 # Why applications failed
 
-_Generated 2026-11-26 14:47:13_
+_Generated 2026-11-26 09:41:33_
 
 ## Harshank
 
-Submitted: **110** (101 companies) | Failed: **661**
+Submitted: **110** (101 companies) | Failed: **688**
 
 | Reason | Count |
 |---|---|
-| Needs an answer from you | 425 |
-| Captcha | 121 |
-| Form rejected | 53 |
+| Needs an answer from you | 435 |
+| Captcha | 128 |
+| Form rejected | 61 |
 | Page error | 26 |
 | No confirmation / OTP | 22 |
-| Job closed | 14 |
+| Job closed | 16 |
 
 ### Questions waiting for your answer
 
 - (24x) Phone Number - PAR Technology, Handshake, The Job Sauce, SimSpace Corporation -> answered (saved privately)
 - (22x) Yes - Cin7, Entrata, ValGenesis, Onit, Inc.
-- (18x) What is your current notice period? - ElevenLabs -> answered (saved privately)
+- (19x) What is your current notice period? - ElevenLabs -> answered (saved privately)
 - (15x) Phone - Horizon3 AI, Talkiatry, Ramp, Quora -> answered (saved privately)
 - (12x) Contact Phone Number - NETGEAR -> answered (saved privately)
 - (11x) Current Location: - OpenGov -> answered (saved privately)
 - (10x) Education History - Applied
+- (10x) What is your notice period? - SurveyMonkey -> answered (saved privately)
 - (9x) Title* - Razorpay Software Private Limited, AiDASH, Inc., IMC Trading, Coinbase -> answered (saved privately)
-- (8x) What is your notice period? - SurveyMonkey -> answered (saved privately)
+- (7x) University Name ✱ - ION Group -> answered (saved privately)
 - (5x) Are you currently able to legally work for any employer in either France, Belgium or Spain? - Alan -> answered (saved privately)
-- (5x) University Name ✱ - ION Group -> answered (saved privately)
+- (4x) Are you on location (BLR) or willing to move? - Rox Data Corp -> answered (saved privately)
 - (4x) Do you have a minimum of 3 years of experience as a Software Engineer? - Alan -> answered (saved privately)
 - (4x) Do you opt-in to receive WhatsApp messages from Stripe Recruiting?* - Stripe -> answered (saved privately)
 - (4x) What is your most recent bonus pay/unvested stock option? (in INR)* - IMC Trading
 - (4x) What is your non - compete period? (in months)* - IMC Trading -> answered (saved privately)
 - (4x) Чи знав/-ла про Universe до подачі на цю роль? - Universe
-- (3x) Are you on location (BLR) or willing to move? - Rox Data Corp -> answered (saved privately)
 - (3x) If so, what type of visa are you currently on and when does it expire? - Kong
 - (3x) Total & Relevant Experience in Software Engineering? ✱ - Allata -> answered (saved privately)
 - (2x) A “U.S. person” is a citizen, legal permanent resident, or legal temporary resident (i.e., a refugee or asylee) of the United States. Which of the following best describes your “U.S. person” status? - Snowflake
@@ -60,15 +60,15 @@ Submitted: **110** (101 companies) | Failed: **661**
 
 ## Divya
 
-Submitted: **104** (97 companies) | Failed: **589**
+Submitted: **104** (97 companies) | Failed: **615**
 
 | Reason | Count |
 |---|---|
-| Needs an answer from you | 404 |
-| Captcha | 106 |
-| Form rejected | 34 |
+| Needs an answer from you | 411 |
+| Captcha | 119 |
+| Form rejected | 38 |
 | No confirmation / OTP | 20 |
-| Job closed | 13 |
+| Job closed | 15 |
 | Page error | 12 |
 
 ### Questions waiting for your answer
@@ -80,12 +80,12 @@ Submitted: **104** (97 companies) | Failed: **589**
 - (12x) Contact Phone Number - NETGEAR -> answered (saved privately)
 - (10x) Title* - AiDASH, Inc., Razorpay Software Private Limited, Coinbase, IMC Trading -> answered (saved privately)
 - (10x) What is your current notice period? - ElevenLabs -> answered (saved privately)
+- (8x) Are you on location (BLR) or willing to move? - Rox Data Corp -> answered (saved privately)
 - (8x) Leetcode/Github Link* - Bitgo
+- (8x) University Name ✱ - ION Group -> answered (saved privately)
 - (7x) Link to your Github profile - ElevenLabs
 - (6x) Are you currently able to legally work for any employer in either France, Belgium or Spain? - Alan -> answered (saved privately)
-- (6x) Are you on location (BLR) or willing to move? - Rox Data Corp -> answered (saved privately)
 - (6x) GitHub - Diagrid, TensorWave, Cardboard
-- (6x) University Name ✱ - ION Group -> answered (saved privately)
 - (5x) Do you opt-in to receive WhatsApp messages from Stripe Recruiting?* - Stripe -> answered (saved privately)
 - (4x) Are you currently living in Bengaluru? If not, are you planning on moving to Bengaluru? - SPAN -> answered (saved privately)
 - (4x) Do you have a minimum of 3 years of experience as a Software Engineer? - Alan -> answered (saved privately)

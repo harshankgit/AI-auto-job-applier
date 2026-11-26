@@ -1,17 +1,17 @@
 {
- "generated_at": "2026-11-26 14:47:13",
+ "generated_at": "2026-11-26 09:41:33",
  "candidates": {
   "harshank": {
    "submitted": 110,
    "submitted_companies": 101,
-   "failed": 661,
+   "failed": 688,
    "reasons": {
-    "needs_answer": 425,
-    "captcha": 121,
-    "form_rejected": 53,
+    "needs_answer": 435,
+    "captcha": 128,
+    "form_rejected": 61,
     "error": 26,
     "unconfirmed": 22,
-    "closed": 14
+    "closed": 16
    },
    "successes": [
     {
@@ -1166,6 +1166,408 @@
     }
    ],
    "failures": [
+    {
+     "company": "ION Group",
+     "title": "Software Developer, 2027 Leadership Development Program, ION Group, India",
+     "location": "Noida",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:41:28",
+     "url": "https://jobs.lever.co/ion/6f66cbb4-c882-4234-b84e-68baea56e1ea",
+     "source": "lever",
+     "score": 55.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "University Name ✱"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II-Golang",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:39:55",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Wonderful",
+     "title": "Forward Deployed Engineer",
+     "location": "India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:39:22",
+     "url": "https://jobs.ashbyhq.com/wonderful/486126ff-8df1-485c-b136-f221968b4559",
+     "source": "ashby",
+     "score": 40.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Are you fluent in the local language?",
+      "Are you fluent in English?",
+      "Do you have client-facing experience?"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Wonderful",
+     "title": "Forward Deployed Engineer",
+     "location": "India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:38:09",
+     "url": "https://jobs.ashbyhq.com/wonderful/486126ff-8df1-485c-b136-f221968b4559",
+     "source": "ashby",
+     "score": 40.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Are you fluent in the local language?",
+      "Are you fluent in English?",
+      "Do you have client-facing experience?"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer (Backend Leaning) - Payments Engineering",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:37:59",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Creative Agents ",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:36:20",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe",
+     "source": "ashby",
+     "score": 72.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What is your current notice period?"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Warner Music Group",
+     "title": "Backend Engineer",
+     "location": "Bangalore",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:35:37",
+     "url": "https://jobs.lever.co/wmg/bd93e552-e497-44a2-bbae-4f2dc318b2f4",
+     "source": "lever",
+     "score": 60.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "NETGEAR",
+     "title": "  SASE Firewall QA Automation Engineer",
+     "location": "Bengaluru, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:35:09",
+     "url": "https://jobs.ashbyhq.com/netgear/b272ca70-fb78-4db1-87d7-ef5852394544",
+     "source": "ashby",
+     "score": 50.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Mobile Engineering - Android",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:34:05",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What is your notice period?"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ShyftLabs",
+     "title": "Software Developer",
+     "location": "Noida, Uttar Pradesh",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:33:39",
+     "url": "https://jobs.lever.co/shyftlabs/4547a228-9cd7-4af6-9588-5cd4c8ae1612",
+     "source": "lever",
+     "score": 55.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:33:24",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426",
+     "source": "ashby",
+     "score": 60.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Smart Working Solutions",
+     "title": "AI Trainer - Software Engineering (Remote, Full-Time) [MV001]",
+     "location": "India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:32:52",
+     "url": "https://jobs.lever.co/smart-working-solutions/b54f0d60-9226-4292-b0a3-9caec516a2fd",
+     "source": "lever",
+     "score": 63.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Please respond truthfully. How much hands-on experience do you have with MCP servers (such as GitHub MCP Server) and agent-based workflow automation? ✱ (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Turnkey",
+     "title": "Engineering - Backend",
+     "location": "Remote",
+     "status": "CLOSED",
+     "applied_at": "2026-11-26 09:32:42",
+     "url": "https://jobs.ashbyhq.com/turnkey/346afd67-a6b9-4fb4-b3fb-19e54baf71e0",
+     "source": "ashby",
+     "score": 57.0,
+     "category": "closed",
+     "why": "The job was already closed when the bot opened it.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Cursor (Anysphere)",
+     "title": "Forward Deployed Engineer - India",
+     "location": "Bengaluru",
+     "status": "CLOSED",
+     "applied_at": "2026-11-26 09:32:39",
+     "url": "https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b",
+     "source": "ashby",
+     "score": 62.0,
+     "category": "closed",
+     "why": "The job was already closed when the bot opened it.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "NETGEAR",
+     "title": "SASE Desktop Client Software Developer",
+     "location": "Bengaluru, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:32:39",
+     "url": "https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3",
+     "source": "ashby",
+     "score": 65.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Mactores",
+     "title": "Full Stack Product Engineer, Agent Native",
+     "location": "Mumbai, MH",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:32:37",
+     "url": "https://jobs.lever.co/mactores/d928d43f-80ac-42f2-bb85-c717cefc83cb",
+     "source": "lever",
+     "score": 63.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ShyftLabs",
+     "title": "Amazon Connect Fullstack Developer",
+     "location": "Noida, Uttar Pradesh",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:32:06",
+     "url": "https://jobs.lever.co/shyftlabs/f036b8ee-8e4b-4e3a-90d5-7d71683acd04",
+     "source": "lever",
+     "score": 65.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Warner Music Group",
+     "title": "Software Engineer - Data Platform",
+     "location": "Bangalore",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:31:44",
+     "url": "https://jobs.lever.co/wmg/742bb482-120a-40bb-bec2-65f44e179dd0",
+     "source": "lever",
+     "score": 64.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "NETGEAR",
+     "title": "  SASE Firewall QA Automation Engineer",
+     "location": "Bengaluru, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:31:09",
+     "url": "https://jobs.ashbyhq.com/netgear/b272ca70-fb78-4db1-87d7-ef5852394544",
+     "source": "ashby",
+     "score": 50.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Rox Data Corp",
+     "title": "Backend Platform Engineer (BLR)",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:30:55",
+     "url": "https://jobs.ashbyhq.com/Rox-Data-Corp/6e6b44f9-8bc2-4dfa-9432-5a0d2931a113",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Are you on location (BLR) or willing to move?"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Full Stack",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:30:49",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What is your notice period?"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ShyftLabs",
+     "title": "Software Developer",
+     "location": "Noida, Uttar Pradesh",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:30:36",
+     "url": "https://jobs.lever.co/shyftlabs/4547a228-9cd7-4af6-9588-5cd4c8ae1612",
+     "source": "lever",
+     "score": 55.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ION Group",
+     "title": "Software Developer, 2027 Leadership Development Program, ION Group, India",
+     "location": "Noida",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:30:34",
+     "url": "https://jobs.lever.co/ion/6f66cbb4-c882-4234-b84e-68baea56e1ea",
+     "source": "lever",
+     "score": 55.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "University Name ✱"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Smart Working Solutions",
+     "title": "AI Trainer - Software Engineering (Remote, Full-Time) [MV001]",
+     "location": "India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:29:50",
+     "url": "https://jobs.lever.co/smart-working-solutions/b54f0d60-9226-4292-b0a3-9caec516a2fd",
+     "source": "lever",
+     "score": 63.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Please respond truthfully. How much hands-on experience do you have with MCP servers (such as GitHub MCP Server) and agent-based workflow automation? ✱ (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "NETGEAR",
+     "title": "SASE Desktop Client Software Developer",
+     "location": "Bengaluru, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:29:36",
+     "url": "https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3",
+     "source": "ashby",
+     "score": 65.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ShyftLabs",
+     "title": "Amazon Connect Fullstack Developer",
+     "location": "Noida, Uttar Pradesh",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:28:59",
+     "url": "https://jobs.lever.co/shyftlabs/f036b8ee-8e4b-4e3a-90d5-7d71683acd04",
+     "source": "lever",
+     "score": 65.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II-Golang",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:28:43",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
     {
      "company": "ElevenLabs",
      "title": "Full-Stack Engineer (Backend Leaning) - Payments Engineering",
@@ -7061,436 +7463,6 @@
       "I confirm the information provided in this application, including but not limited to my resume and the above information, is true and correct. I understand that false statements or material omissions of any kind during the hiring process may result in the rescinding of any offer of employment or dis (bot could not click/type it)"
      ],
      "company_later_succeeded": false
-    },
-    {
-     "company": "CrashPlan",
-     "title": "UI Developer",
-     "location": "Bengaluru, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:29:21",
-     "url": "https://job-boards.greenhouse.io/crashplan/jobs/4463963009",
-     "source": "greenhouse",
-     "score": 80.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What is your current residential address?*"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Ownwell",
-     "title": "Software Engineer",
-     "location": "Gurugram, India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:28:48",
-     "url": "https://job-boards.greenhouse.io/ownwell/jobs/4441476006",
-     "source": "greenhouse",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "AiDASH, Inc.",
-     "title": "SDET 2",
-     "location": "Gurugram, Haryana, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:28:46",
-     "url": "https://job-boards.greenhouse.io/aidashinc/jobs/4421444009",
-     "source": "greenhouse",
-     "score": 51.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Title*"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Quantiq",
-     "title": "Software Engineer, C++",
-     "location": "Gurugram, India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:28:34",
-     "url": "https://job-boards.greenhouse.io/quantiq/jobs/4302276009",
-     "source": "greenhouse",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Insurity India",
-     "title": "Software Engineer II",
-     "location": "Noida",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:28:17",
-     "url": "https://job-boards.greenhouse.io/insurityindia/jobs/4436285009",
-     "source": "greenhouse",
-     "score": 55.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Current Full Address*",
-      "Are you legally eligible for employment in India?*",
-      "What is your level of knowledge and proficiency in writing and speaking English?*",
-      "What is the notice period from your current employer? * (bot could not click/type it)",
-      "Have you previously been employed, by Insurity or any of its affiliates?*"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Cardboard",
-     "title": "Backend Engineer",
-     "location": "Bengaluru",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:25:10",
-     "url": "https://jobs.ashbyhq.com/cardboard/71a37ec3-d1df-4769-b018-a1c8f986bc1f",
-     "source": "ashby",
-     "score": 60.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Something you shipped end to end that you're proud of?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "CUBE",
-     "title": "QA Engineer",
-     "location": "Bangalore",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:24:58",
-     "url": "https://jobs.ashbyhq.com/CUBE/d047c79a-f461-4702-a54d-1437ba9b992f",
-     "source": "ashby",
-     "score": 60.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Current Salary (bot could not click/type it)",
-      "Expected Salary (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Allata",
-     "title": "Application Support Engineer (L2/L3) - .NET Fullstack",
-     "location": "Pune - Maharashtra",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:24:41",
-     "url": "https://jobs.lever.co/Allata/dc3a98e8-c789-4363-b74d-69eab457f87f",
-     "source": "lever",
-     "score": 60.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Total & Relevant Experience in Software Engineering? ✱",
-      "Which programming languages you've worked with? ✱ - .Net",
-      "Which programming languages you've worked with? ✱ - Java",
-      "Which programming languages you've worked with? ✱ - Python",
-      "Which programming languages you've worked with? ✱ - Node.js"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Bureau",
-     "title": "Integration Engineer (SDK)",
-     "location": "Bangalore",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:24:28",
-     "url": "https://jobs.ashbyhq.com/bureau/8786a55b-dd03-450a-872d-9d50feeb4f93",
-     "source": "ashby",
-     "score": 61.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Have you worked on SDKs?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Cursor (Anysphere)",
-     "title": "Forward Deployed Engineer - India",
-     "location": "Bengaluru",
-     "status": "CLOSED",
-     "applied_at": "2026-11-20 11:23:53",
-     "url": "https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b",
-     "source": "ashby",
-     "score": 62.0,
-     "category": "closed",
-     "why": "The job was already closed when the bot opened it.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Smart Working Solutions",
-     "title": "AI Trainer - Software Engineering (Remote, Full-Time) [MV001]",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:23:41",
-     "url": "https://jobs.lever.co/smart-working-solutions/b54f0d60-9226-4292-b0a3-9caec516a2fd",
-     "source": "lever",
-     "score": 63.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Please respond truthfully. How much hands-on experience do you have with MCP servers (such as GitHub MCP Server) and agent-based workflow automation? ✱ (bot could not click/type it)",
-      "Please respond truthfully. What is your level of spoken and written English? ✱",
-      "Are you comfortable working the fixed shift hours of 12 PM – 9:30 PM IST (Summer) and 1 PM – 10:30 PM IST (Winter), Monday to Friday? ✱",
-      "What is your current salary in LPA? We will cross-check references later in the process. ✱ (bot could not click/type it)",
-      "Are you open to negotiation? ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "OutcomesAI",
-     "title": "Backend / ML-Ops Engineer — Speech Model Deployment & Inference Optimization",
-     "location": "Bengaluru",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:23:28",
-     "url": "https://jobs.lever.co/outcomesai/7bbc10a3-805c-441a-8c58-44ab9be9c73c",
-     "source": "lever",
-     "score": 63.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Mindtickle",
-     "title": "AI Product Engineer",
-     "location": "Pune, Maharashtra",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:22:43",
-     "url": "https://jobs.lever.co/mindtickle/864ac315-d7c5-4cd5-ab44-0e33d08f48f1",
-     "source": "lever",
-     "score": 63.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Mactores",
-     "title": "Full Stack Product Engineer, Agent Native",
-     "location": "Mumbai, MH",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:21:54",
-     "url": "https://jobs.lever.co/mactores/d928d43f-80ac-42f2-bb85-c717cefc83cb",
-     "source": "lever",
-     "score": 63.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you already on Notice period? ✱",
-      "Do you have other offer in hand? ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Zimperium",
-     "title": "Java Engineer (Back-End & Microservices) - Bangalore, India",
-     "location": "Bangalore, India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:21:40",
-     "url": "https://jobs.lever.co/zimperium/6b50bb8b-2a86-4e93-8c17-39b66f3e0789",
-     "source": "lever",
-     "score": 64.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Warner Music Group",
-     "title": "Software Engineer - Data Platform",
-     "location": "Bangalore",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:20:11",
-     "url": "https://jobs.lever.co/wmg/742bb482-120a-40bb-bec2-65f44e179dd0",
-     "source": "lever",
-     "score": 64.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Working Model Preference ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "ValGenesis",
-     "title": "Calling all Software Engineers!",
-     "location": "Chennai",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:20:01",
-     "url": "https://jobs.lever.co/valgenesis/f2d220b5-abc4-4dc7-b00c-c6b657768739",
-     "source": "lever",
-     "score": 64.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What area have you most experience in? ✱",
-      "What other areas have you previous employment experience in? ✱",
-      "What is your preferred working location? ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Parspec",
-     "title": "Software Engineer - 2 (Backend)",
-     "location": "Hybrid - Bangalore, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:19:50",
-     "url": "https://jobs.ashbyhq.com/parspec/55ae4708-5bca-4b9f-b3d4-c9f75ca288d5",
-     "source": "ashby",
-     "score": 64.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What is the earliest by when you can join Parspec?"
-     ],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "Litmus",
-     "title": "Customer Success Application Engineer (Litmus GCC)",
-     "location": "Pune, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:19:45",
-     "url": "https://jobs.ashbyhq.com/litmus/cd657661-7f6b-46a6-86ad-3b883280f892",
-     "source": "ashby",
-     "score": 64.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Which industrial systems or technologies have you worked with—such as PLC, SCADA, MES, OPC UA/DA, MQTT, Modbus, historians, industrial gateways, or edge platforms?"
-     ],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "Jobgether",
-     "title": "Graduate Software Engineer, Open Source and Linux, Canonical Ubuntu",
-     "location": "India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:18:47",
-     "url": "https://jobs.lever.co/jobgether/7ee769c9-defd-4860-b1b4-ff4e3444854f",
-     "source": "lever",
-     "score": 64.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Doxel",
-     "title": "Full Stack Software Engineer, India",
-     "location": "Bengaluru, Karnataka",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:17:51",
-     "url": "https://jobs.lever.co/doxel/7f6b2263-f6f3-4c85-8bbf-6238bc017e5c",
-     "source": "lever",
-     "score": 64.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Socure",
-     "title": "Software Engineer -II",
-     "location": "Hub - Bangalore",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:17:03",
-     "url": "https://jobs.ashbyhq.com/socure/5fd23982-574e-4213-9b99-9eab3cd43902",
-     "source": "ashby",
-     "score": 65.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Phone Number",
-      "Phone Number",
-      "What is your home zip code?",
-      "Have you previously held a position at Socure?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Onit, Inc.",
-     "title": "Software Engineer - RoR (Fullstack)",
-     "location": "Pune, Maharashtra",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:16:42",
-     "url": "https://jobs.lever.co/onit/8b0dc399-57b8-448b-b66e-5f3c6496de59",
-     "source": "lever",
-     "score": 65.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "NETGEAR",
-     "title": "SASE Desktop Client Software Developer",
-     "location": "Bengaluru, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:15:34",
-     "url": "https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3",
-     "source": "ashby",
-     "score": 65.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Contact Phone Number",
-      "Contact Phone Number"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Model N",
-     "title": "Associate Education Services Consultant (Web Design: JavaScript, CSS)",
-     "location": "Hyderabad India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:15:19",
-     "url": "https://jobs.lever.co/modeln/4de7e001-1c7b-44c5-9136-ae51bca59f50",
-     "source": "lever",
-     "score": 65.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What relevant experience do you have in the key skills mentioned in the job qualifications? ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Commure",
-     "title": "Software Engineer (India)",
-     "location": "Bengaluru, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:13:43",
-     "url": "https://jobs.ashbyhq.com/Commure/b7f99d0b-e511-41ba-a585-ce636f454e99",
-     "source": "ashby",
-     "score": 65.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Brillio",
-     "title": "Fullstack Engineer - React  Java - R01527438",
-     "location": "Chennai, Tamil Nadu, India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:12:48",
-     "url": "https://jobs.lever.co/brillio-2/7fb2ac4a-a088-4c5d-b67d-77834786b729",
-     "source": "lever",
-     "score": 65.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
     }
    ],
    "questions": [
@@ -7527,7 +7499,7 @@
     },
     {
      "question": "What is your current notice period?",
-     "count": 18,
+     "count": 19,
      "companies": [
       "ElevenLabs"
      ],
@@ -7574,6 +7546,15 @@
      "maybe_not_eligible": false
     },
     {
+     "question": "What is your notice period?",
+     "count": 10,
+     "companies": [
+      "SurveyMonkey"
+     ],
+     "learned": true,
+     "maybe_not_eligible": false
+    },
+    {
      "question": "Title*",
      "count": 9,
      "companies": [
@@ -7586,10 +7567,10 @@
      "maybe_not_eligible": false
     },
     {
-     "question": "What is your notice period?",
-     "count": 8,
+     "question": "University Name ✱",
+     "count": 7,
      "companies": [
-      "SurveyMonkey"
+      "ION Group"
      ],
      "learned": true,
      "maybe_not_eligible": false
@@ -7604,10 +7585,10 @@
      "maybe_not_eligible": true
     },
     {
-     "question": "University Name ✱",
-     "count": 5,
+     "question": "Are you on location (BLR) or willing to move?",
+     "count": 4,
      "companies": [
-      "ION Group"
+      "Rox Data Corp"
      ],
      "learned": true,
      "maybe_not_eligible": false
@@ -7655,15 +7636,6 @@
       "Universe"
      ],
      "learned": false,
-     "maybe_not_eligible": false
-    },
-    {
-     "question": "Are you on location (BLR) or willing to move?",
-     "count": 3,
-     "companies": [
-      "Rox Data Corp"
-     ],
-     "learned": true,
      "maybe_not_eligible": false
     },
     {
@@ -7887,6 +7859,24 @@
      "count": 2,
      "companies": [
       "HavocAI"
+     ],
+     "learned": false,
+     "maybe_not_eligible": false
+    },
+    {
+     "question": "Are you fluent in English?",
+     "count": 2,
+     "companies": [
+      "Wonderful"
+     ],
+     "learned": false,
+     "maybe_not_eligible": false
+    },
+    {
+     "question": "Are you fluent in the local language?",
+     "count": 2,
+     "companies": [
+      "Wonderful"
      ],
      "learned": false,
      "maybe_not_eligible": false
@@ -8259,6 +8249,15 @@
      ],
      "learned": true,
      "maybe_not_eligible": true
+    },
+    {
+     "question": "Do you have client-facing experience?",
+     "count": 2,
+     "companies": [
+      "Wonderful"
+     ],
+     "learned": false,
+     "maybe_not_eligible": false
     },
     {
      "question": "Do you have direct experience owning website security tasks such as hardening, vulnerability management, or incident response? ✱",
@@ -8835,43 +8834,16 @@
      ],
      "learned": true,
      "maybe_not_eligible": false
-    },
-    {
-     "question": "Is the posted salary range aligned with your requirements?",
-     "count": 2,
-     "companies": [
-      "Talkiatry"
-     ],
-     "learned": false,
-     "maybe_not_eligible": false
-    },
-    {
-     "question": "Is your notice period eligable to be bought out?",
-     "count": 2,
-     "companies": [
-      "Protegrity"
-     ],
-     "learned": false,
-     "maybe_not_eligible": false
-    },
-    {
-     "question": "Is your primary programming language Go? *",
-     "count": 2,
-     "companies": [
-      "Rubrik"
-     ],
-     "learned": true,
-     "maybe_not_eligible": false
     }
    ],
    "form_control_issues": [
     {
-     "question": "Location (City)*",
+     "question": "Please respond truthfully. How much hands-on experience do you have with MCP servers (such as GitHub MCP Server) and agent-based workflow automation? ✱",
      "count": 8
     },
     {
-     "question": "Please respond truthfully. How much hands-on experience do you have with MCP servers (such as GitHub MCP Server) and agent-based workflow automation? ✱",
-     "count": 6
+     "question": "Location (City)*",
+     "count": 8
     },
     {
      "question": "Have you shipped at least one production mobile app used by real users?",
@@ -9030,13 +9002,13 @@
   "divya": {
    "submitted": 104,
    "submitted_companies": 97,
-   "failed": 589,
+   "failed": 615,
    "reasons": {
-    "needs_answer": 404,
-    "captcha": 106,
-    "form_rejected": 34,
+    "needs_answer": 411,
+    "captcha": 119,
+    "form_rejected": 38,
     "unconfirmed": 20,
-    "closed": 13,
+    "closed": 15,
     "error": 12
    },
    "successes": [
@@ -10132,6 +10104,385 @@
     }
    ],
    "failures": [
+    {
+     "company": "Warner Music Group",
+     "title": "Software Engineer  - .NET Core Backend",
+     "location": "Bangalore",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:40:49",
+     "url": "https://jobs.lever.co/wmg/9ddb5708-7ae8-4fbe-9179-331b1998a30e",
+     "source": "lever",
+     "score": 55.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Warner Music Group",
+     "title": "Software Engineer",
+     "location": "Bangalore",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:40:02",
+     "url": "https://jobs.lever.co/wmg/23de721a-6770-4f63-8287-6b45c1719415",
+     "source": "lever",
+     "score": 55.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Warner Music Group",
+     "title": "Backend Engineer",
+     "location": "Bangalore",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:38:41",
+     "url": "https://jobs.lever.co/wmg/bd93e552-e497-44a2-bbae-4f2dc318b2f4",
+     "source": "lever",
+     "score": 55.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "NETGEAR",
+     "title": "  SASE Firewall QA Automation Engineer",
+     "location": "Bengaluru, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:37:31",
+     "url": "https://jobs.ashbyhq.com/netgear/b272ca70-fb78-4db1-87d7-ef5852394544",
+     "source": "ashby",
+     "score": 45.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Perforce",
+     "title": "Software Engineer, (Ruby/Clojure) - Puppet",
+     "location": "Pune, Maharashtra",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:37:07",
+     "url": "https://jobs.lever.co/perforce/88e3048f-7fa2-4052-ba15-f2518d42d654",
+     "source": "lever",
+     "score": 55.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Warner Music Group",
+     "title": "Software Engineer - Data Platform",
+     "location": "Bangalore",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:35:45",
+     "url": "https://jobs.lever.co/wmg/742bb482-120a-40bb-bec2-65f44e179dd0",
+     "source": "lever",
+     "score": 59.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "NETGEAR",
+     "title": "  SASE Firewall QA Automation Engineer",
+     "location": "Bengaluru, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:35:29",
+     "url": "https://jobs.ashbyhq.com/netgear/b272ca70-fb78-4db1-87d7-ef5852394544",
+     "source": "ashby",
+     "score": 45.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Cursor (Anysphere)",
+     "title": "Forward Deployed Engineer - India",
+     "location": "Bengaluru",
+     "status": "CLOSED",
+     "applied_at": "2026-11-26 09:34:58",
+     "url": "https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b",
+     "source": "ashby",
+     "score": 62.0,
+     "category": "closed",
+     "why": "The job was already closed when the bot opened it.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Rox Data Corp",
+     "title": "Backend Platform Engineer (BLR)",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:34:56",
+     "url": "https://jobs.ashbyhq.com/Rox-Data-Corp/6e6b44f9-8bc2-4dfa-9432-5a0d2931a113",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Are you on location (BLR) or willing to move?"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ION Group",
+     "title": "Software Developer, 2027 Leadership Development Program, ION Group, India",
+     "location": "Noida",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:34:27",
+     "url": "https://jobs.lever.co/ion/6f66cbb4-c882-4234-b84e-68baea56e1ea",
+     "source": "lever",
+     "score": 55.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "University Name ✱"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ShyftLabs",
+     "title": "Software Developer",
+     "location": "Noida, Uttar Pradesh",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:33:27",
+     "url": "https://jobs.lever.co/shyftlabs/4547a228-9cd7-4af6-9588-5cd4c8ae1612",
+     "source": "lever",
+     "score": 55.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "NETGEAR",
+     "title": "SASE Desktop Client Software Developer",
+     "location": "Bengaluru, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:32:41",
+     "url": "https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3",
+     "source": "ashby",
+     "score": 55.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Warner Music Group",
+     "title": "Backend Engineer",
+     "location": "Bangalore",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:32:31",
+     "url": "https://jobs.lever.co/wmg/bd93e552-e497-44a2-bbae-4f2dc318b2f4",
+     "source": "lever",
+     "score": 55.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Kobie",
+     "title": "Software Engineer",
+     "location": "Bengaluru, Karnataka",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:32:07",
+     "url": "https://jobs.lever.co/kobie/c1563397-e50b-4e33-acec-d2f528722ae8",
+     "source": "lever",
+     "score": 55.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What is your annual salary expectation for a new opportunity? ✱ (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ShyftLabs",
+     "title": "Amazon Connect Fullstack Developer",
+     "location": "Noida, Uttar Pradesh",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:31:53",
+     "url": "https://jobs.lever.co/shyftlabs/f036b8ee-8e4b-4e3a-90d5-7d71683acd04",
+     "source": "lever",
+     "score": 60.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Perforce",
+     "title": "Software Engineer, (Ruby/Clojure) - Puppet",
+     "location": "Pune, Maharashtra",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:31:44",
+     "url": "https://jobs.lever.co/perforce/88e3048f-7fa2-4052-ba15-f2518d42d654",
+     "source": "lever",
+     "score": 55.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ShyftLabs",
+     "title": "Software Developer",
+     "location": "Noida, Uttar Pradesh",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:30:56",
+     "url": "https://jobs.lever.co/shyftlabs/4547a228-9cd7-4af6-9588-5cd4c8ae1612",
+     "source": "lever",
+     "score": 55.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Warner Music Group",
+     "title": "Software Engineer - Data Platform",
+     "location": "Bangalore",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:30:52",
+     "url": "https://jobs.lever.co/wmg/742bb482-120a-40bb-bec2-65f44e179dd0",
+     "source": "lever",
+     "score": 59.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "NETGEAR",
+     "title": "SASE Desktop Client Software Developer",
+     "location": "Bengaluru, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:30:10",
+     "url": "https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3",
+     "source": "ashby",
+     "score": 55.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Cursor (Anysphere)",
+     "title": "Forward Deployed Engineer - India",
+     "location": "Bengaluru",
+     "status": "CLOSED",
+     "applied_at": "2026-11-26 09:30:04",
+     "url": "https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b",
+     "source": "ashby",
+     "score": 62.0,
+     "category": "closed",
+     "why": "The job was already closed when the bot opened it.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Rox Data Corp",
+     "title": "Backend Platform Engineer (BLR)",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:30:02",
+     "url": "https://jobs.ashbyhq.com/Rox-Data-Corp/6e6b44f9-8bc2-4dfa-9432-5a0d2931a113",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Are you on location (BLR) or willing to move?"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ION Group",
+     "title": "Software Developer, 2027 Leadership Development Program, ION Group, India",
+     "location": "Noida",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:29:56",
+     "url": "https://jobs.lever.co/ion/6f66cbb4-c882-4234-b84e-68baea56e1ea",
+     "source": "lever",
+     "score": 55.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "University Name ✱"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Kobie",
+     "title": "Software Engineer",
+     "location": "Bengaluru, Karnataka",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:29:36",
+     "url": "https://jobs.lever.co/kobie/c1563397-e50b-4e33-acec-d2f528722ae8",
+     "source": "lever",
+     "score": 55.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What is your annual salary expectation for a new opportunity? ✱ (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "FamPay",
+     "title": "Backend Engineering Intern",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 09:29:21",
+     "url": "https://jobs.lever.co/fampay/cf014ef0-218a-4041-a238-ff91c7b9a5bc",
+     "source": "lever",
+     "score": 55.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Prior Internship Experience ✱",
+      "What is the duration of internship you are available for? ✱"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ShyftLabs",
+     "title": "Amazon Connect Fullstack Developer",
+     "location": "Noida, Uttar Pradesh",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:28:58",
+     "url": "https://jobs.lever.co/shyftlabs/f036b8ee-8e4b-4e3a-90d5-7d71683acd04",
+     "source": "lever",
+     "score": 60.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Warner Music Group",
+     "title": "Backend Engineer",
+     "location": "Bangalore",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 09:18:01",
+     "url": "https://jobs.lever.co/wmg/bd93e552-e497-44a2-bbae-4f2dc318b2f4",
+     "source": "lever",
+     "score": 55.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
     {
      "company": "Perforce",
      "title": "Software Engineer, (Ruby/Clojure) - Puppet",
@@ -16151,428 +16502,6 @@
       "Will you now or in the future require company sponsorship to retain or extend your work authorization in the country where the job is located?* (bot could not click/type it)"
      ],
      "company_later_succeeded": false
-    },
-    {
-     "company": "Parspec",
-     "title": "Software Engineer - 2 (Backend)",
-     "location": "Hybrid - Bangalore, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:00:42",
-     "url": "https://jobs.ashbyhq.com/parspec/55ae4708-5bca-4b9f-b3d4-c9f75ca288d5",
-     "source": "ashby",
-     "score": 59.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What is the earliest by when you can join Parspec?"
-     ],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "Instawork",
-     "title": "Video Platform Engineer - E3",
-     "location": "Bengaluru, Karnataka, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:00:04",
-     "url": "https://job-boards.greenhouse.io/instawork/jobs/4713756006",
-     "source": "greenhouse",
-     "score": 59.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Which programming languages are you comfortable with? * - Python",
-      "Which programming languages are you comfortable with? * - Java",
-      "Which programming languages are you comfortable with? * - GoLang",
-      "Which programming languages are you comfortable with? * - Javascript",
-      "Which programming languages are you comfortable with? * - Others"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Eudia",
-     "title": "Software Engineer",
-     "location": "Bengaluru, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:59:28",
-     "url": "https://job-boards.greenhouse.io/eudia/jobs/4020070009",
-     "source": "greenhouse",
-     "score": 59.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you okay with working from the office location stated in this job posting 5 days a week?* (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Dscout",
-     "title": "Software Engineer - India",
-     "location": "Remote - India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 10:58:21",
-     "url": "https://job-boards.greenhouse.io/dscout/jobs/4370266009",
-     "source": "greenhouse",
-     "score": 59.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Coinbase",
-     "title": "Software Engineer, Security Platform",
-     "location": "Remote - India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:58:11",
-     "url": "https://www.coinbase.com/careers/positions/8165441?gh_jid=8165441",
-     "source": "greenhouse",
-     "score": 59.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Title*",
-      "Have you previously been employed by Coinbase in any capacity?* (bot could not click/type it)",
-      "Please confirm receipt of the above linked Global Data Privacy Notice and US Arbitration Agreement.* (bot could not click/type it)",
-      "Which of the following best describes how you use AI tools today?*",
-      "Are you a close relative of a government official (i.e., child/step-child, spouse/partner, parent/guardian, aunt/uncle, first cousin, in-law)?*"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Beghou Consulting",
-     "title": "Full Stack Developer",
-     "location": "Pune",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:55:40",
-     "url": "https://jobs.lever.co/beghouconsulting/1eec2140-fed6-4f56-8049-0ee22d3c9d51",
-     "source": "lever",
-     "score": 59.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Less than 30 days",
-      "Yes"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Addepar",
-     "title": "Software Engineer - ADM",
-     "location": "Pune, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:55:19",
-     "url": "https://job-boards.greenhouse.io/addepar1/jobs/8799881002",
-     "source": "greenhouse",
-     "score": 59.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Job Applicant Data Privacy Notice* (bot could not click/type it)",
-      "How many years of experience do you have with Python or Java?* (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "SPAN",
-     "title": "Device - Software Engineer (Functional Safety)",
-     "location": "Bengaluru",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:54:56",
-     "url": "https://jobs.ashbyhq.com/span/98107b13-239e-4c8e-9597-350ab676239e",
-     "source": "ashby",
-     "score": 60.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you currently living in Bengaluru? If not, are you planning on moving to Bengaluru?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Cordance",
-     "title": "Full-Stack .NET Engineer (React & Angular)",
-     "location": "Pune, Maharashtra, India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 10:54:27",
-     "url": "https://job-boards.greenhouse.io/cordance/jobs/5489236008",
-     "source": "greenhouse",
-     "score": 60.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Cardboard",
-     "title": "Backend Engineer",
-     "location": "Bengaluru",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:54:13",
-     "url": "https://jobs.ashbyhq.com/cardboard/71a37ec3-d1df-4769-b018-a1c8f986bc1f",
-     "source": "ashby",
-     "score": 60.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "GitHub",
-      "Something you shipped end to end that you're proud of?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "CUBE",
-     "title": "QA Engineer",
-     "location": "Bangalore",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:54:02",
-     "url": "https://jobs.ashbyhq.com/CUBE/d047c79a-f461-4702-a54d-1437ba9b992f",
-     "source": "ashby",
-     "score": 60.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Current Salary (bot could not click/type it)",
-      "Expected Salary (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Black Duck Software, Inc.",
-     "title": "Software Engineer- SDET 1",
-     "location": "Bangalore",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:53:47",
-     "url": "https://job-boards.greenhouse.io/blackduck/jobs/4965228008",
-     "source": "greenhouse",
-     "score": 60.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you willing to attend at least 1 round of Face‑to‑Face interview at our Bangalore office?*"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Bureau",
-     "title": "Integration Engineer (SDK)",
-     "location": "Bangalore",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:53:39",
-     "url": "https://jobs.ashbyhq.com/bureau/8786a55b-dd03-450a-872d-9d50feeb4f93",
-     "source": "ashby",
-     "score": 61.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Have you worked on SDKs?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Cursor (Anysphere)",
-     "title": "Forward Deployed Engineer - India",
-     "location": "Bengaluru",
-     "status": "CLOSED",
-     "applied_at": "2026-11-20 10:53:03",
-     "url": "https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b",
-     "source": "ashby",
-     "score": 62.0,
-     "category": "closed",
-     "why": "The job was already closed when the bot opened it.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "logicmonitor",
-     "title": "Software Engineer - AI",
-     "location": "Bangalore, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:53:01",
-     "url": "https://www.logicmonitor.com/career/?gh_jid=8080736",
-     "source": "greenhouse",
-     "score": 63.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you currently employed by a Vista portfolio company? Or have you ever taken a pre-employment assessment with a Vista portfolio company? Here is a list of current Vista portfolio companies: https://www.vistaequitypartners.com/companies/* (bot could not click/type it)",
-      "Acknowledgment of Data Transfer*"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Smart Working Solutions",
-     "title": "AI Trainer - Software Engineering (Remote, Full-Time) [MV001]",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:52:41",
-     "url": "https://jobs.lever.co/smart-working-solutions/b54f0d60-9226-4292-b0a3-9caec516a2fd",
-     "source": "lever",
-     "score": 63.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Less than 6 years — My experience across the full SDLC is below the required level.",
-      "Less than 2 years — My professional use of AI coding tools is below the required level.",
-      "Less than 1 year — My experience with AI-assisted test automation is below the required level.",
-      "Less than 1 year — My professional experience with AI-assisted code review is below the required level.",
-      "Less than 3 years — My CI/CD experience is below the required level or I have limited exposure to AI-driven automation."
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Redwood Software",
-     "title": "Software Engineer – AI CoE",
-     "location": "Hyderabad, Telangana, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:52:33",
-     "url": "https://job-boards.greenhouse.io/redwoodsoftware/jobs/4451141009",
-     "source": "greenhouse",
-     "score": 63.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you legally permitted to work in the country where the job is located?* (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "OutcomesAI",
-     "title": "Backend / ML-Ops Engineer — Speech Model Deployment & Inference Optimization",
-     "location": "Bengaluru",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 10:52:09",
-     "url": "https://jobs.lever.co/outcomesai/7bbc10a3-805c-441a-8c58-44ab9be9c73c",
-     "source": "lever",
-     "score": 63.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Mindtickle",
-     "title": "AI Product Engineer",
-     "location": "Pune, Maharashtra",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 10:51:24",
-     "url": "https://jobs.lever.co/mindtickle/864ac315-d7c5-4cd5-ab44-0e33d08f48f1",
-     "source": "lever",
-     "score": 63.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Mactores",
-     "title": "Full Stack Product Engineer, Agent Native",
-     "location": "Mumbai, MH",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:50:34",
-     "url": "https://jobs.lever.co/mactores/d928d43f-80ac-42f2-bb85-c717cefc83cb",
-     "source": "lever",
-     "score": 63.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Yes",
-      "Yes",
-      "Yes"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "EnCharge AI",
-     "title": "AI Software Engineer, Agent Harness",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:50:21",
-     "url": "https://job-boards.greenhouse.io/enchargeai36/jobs/4409175009",
-     "source": "greenhouse",
-     "score": 63.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "verifone",
-     "title": "Data Platform Engineer",
-     "location": "Bengaluru, Karnataka, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:49:36",
-     "url": "https://job-boards.greenhouse.io/verifone/jobs/7615010003",
-     "source": "greenhouse",
-     "score": 64.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Before you begin — please review the following By proceeding with this application, you confirm that you have read and understood the notices below. * (bot could not click/type it)",
-      "By submitting your application, you are providing consent: * (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Secfix",
-     "title": "Backend Engineer – GTM Engineering (Fresh grad, India)",
-     "location": "Remote - India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:48:20",
-     "url": "https://jobs.ashbyhq.com/secfix/583140f4-b26c-47b4-a9be-c7a88dc3c0f5",
-     "source": "ashby",
-     "score": 64.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "When did you complete, or when will you complete, your most recent university degree?",
-      "What is your final bachelor CGPA? Please convert it to the 10-point scale (e.g. 9.2 / 10). If you haven't graduated yet, state your current CGPA.",
-      "How many months of experience do you have in a startup environment (full-time job or internships)?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Litmus",
-     "title": "Customer Success Application Engineer (Litmus GCC)",
-     "location": "Pune, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 10:48:08",
-     "url": "https://jobs.ashbyhq.com/litmus/cd657661-7f6b-46a6-86ad-3b883280f892",
-     "source": "ashby",
-     "score": 64.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Which industrial systems or technologies have you worked with—such as PLC, SCADA, MES, OPC UA/DA, MQTT, Modbus, historians, industrial gateways, or edge platforms?"
-     ],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "Jobgether",
-     "title": "Graduate Software Engineer, Open Source and Linux, Canonical Ubuntu",
-     "location": "India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 10:47:09",
-     "url": "https://jobs.lever.co/jobgether/7ee769c9-defd-4860-b1b4-ff4e3444854f",
-     "source": "lever",
-     "score": 64.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Doxel",
-     "title": "Full Stack Software Engineer, India",
-     "location": "Bengaluru, Karnataka",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 10:45:50",
-     "url": "https://jobs.lever.co/doxel/7f6b2263-f6f3-4c85-8bbf-6238bc017e5c",
-     "source": "lever",
-     "score": 64.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
     }
    ],
    "questions": [
@@ -16660,12 +16589,30 @@
      "maybe_not_eligible": false
     },
     {
+     "question": "Are you on location (BLR) or willing to move?",
+     "count": 8,
+     "companies": [
+      "Rox Data Corp"
+     ],
+     "learned": true,
+     "maybe_not_eligible": false
+    },
+    {
      "question": "Leetcode/Github Link*",
      "count": 8,
      "companies": [
       "Bitgo"
      ],
      "learned": false,
+     "maybe_not_eligible": false
+    },
+    {
+     "question": "University Name ✱",
+     "count": 8,
+     "companies": [
+      "ION Group"
+     ],
+     "learned": true,
      "maybe_not_eligible": false
     },
     {
@@ -16687,15 +16634,6 @@
      "maybe_not_eligible": true
     },
     {
-     "question": "Are you on location (BLR) or willing to move?",
-     "count": 6,
-     "companies": [
-      "Rox Data Corp"
-     ],
-     "learned": true,
-     "maybe_not_eligible": false
-    },
-    {
      "question": "GitHub",
      "count": 6,
      "companies": [
@@ -16704,15 +16642,6 @@
       "Cardboard"
      ],
      "learned": false,
-     "maybe_not_eligible": false
-    },
-    {
-     "question": "University Name ✱",
-     "count": 6,
-     "companies": [
-      "ION Group"
-     ],
-     "learned": true,
      "maybe_not_eligible": false
     },
     {
@@ -17955,12 +17884,12 @@
      "count": 9
     },
     {
-     "question": "Have you shipped at least one production mobile app used by real users?",
+     "question": "What is your annual salary expectation for a new opportunity? ✱",
      "count": 8
     },
     {
-     "question": "What is your annual salary expectation for a new opportunity? ✱",
-     "count": 6
+     "question": "Have you shipped at least one production mobile app used by real users?",
+     "count": 8
     },
     {
      "question": "For iOS: Swift / iOS",
