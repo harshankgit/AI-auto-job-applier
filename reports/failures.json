@@ -1,19 +1,29 @@
 {
- "generated_at": "2026-11-26 16:13:19",
+ "generated_at": "2026-11-26 19:44:08",
  "candidates": {
   "harshank": {
-   "submitted": 111,
-   "submitted_companies": 102,
-   "failed": 757,
+   "submitted": 112,
+   "submitted_companies": 103,
+   "failed": 820,
    "reasons": {
-    "needs_answer": 448,
-    "captcha": 150,
-    "form_rejected": 87,
-    "error": 26,
+    "needs_answer": 493,
+    "captcha": 152,
+    "form_rejected": 101,
+    "error": 28,
     "closed": 24,
     "unconfirmed": 22
    },
    "successes": [
+    {
+     "company": "NETGEAR",
+     "title": "SASE Desktop Client Software Developer",
+     "location": "Bengaluru, India",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-26 10:49:52",
+     "url": "https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3",
+     "source": "ashby",
+     "score": 65.0
+    },
     {
      "company": "Rox Data Corp",
      "title": "Backend Platform Engineer (BLR)",
@@ -1177,6 +1187,978 @@
    ],
    "failures": [
     {
+     "company": "ElevenLabs",
+     "title": "Developer Experience Engineer",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:36:10",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/d16a7ad6-ffbd-4655-8716-4872263f99ce",
+     "source": "ashby",
+     "score": 45.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Developer Experience Engineer",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:35:50",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/d16a7ad6-ffbd-4655-8716-4872263f99ce",
+     "source": "ashby",
+     "score": 45.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenAPI",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:33:24",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/108c99e6-ba2b-44a0-b830-7d535e14a152",
+     "source": "ashby",
+     "score": 64.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenAPI",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:31:41",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/108c99e6-ba2b-44a0-b830-7d535e14a152",
+     "source": "ashby",
+     "score": 64.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer (Frontend Leaning) - Studio",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:30:39",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/e6924f60-c8cc-42b3-9d05-2442ec30e12d",
+     "source": "ashby",
+     "score": 64.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenCreative Enterprise",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:30:21",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/34dbe44c-9815-40b2-81f4-91c607fd84b2",
+     "source": "ashby",
+     "score": 68.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer (Frontend Leaning) - Studio",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:30:01",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/e6924f60-c8cc-42b3-9d05-2442ec30e12d",
+     "source": "ashby",
+     "score": 64.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenCreative Enterprise",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:29:43",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/34dbe44c-9815-40b2-81f4-91c607fd84b2",
+     "source": "ashby",
+     "score": 68.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Ads Engine",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:29:23",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/3abf96ca-2937-4290-9d23-5208aece08b2",
+     "source": "ashby",
+     "score": 68.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Developer",
+     "location": "Remote - Illinois",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:29:05",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/cec2db23-b91d-42a6-9b8f-043c773faf56",
+     "source": "ashby",
+     "score": 57.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What is your desired compensation? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenMusic",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:28:38",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/0547cf3a-856f-4db2-8307-73db634c4096",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Ads Engine",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:28:10",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/3abf96ca-2937-4290-9d23-5208aece08b2",
+     "source": "ashby",
+     "score": 68.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Developer",
+     "location": "Remote - Illinois",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:27:52",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/cec2db23-b91d-42a6-9b8f-043c773faf56",
+     "source": "ashby",
+     "score": 57.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What is your desired compensation? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenMusic",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:27:25",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/0547cf3a-856f-4db2-8307-73db634c4096",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II- ROR",
+     "location": "Jaipur",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:27:00",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/7b4a7246-d679-4c1c-81da-0ac4d75fec39",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer (Backend Leaning) - Payments Engineering",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:26:05",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II- ROR",
+     "location": "Jaipur",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:25:36",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/7b4a7246-d679-4c1c-81da-0ac4d75fec39",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Creative Agents ",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:24:43",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe",
+     "source": "ashby",
+     "score": 72.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Mobile Engineering - Android",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:24:25",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:24:04",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426",
+     "source": "ashby",
+     "score": 60.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Full Stack",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:23:11",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer (Backend Leaning) - Payments Engineering",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:22:48",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Creative Agents ",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:21:24",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe",
+     "source": "ashby",
+     "score": 72.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Mobile Engineering - Android",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:20:41",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:19:38",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426",
+     "source": "ashby",
+     "score": 60.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Full Stack",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 19:18:19",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II-Golang",
+     "location": "Gurugram",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 19:16:57",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Developer",
+     "location": "Remote - Illinois",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 14:31:36",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/cec2db23-b91d-42a6-9b8f-043c773faf56",
+     "source": "ashby",
+     "score": 57.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What is your desired compensation? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenMusic",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 14:30:53",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/0547cf3a-856f-4db2-8307-73db634c4096",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II- ROR",
+     "location": "Jaipur",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 14:19:36",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/7b4a7246-d679-4c1c-81da-0ac4d75fec39",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer (Backend Leaning) - Payments Engineering",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 14:01:28",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Creative Agents ",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 14:00:33",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe",
+     "source": "ashby",
+     "score": 72.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Mobile Engineering - Android",
+     "location": "Bengaluru",
+     "status": "ERROR",
+     "applied_at": "2026-11-26 13:33:32",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "error",
+     "why": "The page crashed or timed out: could not load https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d/application",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II",
+     "location": "Gurugram",
+     "status": "ERROR",
+     "applied_at": "2026-11-26 13:33:24",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426",
+     "source": "ashby",
+     "score": 60.0,
+     "category": "error",
+     "why": "The page crashed or timed out: could not load https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426/application",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Full Stack",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 13:27:41",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II-Golang",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 13:27:08",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer (Backend Leaning) - Payments Engineering",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 12:50:21",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Creative Agents ",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 12:49:25",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe",
+     "source": "ashby",
+     "score": 72.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Mobile Engineering - Android",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 12:48:47",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 12:48:12",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426",
+     "source": "ashby",
+     "score": 60.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Full Stack",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 12:47:02",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II-Golang",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 12:46:30",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer (Backend Leaning) - Payments Engineering",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 12:03:52",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Creative Agents ",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 12:02:27",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe",
+     "source": "ashby",
+     "score": 72.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Mobile Engineering - Android",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 12:01:13",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 11:59:39",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426",
+     "source": "ashby",
+     "score": 60.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Full Stack",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 11:58:41",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II-Golang",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 11:56:40",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Ads Engine",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 11:13:24",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/3abf96ca-2937-4290-9d23-5208aece08b2",
+     "source": "ashby",
+     "score": 68.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenMusic",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 11:13:04",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/0547cf3a-856f-4db2-8307-73db634c4096",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II- ROR",
+     "location": "Jaipur",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 11:12:38",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/7b4a7246-d679-4c1c-81da-0ac4d75fec39",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Mobile Engineering - Android",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 11:10:12",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 11:08:51",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426",
+     "source": "ashby",
+     "score": 60.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Full Stack",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 11:06:59",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Warner Music Group",
+     "title": "Software Engineer",
+     "location": "Bangalore",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 10:57:49",
+     "url": "https://jobs.lever.co/wmg/4a5ad353-6b27-46b2-b9a0-6fde3f73c7e4",
+     "source": "lever",
+     "score": 60.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer (Backend Leaning) - Payments Engineering",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 10:57:00",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Smart Working Solutions",
+     "title": "AI Trainer - Software Engineering (Remote, Full-Time) [MV001]",
+     "location": "India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 10:56:18",
+     "url": "https://jobs.lever.co/smart-working-solutions/b54f0d60-9226-4292-b0a3-9caec516a2fd",
+     "source": "lever",
+     "score": 63.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Please respond truthfully. How much hands-on experience do you have with MCP servers (such as GitHub MCP Server) and agent-based workflow automation? ✱ (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Creative Agents ",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 10:53:29",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe",
+     "source": "ashby",
+     "score": 72.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Mobile Engineering - Android",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 10:53:08",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 10:52:43",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426",
+     "source": "ashby",
+     "score": 60.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Full Stack",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 10:51:29",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II-Golang",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 10:50:47",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Smart Working Solutions",
+     "title": "AI Trainer - Software Engineering (Remote, Full-Time) [MV001]",
+     "location": "India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 10:50:18",
+     "url": "https://jobs.lever.co/smart-working-solutions/b54f0d60-9226-4292-b0a3-9caec516a2fd",
+     "source": "lever",
+     "score": 63.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Please respond truthfully. How much hands-on experience do you have with MCP servers (such as GitHub MCP Server) and agent-based workflow automation? ✱ (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
      "company": "PAR Technology",
      "title": "Software Engineer II-Golang",
      "location": "Gurugram",
@@ -1440,7 +2422,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Turnkey",
@@ -1540,7 +2522,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ShyftLabs",
@@ -1596,7 +2578,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ShyftLabs",
@@ -1640,7 +2622,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ShyftLabs",
@@ -1888,7 +2870,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "SurveyMonkey",
@@ -2004,7 +2986,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ShyftLabs",
@@ -2046,7 +3028,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Rox Data Corp",
@@ -2138,7 +3120,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ShyftLabs",
@@ -2290,7 +3272,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "SurveyMonkey",
@@ -2392,7 +3374,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Mactores",
@@ -2448,7 +3430,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Rox Data Corp",
@@ -2540,7 +3522,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ShyftLabs",
@@ -2656,7 +3638,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Turnkey",
@@ -2742,7 +3724,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ShyftLabs",
@@ -2800,7 +3782,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "SurveyMonkey",
@@ -2876,7 +3858,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ShyftLabs",
@@ -4684,7 +5666,7 @@
       "Contact Phone Number",
       "Contact Phone Number"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Horizon3 AI",
@@ -5526,7 +6508,7 @@
       "Contact Phone Number",
       "Contact Phone Number"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ShyftLabs",
@@ -5939,7 +6921,7 @@
       "Contact Phone Number",
       "Contact Phone Number"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -6354,1006 +7336,6 @@
      "blocking": [
       "How did you first hear about us?",
       "Take Home Submission"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "PlantingSpace",
-     "title": "Backend Software Engineering ",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:15:26",
-     "url": "https://jobs.ashbyhq.com/PlantingSpace/ee49f642-c430-4071-aac5-fcc62654ccf8",
-     "source": "ashby",
-     "score": 61.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Location (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Rain",
-     "title": "Software Engineer - Wallets  ",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:15:25",
-     "url": "https://jobs.ashbyhq.com/rain/6393bceb-88cf-4806-a51c-401be580c59e",
-     "source": "ashby",
-     "score": 57.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Did you graduate from a 4 year university?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Phantom",
-     "title": "Software Engineer, Backend (Trading)",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:15:00",
-     "url": "https://jobs.ashbyhq.com/phantom/d8ee7f59-0f80-437f-908e-bfe603cb078a",
-     "source": "ashby",
-     "score": 61.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "We currently support remote work from North America, South America, and Europe. Which of these three locations will you be working from?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Entefy",
-     "title": "Full Stack Engineer (Remote Position)",
-     "location": "Remote",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:14:51",
-     "url": "https://jobs.lever.co/entefy/ebc5c49e-5454-4c23-b1d0-10c525fcd605",
-     "source": "lever",
-     "score": 57.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Allium",
-     "title": "Software Engineer",
-     "location": "Remote",
-     "status": "ERROR",
-     "applied_at": "2026-11-20 12:14:43",
-     "url": "https://jobs.ashbyhq.com/allium/d5c0f988-67ac-4388-bd54-1970c8cc17f5",
-     "source": "ashby",
-     "score": 61.0,
-     "category": "unconfirmed",
-     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "SignalFire",
-     "title": "Forward Deployed Engineer (FDE) - VC Backed Startups",
-     "location": "Remote - No Preference",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:14:05",
-     "url": "https://jobs.ashbyhq.com/SignalFire/ecfd70ab-44a8-4e78-a7ae-5a4efe187e4d",
-     "source": "ashby",
-     "score": 62.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What is your preferred work environment?",
-      "Which industries are you interested in? - Industry Agnostic",
-      "Which industries are you interested in? - Consumer",
-      "Which industries are you interested in? - Cyber",
-      "Which industries are you interested in? - Enterprise SaaS"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Zeely Inc.",
-     "title": "Middle Manual QA Engineer (Growth)",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:13:52",
-     "url": "https://jobs.ashbyhq.com/zeely/a9a470e6-ba38-44f6-89f8-31279fdc5c4d",
-     "source": "ashby",
-     "score": 58.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Do you have proficiency in the Ukrainian language?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Egen",
-     "title": "ML Platform Engineer, Distributed Training",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:13:45",
-     "url": "https://jobs.lever.co/egen/d1ed13ca-ebb1-4cbc-8277-8e849d69b522",
-     "source": "lever",
-     "score": 60.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Do you currently reside in the USA? ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Horizon3 AI",
-     "title": "Federal Platform Engineer",
-     "location": "US, Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:13:25",
-     "url": "https://jobs.ashbyhq.com/horizon3ai/ec9a5ca0-2a2d-4e1a-b338-4264cce36a9b",
-     "source": "ashby",
-     "score": 62.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Phone",
-      "Phone"
-     ],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "Forward Financing",
-     "title": "Software Engineer II",
-     "location": "Remote - Dominican Republic",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:13:22",
-     "url": "https://jobs.ashbyhq.com/Forward%20Financing/7b412410-8710-4d54-a342-fcf464568170",
-     "source": "ashby",
-     "score": 62.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Thumbtack",
-     "title": "(2027 Talent Pool) Software Engineer, AI/ML Infrastructure",
-     "location": "Remote, Ontario",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:13:11",
-     "url": "https://jobs.ashbyhq.com/thumbtack/fc9f96bc-bd4e-4883-95a8-91d25833fa35",
-     "source": "ashby",
-     "score": 65.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Constructor",
-     "title": "Platform Engineer: Platform Enablement",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:12:44",
-     "url": "https://jobs.ashbyhq.com/constructor/fe2b4f29-b0d8-4944-bf3a-89596746a9c9",
-     "source": "ashby",
-     "score": 62.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Second Front Systems",
-     "title": "AI Software Engineer ",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:12:07",
-     "url": "https://jobs.ashbyhq.com/Second-Front-Systems/e75017ca-8bfb-4c2f-bdce-b0f0cc8bf4ef",
-     "source": "ashby",
-     "score": 65.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Phone Number",
-      "Are you located in any of the following geographies?",
-      "Are you a U.S. Citizen?",
-      "Do you currently obtain a security clearance?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Wormhole Labs",
-     "title": "Full-Stack Blockchain Engineer",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:12:01",
-     "url": "https://jobs.ashbyhq.com/wormholelabs/1f13ccfb-be18-46e7-9b9f-52f7f343c4d9",
-     "source": "ashby",
-     "score": 65.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What was the most difficult engineering problem you've recently solved?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Mudflap",
-     "title": "Software Engineer, Ruby on Rails",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:11:55",
-     "url": "https://jobs.ashbyhq.com/mudflap/6d599ccc-4566-4cd3-9721-2273601acba6",
-     "source": "ashby",
-     "score": 65.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Do you currently reside in the U.S.?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Growly",
-     "title": "Front-End Engineer",
-     "location": "Ukraine, Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:11:41",
-     "url": "https://jobs.ashbyhq.com/Growly/8ecb0ce3-ea0f-49e2-8ce6-348a4db614a1",
-     "source": "ashby",
-     "score": 67.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What is your current level of English?",
-      "Preferred work mode - All listed above Offices",
-      "Please specify your salary expectations (gross, in $) (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Metabase",
-     "title": "Software Engineer (Backend)",
-     "location": "Global Remote",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:10:58",
-     "url": "https://jobs.lever.co/metabase/85f454d8-e795-4978-8a2b-4b8bfa7d7c37",
-     "source": "lever",
-     "score": 66.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Alan",
-     "title": "Fullstack Software Engineer (x/f/m) - Tech Foundations",
-     "location": "Anywhere in France, Belgium, Spain",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:09:39",
-     "url": "https://jobs.ashbyhq.com/alan/14729a35-9c9f-479e-860b-3d6c1348a2b0",
-     "source": "ashby",
-     "score": 72.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "Brigit",
-     "title": "Software Engineer - Fullstack, US Remote",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:09:00",
-     "url": "https://jobs.ashbyhq.com/brigit/ce751b1c-3d59-4ed9-bd4e-7274ead8b23c",
-     "source": "ashby",
-     "score": 67.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you currently based in the United States?",
-      "Have you worked as a full-time software engineer in a professional setting (excluding internships)?",
-      "Which of the following best describes your primary technical expertise?",
-      "Which programming languages do you use regularly in a professional setting? - Java",
-      "Which programming languages do you use regularly in a professional setting? - JavaScript / TypeScript"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Crux",
-     "title": "AI Product Engineer",
-     "location": "Remote (US)",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:08:36",
-     "url": "https://jobs.ashbyhq.com/cruxclimate/de7fb381-026b-420a-8366-f04dffd64f61",
-     "source": "ashby",
-     "score": 70.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Please check any of the boxes that describe your skill set: - Extensive experience with evals and benchmarking",
-      "Please check any of the boxes that describe your skill set: - Experience building AI agents",
-      "Please check any of the boxes that describe your skill set: - Experience building engineering teams from 0 to 1",
-      "Please check any of the boxes that describe your skill set: - Familiarity with modern AI tooling & frameworks (LangChain, LlamaIndex, etc.)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "OpenRouter",
-     "title": "Software Engineer, Trust & Safety",
-     "location": "Remote (US)",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:08:10",
-     "url": "https://jobs.ashbyhq.com/openrouter/cd5340a1-e787-4916-abb8-a08ab1bb229b",
-     "source": "ashby",
-     "score": 76.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you currently based in the United States or Canada?",
-      "Have you interviewed with Stripe in the last year?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "The Job Sauce",
-     "title": "Software Engineer - Alt",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:08:06",
-     "url": "https://jobs.ashbyhq.com/The%20Job%20Sauce/0d567110-4abf-4582-8063-502197e03825",
-     "source": "ashby",
-     "score": 71.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Phone Number"
-     ],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "TensorWave",
-     "title": "Software Engineer (Full Stack)",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:07:59",
-     "url": "https://jobs.ashbyhq.com/TensorWave/e10b179f-c569-46ff-a0d9-01d20f731d30",
-     "source": "ashby",
-     "score": 77.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Will you now or in the future require authorization to work in the United States?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "MultiplyMii",
-     "title": "Full Stack Developer",
-     "location": "Remote Philippines",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:07:48",
-     "url": "https://jobs.ashbyhq.com/multiplymii/c2034ab4-c455-4d22-bc49-a8cb403071e7",
-     "source": "ashby",
-     "score": 77.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What is your preferred work arrangement?",
-      "Expected Salary (bot could not click/type it)",
-      "How did you first hear about MultiplyMii?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Ncontracts",
-     "title": "Software Developer L5",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:07:45",
-     "url": "https://jobs.ashbyhq.com/ncontracts/142b0d39-5d02-45b5-a835-5cb74f3590bf",
-     "source": "ashby",
-     "score": 71.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Address",
-      "Desired Salary: (bot could not click/type it)",
-      "Referral Source?",
-      "I certify that I, the undersigned applicant, have personally completed this application. I further certify that I have not knowingly withheld any information that might adversely affect my changes for employment and that the answers given by me are true and complete to the best of my knowledge. I understand that any omission or misstatement of fact on this application, or in any interview or document used to secure employment shall be grounds for rejection of this application or for immediate discharge if I am employed, regardless of the time elapsed before discovery. I hereby authorize Ncontracts and any of its subsidiaries (the “Company”) to investigate all statements given in this application, including my references, work record, and educations as well as all other matters related to my suitability for employment, and unless otherwise noted, to contact my present and former employers. I also authorize the references and employers I have listed to disclose to the Company any and all documents and other information related to my work records and employment, without giving me prior notice of disclosure. In addition, I hereby release the Company, my present and former employers and all other persons and entities from any and all claims, demands or liabilities arising out of or in any way related to such investigation or disclosure. I understand that nothing in this application or communicated during any interview creates a contract for employment between me and Ncontracts or any of its subsidiaries (the “Company”). I further understand that if hired, my employment with the company is at will, and that I or the Company may terminate my employment at any time without notice and without any reason. I understand that no promises or representations to the contrary are binding on the Company unless made in writing and signed by me and the CEO or an authorized representative of Ncontracts."
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Clasp",
-     "title": "Software Engineer, Foundations",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:07:39",
-     "url": "https://jobs.ashbyhq.com/clasp-group/c570534a-a8f5-41f7-ae82-3def04b38a95",
-     "source": "ashby",
-     "score": 77.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "Talkiatry",
-     "title": "Software Engineer DOLCE",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:07:28",
-     "url": "https://jobs.ashbyhq.com/talkiatry/4343b2d6-b89f-4534-b208-515963523015",
-     "source": "ashby",
-     "score": 72.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Phone",
-      "Are you currently on an OPT or H4 visa?",
-      "Is the posted salary range aligned with your requirements?",
-      "Are you happy for Metaview to transcribe your interviews?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "SimSpace Corporation",
-     "title": "Backend Software Engineer (Internet Services Simulation)",
-     "location": "Remote - Costa Rica",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:07:15",
-     "url": "https://jobs.ashbyhq.com/simspace-corporation/5ce06184-1479-44b8-bfd0-c691eb6f125c",
-     "source": "ashby",
-     "score": 72.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Phone Number",
-      "Please provide your full legal address",
-      "SimSpace uses text messaging to help move you through the interview process quickly. We text to share application updates, schedule interviews, and be more available to support you during the process. Select YES, if we can text you.",
-      "What is your English proficiency?",
-      "Are you comfortable participating in interviews and conducting business entirely in English?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Silver.dev",
-     "title": "Siena - Fullstack Engineer",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:06:47",
-     "url": "https://jobs.ashbyhq.com/Silver/f69efa5f-3be5-4a6c-addd-6e5f43811e4f",
-     "source": "ashby",
-     "score": 81.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you Physically located in Argentina?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Oneleet",
-     "title": "Fullstack Engineer, AI Implementation",
-     "location": "US/EU - Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:06:37",
-     "url": "https://jobs.ashbyhq.com/oneleet/e178bb4b-b402-4630-aaba-89a3c2841518",
-     "source": "ashby",
-     "score": 75.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "Techtorch",
-     "title": "Forward Deployed Engineer ",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:05:49",
-     "url": "https://jobs.ashbyhq.com/techtorch/db625e79-1dc4-495e-8a16-aa0f4a962a2d",
-     "source": "ashby",
-     "score": 50.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What are your expectations (in INR)?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "SearchApi",
-     "title": "Frontend Engineer & UI Designer (Developer Tooling)",
-     "location": "Remote - Lithuania",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:05:49",
-     "url": "https://jobs.ashbyhq.com/SearchApi/597a1f05-d9bd-4827-82f1-794c0d861fff",
-     "source": "ashby",
-     "score": 77.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Can you work as a sole proprietor and issue invoices?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Spellbook",
-     "title": "Product Engineer",
-     "location": "Remote - Ontario",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:05:42",
-     "url": "https://jobs.ashbyhq.com/spellbook.com/381788d0-507c-4232-b9ca-8c5b39070276",
-     "source": "ashby",
-     "score": 81.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you currently legally entitled to work in Canada?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Turvo",
-     "title": "Software Engineer",
-     "location": "Hyderabad",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:05:05",
-     "url": "https://jobs.lever.co/turvo/d0717ecd-1b7c-4233-be83-c2c700646a07",
-     "source": "lever",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Thoughtworks",
-     "title": "UAT-Referral Consultant:County:Developer:Front-end Developer",
-     "location": "Chennai",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:04:14",
-     "url": "https://jobs.ashbyhq.com/thoughtworks/02a6d274-7747-442c-847c-4c24a391548c",
-     "source": "ashby",
-     "score": 55.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Universal Electronics Inc.",
-     "title": "Cloud Software Engineer",
-     "location": "Bangalore, India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:03:41",
-     "url": "https://jobs.lever.co/uei/a6e184f4-71da-42f6-b642-b11fc89acd04",
-     "source": "lever",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "TSMG",
-     "title": "Full Stack Engineer",
-     "location": "Hyderabad",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:03:34",
-     "url": "https://jobs.lever.co/tsmg/dfd8e3f5-dd9d-409f-8bf8-72792ee1765e",
-     "source": "lever",
-     "score": 55.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "I would like to receive information about training opportunities and courses from TSMG Academy in addition to recruitment-related communication ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Spreetail",
-     "title": "Software Engineer II",
-     "location": "India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:03:18",
-     "url": "https://jobs.lever.co/spreetail/d984a921-7e5b-4738-b363-382dfa2e56e3",
-     "source": "lever",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Sophos",
-     "title": "Software Engineer 1 (Java Developer)",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:02:43",
-     "url": "https://jobs.ashbyhq.com/sophos/6b42a0ac-2500-4559-a813-2bfa43eb2ea6",
-     "source": "ashby",
-     "score": 55.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you legally entitled to work in the country where this position is located?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Onehouse",
-     "title": "Backend Engineer - Distributed Systems (India)",
-     "location": "India-Remote",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:02:29",
-     "url": "https://jobs.lever.co/Onehouse/2e0958a7-d86e-4b9e-9f81-b18bdf47f157",
-     "source": "lever",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Saviynt",
-     "title": "Software Engineer (Java/Python)",
-     "location": "Bengaluru, India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:02:28",
-     "url": "https://jobs.lever.co/saviynt/b39f6fac-1a05-401a-83b7-831cffd35843",
-     "source": "lever",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Protegrity",
-     "title": "Software Engineer, Big Data (829)",
-     "location": "Navi Mumbai",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:01:40",
-     "url": "https://jobs.ashbyhq.com/protegrity/132ede34-6b5d-422d-a45b-df400294aacb",
-     "source": "ashby",
-     "score": 55.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Is your notice period eligable to be bought out?",
-      "What's APP Number",
-      "What color is the sky - Yellow",
-      "What color is the sky - Orange",
-      "What color is the sky - Blue"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Neuron 7",
-     "title": "Frontend Engineer",
-     "location": "Bengaluru",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:01:22",
-     "url": "https://jobs.lever.co/neuron7/1f8eb6df-042e-46ea-a687-9be7ba074028",
-     "source": "lever",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Perforce",
-     "title": "Software Engineer, (Ruby/Clojure) - Puppet",
-     "location": "Pune, Maharashtra",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:01:18",
-     "url": "https://jobs.lever.co/perforce/88e3048f-7fa2-4052-ba15-f2518d42d654",
-     "source": "lever",
-     "score": 55.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you a current employee of Perforce? ✱",
-      "Are you a prior employee or contractor of Perforce? ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "LinkedIn Partner Sandbox - RSC testing",
-     "title": "Software Engineer IV",
-     "location": "Bangalore",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:01:09",
-     "url": "https://jobs.lever.co/linkedin/31cb9434-6fc3-4ab8-8998-e878d0742ad7",
-     "source": "lever",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Lingaro",
-     "title": "Backend Developer",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:00:35",
-     "url": "https://jobs.lever.co/lingarogroup/f3231a28-9a57-41f2-8bd0-5638bc520904",
-     "source": "lever",
-     "score": 55.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Choose your currency: ✱",
-      "Choose your salary period ✱",
-      "Gross or net? ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Glomopay",
-     "title": "Software Engineer, Infrastructure",
-     "location": "Bengaluru HQ",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:00:24",
-     "url": "https://jobs.ashbyhq.com/glomo/aaaa687a-468a-485b-ae7f-3f761dcaa522",
-     "source": "ashby",
-     "score": 55.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Tentative Salary (bot could not click/type it)",
-      "Do you have any experience in building payments product in past ?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Notion",
-     "title": "Forward Deployed Engineer, India",
-     "location": "Hyderabad, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:00:08",
-     "url": "https://jobs.ashbyhq.com/notion/79c18580-c927-456c-9d5f-72efbc6c43cb",
-     "source": "ashby",
-     "score": 56.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Will you now or in the future require Notion to sponsor an immigration case in order to employ you?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Kobie",
-     "title": "Software Engineer",
-     "location": "Bengaluru, Karnataka",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:00:05",
-     "url": "https://jobs.lever.co/kobie/c1563397-e50b-4e33-acec-d2f528722ae8",
-     "source": "lever",
-     "score": 55.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What is your annual salary expectation for a new opportunity? ✱ (bot could not click/type it)",
-      "Do you currently live in Bengaluru, India? ✱",
-      "Are you on a notice period? ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Handshake",
-     "title": "Forward Deployed Engineer I",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:59:55",
-     "url": "https://jobs.ashbyhq.com/handshake/f632f0c3-0b9c-49a7-984b-de92e18e6d0b",
-     "source": "ashby",
-     "score": 56.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Phone number"
-     ],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "Granica",
-     "title": "Software Engineer, Data Platform (Bengaluru)",
-     "location": "Bengaluru Urban",
-     "status": "ERROR",
-     "applied_at": "2026-11-20 11:59:52",
-     "url": "https://jobs.ashbyhq.com/granica/8712e354-0bd6-4706-8d30-45b6ff4bf7d4",
-     "source": "ashby",
-     "score": 55.0,
-     "category": "error",
-     "why": "The page crashed or timed out: no form fields found on the apply page (form on main page)",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "CertifyOS",
-     "title": "SDET",
-     "location": "Bengaluru, India",
-     "status": "ERROR",
-     "applied_at": "2026-11-20 11:59:48",
-     "url": "https://jobs.ashbyhq.com/certifyos/3ac954c0-376b-41ad-953b-e3df7e835114",
-     "source": "ashby",
-     "score": 55.0,
-     "category": "error",
-     "why": "The page crashed or timed out: no form fields found on the apply page (form on main page)",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Certa",
-     "title": "Forward Deployed Engineer",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:59:45",
-     "url": "https://jobs.ashbyhq.com/certa/0b101c4d-6e2e-4711-9a70-6302d0c094e1",
-     "source": "ashby",
-     "score": 55.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "How would you rate your hands-on experience with REST APIs, JSON, webhooks, and data mapping?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Acceldata",
-     "title": "Software Engineer - Open Data Platform (ODP)",
-     "location": "Bengaluru",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:59:39",
-     "url": "https://jobs.lever.co/acceldata/0c47e882-83ff-471e-ba75-5543796aa34a",
-     "source": "lever",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Careway Health",
-     "title": "Software Engineer (Remote)",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:59:39",
-     "url": "https://jobs.ashbyhq.com/careway/f7bc5fce-abe3-490e-ab6b-d3eb1e7be423",
-     "source": "ashby",
-     "score": 59.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "Beghou Consulting",
-     "title": "Full Stack Developer",
-     "location": "Pune",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:59:01",
-     "url": "https://jobs.lever.co/beghouconsulting/1eec2140-fed6-4f56-8049-0ee22d3c9d51",
-     "source": "lever",
-     "score": 59.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Experience building backend APIs and services in Python ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Paxos",
-     "title": "Data Platform Engineer",
-     "location": "Remote - India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:58:40",
-     "url": "https://jobs.ashbyhq.com/paxos/f8cbcedf-5b3a-463c-82d1-0d80b9c34e42",
-     "source": "ashby",
-     "score": 60.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Smarsh",
-     "title": "Java Full Stack Developer",
-     "location": "India - Bengaluru",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:58:22",
-     "url": "https://jobs.lever.co/smarsh/ba32022b-8ea6-4d9d-8a32-7415ce7a4adb",
-     "source": "lever",
-     "score": 60.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Nightfall AI",
-     "title": "Backend Software Engineer",
-     "location": "Bengaluru",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:58:03",
-     "url": "https://jobs.ashbyhq.com/nightfall-ai/084baf9b-70ad-498d-8474-c656efdf4cad",
-     "source": "ashby",
-     "score": 60.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Do you have 5 years of experience in one or more systems/high-level programming languages (e.g. Python, Go, Java, C++)?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Allata",
-     "title": "Application Support Engineer (L2/L3) - .NET Fullstack",
-     "location": "Pune - Maharashtra",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:57:56",
-     "url": "https://jobs.lever.co/Allata/dc3a98e8-c789-4363-b74d-69eab457f87f",
-     "source": "lever",
-     "score": 60.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Total & Relevant Experience in Software Engineering? ✱",
-      "Have you worked in a role, where you have provided Production Support of any application? ✱",
-      "Have you worked in shifts? ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Cursor (Anysphere)",
-     "title": "Forward Deployed Engineer - India",
-     "location": "Bengaluru",
-     "status": "CLOSED",
-     "applied_at": "2026-11-20 11:57:40",
-     "url": "https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b",
-     "source": "ashby",
-     "score": 62.0,
-     "category": "closed",
-     "why": "The job was already closed when the bot opened it.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Mactores",
-     "title": "Full Stack Product Engineer, Agent Native",
-     "location": "Mumbai, MH",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:57:34",
-     "url": "https://jobs.lever.co/mactores/d928d43f-80ac-42f2-bb85-c717cefc83cb",
-     "source": "lever",
-     "score": 63.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "SPAN",
-     "title": "Device - Software Engineer (Functional Safety)",
-     "location": "Bengaluru",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:57:33",
-     "url": "https://jobs.ashbyhq.com/span/98107b13-239e-4c8e-9597-350ab676239e",
-     "source": "ashby",
-     "score": 60.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you currently living in Bengaluru? If not, are you planning on moving to Bengaluru?"
      ],
      "company_later_succeeded": false
     }
@@ -8731,8 +8713,16 @@
    ],
    "form_control_issues": [
     {
+     "question": "Location",
+     "count": 32
+    },
+    {
      "question": "Please respond truthfully. How much hands-on experience do you have with MCP servers (such as GitHub MCP Server) and agent-based workflow automation? ✱",
-     "count": 12
+     "count": 14
+    },
+    {
+     "question": "What are your fixed salary expectations?",
+     "count": 13
     },
     {
      "question": "Location (City)*",
@@ -8743,8 +8733,8 @@
      "count": 6
     },
     {
-     "question": "Location",
-     "count": 5
+     "question": "What is your desired compensation?",
+     "count": 4
     },
     {
      "question": "For iOS: Swift / iOS",
@@ -8881,30 +8871,32 @@
     {
      "question": "Are you currently eligible to work in the country where this role is posted without visa sponsorship?*",
      "count": 2
-    },
-    {
-     "question": "Do you now or in the future require visa sponsorship to continue working in the country where this role is posted?*",
-     "count": 2
-    },
-    {
-     "question": "Are you currently eligible to work in the country in which this job is posted?*",
-     "count": 2
     }
    ]
   },
   "divya": {
-   "submitted": 105,
-   "submitted_companies": 98,
-   "failed": 682,
+   "submitted": 106,
+   "submitted_companies": 99,
+   "failed": 686,
    "reasons": {
     "needs_answer": 421,
-    "captcha": 159,
-    "form_rejected": 50,
-    "closed": 20,
+    "captcha": 161,
+    "form_rejected": 51,
+    "closed": 21,
     "unconfirmed": 20,
     "error": 12
    },
    "successes": [
+    {
+     "company": "NETGEAR",
+     "title": "SASE Desktop Client Software Developer",
+     "location": "Bengaluru, India",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-26 10:49:54",
+     "url": "https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3",
+     "source": "ashby",
+     "score": 55.0
+    },
     {
      "company": "Rox Data Corp",
      "title": "Backend Platform Engineer (BLR)",
@@ -10008,6 +10000,62 @@
    ],
    "failures": [
     {
+     "company": "Warner Music Group",
+     "title": "Software Engineer - Data Platform",
+     "location": "Bangalore",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 10:44:50",
+     "url": "https://jobs.lever.co/wmg/742bb482-120a-40bb-bec2-65f44e179dd0",
+     "source": "lever",
+     "score": 59.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "NETGEAR",
+     "title": "  SASE Firewall QA Automation Engineer",
+     "location": "Bengaluru, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-26 10:44:26",
+     "url": "https://jobs.ashbyhq.com/netgear/b272ca70-fb78-4db1-87d7-ef5852394544",
+     "source": "ashby",
+     "score": 45.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": true
+    },
+    {
+     "company": "Cursor (Anysphere)",
+     "title": "Forward Deployed Engineer - India",
+     "location": "Bengaluru",
+     "status": "CLOSED",
+     "applied_at": "2026-11-26 10:44:03",
+     "url": "https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b",
+     "source": "ashby",
+     "score": 62.0,
+     "category": "closed",
+     "why": "The job was already closed when the bot opened it.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ION Group",
+     "title": "Software Developer, 2027 Leadership Development Program, ION Group, India",
+     "location": "Noida",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-26 10:43:33",
+     "url": "https://jobs.lever.co/ion/6f66cbb4-c882-4234-b84e-68baea56e1ea",
+     "source": "lever",
+     "score": 55.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
      "company": "ShyftLabs",
      "title": "Software Developer",
      "location": "Noida, Uttar Pradesh",
@@ -10033,7 +10081,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Kobie",
@@ -10103,7 +10151,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "NETGEAR",
@@ -10117,7 +10165,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Warner Music Group",
@@ -10243,7 +10291,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Kobie",
@@ -10355,7 +10403,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ION Group",
@@ -10439,7 +10487,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Perforce",
@@ -10541,7 +10589,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ION Group",
@@ -10585,7 +10633,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Kobie",
@@ -10657,7 +10705,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Warner Music Group",
@@ -10685,7 +10733,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Perforce",
@@ -10787,7 +10835,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Warner Music Group",
@@ -10933,7 +10981,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Kobie",
@@ -11019,7 +11067,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Perforce",
@@ -11061,7 +11109,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Cursor (Anysphere)",
@@ -11135,7 +11183,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Warner Music Group",
@@ -11235,7 +11283,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Cursor (Anysphere)",
@@ -11430,7 +11478,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "FamPay",
@@ -11489,7 +11537,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Perforce",
@@ -11621,7 +11669,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Kobie",
@@ -12889,7 +12937,7 @@
       "Contact Phone Number",
       "Contact Phone Number"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Rwazi, Inc.",
@@ -12973,7 +13021,7 @@
       "Contact Phone Number",
       "Contact Phone Number"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Rwazi, Inc.",
@@ -13881,7 +13929,7 @@
       "Contact Phone Number",
       "Contact Phone Number"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Kobie",
@@ -15314,7 +15362,7 @@
       "Contact Phone Number",
       "Contact Phone Number"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Allata",
@@ -15660,7 +15708,7 @@
       "Contact Phone Number",
       "Contact Phone Number"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Protegrity",
@@ -16180,69 +16228,6 @@
      "blocking": [
       "If you are currently based in United States, please confirm your current state of residence. If you are based outside of the United States, select \"I am not located in the United States\".* (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Cursor (Anysphere)",
-     "title": "Forward Deployed Engineer - India",
-     "location": "Bengaluru",
-     "status": "CLOSED",
-     "applied_at": "2026-11-20 11:33:26",
-     "url": "https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b",
-     "source": "ashby",
-     "score": 62.0,
-     "category": "closed",
-     "why": "The job was already closed when the bot opened it.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "verifone",
-     "title": "Data Platform Engineer",
-     "location": "Bengaluru, Karnataka, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:33:13",
-     "url": "https://job-boards.greenhouse.io/verifone/jobs/7615010003",
-     "source": "greenhouse",
-     "score": 64.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "By submitting your application, you are providing consent: * (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Squarepoint Capital",
-     "title": "Software Developer - Data Products and Services",
-     "location": "Montreal, London, Singapore, Bangalore",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:32:48",
-     "url": "https://www.squarepoint-capital.com/open-opportunities?id=4346989&gh_jid=4346989",
-     "source": "greenhouse",
-     "score": 69.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Please select the region you are currently located in* (bot could not click/type it)",
-      "Please select your immigration status (Singapore and Hong Kong Applicants only)* (bot could not click/type it)",
-      "Will you now, or in the future, require work sponsorship for your preferred location by the Company/Squarepoint Group?* (bot could not click/type it)",
-      "Please specifically be advised that interviews conducted during our recruitment process may be subject to audio or video recording. This recording is conducted to ensure our recruitment processes’ fairness, efficiency, and legal compliance.* (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Platform Science",
-     "title": "Software Engineer 2",
-     "location": "Chennai, Tamil Nadu, India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:32:43",
-     "url": "https://job-boards.greenhouse.io/platformscience/jobs/7693381003",
-     "source": "greenhouse",
-     "score": 65.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
      "company_later_succeeded": false
     }
    ],

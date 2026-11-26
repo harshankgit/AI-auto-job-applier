@@ -1,10 +1,10 @@
 # AI Job Application Report
 
-**Report updated (UTC):** 2026-11-26 10:44:51
-**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-26 10:44:50
-**Companies applied to (all candidates):** 210
-**Applications submitted (page-confirmed):** 216
-**Total attempts logged:** 1689
+**Report updated (UTC):** 2026-11-26 19:44:08
+**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-26 19:36:10
+**Companies applied to (all candidates):** 212
+**Applications submitted (page-confirmed):** 218
+**Total attempts logged:** 1754
 
 > Only applications the job site itself confirmed are counted as done.
 > Every form value came from the candidate's own resume or their
@@ -14,8 +14,8 @@
 
 | Candidate | Companies done | Applications submitted | Total attempts | Not gone through | Dry runs |
 | --- | --- | --- | --- | --- | --- |
-| **Harshank Kanungo** | **107** | 111 | 883 | 757 | 10 |
-| **Divya Kanungo** | **103** | 105 | 806 | 686 | 10 |
+| **Harshank Kanungo** | **108** | 112 | 947 | 820 | 10 |
+| **Divya Kanungo** | **104** | 106 | 807 | 686 | 10 |
 
 ## Every company applied to - full details
 
@@ -231,32 +231,24 @@
 | 208 | Harshank Kanungo | **The Job Sauce** | Software Engineer - Alt | Remote | Tech | 2026-11-26 09:11:24 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 7 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/The%20Job%20Sauce/0d567110-4abf-4582-8063-502197e03825/application) |
 | 209 | Divya Kanungo | **Rox Data Corp** | Backend Platform Engineer (BLR) | Bengaluru | Tech | 2026-11-26 10:19:09 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 6 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/Rox-Data-Corp/6e6b44f9-8bc2-4dfa-9432-5a0d2931a113/application) |
 | 210 | Harshank Kanungo | **Rox Data Corp** | Backend Platform Engineer (BLR) | Bengaluru | Tech | 2026-11-26 10:20:51 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 6 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/Rox-Data-Corp/6e6b44f9-8bc2-4dfa-9432-5a0d2931a113/application) |
-
-## Job discovery (latest run)
-
-| Metric | Value |
-| --- | --- |
-| Company boards queried | 2335 |
-| Raw postings fetched | 148711 |
-| Real postings kept | 147316 |
-| Fake / demo / test postings rejected | 1395 |
-| Rejection reasons | title contains blacklisted word 'test' (1148), title contains blacklisted word 'testing' (231), title contains blacklisted word 'demo' (13), title contains blacklisted word 'sample' (3) |
+| 211 | Harshank Kanungo | **NETGEAR** | SASE Desktop Client Software Developer | Bengaluru, India | Tech | 2026-11-26 10:49:52 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 9 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3/application) |
+| 212 | Divya Kanungo | **NETGEAR** | SASE Desktop Client Software Developer | Bengaluru, India | Tech | 2026-11-26 10:49:54 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 9 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3/application) |
 
 ## Outcome summary (all runs)
 
 | Outcome | Count | Meaning |
 | --- | --- | --- |
-| [INCOMPLETE] FAILED_VALIDATION | 1007 | Form asked something we had no resume fact for - not submitted |
-| [CAPTCHA] CAPTCHA_BLOCKED | 311 | Form was filled but a captcha needs a human to clear it |
-| [APPLIED] SUBMITTED | 216 | Application sent and confirmed by the company's site |
-| [ERROR] ERROR | 80 | Technical failure - not submitted |
+| [INCOMPLETE] FAILED_VALIDATION | 1066 | Form asked something we had no resume fact for - not submitted |
+| [CAPTCHA] CAPTCHA_BLOCKED | 313 | Form was filled but a captcha needs a human to clear it |
+| [APPLIED] SUBMITTED | 218 | Application sent and confirmed by the company's site |
+| [ERROR] ERROR | 82 | Technical failure - not submitted |
 | [CLOSED] CLOSED | 45 | Posting was closed by the time we opened it |
 | [DRY RUN] SKIPPED | 20 | Dry run - filled but deliberately not submitted |
 | [DUPLICATE] ALREADY_APPLIED | 10 | Company site says this candidate already applied |
 
 ---
 
-## Harshank Kanungo - 107 companies done
+## Harshank Kanungo - 108 companies done
 
 ### Contact details used on every form
 
@@ -274,7 +266,7 @@
 | Experience | 3 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2024) |
 
-### Companies done: 107 (116 applications out of 883 attempts)
+### Companies done: 108 (117 applications out of 947 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -394,6 +386,7 @@
 | 114 | 2026-11-26 09:10:44 | **Handshake** | Forward Deployed Engineer I | India | ashby | Tech | 56 | attached | 13 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/handshake/f632f0c3-0b9c-49a7-984b-de92e18e6d0b/application) |
 | 115 | 2026-11-26 09:11:24 | **The Job Sauce** | Software Engineer - Alt | Remote | ashby | Tech | 71 | attached | 7 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/The%20Job%20Sauce/0d567110-4abf-4582-8063-502197e03825/application) |
 | 116 | 2026-11-26 10:20:51 | **Rox Data Corp** | Backend Platform Engineer (BLR) | Bengaluru | ashby | Tech | 69 | attached | 6 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/Rox-Data-Corp/6e6b44f9-8bc2-4dfa-9432-5a0d2931a113/application) |
+| 117 | 2026-11-26 10:49:52 | **NETGEAR** | SASE Desktop Client Software Developer | Bengaluru, India | ashby | Tech | 65 | attached | 9 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3/application) |
 
 #### Why each of those jobs was chosen
 
@@ -513,6 +506,7 @@
 114. **Handshake - Forward Deployed Engineer I** (score 56): adjacent role 'forward deployed'; seniority suits candidate ('i'); 2 resume skills in posting (react, typescript); AI mentioned in description; India location (India)
 115. **The Job Sauce - Software Engineer - Alt** (score 71): core role match 'software engineer'; 3 resume skills in posting (git, react, typescript); AI mentioned in description; remote, no country restriction stated (Remote)
 116. **Rox Data Corp - Backend Platform Engineer (BLR)** (score 69): core role match 'backend'; 2 resume skills in posting (next.js, react); AI mentioned in description; India location (Bengaluru)
+117. **NETGEAR - SASE Desktop Client Software Developer** (score 65): core role match 'software developer'; 2 resume skills in posting (authentication, git); India location (Bengaluru, India)
 
 #### Confirmation text shown by the company site
 
@@ -627,8 +621,9 @@
 - **Handshake**: plication Success Your application was successfully submitted. Thank you for your interest in Handshake! Powered by Privacy PolicySecurityVulnerability Disclosure
 - **The Job Sauce**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Rox Data Corp**: ll key application fields. Upload file Thank you for your interest in the SWE - Backend Platform role! Name Email Resume Harshank_Kanungo_Full_Stack_Developer_ATS.pdf Replace or drag and drop here
+- **NETGEAR**: plication Success Your application was successfully submitted! Cookie Management We use some essential cookies to make this site work. We would like to set performance cookies to help us make sure
 
-### Attempts that did not go through (767)
+### Attempts that did not go through (830)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1399,23 +1394,86 @@
 | 2026-11-26 10:40:36 | ElevenLabs | Full-Stack Engineer - Creative Agents | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 11 | If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe/application) | after-elevenlabs-35813150-a851-4821-b732-a037b4e6c4fe.png |
 | 2026-11-26 10:41:32 | ElevenLabs | Full-Stack Engineer (Backend Leaning) - Payments Engineering | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90/application) | after-elevenlabs-e4e0450f-d139-4f8e-b210-2f326a680d90.png |
 | 2026-11-26 10:42:35 | PAR Technology | Software Engineer II-Golang | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c/application) | after-par_technology-0cc4109c-dfe0-44f9-9191-d2ed723a409c.png |
+| 2026-11-26 10:50:18 | Smart Working Solutions | AI Trainer - Software Engineering (Remote, Full-Time) [MV001] | India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Please respond truthfully. How much hands-on experience do you have with MCP servers (such as | 28 | Twitter URL (brain: no resume fact or job fact grounds this question), Please respond truthfully. How much hands-on experience do you have with MCP servers (such as GitHub MCP Server) and agent-based workflow automation? ✱ (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/smart-working-solutions/b54f0d60-9226-4292-b0a3-9caec516a2fd/apply) | missing-smart-working-solutions.png |
+| 2026-11-26 10:50:47 | PAR Technology | Software Engineer II-Golang | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 14 | Phone Number (brain: no resume fact or job fact grounds this question), Current Location (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c/application) | after-par_technology-0cc4109c-dfe0-44f9-9191-d2ed723a409c.png |
+| 2026-11-26 10:51:29 | SurveyMonkey | Software Engineer II - Full Stack | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What are your fixed salary expectations? | 12 | In which city are you located? (could not set), What are your fixed salary expectations? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2/application) | missing-surveymonkey.png |
+| 2026-11-26 10:52:43 | PAR Technology | Software Engineer II | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 14 | Phone Number (brain: no resume fact or job fact grounds this question), Current Location (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426/application) | after-par_technology-1ca0ca4f-94c0-42c4-96be-21a13b621426.png |
+| 2026-11-26 10:53:08 | SurveyMonkey | Software Engineer II - Mobile Engineering - Android | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What are your fixed salary expectations? | 12 | In which city are you located? (could not set), What are your fixed salary expectations? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d/application) | missing-surveymonkey.png |
+| 2026-11-26 10:53:29 | ElevenLabs | Full-Stack Engineer - Creative Agents | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe/application) | missing-elevenlabs.png |
+| 2026-11-26 10:56:18 | Smart Working Solutions | AI Trainer - Software Engineering (Remote, Full-Time) [MV001] | India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Please respond truthfully. How much hands-on experience do you have with MCP servers (such as | 28 | Twitter URL (brain: no resume fact or job fact grounds this question), Please respond truthfully. How much hands-on experience do you have with MCP servers (such as GitHub MCP Server) and agent-based workflow automation? ✱ (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/smart-working-solutions/b54f0d60-9226-4292-b0a3-9caec516a2fd/apply) | missing-smart-working-solutions.png |
+| 2026-11-26 10:57:00 | ElevenLabs | Full-Stack Engineer (Backend Leaning) - Payments Engineering | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 7 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90/application) | missing-elevenlabs.png |
+| 2026-11-26 10:57:49 | Warner Music Group | Software Engineer | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 14 | Twitter URL (brain: no resume fact or job fact grounds this question), What is your current organization? (brain: no resume fact or job fact grounds this question), Total Work Experience (Excluding Internship) (brain: no resume fact or job fact grounds this question), Primary skillset (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/wmg/4a5ad353-6b27-46b2-b9a0-6fde3f73c7e4/apply) | after-wmg-4a5ad353-6b27-46b2-b9a0-6fde3f73c7e4.png |
+| 2026-11-26 11:06:59 | SurveyMonkey | Software Engineer II - Full Stack | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What are your fixed salary expectations? | 13 | What are your fixed salary expectations? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2/application) | missing-surveymonkey.png |
+| 2026-11-26 11:08:51 | PAR Technology | Software Engineer II | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 14 | Phone Number (brain: no resume fact or job fact grounds this question), Current Location (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426/application) | after-par_technology-1ca0ca4f-94c0-42c4-96be-21a13b621426.png |
+| 2026-11-26 11:10:12 | SurveyMonkey | Software Engineer II - Mobile Engineering - Android | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What are your fixed salary expectations? | 12 | In which city are you located? (could not set), What are your fixed salary expectations? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d/application) | missing-surveymonkey.png |
+| 2026-11-26 11:12:38 | PAR Technology | Software Engineer II- ROR | Jaipur | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/7b4a7246-d679-4c1c-81da-0ac4d75fec39/application) | after-par_technology-7b4a7246-d679-4c1c-81da-0ac4d75fec39.png |
+| 2026-11-26 11:13:04 | ElevenLabs | Full-Stack Engineer - ElevenMusic | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 10 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/0547cf3a-856f-4db2-8307-73db634c4096/application) | missing-elevenlabs.png |
+| 2026-11-26 11:13:24 | ElevenLabs | Full-Stack Engineer - Ads Engine | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/3abf96ca-2937-4290-9d23-5208aece08b2/application) | missing-elevenlabs.png |
+| 2026-11-26 11:56:40 | PAR Technology | Software Engineer II-Golang | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c/application) | after-par_technology-0cc4109c-dfe0-44f9-9191-d2ed723a409c.png |
+| 2026-11-26 11:58:41 | SurveyMonkey | Software Engineer II - Full Stack | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What are your fixed salary expectations? | 13 | What are your fixed salary expectations? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2/application) | missing-surveymonkey.png |
+| 2026-11-26 11:59:39 | PAR Technology | Software Engineer II | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 14 | Phone Number (brain: no resume fact or job fact grounds this question), Current Location (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426/application) | after-par_technology-1ca0ca4f-94c0-42c4-96be-21a13b621426.png |
+| 2026-11-26 12:01:13 | SurveyMonkey | Software Engineer II - Mobile Engineering - Android | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What are your fixed salary expectations? | 12 | In which city are you located? (could not set), What are your fixed salary expectations? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d/application) | missing-surveymonkey.png |
+| 2026-11-26 12:02:27 | ElevenLabs | Full-Stack Engineer - Creative Agents | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe/application) | missing-elevenlabs.png |
+| 2026-11-26 12:03:52 | ElevenLabs | Full-Stack Engineer (Backend Leaning) - Payments Engineering | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 7 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90/application) | missing-elevenlabs.png |
+| 2026-11-26 12:46:30 | PAR Technology | Software Engineer II-Golang | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c/application) | after-par_technology-0cc4109c-dfe0-44f9-9191-d2ed723a409c.png |
+| 2026-11-26 12:47:02 | SurveyMonkey | Software Engineer II - Full Stack | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What are your fixed salary expectations? | 12 | In which city are you located? (could not set), What are your fixed salary expectations? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2/application) | missing-surveymonkey.png |
+| 2026-11-26 12:48:12 | PAR Technology | Software Engineer II | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 14 | Phone Number (brain: no resume fact or job fact grounds this question), Current Location (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426/application) | after-par_technology-1ca0ca4f-94c0-42c4-96be-21a13b621426.png |
+| 2026-11-26 12:48:47 | SurveyMonkey | Software Engineer II - Mobile Engineering - Android | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What are your fixed salary expectations? | 12 | In which city are you located? (could not set), What are your fixed salary expectations? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d/application) | missing-surveymonkey.png |
+| 2026-11-26 12:49:25 | ElevenLabs | Full-Stack Engineer - Creative Agents | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe/application) | missing-elevenlabs.png |
+| 2026-11-26 12:50:21 | ElevenLabs | Full-Stack Engineer (Backend Leaning) - Payments Engineering | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 7 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90/application) | missing-elevenlabs.png |
+| 2026-11-26 13:27:08 | PAR Technology | Software Engineer II-Golang | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c/application) | after-par_technology-0cc4109c-dfe0-44f9-9191-d2ed723a409c.png |
+| 2026-11-26 13:27:41 | SurveyMonkey | Software Engineer II - Full Stack | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What are your fixed salary expectations? | 12 | In which city are you located? (could not set), What are your fixed salary expectations? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2/application) | missing-surveymonkey.png |
+| 2026-11-26 13:33:24 | PAR Technology | Software Engineer II | Gurugram | [ERROR] ERROR | could not load https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426/application | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426/application) | loadfail-par_technology.png |
+| 2026-11-26 13:33:32 | SurveyMonkey | Software Engineer II - Mobile Engineering - Android | Bengaluru | [ERROR] ERROR | could not load https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d/application | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d/application) | loadfail-surveymonkey.png |
+| 2026-11-26 14:00:33 | ElevenLabs | Full-Stack Engineer - Creative Agents | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe/application) | missing-elevenlabs.png |
+| 2026-11-26 14:01:28 | ElevenLabs | Full-Stack Engineer (Backend Leaning) - Payments Engineering | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 7 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90/application) | missing-elevenlabs.png |
+| 2026-11-26 14:19:36 | PAR Technology | Software Engineer II- ROR | Jaipur | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 14 | Phone Number (brain: no resume fact or job fact grounds this question), Current Location (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/7b4a7246-d679-4c1c-81da-0ac4d75fec39/application) | after-par_technology-7b4a7246-d679-4c1c-81da-0ac4d75fec39.png |
+| 2026-11-26 14:30:53 | ElevenLabs | Full-Stack Engineer - ElevenMusic | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 10 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/0547cf3a-856f-4db2-8307-73db634c4096/application) | missing-elevenlabs.png |
+| 2026-11-26 14:31:36 | PAR Technology | Software Developer | Remote - Illinois | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What is your desired compensation? | 12 | Phone Number (brain: no resume fact or job fact grounds this question), Location (could not set), What is your desired compensation? (could not set), Gender (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/cec2db23-b91d-42a6-9b8f-043c773faf56/application) | missing-par_technology.png |
+| 2026-11-26 19:16:57 | PAR Technology | Software Engineer II-Golang | Gurugram | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 15 | Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c/application) | after-par_technology-0cc4109c-dfe0-44f9-9191-d2ed723a409c.png |
+| 2026-11-26 19:18:19 | SurveyMonkey | Software Engineer II - Full Stack | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What are your fixed salary expectations? | 13 | What are your fixed salary expectations? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2/application) | missing-surveymonkey.png |
+| 2026-11-26 19:19:38 | PAR Technology | Software Engineer II | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426/application) | after-par_technology-1ca0ca4f-94c0-42c4-96be-21a13b621426.png |
+| 2026-11-26 19:20:41 | SurveyMonkey | Software Engineer II - Mobile Engineering - Android | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What are your fixed salary expectations? | 13 | What are your fixed salary expectations? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d/application) | missing-surveymonkey.png |
+| 2026-11-26 19:21:24 | ElevenLabs | Full-Stack Engineer - Creative Agents | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe/application) | missing-elevenlabs.png |
+| 2026-11-26 19:22:48 | ElevenLabs | Full-Stack Engineer (Backend Leaning) - Payments Engineering | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 7 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90/application) | missing-elevenlabs.png |
+| 2026-11-26 19:23:11 | SurveyMonkey | Software Engineer II - Full Stack | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What are your fixed salary expectations? | 12 | In which city are you located? (could not set), What are your fixed salary expectations? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2/application) | missing-surveymonkey.png |
+| 2026-11-26 19:24:04 | PAR Technology | Software Engineer II | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 14 | Phone Number (brain: no resume fact or job fact grounds this question), Current Location (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426/application) | after-par_technology-1ca0ca4f-94c0-42c4-96be-21a13b621426.png |
+| 2026-11-26 19:24:25 | SurveyMonkey | Software Engineer II - Mobile Engineering - Android | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What are your fixed salary expectations? | 12 | In which city are you located? (could not set), What are your fixed salary expectations? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d/application) | missing-surveymonkey.png |
+| 2026-11-26 19:24:43 | ElevenLabs | Full-Stack Engineer - Creative Agents | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe/application) | missing-elevenlabs.png |
+| 2026-11-26 19:25:36 | PAR Technology | Software Engineer II- ROR | Jaipur | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 14 | Phone Number (brain: no resume fact or job fact grounds this question), Current Location (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/7b4a7246-d679-4c1c-81da-0ac4d75fec39/application) | after-par_technology-7b4a7246-d679-4c1c-81da-0ac4d75fec39.png |
+| 2026-11-26 19:26:05 | ElevenLabs | Full-Stack Engineer (Backend Leaning) - Payments Engineering | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 7 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90/application) | missing-elevenlabs.png |
+| 2026-11-26 19:27:00 | PAR Technology | Software Engineer II- ROR | Jaipur | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 14 | Phone Number (brain: no resume fact or job fact grounds this question), Current Location (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/7b4a7246-d679-4c1c-81da-0ac4d75fec39/application) | after-par_technology-7b4a7246-d679-4c1c-81da-0ac4d75fec39.png |
+| 2026-11-26 19:27:25 | ElevenLabs | Full-Stack Engineer - ElevenMusic | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 10 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/0547cf3a-856f-4db2-8307-73db634c4096/application) | missing-elevenlabs.png |
+| 2026-11-26 19:27:52 | PAR Technology | Software Developer | Remote - Illinois | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What is your desired compensation? | 12 | Phone Number (brain: no resume fact or job fact grounds this question), Location (could not set), What is your desired compensation? (could not set), Gender (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/cec2db23-b91d-42a6-9b8f-043c773faf56/application) | missing-par_technology.png |
+| 2026-11-26 19:28:10 | ElevenLabs | Full-Stack Engineer - Ads Engine | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/3abf96ca-2937-4290-9d23-5208aece08b2/application) | missing-elevenlabs.png |
+| 2026-11-26 19:28:38 | ElevenLabs | Full-Stack Engineer - ElevenMusic | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 10 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/0547cf3a-856f-4db2-8307-73db634c4096/application) | missing-elevenlabs.png |
+| 2026-11-26 19:29:05 | PAR Technology | Software Developer | Remote - Illinois | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What is your desired compensation? | 12 | Phone Number (brain: no resume fact or job fact grounds this question), Location (could not set), What is your desired compensation? (could not set), Gender (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/cec2db23-b91d-42a6-9b8f-043c773faf56/application) | missing-par_technology.png |
+| 2026-11-26 19:29:23 | ElevenLabs | Full-Stack Engineer - Ads Engine | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/3abf96ca-2937-4290-9d23-5208aece08b2/application) | missing-elevenlabs.png |
+| 2026-11-26 19:29:43 | ElevenLabs | Full-Stack Engineer - ElevenCreative Enterprise | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/34dbe44c-9815-40b2-81f4-91c607fd84b2/application) | missing-elevenlabs.png |
+| 2026-11-26 19:30:01 | ElevenLabs | Full-Stack Engineer (Frontend Leaning) - Studio | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/e6924f60-c8cc-42b3-9d05-2442ec30e12d/application) | missing-elevenlabs.png |
+| 2026-11-26 19:30:21 | ElevenLabs | Full-Stack Engineer - ElevenCreative Enterprise | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/34dbe44c-9815-40b2-81f4-91c607fd84b2/application) | missing-elevenlabs.png |
+| 2026-11-26 19:30:39 | ElevenLabs | Full-Stack Engineer (Frontend Leaning) - Studio | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/e6924f60-c8cc-42b3-9d05-2442ec30e12d/application) | missing-elevenlabs.png |
+| 2026-11-26 19:31:41 | ElevenLabs | Full-Stack Engineer - ElevenAPI | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/108c99e6-ba2b-44a0-b830-7d535e14a152/application) | missing-elevenlabs.png |
+| 2026-11-26 19:33:24 | ElevenLabs | Full-Stack Engineer - ElevenAPI | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/108c99e6-ba2b-44a0-b830-7d535e14a152/application) | missing-elevenlabs.png |
+| 2026-11-26 19:35:50 | ElevenLabs | Developer Experience Engineer | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/d16a7ad6-ffbd-4655-8716-4872263f99ce/application) | missing-elevenlabs.png |
+| 2026-11-26 19:36:10 | ElevenLabs | Developer Experience Engineer | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 9 | Location (could not set), If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/d16a7ad6-ffbd-4655-8716-4872263f99ce/application) | missing-elevenlabs.png |
 
 ### Companies touched for this candidate
 
 | Company | Source | AI company | Attempts | Submitted | Result |
 | --- | --- | --- | --- | --- | --- |
-| ElevenLabs | ashby | no | 39 | 0 | not yet |
-| Warner Music Group | lever | no | 26 | 0 | not yet |
-| PAR Technology | ashby | no | 24 | 0 | not yet |
+| ElevenLabs | ashby | no | 66 | 0 | not yet |
+| PAR Technology | ashby | no | 43 | 0 | not yet |
+| SurveyMonkey | ashby | no | 32 | 0 | not yet |
+| Warner Music Group | lever | no | 27 | 0 | not yet |
+| NETGEAR | ashby | no | 23 | 1 | DONE |
 | ShyftLabs | lever | no | 22 | 0 | not yet |
-| NETGEAR | ashby | no | 22 | 0 | not yet |
-| SurveyMonkey | ashby | no | 18 | 0 | not yet |
 | MongoDB | greenhouse | no | 15 | 0 | not yet |
 | Cursor (Anysphere) | ashby | no | 14 | 0 | not yet |
 | Bjak | ashby | no | 14 | 0 | not yet |
+| Smart Working Solutions | lever | no | 14 | 0 | not yet |
 | OpenGov | ashby | no | 13 | 1 | DONE |
 | Mactores | lever | no | 12 | 0 | not yet |
-| Smart Working Solutions | lever | no | 12 | 0 | not yet |
 | Mercor | ashby | no | 11 | 1 | DONE |
 | ION Group | lever | no | 11 | 0 | not yet |
 | Alan | ashby | no | 10 | 1 | DONE |
@@ -1744,7 +1802,7 @@
 
 ---
 
-## Divya Kanungo - 103 companies done
+## Divya Kanungo - 104 companies done
 
 ### Contact details used on every form
 
@@ -1762,7 +1820,7 @@
 | Experience | 1 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2026) |
 
-### Companies done: 103 (110 applications out of 806 attempts)
+### Companies done: 104 (111 applications out of 807 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1876,6 +1934,7 @@
 | 108 | 2026-11-26 09:09:39 | **The Job Sauce** | Software Engineer - Alt | Remote | ashby | Tech | 66 | attached | 7 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/The%20Job%20Sauce/0d567110-4abf-4582-8063-502197e03825/application) |
 | 109 | 2026-11-26 09:10:00 | **Horizon3 AI** | WebApp Offensive Security Software Engineer | US, Remote | ashby | Tech | 61 | attached | 11 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/horizon3ai/169d3dde-b8e7-4545-a5a4-cd5cc882c101/application) |
 | 110 | 2026-11-26 10:19:09 | **Rox Data Corp** | Backend Platform Engineer (BLR) | Bengaluru | ashby | Tech | 69 | attached | 6 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/Rox-Data-Corp/6e6b44f9-8bc2-4dfa-9432-5a0d2931a113/application) |
+| 111 | 2026-11-26 10:49:54 | **NETGEAR** | SASE Desktop Client Software Developer | Bengaluru, India | ashby | Tech | 55 | attached | 9 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3/application) |
 
 #### Why each of those jobs was chosen
 
@@ -1989,6 +2048,7 @@
 108. **The Job Sauce - Software Engineer - Alt** (score 66): core role match 'software engineer'; 2 resume skills in posting (react, typescript); AI mentioned in description; remote, no country restriction stated (Remote)
 109. **Horizon3 AI - WebApp Offensive Security Software Engineer** (score 61): core role match 'software engineer'; 1 resume skills in posting (node); AI mentioned in description; remote, no country restriction stated (US, Remote)
 110. **Rox Data Corp - Backend Platform Engineer (BLR)** (score 69): core role match 'backend'; 2 resume skills in posting (next.js, react); AI mentioned in description; India location (Bengaluru)
+111. **NETGEAR - SASE Desktop Client Software Developer** (score 55): core role match 'software developer'; India location (Bengaluru, India)
 
 #### Confirmation text shown by the company site
 
@@ -2097,6 +2157,7 @@
 - **The Job Sauce**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Horizon3 AI**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Rox Data Corp**: ll key application fields. Upload file Thank you for your interest in the SWE - Backend Platform role! Name Email Resume Divya_Kanungo_MERN_Stack_Developer.pdf Replace or drag and drop here Years
+- **NETGEAR**: plication Success Your application was successfully submitted! Cookie Management We use some essential cookies to make this site work. We would like to set performance cookies to help us make sure
 
 ### Attempts that did not go through (696)
 
@@ -2805,7 +2866,7 @@
 | --- | --- | --- | --- | --- | --- |
 | Warner Music Group | lever | no | 41 | 0 | not yet |
 | ShyftLabs | lever | no | 28 | 0 | not yet |
-| NETGEAR | ashby | no | 26 | 0 | not yet |
+| NETGEAR | ashby | no | 27 | 1 | DONE |
 | Cursor (Anysphere) | ashby | no | 19 | 0 | not yet |
 | Supabase | ashby | no | 19 | 0 | not yet |
 | Kobie | lever | no | 15 | 0 | not yet |
