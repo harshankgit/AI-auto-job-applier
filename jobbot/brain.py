@@ -395,16 +395,11 @@ def _sponsorship(low, identity, job, options, target, why):
         if value is None:
             return None, "brain: answer is No but the form offers no such option"
         return value, f"brain: candidate confirmed work authorisation in {target}, no sponsorship needed ({why})"
-    if target == "India":
+    if target in (None, "India"):
         value = _no(options)
         reason = (
             "brain: Indian citizen already authorised to work in India, so no "
             f"sponsorship is needed ({why})"
-        )
-    elif target is None:
-        return None, (
-            "brain: sponsorship answer depends on the work country and the "
-            f"posting names none ({why}) - refusing to guess"
         )
     else:
         value = _yes(options)
@@ -413,7 +408,7 @@ def _sponsorship(low, identity, job, options, target, why):
             f"sponsorship would be required ({why})"
         )
     if value is None:
-        return None, f"brain: answer is {'No' if target == 'India' else 'Yes'} but the form offers no such option"
+        return None, f"brain: answer is {'No' if target in (None, 'India') else 'Yes'} but the form offers no such option"
     return value, reason
 
 
@@ -426,17 +421,12 @@ def _authorization(low, identity, job, options, target, why):
     )
     if not any(n in low for n in needles):
         return None, ""
-    if target == "India":
+    if target in (None, "India"):
         value, verdict = _yes(options), "Yes"
         reason = f"brain: Indian citizen, authorised to work in India ({why})"
     elif target and _authorized_in(identity, target):
         value, verdict = _yes(options), "Yes"
         reason = f"brain: candidate confirmed work authorisation in {target} ({why})"
-    elif target is None:
-        return None, (
-            "brain: work-authorisation answer depends on the country and the "
-            f"posting names none ({why}) - refusing to guess"
-        )
     else:
         value, verdict = _no(options), "No"
         reason = f"brain: candidate has no work authorisation in {target} ({why})"
@@ -696,6 +686,74 @@ def _years_option(years: int, options: list[str]) -> str | None:
     return exact
 
 
+_UNIT_DAYS = (("day", 1), ("week", 7), ("wk", 7), ("month", 30), ("mo", 30), ("year", 365))
+
+
+def _days_option(days: int, options: list[str]) -> str | None:
+    """Pick the option whose period range (days/weeks/months) is closest to `days`."""
+    best: tuple[float, str] | None = None
+    for opt in options:
+        text = _low(opt)
+        if "immediate" in text or "right away" in text or "asap" in text:
+            lo = hi = 0
+        else:
+            nums = [int(n) for n in re.findall(r"\d+", text)]
+            if not nums:
+                continue
+            mult = next((m for u, m in _UNIT_DAYS if u in text), 1)
+            if len(nums) >= 2:
+                lo, hi = min(nums) * mult, max(nums) * mult
+            elif "+" in text or "more than" in text or "over" in text or "above" in text:
+                lo, hi = nums[0] * mult, 10 ** 6
+            elif "up to" in text or "less than" in text or "within" in text or "under" in text:
+                lo, hi = 0, nums[0] * mult
+            else:
+                lo = hi = nums[0] * mult
+        dist = 0 if lo <= days <= hi else min(abs(days - lo), abs(days - hi))
+        if best is None or dist < best[0]:
+            best = (dist, opt)
+    if best and best[0] <= 31:
+        return best[1]
+    return None
+
+
+def _money_values(text: str) -> list[float]:
+    """Amounts in an option, normalised to rupees (handles '12 LPA', '₹29,05,000')."""
+    low = _low(text)
+    out: list[float] = []
+    for raw in re.findall(r"\d[\d,]*(?:\.\d+)?", low):
+        n = float(raw.replace(",", ""))
+        if "lpa" in low or "lakh" in low or "lac" in low or (n < 200 and "k" not in low):
+            n *= 100000
+        elif re.search(re.escape(raw) + r"\s*k\b", low):
+            n *= 1000
+        out.append(n)
+    return out
+
+
+def _salary_option(identity, options: list[str]) -> str | None:
+    """Pick the salary band containing the expectation, else the nearest band."""
+    want = identity.expected_ctc_inr
+    try:
+        want = float(want) if want else None
+    except (TypeError, ValueError):
+        want = None
+    if not want:
+        return None
+    best: tuple[float, str] | None = None
+    for opt in options:
+        vals = _money_values(opt)
+        if not vals:
+            continue
+        lo, hi = min(vals), max(vals)
+        if len(vals) == 1 and ("+" in opt or "above" in _low(opt) or "more" in _low(opt)):
+            hi = 10 ** 12
+        dist = 0 if lo <= want <= hi else min(abs(want - lo), abs(want - hi))
+        if best is None or dist < best[0]:
+            best = (dist, opt)
+    return best[1] if best else None
+
+
 def _salary(low, identity, job, options, target, why):
     current = (
         "current ctc", "current salary", "current compensation", "present ctc",
@@ -717,6 +775,10 @@ def _salary(low, identity, job, options, target, why):
             value = identity.expected_ctc_inr or identity.expected_ctc
         else:
             value = identity.expected_ctc
+        if value and options:
+            picked = choose_option(value, options) or _salary_option(identity, options)
+            if picked:
+                return picked, f"brain: expected CTC {value} mapped to the form's {picked!r}"
         if value:
             return value, f"brain: expected CTC from the candidate's profile ({value})"
         return None, "brain: no salary expectation on file"
@@ -725,12 +787,17 @@ def _salary(low, identity, job, options, target, why):
 
 def _notice_and_start(low, identity, job, options, target, why):
     if "notice period" in low or ("notice" in low and "period" in low) or "resign" in low:
+        yes_no = options and all(_low(o).strip(" .") in (*YES_OPTION_WORDS, *NO_OPTION_WORDS) for o in options)
+        if yes_no or ("are you" in low and ("on a notice" in low or "serving" in low)):
+            value = _yes(options) if options else "Yes"
+            if value:
+                return value, "brain: candidate serves a standard 30-day notice period"
         picked = choose_option("30 days", options) if options else "30 days"
         if picked:
             return picked, "brain: standard 30-day notice, as confirmed in answers.yaml"
-        picked = choose_option("1 month", options)
+        picked = choose_option("1 month", options) or _days_option(30, options or [])
         if picked:
-            return picked, "brain: 30-day notice mapped to the form's '1 month' option"
+            return picked, f"brain: 30-day notice mapped to the form's {picked!r}"
         return None, "brain: notice period is 30 days but no form option matches"
     starters = (
         "when can you start", "start date", "earliest start", "availability",
@@ -748,13 +815,36 @@ def _notice_and_start(low, identity, job, options, target, why):
             picked = choose_option(alt, options)
             if picked:
                 return picked, f"brain: 30-day availability mapped to the form's {picked!r}"
+        picked = _days_option(30, options or [])
+        if picked:
+            return picked, f"brain: 30-day availability mapped to the form's {picked!r}"
         return None, "brain: availability is 30 days from offer but no form option matches"
     return None, ""
 
 
 def _relocation_remote(low, identity, job, options, target, why):
-    if "relocat" in low or "willing to move" in low:
+    m = re.search(r"(?:do|are) you (?:currently )?(?:live|living|based|located|reside|residing) (?:in|near|around) ([a-z .,/()-]+)", low)
+    if m and "willing" not in low and "relocat" not in low:
+        place = m.group(1)
+        home = _low(" ".join(filter(None, (identity.city, identity.location))))
+        ncr = ("gurugram", "gurgaon", "delhi", "ncr", "noida", "faridabad", "ghaziabad")
+        here = any(w in place for w in ncr) or (identity.city and _low(identity.city) in place)
+        if not here and place.strip(" .,") == "india" and "india" in home:
+            here = True
+        value = _yes(options) if here else _no(options)
+        if not options:
+            value = "Yes" if here else f"No - based in {identity.location}, open to relocating"
+        if value:
+            return value, f"brain: candidate lives in {identity.location}"
+    if "relocat" in low or "willing to move" in low or "on location" in low or "open to moving" in low:
         value = _yes(options)
+        if value is None and options:
+            for opt in options:
+                o = _low(opt)
+                if any(w in o for w in ("willing", "relocat", "open to", "move to", "ready to")) \
+                        and not o.startswith("no") and "not " not in o:
+                    value = opt
+                    break
         if value:
             return value, "brain: candidate is open to relocation (confirmed answer policy)"
         return None, "brain: answer is Yes to relocation but the form offers no Yes option"
@@ -795,6 +885,10 @@ def _education(low, identity, job, options, target, why):
         picked = choose_option(value, options) if options else value
         if picked:
             return picked, f"brain: resume education facts ({value})"
+        for opt in options or []:
+            o = _low(opt)
+            if o.startswith("other") or o in ("others", "none of the above", "not listed") or "not listed" in o:
+                return opt, f"brain: {identity.school} is not listed, so picked {opt!r}"
         return None, "brain: resume school is not among the form's options"
     if "highest qualification" in low or "highest education" in low \
             or "highest degree" in low or "education level" in low \
@@ -972,3 +1066,75 @@ def _yes_no_default(low, identity, job, options, target, why):
         if value:
             return value, "brain: candidate consents to standard pre-employment checks"
     return None, ""
+
+
+# ------------------------------------------------------------ auto decision
+# Last resort for REQUIRED fields nothing above could ground: the user asked
+# that a form is never abandoned, so pick the most positive reasonable answer.
+
+_POSITIVE_OPTION_WORDS = (
+    "yes", "willing", "open to", "flexible", "remote", "hybrid", "agree",
+    "interested", "available", "comfortable", "happy to", "definitely",
+    "fluent", "proficient", "advanced", "expert", "strong", "english",
+)
+_PLACEHOLDER_WORDS = ("select", "choose", "please select", "--", "pick one", "none selected")
+_UNKNOWN_LANGS = (
+    "ukrainian", "polish", "german", "french", "spanish", "portuguese", "japanese",
+    "korean", "mandarin", "chinese", "arabic", "russian", "dutch", "italian",
+    "turkish", "hebrew", "swedish", "norwegian", "danish", "finnish", "czech",
+    "romanian", "hungarian", "greek", "vietnamese", "thai", "indonesian",
+)
+
+
+def auto_decide(label: str, identity, job=None, options: list[str] | None = None) -> tuple[str | None, str]:
+    low = _low(label)
+    opts = [o for o in (options or []) if str(o).strip()
+            and not any(_low(o).strip().startswith(p) for p in _PLACEHOLDER_WORDS)]
+    lang_q = any(l in low for l in _UNKNOWN_LANGS)
+    negative = any(n in low for n in _NEGATIVE_NEEDLES) or lang_q
+    if opts:
+        if negative:
+            value = _no(opts)
+            if value:
+                return value, "auto-decided: honest No (no resume fact says otherwise)"
+        for word in ("yes",):
+            value = _yes(opts)
+            if value:
+                return value, "auto-decided: positive answer (no grounded fact)"
+        for word in _POSITIVE_OPTION_WORDS:
+            for opt in opts:
+                o = _low(opt)
+                if word in o and not o.startswith(("no", "not")) and " not " not in o:
+                    return opt, f"auto-decided: most positive option {opt!r}"
+        for opt in opts:
+            if _low(opt).startswith("other"):
+                return opt, f"auto-decided: picked {opt!r}"
+        for opt in opts:
+            o = _low(opt)
+            if not o.startswith(("no", "not", "none", "i don", "i do not")):
+                return opt, f"auto-decided: first reasonable option {opt!r}"
+        return opts[0], f"auto-decided: only option {opts[0]!r}"
+    if negative:
+        return "No", "auto-decided: honest No (no resume fact says otherwise)"
+    years = int(getattr(identity, "years_experience", 0) or 0)
+    if any(w in low for w in ("how many", "years", "number of", "how much experience")):
+        return str(max(years, 1)), "auto-decided: years of experience from resume"
+    if any(w in low for w in ("salary", "ctc", "compensation", "pay ", "rate")):
+        value = identity.expected_ctc or identity.current_ctc
+        if value:
+            return value, "auto-decided: expected CTC"
+    if any(w in low for w in ("url", "link", "website", "profile", "social")):
+        value = identity.linkedin or identity.portfolio or identity.github
+        if value:
+            return value, "auto-decided: best available profile link"
+    if any(w in low for w in ("notice", "join", "start", "available")):
+        return "30 days", "auto-decided: standard 30-day notice"
+    if any(w in low for w in ("location", "city", "where", "address", "based")):
+        return identity.location or identity.city, "auto-decided: resume location"
+    if low.startswith(("are you", "do you", "can you", "will you", "would you", "have you",
+                       "is your", "did you", "could you")):
+        return "Yes", "auto-decided: positive answer (no grounded fact)"
+    text = compose_statement(identity, job)
+    if text:
+        return text, "auto-decided: positive statement composed from resume"
+    return "Yes", "auto-decided: positive answer"

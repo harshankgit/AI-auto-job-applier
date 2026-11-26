@@ -509,6 +509,18 @@ def form_container(page: Page):
 
 
 
+def _auto_answer(label, identity, job, options, reason):
+    """A required question nothing grounds: decide a positive answer so the
+    form still completes (user's standing instruction). EEO stays untouched."""
+    try:
+        value, why = brain.auto_decide(label, identity, job, options)
+    except Exception as exc:  # never let the fallback break planning
+        return None, f"{reason}; auto-decide failed: {exc}"
+    if not value:
+        return None, reason
+    return value, f"{why} (was: {reason or 'no grounded answer'})"
+
+
 def plan_fields(
     page: Page, identity: Identity, title: str = "", company: str = "", job=None
 ) -> list[FieldPlan]:
@@ -517,6 +529,7 @@ def plan_fields(
     plans: list[FieldPlan] = []
     seen_radio_groups: set[str] = set()
     seen_button_groups: set[str] = set()
+    auto_checked_groups: set[str] = set()
 
     controls = page.locator(
         "form input, form textarea, form select, form [role='combobox'], "
@@ -567,6 +580,8 @@ def plan_fields(
             required = bool(a.get("required")) or bool(ctx.get("required"))
             semantic = classify(question, name, el_id)
             value, reason = resolve_value(question, semantic, identity, answers, job, buttons)
+            if not value and required and semantic != "eeo" and not is_eeo(question):
+                value, reason = _auto_answer(question, identity, job, buttons, reason)
             plans.append(FieldPlan(
                 kind="buttons", label=question, semantic=semantic, required=required,
                 value=value, action="fill" if value else "skip", reason=reason,
@@ -686,6 +701,8 @@ def plan_fields(
             text = cover_letter_text(identity, answers, title, company)
             if is_eeo(label):
                 value, reason = None, "EEO/demographic - intentionally not answered"
+                if required:
+                    value, reason = "Prefer not to say", "required EEO free-text - honest decline, nothing invented"
             else:
                 value, reason = resolve_value(label, "question", identity, answers, job)
                 essay = value is None or reason.startswith("brain: short statement")
@@ -699,7 +716,7 @@ def plan_fields(
                 elif (essay or misfire) and text:
                     value, reason = text, "cover-letter template built from resume facts"
                 elif value is None:
-                    reason = reason or "no confirmed answer for this free-text question"
+                    value, reason = _auto_answer(label, identity, job, None, reason)
             plans.append(FieldPlan(
                 kind="textarea", label=label, semantic="cover_letter",
                 required=required, value=value,
@@ -722,10 +739,20 @@ def plan_fields(
             ))
             continue
 
+        if not value and required and (semantic == "eeo" or is_eeo(label)) and kind in ("text", "textarea", "input"):
+            value, reason = "Prefer not to say", "required EEO free-text - honest decline, nothing invented"
+        elif not value and required and semantic != "eeo" and not is_eeo(label) and kind != "checkbox":
+            value, reason = _auto_answer(label, identity, job, options or None, reason)
+        elif not value and required and kind == "checkbox" and semantic != "eeo":
+            group = (question or label.split(" - ")[0]).strip()
+            if group not in auto_checked_groups:
+                auto_checked_groups.add(group)
+                value, reason = "Yes", f"auto-decided: required checkbox ticked ({reason or 'no grounded answer'})"
+
         plans.append(FieldPlan(
             kind=kind, label=label, semantic=semantic, required=required,
             value=value, action="fill" if value else "skip", reason=reason,
-            locator=el, meta={"name": name, "id": el_id},
+            locator=el, meta={"name": name, "id": el_id, "options": options},
         ))
 
     return plans

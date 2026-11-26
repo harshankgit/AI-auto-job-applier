@@ -56,7 +56,8 @@ rules:
   - {match: ["pronoun"], answer: "ANSWER_SKIP"}
   - {match: ["gender", "race", "ethnic", "veteran", "disability", "hispanic", "lgbt"], answer: "ANSWER_SKIP"}
   - {match: ["visa", "immigration status"], answer: "ANSWER_BRAIN"}
-  - {match: ["criminal", "convicted", "background check"], answer: "No"}
+  - {match: ["drug screen", "drug test", "background check", "background verification"], answer: "Yes"}
+  - {match: ["criminal", "convicted"], answer: "No"}
   - {match: ["non-compete", "noncompete", "restrictive covenant"], answer: "No"}
   - {match: ["previously worked", "former employee", "worked at", "ever been employed"], answer: "No"}
   - {match: ["referred by", "employee referral"], answer: "No"}
