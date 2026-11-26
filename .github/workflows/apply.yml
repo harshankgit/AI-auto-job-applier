@@ -1,11 +1,10 @@
-name: auto-apply (cloud)
+name: auto-apply (GitHub runner)
 
-# Keeps applying while the Mac is offline. Every 30 min the gate checks:
-#   - Mac bot running (via its signed tunnel)  -> skip, the Mac has priority
-#   - Stop pressed on the website              -> skip
-#   - another cloud run already heartbeating   -> skip
-# Otherwise it restores the shared encrypted state, runs the bot for up to
-# ~5 h, pushes state back and commits fresh reports (Vercel redeploys).
+# Primary job-apply runner. Works with the Mac switched off.
+# Every 30 min the gate checks whether another GitHub run is already
+# heartbeating (then skip). Otherwise it restores the shared encrypted state,
+# applies for up to ~5 h (idling while Stop is pressed on the website),
+# commits fresh reports every ~30 min (Vercel redeploys) and pushes state.
 on:
   schedule:
     - cron: "*/30 * * * *"
@@ -46,10 +45,16 @@ jobs:
       - name: Install
         run: uv sync --frozen || uv sync
 
-      - name: Gate (Mac busy / paused?)
+      - name: Gate (another run active?)
         id: gate
         run: |
           if uv run python scripts/cloud.py gate; then echo "go=1" >> "$GITHUB_OUTPUT"; else echo "go=0" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Git identity
+        if: steps.gate.outputs.go == '1'
+        run: |
+          git config user.name "jobbot-cloud"
+          git config user.email "jobbot-cloud@users.noreply.github.com"
 
       - name: Install Chrome
         if: steps.gate.outputs.go == '1'

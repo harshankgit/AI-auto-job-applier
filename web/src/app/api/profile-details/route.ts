@@ -1,4 +1,4 @@
-import { withMac } from "@/lib/mac-proxy";
+import { publishInbox, withMac } from "@/lib/mac-proxy";
 import fsp from "node:fs/promises";
 import { NextResponse } from "next/server";
 
@@ -41,7 +41,31 @@ async function handleGET(req: Request) {
 
 async function handlePOST(req: Request) {
   if (!rootIsPresent()) {
-    return NextResponse.json({ error: "details can only be saved on the machine that runs the bot" }, { status: 503 });
+    // On the hosted site: queue the profile details to the GitHub runner's inbox.
+    let body: { candidate?: unknown; details?: Record<string, unknown> };
+    try {
+      body = await req.json();
+    } catch {
+      return NextResponse.json({ error: "invalid JSON body" }, { status: 400 });
+    }
+    const cid = typeof body.candidate === "string" ? body.candidate : "";
+    if (!isCandidateId(cid)) return NextResponse.json({ error: "unknown candidate" }, { status: 400 });
+    const details: Record<string, unknown> = {};
+    for (const f of FIELDS) {
+      const raw = body.details?.[f];
+      if (typeof raw !== "string") continue;
+      const v = raw.trim().slice(0, 300);
+      if (!v) continue;
+      else if (f === "work_authorized_countries") details[f] = v.split(",").map((s) => s.trim()).filter(Boolean);
+      else details[f] = v;
+    }
+    if (!Object.keys(details).length) return NextResponse.json({ error: "nothing to save" }, { status: 400 });
+    const ok = await publishInbox({ kind: "profile", candidate: cid, details });
+    if (!ok) return NextResponse.json({ error: "Could not reach the queue (ntfy)." }, { status: 502 });
+    return NextResponse.json(
+      { saved: true, note: "queued for the GitHub runner" },
+      { status: 202, headers: { "cache-control": "no-store" } },
+    );
   }
   let body: { candidate?: unknown; details?: Record<string, unknown> };
   try {

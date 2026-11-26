@@ -16,6 +16,21 @@ if ! lsof -nP -iTCP:3001 -sTCP:LISTEN >/dev/null 2>&1; then
   (cd web && nohup npx next dev --port 3001 > ../logs/dashboard.log 2>&1 &)
 fi
 
+# answers / profile details saved on the website while the Mac was off
+[ -x .venv/bin/python ] && .venv/bin/python scripts/cloud.py inbox >> "$WLOG" 2>&1
+
+# GitHub runner is primary: while it is applying the Mac only backs up
+if .venv/bin/python scripts/cloud.py cloud_running >/dev/null 2>&1; then
+  if pgrep -f "jobbot\.cli (apply|run)" >/dev/null; then
+    echo "$(ts) [$MODE] GitHub runner applying -> Mac bot yields (stopping)" >> "$WLOG"
+    .venv/bin/python scripts/state_sync.py push >> "$WLOG" 2>&1
+    pkill -f "jobbot\.cli (apply|run)"; sleep 5; pkill -9 -f "jobbot\.cli (apply|run)"
+  else
+    echo "$(ts) [$MODE] GitHub runner applying -> Mac stays idle" >> "$WLOG"
+  fi
+  exit 0
+fi
+
 if pgrep -f "jobbot\.cli (apply|run)" >/dev/null; then
   # running: check it is not frozen (log untouched for 25 min)
   if [ -f logs/realrun.log ] && [ $(( $(date +%s) - $(stat -f %m logs/realrun.log) )) -gt 1500 ]; then

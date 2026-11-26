@@ -46,12 +46,15 @@ async function resolveTunnel(key: string, fresh = false): Promise<Resolved> {
       .split("\n")
       .map((line) => {
         try {
-          return JSON.parse(line) as { event?: string; message?: string };
+          return JSON.parse(line) as { event?: string; message?: string; time?: number };
         } catch {
           return null;
         }
       })
-      .filter((m): m is { event: string; message: string } => !!m && m.event === "message" && !!m.message);
+      .filter(
+        (m): m is { event: string; message: string; time?: number } =>
+          !!m && m.event === "message" && !!m.message && (!m.time || Date.now() / 1000 - m.time < 25 * 60),
+      );
     anyMessage = messages.length > 0;
     for (const m of messages.reverse()) {
       const [candidate, sig] = m.message.trim().split(/\s+/);
@@ -173,10 +176,11 @@ async function proxyToMac(req: Request): Promise<{ res: Response | null; link: s
   return { res: jsonError(502, OFFLINE_MSG, "offline"), link: "offline" };
 }
 
-/* ------------------------------------------------------------ cloud runner */
-// When the Mac is offline the GitHub Actions runner (scripts/cloud.py) applies
-// instead. It publishes signed heartbeats to <topic>-cloud and obeys signed
-// "start"/"stop" commands on <topic>-ctl.
+/* ------------------------------------------------------------ GitHub runner */
+// The GitHub Actions runner (scripts/cloud.py) is the primary applier: it runs
+// with the Mac off. It publishes signed heartbeats to <topic>-cloud, obeys
+// signed "start"/"stop" commands on <topic>-ctl and reads saved answers /
+// profile details from <topic>-inbox. The Mac is only a backup.
 
 type Heartbeat = {
   running: boolean;
@@ -185,11 +189,13 @@ type Heartbeat = {
   startedAt: string;
   at: number;
   note?: string;
+  state?: string;
   run?: string;
   submittedCompanies?: Record<string, number>;
   tail?: string[];
 };
 const HEARTBEAT_FRESH_S = 15 * 60;
+const PENDING_S = 35 * 60;
 
 function accessKey(req: Request): string {
   return (
@@ -256,20 +262,27 @@ async function lastControl(key: string): Promise<{ cmd: string; at: number }> {
   return { cmd: "", at: 0 };
 }
 
-/** Tell the cloud runner (and the Mac watchdog) to start or pause. */
-export async function publishControl(cmd: "start" | "stop", key: string): Promise<boolean> {
-  const ts = String(Math.floor(Date.now() / 1000));
-  NTFY_CACHE.delete(`${TOPIC}-ctl`);
+async function ntfyPost(topic: string, body: string): Promise<boolean> {
+  NTFY_CACHE.delete(topic);
   try {
-    const res = await fetch(`https://ntfy.sh/${TOPIC}-ctl`, {
-      method: "POST",
-      body: `${cmd} ${ts} ${await hmacHex(key, `${cmd} ${ts}`)}`,
-      signal: AbortSignal.timeout(8000),
-    });
+    const res = await fetch(`https://ntfy.sh/${topic}`, { method: "POST", body, signal: AbortSignal.timeout(8000) });
     return res.ok;
   } catch {
     return false;
   }
+}
+
+/** Tell the GitHub runner (and the Mac watchdog) to start or pause. */
+export async function publishControl(cmd: "start" | "stop", key: string): Promise<boolean> {
+  const ts = String(Math.floor(Date.now() / 1000));
+  return ntfyPost(`${TOPIC}-ctl`, `${cmd} ${ts} ${await hmacHex(key, `${cmd} ${ts}`)}`);
+}
+
+/** Queue a signed item (saved answers / profile details) for the GitHub runner. */
+export async function publishInbox(item: Record<string, unknown>, key?: string): Promise<boolean> {
+  const k = key || process.env.JOBBOT_ACCESS_KEY || DEFAULT_KEY;
+  const body = JSON.stringify(item);
+  return ntfyPost(`${TOPIC}-inbox`, `${body}\n${await hmacHex(k, body)}`);
 }
 
 function json(data: unknown, link: string, status = 200): Response {
@@ -279,108 +292,148 @@ function json(data: unknown, link: string, status = 200): Response {
   });
 }
 
-/** Answers status/logs/apply/stop from the cloud runner while the Mac is offline. */
-async function cloudAnswer(req: Request, key: string): Promise<{ res: Response | null; link: string }> {
-  const path = new URL(req.url).pathname;
+type CloudState = { hb: Heartbeat | null; link: string; running: boolean; status: Record<string, unknown> };
+
+/** Current state of the GitHub runner, as a dashboard RunStatus plus a link label. */
+async function cloudState(key: string): Promise<CloudState> {
   const [hb, ctl] = await Promise.all([lastHeartbeat(key), lastControl(key)]);
-  const fresh = !!hb && Date.now() / 1000 - hb.at < HEARTBEAT_FRESH_S;
-  const running = fresh && !!hb?.running && ctl.cmd !== "stop";
-  const pending = !running && ctl.cmd === "start" && Date.now() / 1000 - ctl.at < 45 * 60;
-  const link = running || pending ? "cloud" : "offline";
+  const now = Date.now() / 1000;
+  const fresh = !!hb && now - hb.at < HEARTBEAT_FRESH_S;
+  const stopped = ctl.cmd === "stop";
+  const applying = fresh && !!hb?.running && !stopped;
+  const pending = !applying && ctl.cmd === "start" && now - ctl.at < PENDING_S;
+  const running = applying || pending;
+  const link = running
+    ? "cloud"
+    : stopped || (fresh && hb?.state === "paused")
+      ? "cloud-paused"
+      : fresh
+        ? "cloud-idle"
+        : "cloud-down";
   const status = {
-    running: running || pending,
+    running,
     pid: null,
-    startedAt: running ? hb!.startedAt : pending ? new Date(ctl.at * 1000).toISOString() : null,
+    startedAt: applying ? hb!.startedAt : pending ? new Date(ctl.at * 1000).toISOString() : null,
     candidate: "both",
-    source: running || pending ? "cloud" : null,
+    source: running ? "cloud" : null,
     lastRun: null,
     cloud: hb
-      ? { at: hb.at, note: hb.note ?? "", run: hb.run ?? "", submittedCompanies: hb.submittedCompanies ?? {}, pending }
-      : { pending },
+      ? {
+          at: hb.at,
+          note: hb.note ?? "",
+          state: hb.state ?? "",
+          run: hb.run ?? "",
+          submittedCompanies: hb.submittedCompanies ?? {},
+          pending,
+          paused: stopped,
+        }
+      : { pending, paused: stopped },
   };
-  if (req.method === "POST" && path === "/api/apply") {
-    const ok = await publishControl("start", key);
-    if (!ok) return { res: jsonError(502, "Could not reach the cloud runner queue (ntfy).", "offline"), link: "offline" };
-    return {
-      res: json(
-        {
-          started: true,
-          candidate: "both",
-          candidateLabel: "Both (cloud runner)",
-          limit: 0,
-          command: "GitHub Actions cloud runner (starts within ~30 min while the Mac is offline)",
-          status: { ...status, running: true, source: "cloud", startedAt: status.startedAt ?? new Date().toISOString() },
-        },
-        "cloud",
-      ),
-      link: "cloud",
-    };
-  }
-  if (req.method === "POST" && path === "/api/stop") {
-    const ok = await publishControl("stop", key);
-    if (!ok) return { res: jsonError(502, "Could not reach the cloud runner queue (ntfy).", "offline"), link: "offline" };
-    return { res: json({ stopped: true, pids: [], status: { ...status, running: false, source: null } }, "offline"), link: "offline" };
-  }
-  if (req.method === "GET" && path === "/api/status") return { res: json(status, link), link };
-  if (req.method === "GET" && path === "/api/logs" && new URL(req.url).searchParams.has("tail")) {
-    const lines = hb?.tail?.length
-      ? [`[cloud runner${hb.run ? " " + hb.run : ""} · heartbeat ${new Date(hb.at * 1000).toISOString()}]`, ...hb.tail]
-      : [hb ? `[cloud runner ${hb.note ?? ""} · ${new Date(hb.at * 1000).toISOString()} — log lines arrive with the next heartbeat (~6 min)]` : "[Mac offline — no cloud run yet]"];
-    return { res: json({ lines, running: status.running, status }, link), link };
-  }
-  if (req.method === "GET" || req.method === "HEAD") return { res: null, link };
-  return { res: jsonError(502, OFFLINE_MSG, "offline"), link: "offline" };
+  return { hb, link, running, status };
 }
 
-/** If the Mac says "idle" for /api/status or /api/logs?tail while the cloud runner is applying, answer from the cloud. */
-async function withCloud(req: Request, res: Response): Promise<Response> {
-  const url = new URL(req.url);
-  const isStatus = req.method === "GET" && url.pathname === "/api/status";
-  const isTail = req.method === "GET" && url.pathname === "/api/logs" && url.searchParams.has("tail");
-  if (!res.ok || (!isStatus && !isTail)) return res;
-  try {
-    const body = (await res.clone().json()) as { running?: boolean; status?: { running?: boolean } };
-    const macRunning = isStatus ? !!body.running : !!body.status?.running;
-    if (macRunning) return res;
-    const cloud = await cloudAnswer(req, accessKey(req));
-    if (cloud.res && cloud.link === "cloud") return cloud.res;
-  } catch {
-    /* keep the Mac answer */
-  }
-  return res;
+function cloudLogs(c: CloudState): string[] {
+  const hb = c.hb;
+  if (hb?.tail?.length)
+    return [`[GitHub runner${hb.run ? " " + hb.run : ""} · heartbeat ${new Date(hb.at * 1000).toISOString()}]`, ...hb.tail];
+  if (hb)
+    return [`[GitHub runner ${hb.note ?? ""} · ${new Date(hb.at * 1000).toISOString()} — log lines arrive with the next heartbeat (~5 min)]`];
+  return ["[GitHub runner has not reported yet — it starts on the next schedule (every 30 min)]"];
 }
 
 type Handler = (req: Request) => Response | Promise<Response>;
 
 /**
- * Wrap a route handler: on the Mac (project root present) it runs unchanged;
- * on the hosted site it forwards keyed requests to the Mac and otherwise
- * answers from the snapshot, tagging every response with x-jobbot-link.
+ * Wrap a route handler.
  *
- * When the Mac answers "idle" but the cloud runner is applying, the cloud
- * status is shown instead so the dashboard never claims nothing is running.
+ * On the Mac (project root present) it runs unchanged and mirrors Start/Stop
+ * to the GitHub runner. On the hosted site the GitHub runner comes first:
+ * status, logs and Start/Stop are answered from it, so the site works with
+ * the Mac switched off. The Mac is only consulted as a backup (when its bot
+ * is the one applying) and for fresher data reads.
  */
 export function withMac(handler: Handler): (req: Request) => Promise<Response> {
   return async (req: Request) => {
-    const path = new URL(req.url).pathname;
-    const control = req.method === "POST" && (path === "/api/apply" || path === "/api/stop");
+    const url = new URL(req.url);
+    const path = url.pathname;
+    const key = accessKey(req);
+    const isApply = req.method === "POST" && path === "/api/apply";
+    const isStop = req.method === "POST" && path === "/api/stop";
+
     if (rootIsPresent()) {
       const res = await handler(req);
-      // Mirror Start/Stop to the cloud runner so it pauses/resumes too.
-      if (control && res.ok) await publishControl(path === "/api/stop" ? "stop" : "start", accessKey(req));
-      return withCloud(req, res);
+      if ((isApply || isStop) && res.ok) await publishControl(isStop ? "stop" : "start", key);
+      if (req.method === "GET" && (path === "/api/status" || (path === "/api/logs" && url.searchParams.has("tail")))) {
+        try {
+          const body = (await res.clone().json()) as { running?: boolean; status?: { running?: boolean } };
+          const macRunning = path === "/api/status" ? !!body.running : !!body.status?.running;
+          if (!macRunning) {
+            const c = await cloudState(key);
+            if (c.running)
+              return path === "/api/status"
+                ? json(c.status, c.link)
+                : json({ lines: cloudLogs(c), running: true, status: c.status }, c.link);
+          }
+        } catch {
+          /* keep the Mac answer */
+        }
+      }
+      return res;
     }
-    const { res, link } = await proxyToMac(control ? req.clone() : req);
-    if (res && link === "live") {
-      if (control && res.ok) await publishControl(path === "/api/stop" ? "stop" : "start", accessKey(req));
-      return withCloud(req, res);
+
+    // ---- hosted site: GitHub runner first ----
+    if (isApply || isStop) {
+      const ok = await publishControl(isStop ? "stop" : "start", key);
+      if (isStop) await proxyToMac(req).catch(() => null); // best effort: stop a Mac backup run too
+      if (!ok) return jsonError(502, "Could not reach the GitHub runner queue (ntfy). Try again.", "cloud-down");
+      const c = await cloudState(key);
+      if (isStop)
+        return json({ stopped: true, pids: [], status: { ...c.status, running: false, source: null } }, "cloud-paused");
+      return json(
+        {
+          started: true,
+          candidate: "both",
+          candidateLabel: "Both (GitHub runner)",
+          limit: 0,
+          command: "GitHub Actions runner — resumes within a minute if a run is active, otherwise on the next 30-min schedule",
+          status: { ...c.status, running: true, source: "cloud", startedAt: c.status.startedAt ?? new Date().toISOString() },
+        },
+        "cloud",
+      );
     }
-    if (link === "offline") {
-      const cloud = await cloudAnswer(req, accessKey(req));
-      if (cloud.res) return cloud.res;
-      return tag(await handler(req), cloud.link);
+
+    // Saved answers / profile details are queued for the runner by the handler itself.
+    if (path === "/api/learn" || path === "/api/profile-details") return tag(await handler(req), "cloud");
+
+    const isStatus = req.method === "GET" && path === "/api/status";
+    const isTail = req.method === "GET" && path === "/api/logs" && url.searchParams.has("tail");
+    const isHealth = req.method === "GET" && path === "/api/health";
+    if (isStatus || isTail || isHealth) {
+      const c = await cloudState(key);
+      const cloudRes = () =>
+        isStatus
+          ? json(c.status, c.link)
+          : isTail
+            ? json({ lines: cloudLogs(c), running: c.running, status: c.status }, c.link)
+            : json({ ok: true, root: false, running: c.running, cloud: c.status.cloud, at: new Date().toISOString() }, c.link);
+      if (c.running) return cloudRes();
+      // Runner idle: if the Mac backup is the one applying, show it.
+      const { res, link } = await proxyToMac(req);
+      if (res && link === "live" && res.ok) {
+        try {
+          const body = (await res.clone().json()) as { running?: boolean; status?: { running?: boolean } };
+          if (isStatus ? body.running : isTail ? body.status?.running : body.running) return res;
+        } catch {
+          /* fall back to the runner */
+        }
+      }
+      return cloudRes();
     }
-    if (res) return res;
-    return tag(await handler(req), link);
+
+    // Other reads: fresher data from the Mac when it is reachable, else the committed snapshot.
+    const { res, link } = await proxyToMac(req);
+    if (res && link === "live") return res;
+    if (res && req.method !== "GET" && req.method !== "HEAD") return res;
+    return tag(await handler(req), "cloud");
   };
 }
