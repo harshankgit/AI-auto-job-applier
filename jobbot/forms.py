@@ -69,7 +69,8 @@ SEMANTICS: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("linkedin", ("linkedin",)),
     ("github", ("github", "git hub")),
     ("portfolio", ("portfolio", "website", "personal site", "blog", "url", "web page")),
-    ("company", ("current company", "current employer", "employer", "company")),
+    ("company", ("current company", "current employer", "current organization",
+                 "current organisation", "employer", "company")),
     ("title", ("current title", "current role", "job title", "your title",
                "current designation", "designation", "current position")),
     ("location", ("location", "city", "where are you based", "current city")),
@@ -82,6 +83,7 @@ SEMANTICS: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("full_name", ("name",)),
     ("years", ("years of experience", "how many years", "total experience", "yoe",
                "total professional experience", "relevant professional experience",
+               "total work experience", "work experience (excluding",
                "experience in years", "experience (in years)")),
     ("resume", ("resume", "cv", "attach", "upload")),
     ("cover_letter", ("cover letter", "why do you want", "why are you interested",
@@ -119,6 +121,8 @@ CAPTCHA_HINTS = (
     "iframe[src*='turnstile']",
 )
 
+PAY_RE = re.compile(r"\b(ctc|salary|compensation|cost to company|remuneration|pay expectation|stipend)\b")
+
 
 @dataclass
 class FieldPlan:
@@ -152,6 +156,10 @@ def classify(label: str, name: str = "", el_id: str = "") -> str:
     if is_eeo(label):
         return "eeo"
     hay = _lower(label)
+    # Pay questions ("Total Cost to Company", "CTC") must reach the answer rules,
+    # never the identity "company" field.
+    if PAY_RE.search(hay):
+        return "question"
     for key, needles in SEMANTICS:
         if any(n in hay for n in needles):
             return key
@@ -207,7 +215,59 @@ def _edu_date_answer(label: str, identity: Identity, options: list[str] | None) 
     return value
 
 
+_RESIDE_RE = re.compile(
+    r"\b(?:residing|reside|resident|based|living|located|staying|currently)\s+(?:in|at|out of)\s+([a-z][a-z .()/-]{2,40})",
+    re.I,
+)
+_HOME_WORDS = ("gurugram", "gurgaon", "delhi", "ncr", "new delhi", "noida", "india")
+
+
+def _claims_other_city(option: str, identity: Identity) -> bool:
+    """True when an option asserts the candidate lives somewhere they do not."""
+    low = option.lower()
+    if re.search(r"\b(outside|not (?:residing|based|living)|relocat)", low) and not _RESIDE_RE.search(
+        low.replace("outside", "")
+    ):
+        return False
+    m = _RESIDE_RE.search(low)
+    if not m:
+        return False
+    place = m.group(1)
+    if "outside" in low[: m.start() + 20]:
+        return False
+    home = " ".join(
+        str(getattr(identity, a, "") or "") for a in ("location", "city")
+    ).lower()
+    homes = [w for w in _HOME_WORDS if w in home] or [home]
+    return not any(h and h in place for h in homes) and not any(h in place for h in ("india", "remote", "anywhere"))
+
+
+def _relocate_option(options: list[str]) -> str | None:
+    for o in options:
+        lo = o.lower()
+        if ("outside" in lo or "not based" in lo or "not residing" in lo) and "relocat" in lo:
+            return o
+    for o in options:
+        if "relocat" in o.lower() and "not" not in o.lower():
+            return o
+    return None
+
+
 def resolve_value(
+    label: str, semantic: str, identity: Identity, answers: dict, job=None,
+    options: list[str] | None = None,
+) -> tuple[str | None, str]:
+    """resolve_value_raw plus a truthfulness guard on residence claims."""
+    value, reason = _resolve_value_raw(label, semantic, identity, answers, job, options)
+    if value and options and _claims_other_city(value, identity):
+        alt = _relocate_option(options)
+        if alt:
+            return alt, "lives elsewhere - picked the willing-to-relocate option"
+        return None, f"option '{value}' would claim a residence the resume does not have - skipped"
+    return value, reason
+
+
+def _resolve_value_raw(
     label: str, semantic: str, identity: Identity, answers: dict, job=None,
     options: list[str] | None = None,
 ) -> tuple[str | None, str]:
@@ -1614,10 +1674,41 @@ def captcha_present(page: Page) -> tuple[bool, str]:
         contexts = [page]
 
     for ctx in contexts:
+        try:
+            url = (getattr(ctx, "url", "") or "").lower()
+        except Exception:
+            url = ""
+        # Content *inside* a captcha frame is always 'visible' to itself; what matters
+        # is whether the host page actually shows that frame.
+        if ctx is not page and any(h in url for h in ("hcaptcha", "recaptcha", "turnstile", "challenges.cloudflare")):
+            continue
         found, detail = _captcha_in(ctx)
         if found:
             return True, detail
     return False, ""
+
+
+# True only when an element is really painted: not display:none / visibility:hidden /
+# opacity:0 on itself or any ancestor (invisible hCaptcha keeps a full-viewport
+# iframe permanently mounted with visibility:hidden). For a container (.h-captcha)
+# we require a really-visible iframe inside it.
+_SHOWN_JS = """
+(el) => {
+  const shown = (n) => {
+    const r = n.getBoundingClientRect();
+    if (r.width <= 60 || r.height <= 30) return null;
+    for (let x = n; x && x.nodeType === 1; x = x.parentElement) {
+      const s = getComputedStyle(x);
+      if (s.display === 'none' || s.visibility === 'hidden' || s.visibility === 'collapse') return null;
+      if (parseFloat(s.opacity || '1') < 0.05) return null;
+    }
+    return [Math.round(r.width), Math.round(r.height)];
+  };
+  if (el.tagName === 'IFRAME') return shown(el);
+  for (const f of el.querySelectorAll('iframe')) { const v = shown(f); if (v) return v; }
+  return null;
+}
+"""
 
 
 def _captcha_in(ctx) -> tuple[bool, str]:
@@ -1630,14 +1721,12 @@ def _captcha_in(ctx) -> tuple[bool, str]:
         for idx in range(min(total, 6)):
             node = loc.nth(idx)
             try:
-                if not node.is_visible(timeout=1200):
-                    continue
-                box = node.bounding_box()
+                dims = node.evaluate(_SHOWN_JS, timeout=1500)
             except Exception:
                 continue
-            if box and box.get("width", 0) > 60 and box.get("height", 0) > 30:
+            if dims:
                 kind = "hcaptcha" if "hcaptcha" in selector or "h-captcha" in selector else "recaptcha"
-                return True, f"{kind} widget visible ({int(box['width'])}x{int(box['height'])})"
+                return True, f"{kind} challenge visible ({dims[0]}x{dims[1]})"
     return False, ""
 
 

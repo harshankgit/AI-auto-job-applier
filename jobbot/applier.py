@@ -187,6 +187,37 @@ def _wait_for_outcome(page, timeout_s: float = 20.0) -> str:
     return last
 
 
+def _captcha_second_chance(page, container, after: str) -> str:
+    """Give a post-submit hCaptcha challenge time to clear itself, then resubmit once.
+
+    Never press Escape: that closes a real challenge and drops the token.
+    """
+    deadline = time.time() + 20
+    while time.time() < deadline:  # passive checks sometimes clear on their own
+        time.sleep(1.0)
+        text = _page_text(page)
+        if _has_phrase(text, CONFIRM_PHRASES):
+            return text
+        if not forms.captcha_present(page)[0]:
+            # challenge closed by itself - the submit may already be in flight
+            done = _wait_for_outcome(page, timeout_s=10.0)
+            if _has_phrase(done, CONFIRM_PHRASES):
+                return done
+            break
+    else:
+        return _page_text(page)  # challenge still up: a resubmit will not help
+    browser.human_pause(2.0, 3.0)
+    btn = _find_submit(container)
+    if btn is None:
+        return _page_text(page)
+    try:
+        browser.human_mouse(page, btn)
+        btn.click(timeout=15000)
+    except Exception:
+        return _page_text(page)
+    return _wait_for_outcome(page, timeout_s=30.0)
+
+
 def apply_to_job(
     session: browser.BrowserSession,
     match: Match,
@@ -311,6 +342,9 @@ def apply_to_job(
         # processing the resume upload for a few seconds - a click made too soon
         # is silently ignored. Give it time before submitting.
         browser.human_pause(3.0, 4.0)
+        # Invisible hCaptcha (Lever) scores mouse/keyboard behaviour: move the
+        # pointer like a person before clicking so it passes without a challenge.
+        browser.human_mouse(page, btn)
 
         try:
             btn.click(timeout=15000)
@@ -334,6 +368,11 @@ def apply_to_job(
                     after = _wait_for_outcome(page, timeout_s=25.0)
                 except Exception:
                     pass
+        # A challenge popped up after submit (Lever's invisible hCaptcha escalates
+        # when unsure). It often clears itself on a second, slower attempt: wait,
+        # move like a person, and resubmit once before giving up.
+        if not _has_phrase(after, CONFIRM_PHRASES) and forms.captcha_present(page)[0]:
+            after = _captcha_second_chance(page, container, after)
         post_shot = browser.shoot(page, f"after-{job.company_token}-{job.job_id}")
         confirm = _has_phrase(after, CONFIRM_PHRASES)
 
@@ -353,10 +392,10 @@ def apply_to_job(
             )
 
         still_blocked, why2 = forms.captcha_present(page)
-        if still_blocked or blocked:
+        if still_blocked:
             return build(
                 CAPTCHA_BLOCKED,
-                f"no confirmation and a captcha is in the way ({why2 or why}) - a human must clear it",
+                f"no confirmation and a captcha challenge is showing after submit ({why2 or why}) - a human must clear it",
                 fields_filled=filled, fields_skipped=skipped,
                 resume_attached=resume_ok, screenshot=post_shot,
             )

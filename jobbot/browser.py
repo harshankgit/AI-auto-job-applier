@@ -22,17 +22,49 @@ from .config import CHROME_PROFILE_DIR, SHOTS_DIR
 VIEWPORT = {"width": 1440, "height": 900}
 
 # Removes the obvious automation tells before any page script runs.
+# NOTE: navigator.plugins is NOT overridden -- real Chrome already exposes a
+# PluginArray (PDF viewer) and replacing it with a JS Array is itself a tell.
 STEALTH_JS = """
-Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
-Object.defineProperty(navigator, 'languages', {get: () => ['en-US', 'en']});
-Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3, 4, 5]});
-window.chrome = window.chrome || {runtime: {}};
-const origQuery = window.navigator.permissions.query;
-window.navigator.permissions.query = (p) => (
-  p && p.name === 'notifications'
-    ? Promise.resolve({state: Notification.permission})
-    : origQuery(p)
-);
+(() => {
+  const def = (o, k, v) => { try { Object.defineProperty(o, k, {get: () => v, configurable: true}); } catch (e) {} };
+  def(Navigator.prototype, 'webdriver', false);
+  def(navigator, 'languages', ['en-US', 'en']);
+  if (!window.chrome) window.chrome = {};
+  if (!window.chrome.runtime) window.chrome.runtime = {};
+  // Headless has no browser frame: outer == inner and avail == screen.
+  // Give it a normal macOS window: menu bar + dock + toolbar.
+  try {
+    const sw = screen.width || 1440, sh = screen.height || 900;
+    def(Screen.prototype, 'availHeight', sh - 25);
+    def(Screen.prototype, 'availWidth', sw);
+    def(Screen.prototype, 'availTop', 25);
+    def(window, 'outerWidth', window.innerWidth || sw);
+    def(window, 'outerHeight', (window.innerHeight || sh) + 87);
+    def(window, 'screenX', 0);
+    def(window, 'screenY', 25);
+  } catch (e) {}
+  // Report a mouse (fine pointer + hover), not a touch screen.
+  try {
+    const mm = window.matchMedia.bind(window);
+    const fake = (q, v) => ({matches: v, media: q, onchange: null,
+      addListener() {}, removeListener() {}, addEventListener() {},
+      removeEventListener() {}, dispatchEvent() { return false; }});
+    window.matchMedia = (q) => {
+      const s = String(q).replace(/\\s+/g, '');
+      if (/\\((any-)?pointer:fine\\)/.test(s)) return fake(q, true);
+      if (/\\((any-)?pointer:(coarse|none)\\)/.test(s)) return fake(q, false);
+      if (/\\((any-)?hover:hover\\)/.test(s)) return fake(q, true);
+      if (/\\((any-)?hover:none\\)/.test(s)) return fake(q, false);
+      return mm(q);
+    };
+  } catch (e) {}
+  try {
+    const origQuery = navigator.permissions.query.bind(navigator.permissions);
+    navigator.permissions.query = (p) => (p && p.name === 'notifications')
+      ? Promise.resolve({state: Notification.permission === 'default' ? 'prompt' : Notification.permission, onchange: null})
+      : origQuery(p);
+  } catch (e) {}
+})();
 """
 
 
@@ -76,7 +108,15 @@ class BrowserSession:
                 *( ["--window-position=-4000,-4000", "--window-size=1440,900"]
                    if self.offscreen else [] ),
             ],
-            "ignore_default_args": ["--enable-automation"],
+            # Playwright's headless defaults advertise a touch-only pointer and
+            # hidden scrollbars -- both are bot tells for hCaptcha/reCAPTCHA.
+            "ignore_default_args": [
+                "--enable-automation",
+                "--hide-scrollbars",
+                "--mute-audio",
+                "--blink-settings=primaryHoverType=2,availableHoverTypes=2,"
+                "primaryPointerType=4,availablePointerTypes=4",
+            ],
         }
         try:
             self._ctx = self._pw.chromium.launch_persistent_context(
@@ -194,3 +234,29 @@ def scroll_through(page: Page, steps: int = 4) -> None:
     except Exception:
         pass
     human_pause(0.2, 0.4)
+
+
+def human_mouse(page: Page, target=None) -> None:
+    """Move the pointer along a few curved, uneven steps (and onto `target`).
+
+    Invisible captchas (hCaptcha on Lever, reCAPTCHA v3 on Ashby) score pointer
+    movement; a click with no prior mouse activity looks scripted.
+    """
+    try:
+        vw, vh = VIEWPORT["width"], VIEWPORT["height"]
+        x, y = random.uniform(vw * 0.2, vw * 0.8), random.uniform(vh * 0.2, vh * 0.7)
+        page.mouse.move(x, y, steps=random.randint(8, 16))
+        for _ in range(random.randint(2, 4)):
+            x = min(max(x + random.uniform(-220, 220), 5), vw - 5)
+            y = min(max(y + random.uniform(-160, 160), 5), vh - 5)
+            page.mouse.move(x, y, steps=random.randint(6, 14))
+            time.sleep(random.uniform(0.08, 0.3))
+        if target is not None:
+            box = target.bounding_box(timeout=3000)
+            if box:
+                tx = box["x"] + box["width"] * random.uniform(0.3, 0.7)
+                ty = box["y"] + box["height"] * random.uniform(0.35, 0.65)
+                page.mouse.move(tx, ty, steps=random.randint(12, 24))
+                time.sleep(random.uniform(0.15, 0.45))
+    except Exception:
+        pass

@@ -11,6 +11,8 @@ defaults:
   how_did_you_hear: "Company careers page"
 
 rules:
+  - {match: ["primary skillset", "primary skill set", "primary stack", "primary tech stack", "core skillset"], answer: "Fullstack"}
+  - {match: ["working model", "work model", "residing in bangalore", "willing to work in a hybrid"], answer: "Residing outside Bangalore but willing to relocate"}
   - {match: ["whatsapp", "text message", "sms updates"], answer: "No"}
   - {match: ["cuba, iran", "north korea", "sanctioned countr"], answer: "No"}
   - {match: ["previous employment at", "employed by", "employment agreement", "post-employment"], answer: "No"}

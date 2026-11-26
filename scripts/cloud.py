@@ -46,7 +46,7 @@ PAUSE_POLL_S = 30
 RUN_MINUTES = int(os.environ.get("JOBBOT_RUN_MINUTES", "300"))
 BOT_CMD = [sys.executable, "-u", "-m", "jobbot.cli", "apply", "--candidate", "both", "--continuous",
            "--workers", "2", "--india-remote-only", "--min-score", "50", "--min-score-floor", "40",
-           "--skip-ats", "greenhouse", "--no-sheet"]
+           "--skip-ats", "greenhouse,lever", "--no-sheet"]
 PROFILE_FIELDS = ("github", "linkedin", "portfolio", "current_ctc", "expected_ctc", "notice_period",
                   "work_authorized_countries")
 

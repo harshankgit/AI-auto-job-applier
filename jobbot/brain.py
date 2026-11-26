@@ -610,6 +610,8 @@ def _years(low, identity, job, options, target, why):
         "years of hands-on", "years of work experience", "total experience",
         "total professional experience", "relevant professional experience",
         "experience in years", "experience (in years)", "relevant experience (yrs",
+        "total work experience", "work experience (excluding", "overall experience",
+        "total years", "overall work experience",
     )
     if not any(n in low for n in needles):
         return None, ""

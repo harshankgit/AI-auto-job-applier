@@ -67,6 +67,6 @@ fi
 find data -maxdepth 2 -name 'Singleton*' -path '*chrome-profile*' -exec rm -f {} + 2>/dev/null
 
 nohup .venv/bin/python -u -m jobbot.cli apply --candidate both --continuous --workers 2 \
-  --india-remote-only --min-score 50 --min-score-floor 40 --skip-ats greenhouse \
+  --india-remote-only --min-score 50 --min-score-floor 40 --skip-ats greenhouse,lever \
   > logs/realrun.log 2>&1 &
 echo "$(ts) [$MODE] started bot pid $!" >> "$WLOG"

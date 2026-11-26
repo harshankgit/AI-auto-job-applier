@@ -369,7 +369,7 @@ export async function startRun(candidate: RunTarget, limit: number): Promise<Sta
     "--min-score-floor",
     "40",
     "--skip-ats",
-    "greenhouse",
+    "greenhouse,lever",
   ];
   const command = `${uv} ${args.join(" ")}`;
 
