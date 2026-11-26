@@ -1,10 +1,10 @@
 # AI Job Application Report
 
-**Report updated (UTC):** 2026-11-26 10:09:49
-**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-26 10:09:49
-**Companies applied to (all candidates):** 208
-**Applications submitted (page-confirmed):** 214
-**Total attempts logged:** 1620
+**Report updated (UTC):** 2026-11-26 10:44:51
+**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-26 10:44:50
+**Companies applied to (all candidates):** 210
+**Applications submitted (page-confirmed):** 216
+**Total attempts logged:** 1689
 
 > Only applications the job site itself confirmed are counted as done.
 > Every form value came from the candidate's own resume or their
@@ -14,8 +14,8 @@
 
 | Candidate | Companies done | Applications submitted | Total attempts | Not gone through | Dry runs |
 | --- | --- | --- | --- | --- | --- |
-| **Harshank Kanungo** | **106** | 110 | 847 | 722 | 10 |
-| **Divya Kanungo** | **102** | 104 | 773 | 654 | 10 |
+| **Harshank Kanungo** | **107** | 111 | 883 | 757 | 10 |
+| **Divya Kanungo** | **103** | 105 | 806 | 686 | 10 |
 
 ## Every company applied to - full details
 
@@ -229,32 +229,34 @@
 | 206 | Divya Kanungo | **Horizon3 AI** | WebApp Offensive Security Software Engineer | US, Remote | Tech | 2026-11-26 09:10:00 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 11 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/horizon3ai/169d3dde-b8e7-4545-a5a4-cd5cc882c101/application) |
 | 207 | Harshank Kanungo | **Handshake** | Forward Deployed Engineer I | India | Tech | 2026-11-26 09:10:44 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 13 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/handshake/f632f0c3-0b9c-49a7-984b-de92e18e6d0b/application) |
 | 208 | Harshank Kanungo | **The Job Sauce** | Software Engineer - Alt | Remote | Tech | 2026-11-26 09:11:24 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 7 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/The%20Job%20Sauce/0d567110-4abf-4582-8063-502197e03825/application) |
+| 209 | Divya Kanungo | **Rox Data Corp** | Backend Platform Engineer (BLR) | Bengaluru | Tech | 2026-11-26 10:19:09 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 6 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/Rox-Data-Corp/6e6b44f9-8bc2-4dfa-9432-5a0d2931a113/application) |
+| 210 | Harshank Kanungo | **Rox Data Corp** | Backend Platform Engineer (BLR) | Bengaluru | Tech | 2026-11-26 10:20:51 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 6 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/Rox-Data-Corp/6e6b44f9-8bc2-4dfa-9432-5a0d2931a113/application) |
 
 ## Job discovery (latest run)
 
 | Metric | Value |
 | --- | --- |
 | Company boards queried | 2335 |
-| Raw postings fetched | 150268 |
-| Real postings kept | 148858 |
-| Fake / demo / test postings rejected | 1410 |
-| Rejection reasons | title contains blacklisted word 'test' (1160), title contains blacklisted word 'testing' (234), title contains blacklisted word 'demo' (13), title contains blacklisted word 'sample' (3) |
+| Raw postings fetched | 148711 |
+| Real postings kept | 147316 |
+| Fake / demo / test postings rejected | 1395 |
+| Rejection reasons | title contains blacklisted word 'test' (1148), title contains blacklisted word 'testing' (231), title contains blacklisted word 'demo' (13), title contains blacklisted word 'sample' (3) |
 
 ## Outcome summary (all runs)
 
 | Outcome | Count | Meaning |
 | --- | --- | --- |
-| [INCOMPLETE] FAILED_VALIDATION | 982 | Form asked something we had no resume fact for - not submitted |
-| [CAPTCHA] CAPTCHA_BLOCKED | 276 | Form was filled but a captcha needs a human to clear it |
-| [APPLIED] SUBMITTED | 214 | Application sent and confirmed by the company's site |
+| [INCOMPLETE] FAILED_VALIDATION | 1007 | Form asked something we had no resume fact for - not submitted |
+| [CAPTCHA] CAPTCHA_BLOCKED | 311 | Form was filled but a captcha needs a human to clear it |
+| [APPLIED] SUBMITTED | 216 | Application sent and confirmed by the company's site |
 | [ERROR] ERROR | 80 | Technical failure - not submitted |
-| [CLOSED] CLOSED | 38 | Posting was closed by the time we opened it |
+| [CLOSED] CLOSED | 45 | Posting was closed by the time we opened it |
 | [DRY RUN] SKIPPED | 20 | Dry run - filled but deliberately not submitted |
 | [DUPLICATE] ALREADY_APPLIED | 10 | Company site says this candidate already applied |
 
 ---
 
-## Harshank Kanungo - 106 companies done
+## Harshank Kanungo - 107 companies done
 
 ### Contact details used on every form
 
@@ -272,7 +274,7 @@
 | Experience | 3 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2024) |
 
-### Companies done: 106 (115 applications out of 847 attempts)
+### Companies done: 107 (116 applications out of 883 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -391,6 +393,7 @@
 | 113 | 2026-11-26 07:14:57 | **UiPath** | Software Engineer II | Bangalore | ashby | Tech | 84 | attached | 12 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/uipath/eaada8b4-4230-4712-9657-b64d64a690b0/application) |
 | 114 | 2026-11-26 09:10:44 | **Handshake** | Forward Deployed Engineer I | India | ashby | Tech | 56 | attached | 13 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/handshake/f632f0c3-0b9c-49a7-984b-de92e18e6d0b/application) |
 | 115 | 2026-11-26 09:11:24 | **The Job Sauce** | Software Engineer - Alt | Remote | ashby | Tech | 71 | attached | 7 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/The%20Job%20Sauce/0d567110-4abf-4582-8063-502197e03825/application) |
+| 116 | 2026-11-26 10:20:51 | **Rox Data Corp** | Backend Platform Engineer (BLR) | Bengaluru | ashby | Tech | 69 | attached | 6 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/Rox-Data-Corp/6e6b44f9-8bc2-4dfa-9432-5a0d2931a113/application) |
 
 #### Why each of those jobs was chosen
 
@@ -509,6 +512,7 @@
 113. **UiPath - Software Engineer II** (score 84): core role match 'software engineer'; seniority suits candidate ('ii'); 6 resume skills in posting (css, express, html, javascript, react); AI mentioned in description; India location (Bangalore)
 114. **Handshake - Forward Deployed Engineer I** (score 56): adjacent role 'forward deployed'; seniority suits candidate ('i'); 2 resume skills in posting (react, typescript); AI mentioned in description; India location (India)
 115. **The Job Sauce - Software Engineer - Alt** (score 71): core role match 'software engineer'; 3 resume skills in posting (git, react, typescript); AI mentioned in description; remote, no country restriction stated (Remote)
+116. **Rox Data Corp - Backend Platform Engineer (BLR)** (score 69): core role match 'backend'; 2 resume skills in posting (next.js, react); AI mentioned in description; India location (Bengaluru)
 
 #### Confirmation text shown by the company site
 
@@ -622,8 +626,9 @@
 - **UiPath**: nsidering us! Your application has been successfully submitted. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Handshake**: plication Success Your application was successfully submitted. Thank you for your interest in Handshake! Powered by Privacy PolicySecurityVulnerability Disclosure
 - **The Job Sauce**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Rox Data Corp**: ll key application fields. Upload file Thank you for your interest in the SWE - Backend Platform role! Name Email Resume Harshank_Kanungo_Full_Stack_Developer_ATS.pdf Replace or drag and drop here
 
-### Attempts that did not go through (732)
+### Attempts that did not go through (767)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1359,31 +1364,66 @@
 | 2026-11-26 10:08:40 | PAR Technology | Software Engineer II | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426/application) | after-par_technology-1ca0ca4f-94c0-42c4-96be-21a13b621426.png |
 | 2026-11-26 10:09:01 | SurveyMonkey | Software Engineer II - Mobile Engineering - Android | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What is your notice period? | 14 | What is your notice period? (brain: notice period is 30 days but no form option matches) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d/application) | missing-surveymonkey.png |
 | 2026-11-26 10:09:49 | Warner Music Group | Backend Engineer | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 13 | Twitter URL (brain: no resume fact or job fact grounds this question), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Black or African American (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/wmg/bd93e552-e497-44a2-bbae-4f2dc318b2f4/apply) | after-wmg-bd93e552-e497-44a2-bbae-4f2dc318b2f4.png |
+| 2026-11-26 10:17:11 | PAR Technology | Software Engineer II-Golang | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c/application) | after-par_technology-0cc4109c-dfe0-44f9-9191-d2ed723a409c.png |
+| 2026-11-26 10:17:15 | ShyftLabs | Amazon Connect Fullstack Developer | Noida, Uttar Pradesh | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 19 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/shyftlabs/f036b8ee-8e4b-4e3a-90d5-7d71683acd04/apply) | after-shyftlabs-f036b8ee-8e4b-4e3a-90d5-7d71683acd04.png |
+| 2026-11-26 10:17:58 | NETGEAR | SASE Desktop Client Software Developer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Contact Phone Number (brain: no resume fact or job fact grounds this question), Contact Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3/application) | after-netgear-42ed1416-702a-455e-a5ad-9e39cf489fc3.png |
+| 2026-11-26 10:18:28 | Smart Working Solutions | AI Trainer - Software Engineering (Remote, Full-Time) [MV001] | India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Please respond truthfully. How much hands-on experience do you have with MCP servers (such as | 27 | In which location did you find the job? (brain: no resume fact or job fact grounds this question), Twitter URL (brain: no resume fact or job fact grounds this question), Please respond truthfully. How much hands-on experience do you have with MCP servers (such as GitHub MCP Server) and agent-based workflow automation? ✱ (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/smart-working-solutions/b54f0d60-9226-4292-b0a3-9caec516a2fd/apply) | missing-smart-working-solutions.png |
+| 2026-11-26 10:19:15 | ShyftLabs | Software Developer | Noida, Uttar Pradesh | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 10 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/shyftlabs/4547a228-9cd7-4af6-9588-5cd4c8ae1612/apply) | after-shyftlabs-4547a228-9cd7-4af6-9588-5cd4c8ae1612.png |
+| 2026-11-26 10:19:54 | NETGEAR | SASE Firewall QA Automation Engineer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Contact Phone Number (brain: no resume fact or job fact grounds this question), Contact Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/netgear/b272ca70-fb78-4db1-87d7-ef5852394544/application) | after-netgear-b272ca70-fb78-4db1-87d7-ef5852394544.png |
+| 2026-11-26 10:19:57 | ION Group | Software Developer, 2027 Leadership Development Program, ION Group, India | Noida | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 35 | Which location are you applying for? (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/ion/6f66cbb4-c882-4234-b84e-68baea56e1ea/apply) | after-ion-6f66cbb4-c882-4234-b84e-68baea56e1ea.png |
+| 2026-11-26 10:20:41 | SurveyMonkey | Software Engineer II - Full Stack | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2/application) | after-surveymonkey-ef79b729-ceb3-4725-ab3c-1314c55c1cb2.png |
+| 2026-11-26 10:20:55 | ShyftLabs | Amazon Connect Fullstack Developer | Noida, Uttar Pradesh | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 19 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/shyftlabs/f036b8ee-8e4b-4e3a-90d5-7d71683acd04/apply) | after-shyftlabs-f036b8ee-8e4b-4e3a-90d5-7d71683acd04.png |
+| 2026-11-26 10:21:36 | NETGEAR | SASE Desktop Client Software Developer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Contact Phone Number (brain: no resume fact or job fact grounds this question), Contact Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3/application) | after-netgear-42ed1416-702a-455e-a5ad-9e39cf489fc3.png |
+| 2026-11-26 10:21:42 | Warner Music Group | Software Engineer - Data Platform | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 13 | Twitter URL (brain: no resume fact or job fact grounds this question), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Black or African American (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/wmg/742bb482-120a-40bb-bec2-65f44e179dd0/apply) | after-wmg-742bb482-120a-40bb-bec2-65f44e179dd0.png |
+| 2026-11-26 10:21:56 | Smart Working Solutions | AI Trainer - Software Engineering (Remote, Full-Time) [MV001] | India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Please respond truthfully. How much hands-on experience do you have with MCP servers (such as | 27 | In which location did you find the job? (brain: no resume fact or job fact grounds this question), Twitter URL (brain: no resume fact or job fact grounds this question), Please respond truthfully. How much hands-on experience do you have with MCP servers (such as GitHub MCP Server) and agent-based workflow automation? ✱ (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/smart-working-solutions/b54f0d60-9226-4292-b0a3-9caec516a2fd/apply) | missing-smart-working-solutions.png |
+| 2026-11-26 10:22:42 | Mactores | Full Stack Product Engineer, Agent Native | Mumbai, MH | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 21 | Twitter URL (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/mactores/d928d43f-80ac-42f2-bb85-c717cefc83cb/apply) | after-mactores-d928d43f-80ac-42f2-bb85-c717cefc83cb.png |
+| 2026-11-26 10:22:44 | ShyftLabs | Software Developer | Noida, Uttar Pradesh | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 10 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/shyftlabs/4547a228-9cd7-4af6-9588-5cd4c8ae1612/apply) | after-shyftlabs-4547a228-9cd7-4af6-9588-5cd4c8ae1612.png |
+| 2026-11-26 10:22:45 | Cursor (Anysphere) | Forward Deployed Engineer - India | Bengaluru | [CLOSED] CLOSED | posting closed ('page not found') | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b/application) | closed-cursor.png |
+| 2026-11-26 10:22:48 | Turnkey | Engineering - Backend | Remote | [CLOSED] CLOSED | posting closed ('page not found') | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/turnkey/346afd67-a6b9-4fb4-b3fb-19e54baf71e0/application) | closed-turnkey.png |
+| 2026-11-26 10:23:25 | NETGEAR | SASE Firewall QA Automation Engineer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Contact Phone Number (brain: no resume fact or job fact grounds this question), Contact Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/netgear/b272ca70-fb78-4db1-87d7-ef5852394544/application) | after-netgear-b272ca70-fb78-4db1-87d7-ef5852394544.png |
+| 2026-11-26 10:23:47 | PAR Technology | Software Engineer II | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426/application) | after-par_technology-1ca0ca4f-94c0-42c4-96be-21a13b621426.png |
+| 2026-11-26 10:24:51 | SurveyMonkey | Software Engineer II - Mobile Engineering - Android | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d/application) | after-surveymonkey-f6222e24-96f9-4515-b519-2ab2cd38449d.png |
+| 2026-11-26 10:25:54 | Warner Music Group | Backend Engineer | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 13 | Twitter URL (brain: no resume fact or job fact grounds this question), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Black or African American (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/wmg/bd93e552-e497-44a2-bbae-4f2dc318b2f4/apply) | after-wmg-bd93e552-e497-44a2-bbae-4f2dc318b2f4.png |
+| 2026-11-26 10:26:34 | ElevenLabs | Full-Stack Engineer - Creative Agents | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 11 | If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe/application) | after-elevenlabs-35813150-a851-4821-b732-a037b4e6c4fe.png |
+| 2026-11-26 10:27:28 | ElevenLabs | Full-Stack Engineer (Backend Leaning) - Payments Engineering | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90/application) | after-elevenlabs-e4e0450f-d139-4f8e-b210-2f326a680d90.png |
+| 2026-11-26 10:29:00 | PAR Technology | Software Engineer II-Golang | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c/application) | after-par_technology-0cc4109c-dfe0-44f9-9191-d2ed723a409c.png |
+| 2026-11-26 10:32:36 | ION Group | Software Developer, 2027 Leadership Development Program, ION Group, India | Noida | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 35 | Which location are you applying for? (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/ion/6f66cbb4-c882-4234-b84e-68baea56e1ea/apply) | after-ion-6f66cbb4-c882-4234-b84e-68baea56e1ea.png |
+| 2026-11-26 10:33:20 | SurveyMonkey | Software Engineer II - Full Stack | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2/application) | after-surveymonkey-ef79b729-ceb3-4725-ab3c-1314c55c1cb2.png |
+| 2026-11-26 10:34:09 | Warner Music Group | Software Engineer - Data Platform | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 13 | Twitter URL (brain: no resume fact or job fact grounds this question), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Black or African American (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/wmg/742bb482-120a-40bb-bec2-65f44e179dd0/apply) | after-wmg-742bb482-120a-40bb-bec2-65f44e179dd0.png |
+| 2026-11-26 10:35:02 | Mactores | Full Stack Product Engineer, Agent Native | Mumbai, MH | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 21 | Twitter URL (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/mactores/d928d43f-80ac-42f2-bb85-c717cefc83cb/apply) | after-mactores-d928d43f-80ac-42f2-bb85-c717cefc83cb.png |
+| 2026-11-26 10:35:05 | Cursor (Anysphere) | Forward Deployed Engineer - India | Bengaluru | [CLOSED] CLOSED | posting closed ('page not found') | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b/application) | closed-cursor.png |
+| 2026-11-26 10:35:08 | Turnkey | Engineering - Backend | Remote | [CLOSED] CLOSED | posting closed ('page not found') | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/turnkey/346afd67-a6b9-4fb4-b3fb-19e54baf71e0/application) | closed-turnkey.png |
+| 2026-11-26 10:36:18 | PAR Technology | Software Engineer II | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426/application) | after-par_technology-1ca0ca4f-94c0-42c4-96be-21a13b621426.png |
+| 2026-11-26 10:38:03 | SurveyMonkey | Software Engineer II - Mobile Engineering - Android | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d/application) | after-surveymonkey-f6222e24-96f9-4515-b519-2ab2cd38449d.png |
+| 2026-11-26 10:39:51 | Warner Music Group | Backend Engineer | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 13 | Twitter URL (brain: no resume fact or job fact grounds this question), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Black or African American (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.lever.co/wmg/bd93e552-e497-44a2-bbae-4f2dc318b2f4/apply) | after-wmg-bd93e552-e497-44a2-bbae-4f2dc318b2f4.png |
+| 2026-11-26 10:40:36 | ElevenLabs | Full-Stack Engineer - Creative Agents | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 11 | If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe/application) | after-elevenlabs-35813150-a851-4821-b732-a037b4e6c4fe.png |
+| 2026-11-26 10:41:32 | ElevenLabs | Full-Stack Engineer (Backend Leaning) - Payments Engineering | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | If other, please specify below (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90/application) | after-elevenlabs-e4e0450f-d139-4f8e-b210-2f326a680d90.png |
+| 2026-11-26 10:42:35 | PAR Technology | Software Engineer II-Golang | Gurugram | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Phone Number (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c/application) | after-par_technology-0cc4109c-dfe0-44f9-9191-d2ed723a409c.png |
 
 ### Companies touched for this candidate
 
 | Company | Source | AI company | Attempts | Submitted | Result |
 | --- | --- | --- | --- | --- | --- |
-| ElevenLabs | ashby | no | 35 | 0 | not yet |
-| Warner Music Group | lever | no | 22 | 0 | not yet |
-| PAR Technology | ashby | no | 19 | 0 | not yet |
-| ShyftLabs | lever | no | 18 | 0 | not yet |
-| NETGEAR | ashby | no | 18 | 0 | not yet |
+| ElevenLabs | ashby | no | 39 | 0 | not yet |
+| Warner Music Group | lever | no | 26 | 0 | not yet |
+| PAR Technology | ashby | no | 24 | 0 | not yet |
+| ShyftLabs | lever | no | 22 | 0 | not yet |
+| NETGEAR | ashby | no | 22 | 0 | not yet |
+| SurveyMonkey | ashby | no | 18 | 0 | not yet |
 | MongoDB | greenhouse | no | 15 | 0 | not yet |
-| SurveyMonkey | ashby | no | 14 | 0 | not yet |
+| Cursor (Anysphere) | ashby | no | 14 | 0 | not yet |
 | Bjak | ashby | no | 14 | 0 | not yet |
 | OpenGov | ashby | no | 13 | 1 | DONE |
-| Cursor (Anysphere) | ashby | no | 12 | 0 | not yet |
+| Mactores | lever | no | 12 | 0 | not yet |
+| Smart Working Solutions | lever | no | 12 | 0 | not yet |
 | Mercor | ashby | no | 11 | 1 | DONE |
+| ION Group | lever | no | 11 | 0 | not yet |
 | Alan | ashby | no | 10 | 1 | DONE |
-| Mactores | lever | no | 10 | 0 | not yet |
-| Smart Working Solutions | lever | no | 10 | 0 | not yet |
+| Turnkey | ashby | no | 10 | 0 | not yet |
 | Bitgo | greenhouse | no | 9 | 0 | not yet |
-| ION Group | lever | no | 9 | 0 | not yet |
+| Rox Data Corp | ashby | no | 9 | 1 | DONE |
 | Writer | ashby | no | 8 | 0 | not yet |
 | Supabase | ashby | no | 8 | 4 | DONE |
-| Rox Data Corp | ashby | no | 8 | 0 | not yet |
-| Turnkey | ashby | no | 8 | 0 | not yet |
 | OpenAI | ashby | no | 6 | 3 | DONE |
 | Stripe | greenhouse | no | 5 | 0 | not yet |
 | Handshake | ashby | no | 5 | 1 | DONE |
@@ -1704,7 +1744,7 @@
 
 ---
 
-## Divya Kanungo - 102 companies done
+## Divya Kanungo - 103 companies done
 
 ### Contact details used on every form
 
@@ -1722,7 +1762,7 @@
 | Experience | 1 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2026) |
 
-### Companies done: 102 (109 applications out of 773 attempts)
+### Companies done: 103 (110 applications out of 806 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1835,6 +1875,7 @@
 | 107 | 2026-11-26 09:08:28 | **Handshake** | Forward Deployed Engineer I | India | ashby | Tech | 56 | attached | 13 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/handshake/f632f0c3-0b9c-49a7-984b-de92e18e6d0b/application) |
 | 108 | 2026-11-26 09:09:39 | **The Job Sauce** | Software Engineer - Alt | Remote | ashby | Tech | 66 | attached | 7 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/The%20Job%20Sauce/0d567110-4abf-4582-8063-502197e03825/application) |
 | 109 | 2026-11-26 09:10:00 | **Horizon3 AI** | WebApp Offensive Security Software Engineer | US, Remote | ashby | Tech | 61 | attached | 11 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/horizon3ai/169d3dde-b8e7-4545-a5a4-cd5cc882c101/application) |
+| 110 | 2026-11-26 10:19:09 | **Rox Data Corp** | Backend Platform Engineer (BLR) | Bengaluru | ashby | Tech | 69 | attached | 6 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/Rox-Data-Corp/6e6b44f9-8bc2-4dfa-9432-5a0d2931a113/application) |
 
 #### Why each of those jobs was chosen
 
@@ -1947,6 +1988,7 @@
 107. **Handshake - Forward Deployed Engineer I** (score 56): adjacent role 'forward deployed'; seniority suits candidate ('i'); 2 resume skills in posting (react, typescript); AI mentioned in description; India location (India)
 108. **The Job Sauce - Software Engineer - Alt** (score 66): core role match 'software engineer'; 2 resume skills in posting (react, typescript); AI mentioned in description; remote, no country restriction stated (Remote)
 109. **Horizon3 AI - WebApp Offensive Security Software Engineer** (score 61): core role match 'software engineer'; 1 resume skills in posting (node); AI mentioned in description; remote, no country restriction stated (US, Remote)
+110. **Rox Data Corp - Backend Platform Engineer (BLR)** (score 69): core role match 'backend'; 2 resume skills in posting (next.js, react); AI mentioned in description; India location (Bengaluru)
 
 #### Confirmation text shown by the company site
 
@@ -2054,8 +2096,9 @@
 - **Handshake**: plication Success Your application was successfully submitted. Thank you for your interest in Handshake! Powered by Privacy PolicySecurityVulnerability Disclosure
 - **The Job Sauce**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Horizon3 AI**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Rox Data Corp**: ll key application fields. Upload file Thank you for your interest in the SWE - Backend Platform role! Name Email Resume Divya_Kanungo_MERN_Stack_Developer.pdf Replace or drag and drop here Years
 
-### Attempts that did not go through (664)
+### Attempts that did not go through (696)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -2723,22 +2766,54 @@
 | 2026-11-26 10:08:40 | NETGEAR | SASE Desktop Client Software Developer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Contact Phone Number (brain: no resume fact or job fact grounds this question), Contact Phone Number (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3/application) | after-netgear-42ed1416-702a-455e-a5ad-9e39cf489fc3.png |
 | 2026-11-26 10:09:27 | ShyftLabs | Software Developer | Noida, Uttar Pradesh | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 9 | GitHub URL (not present in resume (github) - skipped, never faked) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/shyftlabs/4547a228-9cd7-4af6-9588-5cd4c8ae1612/apply) | after-shyftlabs-4547a228-9cd7-4af6-9588-5cd4c8ae1612.png |
 | 2026-11-26 10:09:29 | Warner Music Group | Backend Engineer | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 12 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/wmg/bd93e552-e497-44a2-bbae-4f2dc318b2f4/apply) | after-wmg-bd93e552-e497-44a2-bbae-4f2dc318b2f4.png |
+| 2026-11-26 10:17:25 | ShyftLabs | Amazon Connect Fullstack Developer | Noida, Uttar Pradesh | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 18 | GitHub URL (not present in resume (github) - skipped, never faked) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/shyftlabs/f036b8ee-8e4b-4e3a-90d5-7d71683acd04/apply) | after-shyftlabs-f036b8ee-8e4b-4e3a-90d5-7d71683acd04.png |
+| 2026-11-26 10:18:19 | Kobie | Software Engineer | Bengaluru, Karnataka | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 19 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/kobie/c1563397-e50b-4e33-acec-d2f528722ae8/apply) | after-kobie-c1563397-e50b-4e33-acec-d2f528722ae8.png |
+| 2026-11-26 10:18:56 | ION Group | Software Developer, 2027 Leadership Development Program, ION Group, India | Noida | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 35 | Which location are you applying for? (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/ion/6f66cbb4-c882-4234-b84e-68baea56e1ea/apply) | after-ion-6f66cbb4-c882-4234-b84e-68baea56e1ea.png |
+| 2026-11-26 10:18:59 | NETGEAR | SASE Desktop Client Software Developer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Contact Phone Number (brain: no resume fact or job fact grounds this question), Contact Phone Number (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3/application) | after-netgear-42ed1416-702a-455e-a5ad-9e39cf489fc3.png |
+| 2026-11-26 10:19:12 | Cursor (Anysphere) | Forward Deployed Engineer - India | Bengaluru | [CLOSED] CLOSED | posting closed ('page not found') | 0 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b/application) | closed-cursor.png |
+| 2026-11-26 10:19:46 | ShyftLabs | Software Developer | Noida, Uttar Pradesh | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 9 | GitHub URL (not present in resume (github) - skipped, never faked) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/shyftlabs/4547a228-9cd7-4af6-9588-5cd4c8ae1612/apply) | after-shyftlabs-4547a228-9cd7-4af6-9588-5cd4c8ae1612.png |
+| 2026-11-26 10:19:59 | Warner Music Group | Software Engineer - Data Platform | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 12 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/wmg/742bb482-120a-40bb-bec2-65f44e179dd0/apply) | after-wmg-742bb482-120a-40bb-bec2-65f44e179dd0.png |
+| 2026-11-26 10:20:51 | Perforce | Software Engineer, (Ruby/Clojure) - Puppet | Pune, Maharashtra | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 22 | Pronouns - He/him (EEO/demographic field - intentionally not answered), Pronouns - She/her (EEO/demographic field - intentionally not answered), Pronouns - They/them (EEO/demographic field - intentionally not answered), Pronouns - Xe/xem (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/perforce/88e3048f-7fa2-4052-ba15-f2518d42d654/apply) | after-perforce-88e3048f-7fa2-4052-ba15-f2518d42d654.png |
+| 2026-11-26 10:20:52 | ShyftLabs | Amazon Connect Fullstack Developer | Noida, Uttar Pradesh | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 18 | GitHub URL (not present in resume (github) - skipped, never faked) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/shyftlabs/f036b8ee-8e4b-4e3a-90d5-7d71683acd04/apply) | after-shyftlabs-f036b8ee-8e4b-4e3a-90d5-7d71683acd04.png |
+| 2026-11-26 10:21:39 | Warner Music Group | Backend Engineer | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 12 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/wmg/bd93e552-e497-44a2-bbae-4f2dc318b2f4/apply) | after-wmg-bd93e552-e497-44a2-bbae-4f2dc318b2f4.png |
+| 2026-11-26 10:21:48 | Kobie | Software Engineer | Bengaluru, Karnataka | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 19 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/kobie/c1563397-e50b-4e33-acec-d2f528722ae8/apply) | after-kobie-c1563397-e50b-4e33-acec-d2f528722ae8.png |
+| 2026-11-26 10:22:57 | NETGEAR | SASE Desktop Client Software Developer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Contact Phone Number (brain: no resume fact or job fact grounds this question), Contact Phone Number (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3/application) | after-netgear-42ed1416-702a-455e-a5ad-9e39cf489fc3.png |
+| 2026-11-26 10:23:45 | ShyftLabs | Software Developer | Noida, Uttar Pradesh | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 9 | GitHub URL (not present in resume (github) - skipped, never faked) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/shyftlabs/4547a228-9cd7-4af6-9588-5cd4c8ae1612/apply) | after-shyftlabs-4547a228-9cd7-4af6-9588-5cd4c8ae1612.png |
+| 2026-11-26 10:24:31 | ION Group | Software Developer, 2027 Leadership Development Program, ION Group, India | Noida | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 35 | Which location are you applying for? (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/ion/6f66cbb4-c882-4234-b84e-68baea56e1ea/apply) | after-ion-6f66cbb4-c882-4234-b84e-68baea56e1ea.png |
+| 2026-11-26 10:24:36 | Cursor (Anysphere) | Forward Deployed Engineer - India | Bengaluru | [CLOSED] CLOSED | posting closed ('page not found') | 0 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b/application) | closed-cursor.png |
+| 2026-11-26 10:25:33 | Warner Music Group | Software Engineer - Data Platform | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 12 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/wmg/742bb482-120a-40bb-bec2-65f44e179dd0/apply) | after-wmg-742bb482-120a-40bb-bec2-65f44e179dd0.png |
+| 2026-11-26 10:26:23 | Perforce | Software Engineer, (Ruby/Clojure) - Puppet | Pune, Maharashtra | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 22 | Pronouns - He/him (EEO/demographic field - intentionally not answered), Pronouns - She/her (EEO/demographic field - intentionally not answered), Pronouns - They/them (EEO/demographic field - intentionally not answered), Pronouns - Xe/xem (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/perforce/88e3048f-7fa2-4052-ba15-f2518d42d654/apply) | after-perforce-88e3048f-7fa2-4052-ba15-f2518d42d654.png |
+| 2026-11-26 10:27:10 | Warner Music Group | Backend Engineer | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 12 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/wmg/bd93e552-e497-44a2-bbae-4f2dc318b2f4/apply) | after-wmg-bd93e552-e497-44a2-bbae-4f2dc318b2f4.png |
+| 2026-11-26 10:28:54 | Warner Music Group | Software Engineer | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 12 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/wmg/23de721a-6770-4f63-8287-6b45c1719415/apply) | after-wmg-23de721a-6770-4f63-8287-6b45c1719415.png |
+| 2026-11-26 10:30:25 | Warner Music Group | Software Engineer  - .NET Core Backend | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 12 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/wmg/9ddb5708-7ae8-4fbe-9179-331b1998a30e/apply) | after-wmg-9ddb5708-7ae8-4fbe-9179-331b1998a30e.png |
+| 2026-11-26 10:38:04 | NETGEAR | SASE Firewall QA Automation Engineer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Contact Phone Number (brain: no resume fact or job fact grounds this question), Contact Phone Number (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/netgear/b272ca70-fb78-4db1-87d7-ef5852394544/application) | after-netgear-b272ca70-fb78-4db1-87d7-ef5852394544.png |
+| 2026-11-26 10:39:52 | NETGEAR | SASE Firewall QA Automation Engineer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Contact Phone Number (brain: no resume fact or job fact grounds this question), Contact Phone Number (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/netgear/b272ca70-fb78-4db1-87d7-ef5852394544/application) | after-netgear-b272ca70-fb78-4db1-87d7-ef5852394544.png |
+| 2026-11-26 10:40:02 | Warner Music Group | Software Engineer | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 12 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/wmg/23de721a-6770-4f63-8287-6b45c1719415/apply) | after-wmg-23de721a-6770-4f63-8287-6b45c1719415.png |
+| 2026-11-26 10:40:50 | Warner Music Group | Software Engineer  - .NET Core Backend | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 12 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/wmg/9ddb5708-7ae8-4fbe-9179-331b1998a30e/apply) | after-wmg-9ddb5708-7ae8-4fbe-9179-331b1998a30e.png |
+| 2026-11-26 10:40:56 | ShyftLabs | Amazon Connect Fullstack Developer | Noida, Uttar Pradesh | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 18 | GitHub URL (not present in resume (github) - skipped, never faked) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/shyftlabs/f036b8ee-8e4b-4e3a-90d5-7d71683acd04/apply) | after-shyftlabs-f036b8ee-8e4b-4e3a-90d5-7d71683acd04.png |
+| 2026-11-26 10:41:52 | Kobie | Software Engineer | Bengaluru, Karnataka | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 19 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/kobie/c1563397-e50b-4e33-acec-d2f528722ae8/apply) | after-kobie-c1563397-e50b-4e33-acec-d2f528722ae8.png |
+| 2026-11-26 10:42:30 | NETGEAR | SASE Desktop Client Software Developer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Contact Phone Number (brain: no resume fact or job fact grounds this question), Contact Phone Number (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/netgear/42ed1416-702a-455e-a5ad-9e39cf489fc3/application) | after-netgear-42ed1416-702a-455e-a5ad-9e39cf489fc3.png |
+| 2026-11-26 10:43:18 | ShyftLabs | Software Developer | Noida, Uttar Pradesh | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 9 | GitHub URL (not present in resume (github) - skipped, never faked) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/shyftlabs/4547a228-9cd7-4af6-9588-5cd4c8ae1612/apply) | after-shyftlabs-4547a228-9cd7-4af6-9588-5cd4c8ae1612.png |
+| 2026-11-26 10:43:33 | ION Group | Software Developer, 2027 Leadership Development Program, ION Group, India | Noida | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 35 | Which location are you applying for? (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/ion/6f66cbb4-c882-4234-b84e-68baea56e1ea/apply) | after-ion-6f66cbb4-c882-4234-b84e-68baea56e1ea.png |
+| 2026-11-26 10:44:03 | Cursor (Anysphere) | Forward Deployed Engineer - India | Bengaluru | [CLOSED] CLOSED | posting closed ('page not found') | 0 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/cursor/5f17ee48-29e8-4f48-bbc4-dc250731250b/application) | closed-cursor.png |
+| 2026-11-26 10:44:26 | NETGEAR | SASE Firewall QA Automation Engineer | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Contact Phone Number (brain: no resume fact or job fact grounds this question), Contact Phone Number (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/netgear/b272ca70-fb78-4db1-87d7-ef5852394544/application) | after-netgear-b272ca70-fb78-4db1-87d7-ef5852394544.png |
+| 2026-11-26 10:44:50 | Warner Music Group | Software Engineer - Data Platform | Bangalore | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha is in the way (hcaptcha widget visible (1440x900)) - a human must clear it | 12 | Twitter URL (brain: no resume fact or job fact grounds this question), GitHub URL (not present in resume (github) - skipped, never faked), I identify my ethnicity as Select all that apply - White / Caucasian (EEO/demographic field - intentionally not answered), I identify my ethnicity as Select all that apply - Hispanic, Latino, or Spanish origin (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.lever.co/wmg/742bb482-120a-40bb-bec2-65f44e179dd0/apply) | after-wmg-742bb482-120a-40bb-bec2-65f44e179dd0.png |
 
 ### Companies touched for this candidate
 
 | Company | Source | AI company | Attempts | Submitted | Result |
 | --- | --- | --- | --- | --- | --- |
-| Warner Music Group | lever | no | 32 | 0 | not yet |
-| ShyftLabs | lever | no | 22 | 0 | not yet |
-| NETGEAR | ashby | no | 20 | 0 | not yet |
+| Warner Music Group | lever | no | 41 | 0 | not yet |
+| ShyftLabs | lever | no | 28 | 0 | not yet |
+| NETGEAR | ashby | no | 26 | 0 | not yet |
+| Cursor (Anysphere) | ashby | no | 19 | 0 | not yet |
 | Supabase | ashby | no | 19 | 0 | not yet |
-| Cursor (Anysphere) | ashby | no | 16 | 0 | not yet |
+| Kobie | lever | no | 15 | 0 | not yet |
+| ION Group | lever | no | 14 | 0 | not yet |
 | ElevenLabs | ashby | no | 13 | 0 | not yet |
 | Bjak | ashby | no | 13 | 0 | not yet |
-| Kobie | lever | no | 12 | 0 | not yet |
-| ION Group | lever | no | 11 | 0 | not yet |
-| Rox Data Corp | ashby | no | 11 | 0 | not yet |
-| Perforce | lever | no | 11 | 0 | not yet |
+| Perforce | lever | no | 13 | 0 | not yet |
+| Rox Data Corp | ashby | no | 12 | 1 | DONE |
 | Mercor | ashby | yes | 10 | 2 | DONE |
 | Alan | ashby | no | 9 | 1 | DONE |
 | Bitgo | greenhouse | no | 8 | 0 | not yet |

@@ -465,6 +465,8 @@ def run_batch(
         used = store.role_already_used(identity.id, job.key, token, job.company, job.title)
         if used:
             continue
+        if store.hopeless(identity.id, job.key):
+            continue
         if store.failed_attempts_since(identity.id, job.key, answers_since) >= 2:
             # Two honest tries already failed with the current answers: a third
             # identical try just burns time. Edit answers.yaml and it retries.

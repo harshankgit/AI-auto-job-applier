@@ -196,6 +196,23 @@ def failed_attempts_since(candidate_id: str, job_key: str, since_utc: str) -> in
     return int(row["n"]) if row else 0
 
 
+def hopeless(candidate_id: str, job_key: str) -> str | None:
+    """A reason never to retry this role: the posting is gone (CLOSED for anyone)
+    or a captcha already blocked this candidate there (captchas repeat)."""
+    with closing(_connect()) as conn:
+        row = conn.execute(
+            "SELECT SUM(status='CLOSED') AS closed,"
+            " SUM(status='CAPTCHA_BLOCKED' AND candidate_id=?) AS cap"
+            " FROM attempts WHERE job_key=?",
+            (candidate_id, job_key),
+        ).fetchone()
+    if row and (row["closed"] or 0):
+        return "closed"
+    if row and (row["cap"] or 0):
+        return "captcha"
+    return None
+
+
 def _norm_title(title: str) -> str:
     return " ".join("".join(ch if ch.isalnum() else " " for ch in (title or "").lower()).split())
 

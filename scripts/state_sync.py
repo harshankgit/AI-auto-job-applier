@@ -141,7 +141,9 @@ def _merge_json(remote: Path, local: Path) -> None:
             return out
         return a
 
-    local.write_text(json.dumps(union(ld, rd), indent=2, ensure_ascii=False))
+    merged = union(ld, rd)
+    if merged != ld:  # untouched file keeps its mtime (mtime drives answer-retry logic)
+        local.write_text(json.dumps(merged, indent=2, ensure_ascii=False))
 
 
 def _merge_tree(extracted: Path) -> dict:

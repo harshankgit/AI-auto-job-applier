@@ -539,6 +539,23 @@ def _misc_policy(low, identity, job, options, target, why):
         if skills:
             return ", ".join(skills[:12]), "brain: resume skill list"
         return None, "brain: no skill list on the resume"
+    # Pan India preference: the candidate will work from any Indian city.
+    if options and any(n in low for n in (
+            "which location", "preferred location", "location preference",
+            "preferred city", "preferred work location", "location are you applying",
+            "which city", "preferred office")):
+        opts = [str(o) for o in options]
+        for words, why in (
+                (("gurugram", "gurgaon", "delhi", "ncr", "noida", "faridabad", "ghaziabad"),
+                 "nearest to current city (Delhi NCR)"),
+                (("bengaluru", "bangalore", "mumbai", "pune", "hyderabad", "chennai", "kolkata",
+                  "ahmedabad", "indore", "jaipur", "chandigarh", "kochi", "india", "pan india", "any"),
+                 "open to any city in India"),
+                (("remote", "anywhere"), "remote is fine")):
+            for o in opts:
+                if any(w in o.lower() for w in words):
+                    return o, f"brain: Pan India preference - {why}"
+        return opts[0], "brain: Pan India preference - first listed location"
     # Multi-checkbox office pickers ("Which office ... - San Francisco"): the
     # candidate is open to relocating, so every office box gets ticked.
     if "which office" in low or "which of our offices" in low or (
@@ -791,14 +808,14 @@ def _notice_and_start(low, identity, job, options, target, why):
         if yes_no or ("are you" in low and ("on a notice" in low or "serving" in low)):
             value = _yes(options) if options else "Yes"
             if value:
-                return value, "brain: candidate serves a standard 30-day notice period"
-        picked = choose_option("30 days", options) if options else "30 days"
+                return value, "brain: candidate serves a standard 10-day notice period"
+        picked = choose_option("10 days", options) if options else "10 days"
         if picked:
-            return picked, "brain: standard 30-day notice, as confirmed in answers.yaml"
-        picked = choose_option("1 month", options) or _days_option(30, options or [])
+            return picked, "brain: standard 10-day notice, as confirmed in answers.yaml"
+        picked = _days_option(10, options or [])
         if picked:
-            return picked, f"brain: 30-day notice mapped to the form's {picked!r}"
-        return None, "brain: notice period is 30 days but no form option matches"
+            return picked, f"brain: 10-day notice mapped to the form's {picked!r}"
+        return None, "brain: notice period is 10 days but no form option matches"
     starters = (
         "when can you start", "start date", "earliest start", "availability",
         "available to start", "how soon can you", "joining date", "date of joining",
@@ -807,18 +824,18 @@ def _notice_and_start(low, identity, job, options, target, why):
         "when are you available", "start a new role",
     )
     if any(n in low for n in starters):
-        text = "30 days from offer"
+        text = "10 days from offer"
         picked = choose_option(text, options) if options else text
         if picked:
-            return picked, "brain: available 30 days from offer (standard notice period)"
-        for alt in ("1 month", "immediately", "30 days"):
+            return picked, "brain: available 10 days from offer (standard notice period)"
+        for alt in ("2 weeks", "immediately", "10 days"):
             picked = choose_option(alt, options)
             if picked:
-                return picked, f"brain: 30-day availability mapped to the form's {picked!r}"
-        picked = _days_option(30, options or [])
+                return picked, f"brain: 10-day availability mapped to the form's {picked!r}"
+        picked = _days_option(10, options or [])
         if picked:
-            return picked, f"brain: 30-day availability mapped to the form's {picked!r}"
-        return None, "brain: availability is 30 days from offer but no form option matches"
+            return picked, f"brain: 10-day availability mapped to the form's {picked!r}"
+        return None, "brain: availability is 10 days from offer but no form option matches"
     return None, ""
 
 
@@ -1128,7 +1145,7 @@ def auto_decide(label: str, identity, job=None, options: list[str] | None = None
         if value:
             return value, "auto-decided: best available profile link"
     if any(w in low for w in ("notice", "join", "start", "available")):
-        return "30 days", "auto-decided: standard 30-day notice"
+        return "10 days", "auto-decided: standard 10-day notice"
     if any(w in low for w in ("location", "city", "where", "address", "based")):
         return identity.location or identity.city, "auto-decided: resume location"
     if low.startswith(("are you", "do you", "can you", "will you", "would you", "have you",

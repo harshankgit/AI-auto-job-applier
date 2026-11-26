@@ -1173,7 +1173,8 @@ def _best_option(options: list[Locator], value: str, query: str):
     pairs = [(t, o) for t, o in pairs if t]
     if not pairs:
         return None, ""
-    probes = [_lower(value), _lower(query), _lower(value.split(",")[0])]
+    probes = [_lower(value), _lower(query), _lower(value.split(",")[0]),
+              _lower(query.split(",")[0])]
     for probe in probes:
         if not probe:
             continue
@@ -1228,18 +1229,28 @@ def _fill_combobox(page: Page, el: Locator, value: str) -> bool:
             el.fill("", timeout=3000)
         except Exception:
             pass
+        baseline: set[str] = set()
+        if scope is not None:
+            try:
+                baseline = {_option_text(o) for o in _visible_options(page)}
+            except Exception:
+                baseline = set()
         try:
             el.type(query[:60], delay=20, timeout=10000)
         except Exception:
             continue
 
         # Autocompletes hit a network endpoint; poll instead of a fixed sleep.
+        # The page-wide fallback must ignore option-like nodes that were already
+        # on screen before we typed (Ashby renders other questions' Yes/No
+        # buttons as options, which made a location box look 'answered').
         options: list[Locator] = []
-        for _ in range(10):
+        for _ in range(20):
             page.wait_for_timeout(300)
             options = _visible_options(page, scope)
             if not options and scope is not None:
-                options = _visible_options(page)
+                options = [o for o in _visible_options(page)
+                           if _option_text(o) not in baseline]
             if options:
                 break
         if not options:
@@ -1278,13 +1289,34 @@ def _fill_combobox(page: Page, el: Locator, value: str) -> bool:
         try:
             el.press("Enter", timeout=3000)
             page.wait_for_timeout(300)
+            # Ashby-style autocompletes keep the typed text in the input but
+            # clear it on blur unless an option was chosen; only trust the
+            # value if it survives losing focus.
+            try:
+                el.evaluate("e => e.blur()")
+            except Exception:
+                pass
+            page.wait_for_timeout(600)
             if _combobox_settled(el):
                 return True
         except Exception:
             pass
+        try:
+            el.fill("", timeout=2000)
+        except Exception:
+            pass
+        _dismiss_menu(page, el)
+        return False
 
+    # Options were offered but none was ours: leave the box EMPTY so the
+    # readback reports it honestly (typed text alone is not a selection and
+    # Ashby rejects it as 'Missing entry for required field').
+    try:
+        el.fill("", timeout=2000)
+    except Exception:
+        pass
     _dismiss_menu(page, el)
-    return _combobox_settled(el)
+    return False
 
 
 def _set_checkbox(el: Locator, value: str) -> bool:
@@ -1623,8 +1655,15 @@ def missing_required(plans: list[FieldPlan], outcome: dict[str, Any] | None = No
     ]
     if outcome:
         labels = {p.label: p for p in plans}
+        # A later 'repaired'/'filled' entry for the same label supersedes an
+        # earlier failure (first fill missed, verify pass re-entered it).
+        final: dict[str, str] = {}
+        for entry in outcome.get("audit", []):
+            final[entry.get("label", "")] = entry.get("status", "")
         for entry in outcome.get("audit", []):
             if entry.get("status") not in ("failed", "empty"):
+                continue
+            if final.get(entry.get("label", "")) in ("repaired", "filled"):
                 continue
             plan = labels.get(entry.get("label", ""))
             if plan and plan.required and not is_eeo(plan.label):

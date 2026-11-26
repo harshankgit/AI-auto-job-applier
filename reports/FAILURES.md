@@ -1,19 +1,19 @@
 # Why applications failed
 
-_Generated 2026-11-26 15:38:40_
+_Generated 2026-11-26 16:13:19_
 
 ## Harshank
 
-Submitted: **110** (101 companies) | Failed: **719**
+Submitted: **111** (102 companies) | Failed: **757**
 
 | Reason | Count |
 |---|---|
-| Needs an answer from you | 445 |
-| Captcha | 137 |
-| Form rejected | 69 |
+| Needs an answer from you | 448 |
+| Captcha | 150 |
+| Form rejected | 87 |
 | Page error | 26 |
+| Job closed | 24 |
 | No confirmation / OTP | 22 |
-| Job closed | 20 |
 
 ### Questions waiting for your answer
 
@@ -21,7 +21,7 @@ Submitted: **110** (101 companies) | Failed: **719**
 - (22x) Yes - Cin7, Entrata, ValGenesis, Onit, Inc.
 - (20x) What is your current notice period? - ElevenLabs -> answered (saved privately)
 - (15x) Phone - Horizon3 AI, Talkiatry, Ramp, Quora -> answered (saved privately)
-- (13x) What is your notice period? - SurveyMonkey -> answered (saved privately)
+- (14x) What is your notice period? - SurveyMonkey -> answered (saved privately)
 - (12x) Contact Phone Number - NETGEAR -> answered (saved privately)
 - (11x) Current Location: - OpenGov -> answered (saved privately)
 - (10x) Education History - Applied
@@ -60,15 +60,15 @@ Submitted: **110** (101 companies) | Failed: **719**
 
 ## Divya
 
-Submitted: **104** (97 companies) | Failed: **651**
+Submitted: **105** (98 companies) | Failed: **682**
 
 | Reason | Count |
 |---|---|
 | Needs an answer from you | 421 |
-| Captcha | 136 |
-| Form rejected | 44 |
+| Captcha | 159 |
+| Form rejected | 50 |
+| Job closed | 20 |
 | No confirmation / OTP | 20 |
-| Job closed | 18 |
 | Page error | 12 |
 
 ### Questions waiting for your answer
