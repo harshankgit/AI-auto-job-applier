@@ -598,6 +598,13 @@ def plan_fields(
             options = [o for o in (ctx.get("options") or [])]
             if question:
                 label = question
+            # Ashby renders SMS / WhatsApp marketing-consent radios inside the
+            # required Phone entry, so they inherit its _required heading. They are
+            # opt-ins, not questions: never let them block a submit.
+            blob = _lower(" ".join([name or "", *[str(o) for o in options]]))
+            if not a.get("required") and ("consent" in blob or "text message" in blob
+                                          or "whatsapp" in blob or "sms" in blob):
+                required = False
         elif kind == "select":
             options = [
                 o for o in (ctx.get("options") or [])
