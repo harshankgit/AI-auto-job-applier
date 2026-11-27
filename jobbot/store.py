@@ -361,3 +361,17 @@ def blocked_companies(candidate_id: str, min_fails: int = 2) -> set[str]:
             (candidate_id,),
         ).fetchall()
     return {r["co"] for r in rows if r["co"] and (r["ok"] or 0) == 0 and (r["bad"] or 0) >= min_fails}
+
+
+def recently_failed_companies(candidate_id: str, since_utc: str, min_fails: int = 2) -> set[str]:
+    """Companies with >= min_fails failed/error attempts after `since_utc` and no
+    submit - used to stop endless retry loops on companies whose answers were
+    taught but whose form still fails the same way."""
+    with closing(_connect()) as conn:
+        rows = conn.execute(
+            "SELECT lower(trim(company)) AS co, "
+            "SUM(status IN ('FAILED_VALIDATION','CAPTCHA_BLOCKED','ERROR')) AS bad, "
+            "SUM(status='SUBMITTED') AS ok FROM attempts WHERE candidate_id=? AND applied_at>=? GROUP BY co",
+            (candidate_id, since_utc),
+        ).fetchall()
+    return {r["co"] for r in rows if r["co"] and (r["ok"] or 0) == 0 and (r["bad"] or 0) >= min_fails}

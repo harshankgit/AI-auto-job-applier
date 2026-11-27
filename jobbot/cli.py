@@ -283,7 +283,13 @@ def cmd_apply(args) -> int:
             blocked = store.blocked_companies(cid, 2)
             try:
                 from . import learn as _learn
-                blocked -= _learn.learned_companies(cid)
+                # taught companies get retried - but only until they fail twice
+                # more since the last teaching (or in 24h), so one stubborn form
+                # cannot eat the whole run in a retry loop
+                since = max(time.time() - 86400, _learn.mtime())
+                stubborn = store.recently_failed_companies(
+                    cid, time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime(since)), 2)
+                blocked -= (_learn.learned_companies(cid) - stubborn)
             except Exception:
                 pass
             ordered = _ordered(ranked, done_cos | blocked)
