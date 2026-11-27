@@ -299,8 +299,31 @@ def publish_reports() -> None:
 
 # --- gate + run --------------------------------------------------------------------------
 
+def _run_finished(hb: dict) -> bool:
+    """True when the heartbeat's GitHub run has already ended (cancelled/crashed runs leave a
+    stale 'running' heartbeat behind for up to FRESH_S)."""
+    m = re.search(r"/actions/runs/(\d+)", str(hb.get("run") or ""))
+    if not m or m.group(1) == os.environ.get("GITHUB_RUN_ID"):
+        return False
+    repo = os.environ.get("JOBBOT_REPO") or os.environ.get("GITHUB_REPOSITORY")
+    if not repo:
+        return False
+    try:
+        out = subprocess.run(
+            ["gh", "run", "view", m.group(1), "-R", repo, "--json", "status", "-q", ".status"],
+            capture_output=True, text=True, timeout=30,
+        )
+    except Exception:
+        return False
+    return out.returncode == 0 and out.stdout.strip() == "completed"
+
+
 def gate() -> int:
     if cloud_running():
+        hb = last_heartbeat() or {}
+        if _run_finished(hb):
+            print(f"gate: last heartbeat came from {hb.get('run')} which has finished -> run")
+            return 0
         print("gate: another GitHub run is active -> skip")
         return 1
     print("gate: no GitHub run active -> run (it waits if Stop was pressed)")
