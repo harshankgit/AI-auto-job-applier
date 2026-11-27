@@ -229,6 +229,22 @@ function Questions({ cid, questions, onSaved }: { cid: string; questions: Questi
                 {q.maybe_not_eligible && <span className="ml-2 text-amber-400">eligibility</span>}
               </div>
             </div>
+            <div className="mt-2 flex gap-1 sm:mt-0">
+              {["Yes", "No"].map((v) => (
+                <button
+                  key={v}
+                  type="button"
+                  onClick={() => setDraft((d) => ({ ...d, [q.question]: v }))}
+                  className={`rounded-lg border px-3 py-2 text-xs font-semibold ${
+                    draft[q.question] === v
+                      ? "border-emerald-500 bg-emerald-600/20 text-emerald-300"
+                      : "border-zinc-700 text-zinc-300 hover:border-zinc-500"
+                  }`}
+                >
+                  {v}
+                </button>
+              ))}
+            </div>
             <input
               value={draft[q.question] ?? ""}
               onChange={(e) => setDraft((d) => ({ ...d, [q.question]: e.target.value }))}
