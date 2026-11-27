@@ -112,6 +112,16 @@ _US_STATE_RE = re.compile(
     r"wa|wv|wi|wy|dc)(?![a-z])"
 )
 
+# Regions/countries that, when named in a job TITLE, pin the role abroad.
+_TITLE_FOREIGN = (
+    "europe", "emea", "latam", "north america", "americas", "amer", "us", "usa",
+    "u.s.", "uk", "united states", "united kingdom", "canada", "germany",
+    "france", "spain", "italy", "netherlands", "poland", "portugal", "ireland",
+    "dach", "nordics", "benelux", "mexico", "brazil", "australia", "anz",
+    "japan", "korea", "singapore", "israel", "switzerland", "sweden", "uae",
+    "dubai", "saudi", "ksa", "philippines", "vietnam", "indonesia",
+)
+
 
 def classify_geo(job) -> tuple[str, str]:
     """Classify a posting's location for an India-based applicant.
@@ -131,6 +141,12 @@ def classify_geo(job) -> tuple[str, str]:
         if remote_word:
             return GEO_INDIA, f"remote within India ({job.location})"
         return GEO_INDIA, f"India location ({job.location})"
+
+    # 'Field Application Engineer (Europe)' with location 'Remote' is a
+    # Europe role - the title names the region the location text left out.
+    title_tie = _has_word((job.title or "").lower(), _TITLE_FOREIGN)
+    if title_tie:
+        return GEO_REMOTE_FOREIGN, f"title ties the role to '{title_tie}' ({job.title})"
 
     if remote_word:
         if _has(loc, GLOBAL_WORDS):
