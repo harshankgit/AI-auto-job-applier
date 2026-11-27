@@ -18,6 +18,7 @@ label-text-driven with per-platform id/name fast-paths:
 from __future__ import annotations
 
 import re
+import time
 from dataclasses import dataclass, field as dc_field
 from typing import Any
 
@@ -119,6 +120,8 @@ CAPTCHA_HINTS = (
     "[class*='h-captcha']",
     "[class*='g-recaptcha']",
     "iframe[src*='turnstile']",
+    "iframe[src*='challenges.cloudflare.com']",
+    "[class*='cf-turnstile']",
 )
 
 PAY_RE = re.compile(r"\b(ctc|salary|compensation|cost to company|remuneration|pay expectation|stipend)\b")
@@ -160,8 +163,15 @@ def classify(label: str, name: str = "", el_id: str = "") -> str:
     # never the identity "company" field.
     if PAY_RE.search(hay):
         return "question"
+    long_question = len(hay.split()) > 6
     for key, needles in SEMANTICS:
-        if any(n in hay for n in needles):
+        hits = [n for n in needles if n in hay]
+        # 'Let the company know about your interest...' is a message box, not
+        # the current-employer field: bare 'company'/'employer' only counts in
+        # a short label.
+        if key == "company" and long_question and set(hits) <= {"company", "employer"}:
+            continue
+        if hits:
             return key
     attr = _lower(f"{name} {el_id}").replace("_", " ").replace("-", " ")
     for key, needles in SEMANTICS:
@@ -373,6 +383,22 @@ def label_for(page: Page, el: Locator) -> str:
             """
             (node) => {
               const clean = (s) => (s || '').replace(/\\s+/g, ' ').trim();
+              // SmartRecruiters screening questions live inside shadow roots of
+              // sr-question-field-* hosts; the question is that host's first line.
+              if (node.getRootNode && node.getRootNode() !== document) {
+                let a = node;
+                for (let i = 0; i < 30 && a; i++) {
+                  a = a.parentElement || (a.getRootNode && a.getRootNode().host) || null;
+                  if (!a || !a.tagName) break;
+                  if (/^SR-QUESTION-FIELD/.test(a.tagName)) {
+                    const lines = (a.innerText || a.textContent || '').split(/\\n+/)
+                      .map(clean).filter((s) => s && s !== '*');
+                    const q = (lines[0] || '').replace(/^\\d+\\.\\s*/, '').replace(/\\s*\\*$/, '');
+                    if (q) return q;
+                    break;
+                  }
+                }
+              }
               if (node.id) {
                 const esc = (window.CSS && CSS.escape) ? CSS.escape(node.id) : node.id;
                 const lab = document.querySelector(`label[for="${esc}"]`);
@@ -383,10 +409,15 @@ def label_for(page: Page, el: Locator) -> str:
               const labelledby = node.getAttribute('aria-labelledby');
               if (labelledby) {
                 const parts = labelledby.split(/\\s+/)
-                  .map((id) => document.getElementById(id))
+                  .map((id) => document.getElementById(id) || (node.getRootNode && node.getRootNode().getElementById ? node.getRootNode().getElementById(id) : null))
                   .filter(Boolean)
                   .map((n) => clean(n.innerText));
                 if (clean(parts.join(' '))) return clean(parts.join(' '));
+              }
+              // Workable: <span id="<name>_label"> holds the question for value inputs.
+              if (node.name) {
+                const wl = document.getElementById(node.name + '_label');
+                if (wl && clean(wl.innerText)) return clean(wl.innerText);
               }
               let up = node.closest('label');
               if (up && clean(up.innerText)) return clean(up.innerText);
@@ -415,7 +446,15 @@ def _attrs(el: Locator) -> dict[str, str]:
               type: (n.getAttribute('type') || '').toLowerCase(),
               name: n.getAttribute('name') || '',
               id: n.id || '',
-              required: (n.required || n.getAttribute('aria-required') === 'true') ? '1' : '',
+              sig: n.getAttribute('data-sr-id') || n.getAttribute('data-ui') || n.getAttribute('data-qa') || '',
+              required: (n.required || n.getAttribute('aria-required') === 'true'
+                || (() => { const m = /^input_(.+)_input$/.exec(n.id || '');
+                     const h = m ? document.querySelector(`[name="${m[1]}"]`) : null;
+                     return !!(h && (h.required || h.getAttribute('aria-required') === 'true')); })()) ? '1' : '',
+              // Workable keeps a combobox's value in a second, id-less input
+              // named like the question; the visible input_<name>_input is the
+              // real control, so the holder must not be planned separately.
+              holder: (!n.id && n.name && document.getElementById('input_' + n.name + '_input')) ? '1' : '',
               role: n.getAttribute('role') || '',
               value: n.value || '',
               visible: (n.offsetParent !== null || n.getClientRects().length > 0) ? '1' : '',
@@ -441,6 +480,28 @@ _FIELD_CONTEXT_JS = """
   if (node.tagName === 'SELECT') {
     out.options = Array.from(node.options).map((o) => clean(o.text)).filter(Boolean);
   }
+  // SmartRecruiters: shadow-DOM question hosts (sr-question-field-*).
+  if (node.getRootNode && node.getRootNode() !== document) {
+    let a = node;
+    for (let i = 0; i < 30 && a; i++) {
+      a = a.parentElement || (a.getRootNode && a.getRootNode().host) || null;
+      if (!a || !a.tagName) break;
+      if (/^SR-QUESTION-FIELD/.test(a.tagName)) {
+        const raw = a.innerText || a.textContent || '';
+        const lines = raw.split(/\\n+/).map(clean).filter((s) => s && s !== '*');
+        out.question = (lines[0] || '').replace(/^\\d+\\.\\s*/, '').replace(/\\s*\\*$/, '');
+        out.required = /\\*/.test(raw.slice(0, 400)) || node.getAttribute('aria-required') === 'true' || !!node.required;
+        if (node.type === 'radio' && node.name) {
+          const rs = node.getRootNode().querySelectorAll(`input[type=radio][name="${node.name}"]`);
+          out.options = Array.from(rs).map((r) => {
+            const l = r.closest('label') || (r.id && node.getRootNode().querySelector(`label[for="${r.id}"]`));
+            return clean(l ? l.innerText : r.value);
+          }).filter(Boolean);
+        }
+        return out;
+      }
+    }
+  }
   const entry = node.closest('.ashby-application-form-field-entry, [class*="_fieldEntry"]');
   if (entry) {
     out.ashby = true;
@@ -459,6 +520,17 @@ _FIELD_CONTEXT_JS = """
       if (lg) {
         out.question = clean(lg.innerText);
         out.required = /\\*\\s*$/.test(lg.innerText || '');
+      } else {
+        // Workable: fieldset without legend; options are [role=radio] wrappers
+        // whose aria-labelledby starts with the question span id.
+        const opt = fs.querySelector('[role=radio][aria-labelledby], [aria-labelledby]');
+        const qid = opt ? (opt.getAttribute('aria-labelledby') || '').split(/\\s+/)[0] : '';
+        const qn = qid ? document.getElementById(qid) : null;
+        if (qn && clean(qn.innerText)) {
+          out.question = clean(qn.innerText);
+          out.required = /\\*\\s*$/.test(qn.innerText || '') || fs.getAttribute('aria-required') === 'true'
+            || !!(qn.parentElement && /required|\\*/.test(qn.parentElement.innerText.slice(-3)));
+        }
       }
     }
     // Lever: <li class="application-question"><div class="application-label"><div class="text">Q<span class="required">*</span>
@@ -520,6 +592,7 @@ FORM_FRAME_HOSTS = (
     "job_app",
     "workable.com",
     "smartrecruiters.com",
+    "recruitee.com",
 )
 
 FRAME_BLOCKLIST = ("recaptcha", "hcaptcha", "googleapis", "gstatic", "doubleclick")
@@ -608,6 +681,8 @@ def plan_fields(
         tag, ftype = a.get("tag", ""), a.get("type", "")
         if tag == "input" and ftype in SKIP_INPUT_TYPES:
             continue
+        if a.get("holder"):
+            continue
         if ftype == "file":
             kind = "file"
         elif tag == "textarea":
@@ -646,7 +721,7 @@ def plan_fields(
                 kind="buttons", label=question, semantic=semantic, required=required,
                 value=value, action="fill" if value else "skip", reason=reason,
                 locator=el.locator(ENTRY_XPATH),
-                meta={"name": name, "id": el_id, "options": buttons},
+                meta={"name": name, "id": el_id, "sig": a.get("sig", ""), "options": buttons},
             ))
             continue
 
@@ -690,6 +765,11 @@ def plan_fields(
         elif kind == "checkbox":
             if question and _lower(label) not in _lower(question):
                 label = f"{question} - {label}" if label else question
+            # Recruitee: the label IS the question; the option lives in value=.
+            opt_val = str(a.get("value") or "").strip()
+            if " - " not in label and opt_val and _lower(opt_val) not in ("on", "true", "1", "yes") \
+                    and _lower(opt_val) not in _lower(label):
+                label = f"{label} - {opt_val}"
         elif question and is_ashby:
             label = question
 
@@ -716,14 +796,14 @@ def plan_fields(
                     kind="file", label=label or "Cover letter", semantic="cover_letter",
                     required=required, value="", action="skip",
                     reason="optional cover-letter upload - the resume belongs in the resume slot",
-                    locator=el, meta={"name": name, "id": el_id},
+                    locator=el, meta={"name": name, "id": el_id, "sig": a.get("sig", "")},
                 ))
                 continue
             plans.append(FieldPlan(
                 kind="file", label=label or "Resume", semantic="resume",
                 required=required, value=identity.resume, action="fill",
                 reason="resume file from profile", locator=el,
-                meta={"name": name, "id": el_id},
+                meta={"name": name, "id": el_id, "sig": a.get("sig", "")},
             ))
             continue
 
@@ -751,7 +831,7 @@ def plan_fields(
                 kind=kind, label=label, semantic=semantic, required=required,
                 value=None, action="skip",
                 reason="conditional follow-up field - not applicable to our answers",
-                locator=el, meta={"name": name, "id": el_id},
+                locator=el, meta={"name": name, "id": el_id, "sig": a.get("sig", "")},
             ))
             continue
 
@@ -781,7 +861,7 @@ def plan_fields(
                 kind="textarea", label=label, semantic="cover_letter",
                 required=required, value=value,
                 action="fill" if value else "skip", reason=reason, locator=el,
-                meta={"name": name, "id": el_id},
+                meta={"name": name, "id": el_id, "sig": a.get("sig", "")},
             ))
             continue
 
@@ -794,10 +874,29 @@ def plan_fields(
                 plans.append(FieldPlan(
                     kind=kind, label=label, semantic="question", required=required,
                     value=yes[0], action="fill", reason="phone SMS consent - recruiter texts are fine",
-                    locator=el, meta={"name": name, "id": el_id, "options": options},
+                    locator=el, meta={"name": name, "id": el_id, "sig": a.get("sig", ""), "options": options},
+                ))
+                continue
+        # Self-rating groups (Beginner / Intermediate / Advanced) - one honest
+        # level: known resume skill -> by years; anything else -> Beginner.
+        if kind == "checkbox" and " - " in label:
+            option = label.split(" - ")[-1].strip()
+            if _LEVEL_RE.search(_lower(option)):
+                level = _honest_level(label.split(" - ")[0], identity)
+                pick = _lower(option).startswith(level) or level in _lower(option)
+                plans.append(FieldPlan(
+                    kind=kind, label=label, semantic="question", required=required,
+                    value="Yes" if pick else "No", action="fill",
+                    reason=f"self-rating: honest level '{level}' from resume skills/years",
+                    locator=el, meta={"name": name, "id": el_id, "sig": a.get("sig", ""), "options": options},
                 ))
                 continue
         value, reason = resolve_value(label, semantic, identity, answers, job, options or None)
+        # <input type=number>: '14-15 LPA' is invalid there - send digits.
+        if value and str(a.get("type") or "").lower() == "number" and not re.fullmatch(r"\d+(\.\d+)?", str(value).strip()):
+            num = _numeric_answer(label, value, identity)
+            if num:
+                value, reason = num, f"number field - {reason}"
 
         # A checkbox IS one option of a group ("Gurugram", "Jaipur"). A text
         # answer like 'Gurugram, Haryana, India' must become tick / no-tick for
@@ -817,7 +916,7 @@ def plan_fields(
                 kind=kind, label=label, semantic="eeo_decline", required=required,
                 value=DECLINE_SENTINEL, action="fill",
                 reason="required EEO field - choosing the form's own 'decline to self-identify' option",
-                locator=el, meta={"name": name, "id": el_id},
+                locator=el, meta={"name": name, "id": el_id, "sig": a.get("sig", "")},
             ))
             continue
 
@@ -834,11 +933,12 @@ def plan_fields(
         plans.append(FieldPlan(
             kind=kind, label=label, semantic=semantic, required=required,
             value=value, action="fill" if value else "skip", reason=reason,
-            locator=el, meta={"name": name, "id": el_id, "options": options},
+            locator=el, meta={"name": name, "id": el_id, "sig": a.get("sig", ""), "options": options},
         ))
 
     # Kept per plan (workers are threads) so a dropdown whose list only shows
     # up after typing can still be answered from the options it reveals.
+    _plan_sr_radios(page, identity, answers, job, plans)
     _ensure_required_groups(plans, identity)
     for p in plans:
         if p.meta is not None:
@@ -847,6 +947,46 @@ def plan_fields(
 
 
 _YESNO_RE = re.compile(r"^(yes|no|y|n|true|false|agree|accept|i agree|i accept|i confirm)\b")
+_LEVEL_RE = re.compile(r"^(beginner|novice|basic|intermediate|advanced|expert|proficient|elementary)\b")
+
+
+def _honest_level(question: str, identity) -> str:
+    """'How do you rate your skills with Node.js?' -> beginner/intermediate/advanced."""
+    from . import brain
+    q = _lower(question)
+    years = 0.0
+    try:
+        years = float(getattr(identity, "years_experience", 0) or 0)
+    except (TypeError, ValueError):
+        pass
+    known = any(s and len(s) >= 2 and re.search(rf"(?<![a-z0-9]){re.escape(s)}(?![a-z0-9])", q)
+                for s in brain._skills(identity))
+    if not known:
+        m = re.search(r"\bwith ([a-z0-9.+#/ -]{2,30}?)(?:\?|$| such| and)", q)
+        known = bool(m and brain._knows(identity, m.group(1)))
+    if not known:
+        return "beginner"
+    return "advanced" if years >= 3 else "intermediate"
+
+
+def _numeric_answer(label: str, value: str, identity) -> str | None:
+    """Digits for number inputs: salary -> INR (or USD when asked), else first number."""
+    low = _lower(label)
+    if re.search(r"salary|ctc|compensation|pay|remuneration|expect", low):
+        try:
+            inr = int(str(getattr(identity, "expected_ctc_inr", "") or "0").replace(",", ""))
+        except ValueError:
+            inr = 0
+        if inr:
+            if re.search(r"usd|\$|dollar", low):
+                return str(int(round(inr / 83 / 1000.0)) * 1000)
+            if re.search(r"eur|€", low):
+                return str(int(round(inr / 90 / 1000.0)) * 1000)
+            if re.search(r"lpa|lakh", low):
+                return str(round(inr / 100000, 1)).rstrip("0").rstrip(".")
+            return str(inr)
+    m = re.search(r"\d+(\.\d+)?", str(value))
+    return m.group(0) if m else None
 
 
 def _option_matches(option: str, value: str, identity) -> bool:
@@ -866,6 +1006,96 @@ def _option_matches(option: str, value: str, identity) -> bool:
 
 
 _GROUP_PREFER = re.compile(r"\b(remote|anywhere|india|delhi|ncr|gurgaon|gurugram|noida|open to|any location|flexible|willing to relocate)\b")
+
+
+def _plan_sr_radios(page, identity, answers, job, plans) -> None:
+    """SmartRecruiters Yes/No questions are <spl-radio> web components (no
+    <input>), so the generic control walk never sees them. Plan them here."""
+    try:
+        hosts = page.locator("sr-question-field-radio")
+        n = min(hosts.count(), 40)
+    except Exception:
+        return
+    for i in range(n):
+        host = hosts.nth(i)
+        try:
+            if not host.is_visible():
+                continue
+            text = host.inner_text(timeout=3000)
+            radios = host.locator("spl-radio")
+            opts = [t for t in (_sr_radio_text(radios.nth(k)) for k in range(radios.count())) if t]
+        except Exception:
+            continue
+        lines = [ln.strip() for ln in text.splitlines() if ln.strip() and ln.strip() != "*"]
+        if not lines or not opts:
+            continue
+        question = re.sub(r"^\d+\.\s*", "", lines[0]).rstrip("* ").strip()
+        required = "*" in text[:400]
+        semantic = classify(question, "", "")
+        value, reason = resolve_value(question, semantic, identity, answers, job, opts)
+        if not value and required and semantic != "eeo" and not is_eeo(question):
+            value, reason = _auto_answer(question, identity, job, opts, reason)
+        plans.append(FieldPlan(
+            kind="srradio", label=question, semantic=semantic, required=required,
+            value=value, action="fill" if value else "skip", reason=reason,
+            locator=host, meta={"name": f"sr-radio-{i}", "id": "", "sig": "", "options": opts},
+        ))
+
+
+def _sr_radio_text(radio) -> str:
+    """An <spl-radio>'s option text lives in its shadow root's <label>."""
+    try:
+        t = radio.locator("label").first.inner_text(timeout=2000).strip()
+        if t:
+            return t
+    except Exception:
+        pass
+    try:
+        return (radio.evaluate(
+            "n => (n.shadowRoot ? n.shadowRoot.textContent : n.textContent) || ''") or "").strip()
+    except Exception:
+        return ""
+
+
+def _sr_radio_checked(radio) -> bool:
+    try:
+        return bool(radio.evaluate(
+            "n => n.checked === true || n.getAttribute('aria-checked') === 'true' || n.hasAttribute('checked')"))
+    except Exception:
+        return False
+
+
+def _set_sr_radio(host, value: str) -> bool:
+    want = _lower(value)
+    try:
+        radios = host.locator("spl-radio")
+        for k in range(radios.count()):
+            r = radios.nth(k)
+            if _lower(_sr_radio_text(r)) != want:
+                continue
+            try:
+                r.scroll_into_view_if_needed(timeout=3000)
+            except Exception:
+                pass
+            for how in ("label", "host", "force", "js"):
+                try:
+                    if how == "label":
+                        r.locator("label").first.click(timeout=4000)
+                    elif how == "host":
+                        r.click(timeout=4000)
+                    elif how == "force":
+                        r.click(timeout=4000, force=True)
+                    else:
+                        r.evaluate("n => { const i = n.shadowRoot && n.shadowRoot.querySelector('input'); (i || n).click(); }")
+                except Exception:
+                    continue
+                time.sleep(0.4)
+                if _sr_radio_checked(r):
+                    return True
+            return _sr_radio_checked(r)
+    except Exception:
+        return False
+    return False
 
 
 def _ensure_required_groups(plans, identity) -> None:
@@ -1112,6 +1342,7 @@ def _pick_option(el: Locator, value: str) -> bool:
 # rows in the DOM at 0x0 pixels. Matching those first made the clicker aim at an
 # invisible node, which is why Country* and Location (City)* were never filled.
 OPTION_SELECTORS = (
+    "spl-select-option",  # SmartRecruiters web components (lit, shadow DOM)
     "div[class*='select__option']",
     "div[class*='menu'] div[role='option']",
     "[role='listbox'] [role='option']",
@@ -1344,9 +1575,12 @@ def _best_option(options: list[Locator], value: str, query: str):
         if not probe:
             continue
         for test in (lambda t, p: t == p, lambda t, p: t.startswith(p), lambda t, p: p in t):
-            for text, opt in pairs:
-                if test(text, probe):
-                    return opt, text
+            hits = [(text, opt) for text, opt in pairs if test(text, probe)]
+            # 'Fluent' must pick '...speak fluently', not '...but not fluently'.
+            if " not " not in f" {probe} ":
+                hits.sort(key=lambda h: bool(re.search(r"\b(not|no|never|without)\b", h[0])))
+            if hits:
+                return hits[0][1], hits[0][0]
     if len(pairs) == 1:
         return pairs[0][1], pairs[0][0]
     return None, ""
@@ -1371,6 +1605,56 @@ def _dismiss_menu(page: Page, el: Locator) -> None:
             pass
 
 
+def _owned_listbox(page: Page, el: Locator) -> Locator | None:
+    """The listbox a combobox names via aria-controls/aria-owns (Workable)."""
+    for attr in ("aria-controls", "aria-owns"):
+        try:
+            lid = (el.get_attribute(attr, timeout=1500) or "").split()
+        except Exception:
+            continue
+        if lid and re.fullmatch(r"[A-Za-z][\w\-:.]*", lid[0]):
+            return page.locator(f"[id='{lid[0]}']")
+    return None
+
+
+def _is_readonly(el: Locator) -> bool:
+    try:
+        return bool(el.evaluate("e => !!e.readOnly || e.getAttribute('aria-autocomplete') === 'none'"))
+    except Exception:
+        return False
+
+
+def _pick_readonly(page: Page, el: Locator, value: str, scope: Locator | None) -> bool:
+    """Select-only combobox: typing does nothing, the list opens on click."""
+    for attempt in range(2):
+        try:
+            el.scroll_into_view_if_needed(timeout=4000)
+            baseline = set() if scope is not None else {_option_text(o) for o in _visible_options(page)}
+            (_control_root(el) or el).click(timeout=6000)
+        except Exception:
+            return False
+        options: list[Locator] = []
+        for _ in range(12):
+            page.wait_for_timeout(250)
+            options = _visible_options(page, scope) if scope is not None else [
+                o for o in _visible_options(page) if _option_text(o) not in baseline]
+            if options:
+                break
+        target, text = _best_option(options, value, value) if options else (None, "")
+        if target is None:
+            _dismiss_menu(page, el)
+            return False
+        try:
+            target.click(timeout=4000, force=attempt > 0)
+        except Exception:
+            continue
+        page.wait_for_timeout(400)
+        if _combobox_settled(el, text):
+            return True
+    _dismiss_menu(page, el)
+    return False
+
+
 def _fill_combobox(page: Page, el: Locator, value: str) -> bool:
     """React-select / autocomplete: click, type, then choose from the listbox."""
     queries = _combobox_queries(value)
@@ -1379,12 +1663,18 @@ def _fill_combobox(page: Page, el: Locator, value: str) -> bool:
     # Options must be hunted inside THIS field's own select container. A global
     # search also sees the phone widget's dial-code menu, which is how typing
     # 'India' into Country* ended up committing the dial code +91 instead.
-    scope = _select_scope(el)
+    scope = _select_scope(el) or _owned_listbox(page, el)
     if not queries:
         return False
+    if _is_readonly(el):
+        return _pick_readonly(page, el, value, scope)
     saw_options = False
+    # Hard budget: a combobox that never answers must not stall the whole form.
+    deadline = time.time() + 30
 
     for query in queries:
+        if time.time() > deadline:
+            break
         try:
             el.scroll_into_view_if_needed(timeout=4000)
             control = _control_root(el)
@@ -1418,7 +1708,8 @@ def _fill_combobox(page: Page, el: Locator, value: str) -> bool:
             if not options and scope is not None:
                 options = [o for o in _visible_options(page)
                            if _option_text(o) not in baseline]
-            if options:
+            options = [o for o in options if _option_text(o)]
+            if options or time.time() > deadline:
                 break
         if not options:
             _dismiss_menu(page, el)
@@ -1493,16 +1784,38 @@ def _set_checkbox(el: Locator, value: str) -> bool:
     want_yes = _lower(value).startswith(("y", "t", "a", "1"))
     try:
         if want_yes:
-            el.check(timeout=6000)
+            el.check(timeout=4000)
         else:
-            el.uncheck(timeout=6000)
+            el.uncheck(timeout=4000)
         return True
     except Exception:
+        pass
+    # Hidden inputs (Radix/React custom checkboxes): click the visible label or
+    # fire a DOM click, then check the state really changed.
+    def _state():
         try:
-            el.click(timeout=4000)
-            return True
+            return el.is_checked(timeout=1500)
         except Exception:
-            return False
+            return None
+
+    tries = []
+    try:
+        el_id = el.get_attribute("id", timeout=1500) or ""
+    except Exception:
+        el_id = ""
+    if el_id:
+        lab = el.page.locator(f"label[for={el_id!r}]")
+        tries.append(lambda: lab.first.click(timeout=3000))
+    tries.append(lambda: el.click(timeout=3000, force=True))
+    tries.append(lambda: el.evaluate("n => n.click()"))
+    for t in tries:
+        if _state() == want_yes:
+            return True
+        try:
+            t()
+        except Exception:
+            continue
+    return _state() == want_yes
 
 
 def _set_radio(page: Page, el: Locator, label: str, value: str) -> bool:
@@ -1577,6 +1890,13 @@ def apply_plan(page: Page, plans: list[FieldPlan]) -> dict[str, Any]:
     resume_attached = False
     skipped: list[str] = []
     audit: list[dict[str, str]] = []
+    # A form must never take forever: past this budget we stop the slow
+    # combobox rescue paths (fallbacks / option discovery) and only make
+    # single attempts, so one stubborn dropdown can't stall the whole run.
+    budget_end = time.time() + 150
+
+    def _has_time() -> bool:
+        return time.time() < budget_end
 
     for plan in plans:
         if plan.action == "skip" or not plan.value:
@@ -1588,7 +1908,8 @@ def apply_plan(page: Page, plans: list[FieldPlan]) -> dict[str, Any]:
         # detaches every locator captured during planning. Re-query first.
         # Plan locators are positional (nth=N); filling earlier comboboxes
         # shifts the DOM, so N then points at a different control.
-        if plan.kind not in ("radio", "buttons"):
+        planned_locator = plan.locator
+        if plan.kind not in ("radio", "buttons", "srradio"):
             plan.locator = _relocate(page, plan)
 
         ok = False
@@ -1605,29 +1926,55 @@ def apply_plan(page: Page, plans: list[FieldPlan]) -> dict[str, Any]:
         elif plan.kind == "select":
             ok = _pick_option(plan.locator, plan.value)
         elif plan.kind == "combobox":
-            ok = _fill_combobox(page, plan.locator, plan.value)
+            manual = _sr_manual_location(page, plan.locator, plan.value)
+            ok = False
+            # A long composed sentence never matches a dropdown entry - typing
+            # it just burns ~25s per attempt. Read the box's own list first.
+            if manual is None and len(plan.value or "") > 40 and _has_time():
+                chosen = _discover_and_choose(page, plan)
+                if chosen and _fill_combobox(page, plan.locator, chosen):
+                    ok = True
+                    plan.reason = f"{plan.reason}; picked '{chosen}' from the form's own list"
+                    plan.value = chosen
             if not ok:
+                ok = manual if manual is not None else _fill_combobox(page, plan.locator, plan.value)
+            if not ok and planned_locator is not plan.locator and _has_time():
+                try:
+                    _dismiss_menu(page, plan.locator)
+                except Exception:
+                    pass
+                if _fill_combobox(page, planned_locator, plan.value):
+                    ok = True
+                    plan.locator = planned_locator
+            # Optional dropdowns get one honest try; the slow rescue paths are
+            # only worth it for required questions.
+            rescue = plan.required and _has_time()
+            # Read the form's own list BEFORE the catch-all 'Other' fallbacks:
+            # Bosch offers 'Gurugram'/'B.E/B.Tech', and 'Other' would be wrong.
+            if not ok and rescue:
+                chosen = _discover_and_choose(page, plan)
+                if chosen and _fill_combobox(page, plan.locator, chosen):
+                    ok = True
+                    plan.reason = f"{plan.reason}; picked '{chosen}' from the form's own list"
+                    plan.value = chosen
+            if not ok and plan.required and _has_time():
                 for alt in _combobox_fallbacks(plan):
                     if _fill_combobox(page, plan.locator, alt):
                         ok = True
                         plan.reason = f"{plan.reason}; list lacked '{plan.value}', chose '{alt}'"
                         plan.value = alt
                         break
-            if not ok:
-                chosen = _discover_and_choose(page, plan)
-                if chosen and _fill_combobox(page, plan.locator, chosen):
-                    ok = True
-                    plan.reason = f"{plan.reason}; picked '{chosen}' from the form's own list"
-                    plan.value = chosen
         elif plan.kind == "checkbox":
             ok = _set_checkbox(plan.locator, plan.value)
         elif plan.kind == "buttons":
             ok = _click_choice_button(plan.locator, plan.value)
+        elif plan.kind == "srradio":
+            ok = _set_sr_radio(plan.locator, plan.value)
         elif plan.kind == "radio":
             ok = _set_radio(page, plan.locator, plan.label, plan.value)
         else:
             ok = _fill_text(plan.locator, plan.value)
-            if not ok:
+            if not ok and _has_time():
                 ok = _fill_combobox(page, plan.locator, plan.value)
 
         if ok:
@@ -1654,7 +2001,7 @@ def apply_plan(page: Page, plans: list[FieldPlan]) -> dict[str, Any]:
     for plan in plans:
         if plan.action == "skip" or not plan.value or plan.kind == "file":
             continue
-        if plan.kind in ("checkbox", "radio", "buttons") or plan.value == DECLINE_SENTINEL:
+        if plan.kind in ("checkbox", "radio", "buttons", "srradio") or plan.value == DECLINE_SENTINEL:
             continue
         # React remounts these forms during validation, which detaches the
         # locator we captured while planning - so always re-query by id first.
@@ -1665,7 +2012,11 @@ def apply_plan(page: Page, plans: list[FieldPlan]) -> dict[str, Any]:
         if plan.semantic == "phone":
             _fill_phone(page, el, plan.value)
         elif plan.kind == "combobox":
-            _fill_combobox(page, el, plan.value)
+            if not _has_time() and not plan.required:
+                unverified.append(plan.label or plan.semantic)
+                continue
+            if _sr_manual_location(page, el, plan.value) is None:
+                _fill_combobox(page, el, plan.value)
         else:
             _fill_text(el, plan.value)
         el = _relocate(page, plan)
@@ -1731,7 +2082,7 @@ def _discover_options(page: Page, el: Locator, plan: FieldPlan) -> list[str]:
     for '14-15 LPA'; typing '1' or 'INR' reveals the real brackets. Collect the
     texts the form itself offers so the answer can be chosen from them.
     """
-    scope = _select_scope(el)
+    scope = _select_scope(el) or _owned_listbox(page, el)
     words = [w for w in re.split(r"[^A-Za-z0-9]+", plan.value or "") if len(w) >= 2][:3]
     probes = [""] + words + list(_DISCOVERY_PROBES)
     found: list[str] = []
@@ -1770,6 +2121,9 @@ def _discover_options(page: Page, el: Locator, plan: FieldPlan) -> list[str]:
         _dismiss_menu(page, el)
         if len(found) >= 25:
             break
+        # A plain dropdown shows its whole list on click - no need to type.
+        if probe == "" and len(found) >= 2:
+            break
     try:
         el.fill("", timeout=2000)
     except Exception:
@@ -1803,6 +2157,14 @@ def _discover_and_choose(page: Page, plan: FieldPlan) -> str | None:
     low = _lower(plan.label)
     place = plan.semantic in ("school", "location") or any(
         k in low for k in ("location", "city", "country", "based", "school", "university", "college"))
+    if not value and place:
+        value = _home_option(opts, identity)
+    if any(k in low for k in ("qualification", "degree", "education")):
+        # Both candidates hold a B.Tech - prefer the form's matching entry
+        # over whatever generic pick ('Others') the brain fell back to.
+        deg = _degree_option(opts)
+        if deg and (not value or not _degree_option([value])):
+            value = deg
     if not value and plan.required and not place:
         try:
             value, _ = brain.auto_decide(plan.label, identity, job, opts)
@@ -1815,6 +2177,33 @@ def _discover_and_choose(page: Page, plan: FieldPlan) -> str | None:
     return value
 
 
+_DEGREE_PREF = ("b.tech", "btech", "b. tech", "b.e", "bachelor of technology",
+                "bachelor of engineering", "bachelor", "graduate", "graduation", "ug")
+
+
+def _degree_option(opts: list[str]) -> str | None:
+    """The option naming a B.Tech / bachelor's degree (the candidates' real one)."""
+    for want in _DEGREE_PREF:
+        for o in opts:
+            ol = o.lower()
+            if want in ol and "post" not in ol and "master" not in ol:
+                return o
+    return None
+
+
+_HOME_PREF = ("gurugram", "gurgaon", "delhi", "ncr", "noida", "pan india", "any location",
+              "anywhere", "remote", "india")
+
+
+def _home_option(opts: list[str], identity) -> str | None:
+    """For a place dropdown: the option nearest the candidate's real home."""
+    for want in _HOME_PREF:
+        for o in opts:
+            if want in o.lower():
+                return o
+    return None
+
+
 def _relocate(page: Page, plan: FieldPlan) -> Locator:
     """Fresh locator for a planned field, by id when the ATS gave us one.
 
@@ -1822,10 +2211,36 @@ def _relocate(page: Page, plan: FieldPlan) -> Locator:
     the locator captured during planning: reads then return '' and re-fills
     land on a dead node. Re-querying by id is what makes the repair pass real.
     """
+    sig = (plan.meta or {}).get("sig") or ""
+    if sig:
+        # SmartRecruiters re-renders the form after early fields are typed and
+        # renumbers every id, but keeps its data-sr-id hooks stable.
+        try:
+            for attr in ("data-sr-id", "data-ui", "data-qa"):
+                fresh = page.locator(f"[{attr}={sig!r}]")
+                if fresh.count() == 1:
+                    return fresh
+            # After the resume is parsed SmartRecruiters swaps its location
+            # search box for a country picker plus a plain city input.
+            swap = _SR_SWAPS.get(sig)
+            if swap:
+                fresh = page.locator(f"[data-sr-id={swap!r}]")
+                if fresh.count() == 1:
+                    return fresh
+        except Exception:
+            pass
     el_id = (plan.meta or {}).get("id") or ""
     if el_id:
         try:
             fresh = page.locator(f"#{_css_escape(el_id)}")
+            if fresh.count() == 1:
+                return fresh
+            # SmartRecruiters' web components repeat the id on their host
+            # elements (spl-phone-field > spl-input > input all share it), so
+            # narrow to the real form control instead of the positional
+            # planning locator, which drifts when the DOM grows.
+            esc = _css_escape(el_id)
+            fresh = page.locator(f"input#{esc}, textarea#{esc}, select#{esc}")
             if fresh.count() == 1:
                 return fresh
         except Exception:
@@ -1839,6 +2254,30 @@ def _relocate(page: Page, plan: FieldPlan) -> Locator:
         except Exception:
             pass
     return plan.locator
+
+
+_SR_SWAPS = {"location-autocomplete-search-search-input": "location-autocomplete-city-input"}
+
+
+def _sr_manual_location(page: Page, el: Locator, value: str) -> bool | None:
+    """Fill SmartRecruiters' manual location layout (country picker + city
+    text box). Returns None when `el` is not that layout."""
+    try:
+        if el.get_attribute("data-sr-id") != "location-autocomplete-city-input":
+            return None
+    except Exception:
+        return None
+    parts = [x.strip() for x in value.split(",") if x.strip()]
+    city = parts[0] if parts else value
+    country = parts[-1] if len(parts) > 1 else ""
+    if country:
+        try:
+            box = page.locator("[data-sr-id='location-autocomplete-country-search-input']")
+            if box.count() == 1 and box.input_value().strip().lower() != country.lower():
+                _fill_combobox(page, box, country)
+        except Exception:
+            pass
+    return _fill_text(el, city)
 
 
 def _css_escape(value: str) -> str:
@@ -1947,10 +2386,20 @@ def missing_required(plans: list[FieldPlan], outcome: dict[str, Any] | None = No
     fill and failed on (Turing's Country*/Location*) slipped straight past the
     applier's guard. So hard failures from apply_plan count as missing too.
     """
+    # A checkbox group (same name) needs ONE tick, not every member ticked.
+    ticked = {
+        (p.meta or {}).get("name") for p in plans
+        if p.kind == "checkbox" and p.action == "fill" and p.value
+        and _lower(str(p.value)).startswith(("y", "t", "a", "1")) and (p.meta or {}).get("name")
+    }
+
+    def _group_ok(p) -> bool:
+        return p.kind == "checkbox" and (p.meta or {}).get("name") in ticked
+
     missing = [
         p.label or p.semantic
         for p in plans
-        if p.required and p.action == "skip" and not is_eeo(p.label)
+        if p.required and p.action == "skip" and not is_eeo(p.label) and not _group_ok(p)
     ]
     if outcome:
         labels = {p.label: p for p in plans}
@@ -1965,7 +2414,7 @@ def missing_required(plans: list[FieldPlan], outcome: dict[str, Any] | None = No
             if final.get(entry.get("label", "")) in ("repaired", "filled"):
                 continue
             plan = labels.get(entry.get("label", ""))
-            if plan and plan.required and not is_eeo(plan.label):
+            if plan and plan.required and not is_eeo(plan.label) and not _group_ok(plan):
                 missing.append(plan.label or plan.semantic)
     # Preserve order, drop duplicates (Country* appears twice: real + decoy).
     return list(dict.fromkeys(missing))

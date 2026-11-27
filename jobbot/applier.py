@@ -10,6 +10,8 @@ Rules this module enforces:
 
 from __future__ import annotations
 
+import re
+
 import time
 
 from . import browser, config, forms, store
@@ -63,6 +65,10 @@ CLOSED_PHRASES = (
     "job posting is not available",
     "position is no longer available",
     "page not found",
+    "this job has expired",
+    "job has expired",
+    "job is no longer available",
+    "this job is no longer open",
 )
 
 VALIDATION_HINTS = (
@@ -78,7 +84,8 @@ VALIDATION_HINTS = (
 # Only these ATS platforms expose a real, fillable application form that this
 # bot understands. Aggregator listings (RemoteOK, Arbeitnow) just link out to
 # arbitrary third-party pages or email addresses, so they are never auto-applied.
-APPLIABLE_SOURCES = ("greenhouse", "lever", "ashby")
+# Workable is excluded: its Cloudflare Turnstile blocks automated submits.
+APPLIABLE_SOURCES = ("greenhouse", "lever", "ashby", "smartrecruiters", "recruitee")
 
 
 def is_appliable(job) -> bool:
@@ -94,8 +101,16 @@ SUBMIT_TEXTS = (
 )
 
 
+_LEGEND_RE = re.compile(
+    r"(\*\s*required fields?|required fields? (are )?marked( with)?( an)?( asterisk)?|"
+    r"(indicates|denotes) (a )?required( field)?|fields? marked with (an )?\* (are|is) required)"
+)
+
+
 def _has_phrase(text: str, phrases) -> str:
     low = text.lower()
+    if phrases is VALIDATION_HINTS:
+        low = _LEGEND_RE.sub(" ", low)
     for p in phrases:
         if p in low:
             return p
@@ -171,6 +186,33 @@ def _find_submit(page):
     return None
 
 
+NEXT_TEXTS = ("next", "continue", "save and continue", "save & continue", "proceed", "next step")
+
+
+def _find_next(page):
+    """A 'Next'/'Continue' button of a multi-step form (SmartRecruiters, ...)."""
+    for text in NEXT_TEXTS:
+        pattern = re.compile(rf"^\s*{re.escape(text)}\s*(step)?\s*[>»→]?\s*$", re.I)
+        try:
+            loc = page.get_by_role("button", name=pattern)
+            for i in range(min(loc.count(), 3)):
+                btn = loc.nth(i)
+                if btn.is_visible() and btn.is_enabled():
+                    return btn
+        except Exception:
+            continue
+    try:
+        loc = page.locator("spl-button, button, [role=button]").filter(
+            has_text=re.compile(r"^\s*(next|continue|save and continue|proceed)\s*$", re.I))
+        for i in range(min(loc.count(), 4)):
+            btn = loc.nth(i)
+            if btn.is_visible():
+                return btn
+    except Exception:
+        pass
+    return None
+
+
 def _wait_for_outcome(page, timeout_s: float = 20.0) -> str:
     """Poll the page after submit until it confirms, errors, or we give up."""
     start_url = page.url
@@ -217,6 +259,61 @@ def _captcha_second_chance(page, container, after: str) -> str:
         return _page_text(page)
     return _wait_for_outcome(page, timeout_s=30.0)
 
+_TURNSTILE_SEL = "[id^='turnstile-container'], [class*='cf-turnstile'], [class*='turnstile-container']"
+
+
+def _turnstile_box(page):
+    """Bounding box of the Turnstile widget: its Cloudflare iframe if rendered, else the container."""
+    for f in page.frames:
+        if "challenges.cloudflare.com" in (f.url or ""):
+            try:
+                el = f.frame_element()
+                b = el.bounding_box()
+                if el.is_visible() and b and b["width"] >= 40 and b["height"] >= 30:
+                    return b
+            except Exception:
+                pass
+    try:
+        loc = page.locator(_TURNSTILE_SEL)
+        for i in range(min(loc.count(), 5)):
+            box = loc.nth(i)
+            if box.is_visible():
+                box.scroll_into_view_if_needed(timeout=4000)
+                b = box.bounding_box()
+                if b and b["width"] >= 40 and b["height"] >= 30:
+                    return b
+    except Exception:
+        pass
+    return None
+
+
+def _click_turnstile(page) -> bool:
+    """Tick a visible Cloudflare Turnstile 'Verify you are human' box like a person.
+
+    Retries up to 3 times; returns True once the page confirms (or after clicking)."""
+    clicked = False
+    for attempt in range(3):
+        b = _turnstile_box(page)
+        if not b:
+            return clicked
+        time.sleep(1.0 + attempt)
+        b = _turnstile_box(page) or b
+        try:
+            page.mouse.move(b["x"] + 200, b["y"] + 120, steps=12)
+            time.sleep(0.4)
+            x, y = b["x"] + 30, b["y"] + b["height"] / 2
+            page.mouse.move(x, y, steps=18)
+            time.sleep(0.3)
+            page.mouse.click(x, y)
+            clicked = True
+        except Exception:
+            continue
+        for _ in range(8):
+            time.sleep(1.5)
+            if _has_phrase(_page_text(page), CONFIRM_PHRASES):
+                return True
+    return clicked
+
 
 def apply_to_job(
     session: browser.BrowserSession,
@@ -260,6 +357,21 @@ def apply_to_job(
             return build(ERROR, f"could not load {url}", screenshot=browser.shoot(page, f"loadfail-{job.company_token}"))
 
         browser.human_pause(0.6, 1.4)
+        if job.source == "smartrecruiters" and "oneclick-ui" not in page.url:
+            # The public job page only links to the real one-click form.
+            href = ""
+            try:
+                link = page.locator("a[href*='oneclick-ui']").first
+                if link.count():
+                    href = link.get_attribute("href", timeout=3000) or ""
+            except Exception:
+                href = ""
+            if href:
+                if href.startswith("/"):
+                    href = "https://jobs.smartrecruiters.com" + href
+                if not browser.goto(page, href):
+                    return build(ERROR, f"could not load {href}", screenshot=browser.shoot(page, f"loadfail-{job.company_token}"))
+                browser.human_pause(0.6, 1.4)
         text = _page_text(page)
 
         hit = _has_phrase(text, CLOSED_PHRASES)
@@ -323,6 +435,44 @@ def apply_to_job(
                 screenshot=browser.shoot(page, f"missing-{job.company_token}"),
             )
 
+        # Multi-step forms: page 1 has 'Next' instead of 'Submit'. Walk the steps,
+        # filling each one, until the real submit button shows up.
+        for step in range(2, 6):
+            if _find_submit(container) is not None:
+                break
+            nxt = _find_next(container)
+            if nxt is None:
+                break
+            try:
+                nxt.scroll_into_view_if_needed(timeout=4000)
+                nxt.click(timeout=8000)
+            except Exception:
+                break
+            browser.human_pause(2.0, 3.0)
+            try:
+                page.wait_for_load_state("domcontentloaded", timeout=8000)
+            except Exception:
+                pass
+            step_text = _page_text(page)
+            if _has_phrase(step_text, CONFIRM_PHRASES):
+                break
+            container, _ = forms.form_container(page)
+            step_plans = forms.plan_fields(container, identity, job.title, job.company, job)
+            step_plans = [p for p in step_plans if p.kind != "file"]
+            if step_plans:
+                step_out = forms.apply_plan(container, step_plans)
+                filled += step_out["filled"]
+                skipped += step_out["skipped"]
+                browser.human_pause(0.8, 1.4)
+                step_missing = forms.missing_required(step_plans, step_out)
+                if step_missing:
+                    return build(
+                        FAILED_VALIDATION,
+                        f"step {step}: required questions we have no resume fact or confirmed answer for: {', '.join(step_missing[:5])}",
+                        fields_filled=filled, fields_skipped=skipped, resume_attached=resume_ok,
+                        screenshot=browser.shoot(page, f"missing-{job.company_token}"),
+                    )
+
         blocked, why = forms.captcha_present(page)
         pre_shot = browser.shoot(page, f"filled-{job.company_token}-{job.job_id}")
 
@@ -356,6 +506,10 @@ def apply_to_job(
             )
 
         after = _wait_for_outcome(page)
+        if not _has_phrase(after, CONFIRM_PHRASES) and _click_turnstile(page):
+            # Cloudflare Turnstile (Workable) needs its checkbox ticked; once it
+            # passes the queued submit goes through on its own.
+            after = _wait_for_outcome(page, timeout_s=25.0)
         if not _has_phrase(after, CONFIRM_PHRASES) and not _has_phrase(after, VALIDATION_HINTS):
             # Form still sitting there with no error: the first click was swallowed.
             # Safe to click again - a successful submit replaces the form, so a

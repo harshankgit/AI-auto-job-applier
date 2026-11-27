@@ -203,7 +203,36 @@ def goto(page: Page, url: str, wait: str = "domcontentloaded") -> bool:
     except Exception:
         pass
     human_pause(0.6, 1.2)
+    dismiss_cookies(page)
     return True
+
+
+_COOKIE_BUTTONS = (
+    "[data-ui='cookie-consent-decline']",
+    "#onetrust-reject-all-handler",
+    "button:has-text('Decline all')",
+    "button:has-text('Reject all')",
+    "button:has-text('Reject All')",
+    "[data-ui='cookie-consent-accept']",
+    "#onetrust-accept-btn-handler",
+    "button:has-text('Accept all')",
+    "button:has-text('Accept All')",
+    "button:has-text('Accept cookies')",
+)
+
+
+def dismiss_cookies(page: Page) -> bool:
+    """Cookie banners sit over the form and swallow every click; close them."""
+    for sel in _COOKIE_BUTTONS:
+        try:
+            btn = page.locator(sel).first
+            if btn.count() and btn.is_visible():
+                btn.click(timeout=3000)
+                page.wait_for_timeout(400)
+                return True
+        except Exception:
+            continue
+    return False
 
 
 def shoot(page: Page, name: str) -> str:

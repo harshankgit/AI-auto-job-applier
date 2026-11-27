@@ -151,11 +151,161 @@ def fetch_ashby(token: str, name: str, is_ai: bool) -> list[Job]:
     return jobs
 
 
+# --------------------------------------------------------------------- workable
+
+def fetch_workable(token: str, name: str, is_ai: bool) -> list[Job]:
+    url = f"https://apply.workable.com/api/v1/widget/accounts/{token}?details=true"
+    with httpx.Client(timeout=TIMEOUT, headers=HEADERS, follow_redirects=True) as c:
+        r = c.get(url)
+        r.raise_for_status()
+        payload = r.json()
+
+    company = payload.get("name") or name
+    jobs: list[Job] = []
+    for j in payload.get("jobs", []) or []:
+        code = str(j.get("shortcode", "") or "")
+        if not code:
+            continue
+        locs = j.get("locations") or []
+        parts = [j.get("city", ""), j.get("state", ""), j.get("country", "")]
+        if locs:
+            parts = [locs[0].get("city", ""), locs[0].get("region", ""), locs[0].get("country", "")]
+        loc = ", ".join(p for p in parts if p)
+        if j.get("telecommuting"):
+            loc = f"{loc} (Remote)" if loc else "Remote"
+        title = j.get("title", "") or ""
+        job_url = f"https://apply.workable.com/{token}/j/{code}/"
+        jobs.append(
+            Job(
+                source="workable",
+                company=company,
+                company_token=token,
+                job_id=code,
+                title=title,
+                location=loc,
+                url=job_url,
+                apply_url=f"https://apply.workable.com/{token}/j/{code}/apply/",
+                description=_text(j.get("description")),
+                is_remote=bool(j.get("telecommuting")) or _remote(loc, title),
+                department=j.get("department", "") or "",
+                employment_type=j.get("employment_type", "") or "",
+                posted_at=j.get("published_on", "") or "",
+                company_is_ai=is_ai,
+            )
+        )
+    return jobs
+
+
+# -------------------------------------------------------------- smartrecruiters
+
+def fetch_smartrecruiters(token: str, name: str, is_ai: bool) -> list[Job]:
+    """India postings only (country=in) - the global lists are huge."""
+    base = f"https://api.smartrecruiters.com/v1/companies/{token}/postings"
+    rows: list[dict[str, Any]] = []
+    with httpx.Client(timeout=TIMEOUT, headers=HEADERS, follow_redirects=True) as c:
+        offset = 0
+        while offset < 400:
+            r = c.get(base, params={"limit": 100, "offset": offset, "country": "in"})
+            r.raise_for_status()
+            payload = r.json()
+            content = payload.get("content") or []
+            rows.extend(content)
+            offset += 100
+            if len(content) < 100 or offset >= int(payload.get("totalFound") or 0):
+                break
+
+    jobs: list[Job] = []
+    for j in rows:
+        jid = str(j.get("id", "") or "")
+        if not jid:
+            continue
+        l = j.get("location") or {}
+        loc = l.get("fullLocation") or ", ".join(
+            p for p in (l.get("city"), l.get("region"), (l.get("country") or "").upper()) if p
+        )
+        remote = bool(l.get("remote"))
+        title = j.get("name", "") or ""
+        comp = (j.get("company") or {}).get("name") or name
+        job_url = f"https://jobs.smartrecruiters.com/{token}/{jid}"
+        labels = [
+            (j.get(k) or {}).get("label", "")
+            for k in ("function", "experienceLevel", "industry", "typeOfEmployment")
+        ]
+        jobs.append(
+            Job(
+                source="smartrecruiters",
+                company=comp,
+                company_token=token,
+                job_id=jid,
+                title=title,
+                location=loc + (" (Remote)" if remote and "remote" not in loc.lower() else ""),
+                url=job_url,
+                apply_url=job_url,
+                description=" | ".join(x for x in labels if x),
+                is_remote=remote or _remote(loc, title),
+                department=(j.get("department") or {}).get("label", "") or "",
+                employment_type=(j.get("typeOfEmployment") or {}).get("label", "") or "",
+                posted_at=j.get("releasedDate", "") or "",
+                company_is_ai=is_ai,
+            )
+        )
+    return jobs
+
+
+# -------------------------------------------------------------------- recruitee
+
+def fetch_recruitee(token: str, name: str, is_ai: bool) -> list[Job]:
+    url = f"https://{token}.recruitee.com/api/offers/"
+    with httpx.Client(timeout=TIMEOUT, headers=HEADERS, follow_redirects=True) as c:
+        r = c.get(url)
+        r.raise_for_status()
+        payload = r.json()
+
+    jobs: list[Job] = []
+    for j in payload.get("offers", []) or []:
+        if j.get("status") not in (None, "published"):
+            continue
+        slug = j.get("slug", "") or ""
+        loc = j.get("location", "") or ", ".join(
+            x.get("name", "") for x in (j.get("locations") or []) if x.get("name")
+        )
+        remote = bool(j.get("remote"))
+        title = j.get("title", "") or ""
+        job_url = j.get("careers_url") or f"https://{token}.recruitee.com/o/{slug}"
+        apply_url = j.get("careers_apply_url") or f"{job_url.rstrip('/')}/c/new"
+        jobs.append(
+            Job(
+                source="recruitee",
+                company=j.get("company_name") or name,
+                company_token=token,
+                job_id=str(j.get("id", "") or slug),
+                title=title,
+                location=loc + (" (Remote)" if remote and "remote" not in loc.lower() else ""),
+                url=job_url,
+                apply_url=apply_url,
+                description=_text((j.get("description") or "") + " " + (j.get("requirements") or "")),
+                is_remote=remote or _remote(loc, title),
+                department=j.get("department", "") or "",
+                employment_type=j.get("employment_type_code", "") or "",
+                posted_at=j.get("published_at", "") or "",
+                company_is_ai=is_ai,
+            )
+        )
+    return jobs
+
+
 FETCHERS = {
     "greenhouse": fetch_greenhouse,
     "lever": fetch_lever,
     "ashby": fetch_ashby,
+    "workable": fetch_workable,
+    "smartrecruiters": fetch_smartrecruiters,
+    "recruitee": fetch_recruitee,
 }
+
+# Workable is fetchable but its Cloudflare Turnstile rejects automated submits,
+# so it is not part of the default discovery set (pass it explicitly to list jobs).
+ALL_SOURCES = tuple(k for k in FETCHERS if k != "workable")
 
 
 # ------------------------------------------------------------------ aggregators
@@ -222,7 +372,7 @@ def fetch_remoteok() -> list[Job]:
 # ------------------------------------------------------------------- orchestrator
 
 def discover(
-    sources: Iterable[str] = ("greenhouse", "lever", "ashby"),
+    sources: Iterable[str] = ALL_SOURCES,
     include_aggregators: bool = True,
     workers: int = 64,
     progress=None,

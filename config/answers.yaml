@@ -12,6 +12,13 @@ defaults:
 
 rules:
   - {match: ["primary skillset", "primary skill set", "primary stack", "primary tech stack", "core skillset"], answer: "Fullstack"}
+  - {match: ["associates from", "connected with any", "associated with", "worked with us earlier", "applied to us earlier", "employed with us earlier"], answer: "No"}
+  - {match: ["other offer", "offer in hand", "offers in hand", "holding any offer", "holding an offer"], answer: "No"}
+  - {match: ["pan card", "pan number", "aadhaar", "aadhar", "passport number", "national id"], answer: "Will share during onboarding"}
+  - {match: ["consent to", "automated solution", "automated decision"], answer: "Yes"}
+  - {match: ["your qualification", "qualification?", "qualification"], answer: "ANSWER_EDUCATION"}
+  - {match: ["your work experience", "work experience?", "relevant experience"], answer: "ANSWER_BRAIN"}
+  - {match: ["english level", "english proficiency", "level of english", "english language proficiency", "proficiency in english"], answer: "Fluent"}
   - {match: ["working model", "work model", "residing in bangalore", "willing to work in a hybrid"], answer: "Residing outside Bangalore but willing to relocate"}
   - {match: ["whatsapp", "text message", "sms updates"], answer: "No"}
   - {match: ["cuba, iran", "north korea", "sanctioned countr"], answer: "No"}
