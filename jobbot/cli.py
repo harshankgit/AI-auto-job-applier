@@ -188,8 +188,14 @@ def cmd_apply(args) -> int:
     jobs_lock = threading.Lock()
 
     def _fresh_jobs(max_age: float):
-        with jobs_lock:
-            if time.time() - jobs_state["at"] > max_age:
+        if time.time() - jobs_state["at"] <= max_age and jobs_state["jobs"]:
+            return jobs_state["jobs"]
+        # only ONE thread re-discovers; the others keep applying from the current
+        # list instead of queueing behind the (CPU-heavy) discovery
+        if not jobs_lock.acquire(blocking=not jobs_state["jobs"]):
+            return jobs_state["jobs"]
+        try:
+            if time.time() - jobs_state["at"] > max_age or not jobs_state["jobs"]:
                 log("[target] re-discovering job boards for new postings...")
                 try:
                     new_jobs, new_stats = _discover(args)
@@ -204,6 +210,8 @@ def cmd_apply(args) -> int:
                     jobs_state["at"] = time.time() - max(0.0, max_age - 120)
                     log(f"[target] re-discovery failed: {exc}")
             return jobs_state["jobs"]
+        finally:
+            jobs_lock.release()
 
     def _ordered(ranked, skip_companies):
         """One job per company first (best company first, Gurugram/NCR then India
@@ -247,6 +255,7 @@ def cmd_apply(args) -> int:
         min_score = float(args.min_score)
         floor = float(getattr(args, "min_score_floor", 40.0))
         idle_rounds = 0
+        waited = False
         rnd = 0
 
         def reached():
@@ -254,7 +263,10 @@ def cmd_apply(args) -> int:
 
         while not reached():
             rnd += 1
-            pool = _fresh_jobs(max_age=1800 if idle_rounds == 0 else 0)
+            # widening the score reuses the same postings; only look for NEW postings
+            # every 30 min, or 10 min after the pool was fully exhausted
+            pool = _fresh_jobs(max_age=600 if waited else 1800)
+            waited = False
             if not pool:
                 log(f"[{tag}] no job postings reachable (internet down?) - retrying in 60s")
                 for _ in range(6):
@@ -301,6 +313,7 @@ def cmd_apply(args) -> int:
                 log(f"[{tag}] pool exhausted - widening match to min score {min_score:g}")
                 continue
             log(f"[{tag}] every matching job tried; waiting 10 min for new postings...")
+            waited = True
             for _ in range(60):
                 if reached():
                     break
