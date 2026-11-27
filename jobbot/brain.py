@@ -430,6 +430,14 @@ def _authorization(low, identity, job, options, target, why):
     else:
         value, verdict = _no(options), "No"
         reason = f"brain: candidate has no work authorisation in {target} ({why})"
+    if value is None and verdict == "Yes" and options:
+        for opt in options:
+            o = _low(opt)
+            if any(w in o for w in ("citizen", "right to work", "authori", "permanent resident", "eligible")) \
+                    and not o.startswith("no") and not any(w in o for w in (
+                        "not ", "don't", "sponsor", "visa", "require", "need")):
+                value = opt
+                break
     if value is None:
         return None, f"brain: answer is {verdict} but the form offers no such option"
     return value, reason
@@ -880,6 +888,9 @@ def _relocation_remote(low, identity, job, options, target, why):
         here = any(w in place for w in ncr) or (identity.city and _low(identity.city) in place)
         if not here and place.strip(" .,") == "india" and "india" in home:
             here = True
+        if not here and any(w in place for w in ("country where", "the country", "same country",
+                                                 "location where", "city where")):
+            here = target in (None, "India") and "india" in home
         value = _yes(options) if here else _no(options)
         if not options:
             value = "Yes" if here else f"No - based in {identity.location}, open to relocating"
@@ -1122,6 +1133,7 @@ _NEGATIVE_NEEDLES = (
     "restrictive covenant", "employment agreement", "any restrictions",
     "criminal", "convicted", "been terminated", "been dismissed",
     "related to any", "family member", "do you have any agreement",
+    "family relationship", "personal or family", "relationships with employees",
     "currently employed by", "conflict of interest",
     "receive alerts", "similar jobs", "marketing email", "talent community",
     "newsletter", "stay up to date", "stay in touch",
