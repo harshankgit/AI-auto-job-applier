@@ -1,6 +1,6 @@
 # AI Job Application Report
 
-**Report updated (UTC):** 2026-11-27 11:42:37
+**Report updated (UTC):** 2026-11-27 12:12:37
 **History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-27 10:47:22
 **Companies applied to (all candidates):** 232
 **Applications submitted (page-confirmed):** 237
