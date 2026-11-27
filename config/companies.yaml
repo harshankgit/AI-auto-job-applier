@@ -7484,37 +7484,8 @@ smartrecruiters:
   name: "Ubisoft"
   ai: false
 
-recruitee:
-- token: "avantarte"
-  name: "Avant Arte"
-  ai: false
-- token: "causalens"
-  name: "causaLens"
-  ai: false
-- token: "epilot"
-  name: "epilot GmbH"
-  ai: false
-- token: "grid"
-  name: "GRID eSports GmbH"
-  ai: false
-- token: "holepunch"
-  name: "Holepunch"
-  ai: false
-- token: "instruqt"
-  name: "Instruqt"
-  ai: false
-- token: "miaplaza"
-  name: "Miaplaza"
-  ai: false
-- token: "prenosis"
-  name: "Prenosis Inc."
-  ai: false
-- token: "talk360"
-  name: "Talk360"
-  ai: false
-- token: "tether"
-  name: "Tether Operations Limited"
-  ai: false
-- token: "up42gmbh"
-  name: "UP42 GmbH"
-  ai: false
+# Recruitee boards are only kept when they post India jobs. The 11 earlier
+# boards (Tether, GRID eSports, Holepunch, epilot, ...) were worldwide/EU
+# remote only, so they were removed; jobbot/boards.py re-adds Recruitee
+# boards automatically once they list an India-located role.
+recruitee: []

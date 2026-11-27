@@ -123,6 +123,9 @@ _TITLE_FOREIGN = (
 )
 
 
+_GENDER_MARKER_RE = re.compile(r"\(\s*[mwfdx]\s*/\s*[mwfdx]\s*(?:/\s*(?:[mwfdx]|div)\s*)?\)", re.I)
+
+
 def classify_geo(job) -> tuple[str, str]:
     """Classify a posting's location for an India-based applicant.
 
@@ -147,6 +150,10 @@ def classify_geo(job) -> tuple[str, str]:
     title_tie = _has_word((job.title or "").lower(), _TITLE_FOREIGN)
     if title_tie:
         return GEO_REMOTE_FOREIGN, f"title ties the role to '{title_tie}' ({job.title})"
+    # '(m/w/d)', '(m/f/x)' etc. are German/Austrian legal gender markers -
+    # the role is in the DACH region even when the location just says 'Remote'.
+    if _GENDER_MARKER_RE.search(job.title or ""):
+        return GEO_REMOTE_FOREIGN, f"title carries a DACH gender marker ({job.title})"
 
     if remote_word:
         if _has(loc, GLOBAL_WORDS):
