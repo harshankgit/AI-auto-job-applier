@@ -1,18 +1,18 @@
 # Why applications failed
 
-_Generated 2026-11-27 13:31:16_
+_Generated 2026-11-27 14:01:38_
 
 ## Harshank
 
-Submitted: **139** (130 companies) | Failed: **914**
+Submitted: **143** (134 companies) | Failed: **949**
 
 | Reason | Count |
 |---|---|
-| Needs an answer from you | 534 |
-| Captcha | 160 |
-| Form rejected | 131 |
-| Page error | 35 |
-| No confirmation / OTP | 30 |
+| Needs an answer from you | 542 |
+| Captcha | 172 |
+| Form rejected | 142 |
+| Page error | 37 |
+| No confirmation / OTP | 32 |
 | Job closed | 24 |
 
 ### Questions waiting for your answer
@@ -32,13 +32,13 @@ Submitted: **139** (130 companies) | Failed: **914**
 - (4x) Cover Letter - Reteam
 - (4x) Do you have a minimum of 3 years of experience as a Software Engineer? - Alan -> answered (saved privately)
 - (4x) Do you opt-in to receive WhatsApp messages from Stripe Recruiting?* - Stripe -> answered (saved privately)
+- (4x) Please check any of the boxes that describe your skill set: - Experience building AI agents - Crux
+- (4x) Please check any of the boxes that describe your skill set: - Experience building engineering teams from 0 to 1 - Crux
+- (4x) Please check any of the boxes that describe your skill set: - Familiarity with modern AI tooling & frameworks (LangChain, LlamaIndex, etc.) - Crux
 - (4x) What is your most recent bonus pay/unvested stock option? (in INR)* - IMC Trading
 - (4x) What is your non - compete period? (in months)* - IMC Trading -> answered (saved privately)
 - (4x) Чи знав/-ла про Universe до подачі на цю роль? - Universe
 - (3x) If so, what type of visa are you currently on and when does it expire? - Kong
-- (3x) Please check any of the boxes that describe your skill set: - Experience building AI agents - Crux
-- (3x) Please check any of the boxes that describe your skill set: - Experience building engineering teams from 0 to 1 - Crux
-- (3x) Please check any of the boxes that describe your skill set: - Familiarity with modern AI tooling & frameworks (LangChain, LlamaIndex, etc.) - Crux
 - (3x) Total & Relevant Experience in Software Engineering? ✱ - Allata -> answered (saved privately)
 - (3x) What color is the sky - Blue - Protegrity
 - (3x) What color is the sky - Orange - Protegrity
@@ -60,16 +60,16 @@ Submitted: **139** (130 companies) | Failed: **914**
 
 ## Divya
 
-Submitted: **121** (114 companies) | Failed: **751**
+Submitted: **132** (125 companies) | Failed: **789**
 
 | Reason | Count |
 |---|---|
-| Needs an answer from you | 433 |
-| Captcha | 174 |
-| Form rejected | 77 |
-| No confirmation / OTP | 26 |
+| Needs an answer from you | 441 |
+| Captcha | 187 |
+| Form rejected | 89 |
+| No confirmation / OTP | 28 |
+| Page error | 23 |
 | Job closed | 21 |
-| Page error | 20 |
 
 ### Questions waiting for your answer
 
@@ -88,6 +88,7 @@ Submitted: **121** (114 companies) | Failed: **751**
 - (6x) GitHub - Diagrid, TensorWave, Cardboard
 - (5x) Do you opt-in to receive WhatsApp messages from Stripe Recruiting?* - Stripe -> answered (saved privately)
 - (4x) Are you currently living in Bengaluru? If not, are you planning on moving to Bengaluru? - SPAN -> answered (saved privately)
+- (4x) Cover Letter - Reteam
 - (4x) Do you have a minimum of 3 years of experience as a Software Engineer? - Alan -> answered (saved privately)
 - (4x) What is your most recent bonus pay/unvested stock option? (in INR)* - IMC Trading
 - (4x) What is your non - compete period? (in months)* - IMC Trading -> answered (saved privately)
@@ -112,4 +113,3 @@ Submitted: **121** (114 companies) | Failed: **751**
 - (2x) Are you currently legally entitled to work in Canada? - Spellbook
 - (2x) Are you currently living in Hyderabad? ✱ - Zeta
 - (2x) Are you currently on an OPT or H4 visa? - Talkiatry
-- (2x) Are you eligible for a US security clearance? - HavocAI
