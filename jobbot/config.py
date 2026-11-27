@@ -26,8 +26,29 @@ def _load(name: str) -> dict[str, Any]:
         return yaml.safe_load(fh) or {}
 
 
-def load_companies() -> dict[str, Any]:
-    return _load("companies.yaml")
+def load_companies(include_discovered: bool = True) -> dict[str, Any]:
+    cfg = _load("companies.yaml")
+    if not include_discovered:
+        return cfg
+    # Boards found by `jobbot boards` (data/discovered_boards.yaml).
+    path = DATA_DIR / "discovered_boards.yaml"
+    if path.exists():
+        try:
+            extra = yaml.safe_load(path.read_text()) or {}
+        except Exception:
+            extra = {}
+        for src, entries in extra.items():
+            if src == "greenhouse" or not isinstance(entries, list):
+                continue
+            have = cfg.setdefault(src, []) or []
+            cfg[src] = have
+            known = {str(e.get("token", "")).lower() for e in have if isinstance(e, dict)}
+            for e in entries:
+                tok = str((e or {}).get("token", ""))
+                if tok and tok.lower() not in known:
+                    have.append({"token": tok, "name": e.get("name") or tok, "ai": bool(e.get("ai"))})
+                    known.add(tok.lower())
+    return cfg
 
 
 def load_profiles() -> list[dict[str, Any]]:

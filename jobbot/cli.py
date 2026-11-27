@@ -197,6 +197,7 @@ def cmd_apply(args) -> int:
         try:
             if time.time() - jobs_state["at"] > max_age or not jobs_state["jobs"]:
                 log("[target] re-discovering job boards for new postings...")
+                _maybe_probe_boards()
                 try:
                     new_jobs, new_stats = _discover(args)
                     if new_jobs or not jobs_state["jobs"]:
@@ -486,7 +487,45 @@ def build_parser() -> argparse.ArgumentParser:
     sub.add_parser("sheet", help="check Google Sheets credentials").set_defaults(func=cmd_sheet)
     sub.add_parser("profiles", help="show the resume data that will be used").set_defaults(func=cmd_profiles)
     sub.add_parser("mcp", help="run the MCP server (stdio) for Claude Desktop / Claude Code").set_defaults(func=cmd_mcp)
+    sub.add_parser("boards", help="probe for new company job boards with India openings").set_defaults(func=cmd_boards)
     return p
+
+
+_board_probe = {"running": False}
+
+
+def _maybe_probe_boards() -> None:
+    """Once a day, look for new company boards in the background."""
+    from . import boards
+    if _board_probe["running"] or not boards.is_stale(24):
+        return
+    _board_probe["running"] = True
+
+    def run():
+        try:
+            found = boards.refresh()
+            n = sum(len(v) for v in found.values())
+            log(f"[boards] board discovery done - {n} extra board(s) with India openings saved")
+        except Exception as exc:
+            log(f"[boards] board discovery failed: {exc}")
+        finally:
+            _board_probe["running"] = False
+
+    threading.Thread(target=run, daemon=True, name="board-probe").start()
+
+
+def cmd_boards(args) -> int:
+    from . import boards
+
+    def prog(src, token, total, india):
+        if india:
+            log(f"  + {src}:{token}  {total} postings, {india} in India")
+
+    found = boards.refresh(progress=prog)
+    for src, entries in found.items():
+        log(f"{src}: {len(entries)} board(s)")
+    log(f"saved to {boards.OUT_FILE}")
+    return 0
 
 
 def cmd_mcp(args) -> int:
