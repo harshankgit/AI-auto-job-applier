@@ -804,40 +804,69 @@ def _salary(low, identity, job, options, target, why):
     return None, ""
 
 
+def _immediate_option(options: list[str], alts) -> str | None:
+    """The option meaning 'can join now'. Range-aware first (so '2 weeks' never
+    substring-matches '9-12 weeks'), then strict text matches only."""
+    for opt in options:
+        o = _low(opt)
+        if re.search(r"(?<!\d)(immediate\w*|right away|asap|no notice|0 days?|none)\b", o) \
+                and not o.startswith("not "):
+            return opt
+    picked = _days_option(0, options)
+    if picked:
+        return picked
+    for alt in alts:
+        a = _low(alt)
+        for opt in options:
+            o = _low(opt).strip(" .")
+            if o == a or re.match(re.escape(a) + r"\b", o):
+                return opt
+    return None
+
+
+
 def _notice_and_start(low, identity, job, options, target, why):
-    if "notice period" in low or ("notice" in low and "period" in low) or "resign" in low:
+    # User confirmed: both candidates can join IMMEDIATELY (no notice period).
+    imm = ("Immediate", "Immediately", "Immediate joiner", "0 days", "No notice period",
+           "Less than 15 days", "15 days or less", "Within 15 days", "0-15 days", "1-15 days",
+           "15 days", "2 weeks", "Less than 1 month", "Within a month")
+    if "notice period" in low or ("notice" in low and "period" in low) or "resign" in low \
+            or "serving notice" in low or "notice buyout" in low:
         yes_no = options and all(_low(o).strip(" .") in (*YES_OPTION_WORDS, *NO_OPTION_WORDS) for o in options)
-        if yes_no or ("are you" in low and ("on a notice" in low or "serving" in low)):
-            value = _yes(options) if options else "Yes"
+        if yes_no or ("are you" in low and ("on a notice" in low or "serving" in low)) or "buyout" in low:
+            value = _no(options) if options else "No"
             if value:
-                return value, "brain: candidate serves a standard 10-day notice period"
-        picked = choose_option("10 days", options) if options else "10 days"
+                return value, "brain: candidate can join immediately (no notice to serve)"
+        if not options:
+            if any(w in low for w in ("in days", "number of days", "(days)", "days)")):
+                return "0", "brain: immediate joiner - 0 days notice"
+            return "Immediate", "brain: candidate can join immediately (confirmed by user)"
+        picked = _immediate_option(options, imm)
         if picked:
-            return picked, "brain: standard 10-day notice, as confirmed in answers.yaml"
-        picked = _days_option(10, options or [])
-        if picked:
-            return picked, f"brain: 10-day notice mapped to the form's {picked!r}"
-        return None, "brain: notice period is 10 days but no form option matches"
+            return picked, f"brain: immediate joiner mapped to the form's {picked!r}"
+        return options[0], f"brain: immediate joiner - shortest option {options[0]!r}"
     starters = (
         "when can you start", "start date", "earliest start", "availability",
         "available to start", "how soon can you", "joining date", "date of joining",
         "when would you be able to start", "notice", "available from",
-        "could you start", "start working", "able to start",
-        "when are you available", "start a new role",
+        "could you start", "start working", "able to start", "can you join",
+        "when are you available", "start a new role", "earliest by when", "earliest month",
+        "when can you join", "how soon", "join us",
     )
     if any(n in low for n in starters):
-        text = "10 days from offer"
-        picked = choose_option(text, options) if options else text
+        if not options:
+            if "month" in low:
+                import datetime as _dt
+                return _dt.date.today().strftime("%B %Y"), "brain: can start immediately (this month)"
+            if "date" in low and "mm" in low:
+                import datetime as _dt
+                d = _dt.date.today() + _dt.timedelta(days=7)
+                return d.strftime("%m/%d/%Y"), "brain: can start immediately"
+            return "Immediately", "brain: candidate can join immediately (confirmed by user)"
+        picked = _immediate_option(options, imm)
         if picked:
-            return picked, "brain: available 10 days from offer (standard notice period)"
-        for alt in ("2 weeks", "immediately", "10 days"):
-            picked = choose_option(alt, options)
-            if picked:
-                return picked, f"brain: 10-day availability mapped to the form's {picked!r}"
-        picked = _days_option(10, options or [])
-        if picked:
-            return picked, f"brain: 10-day availability mapped to the form's {picked!r}"
-        return None, "brain: availability is 10 days from offer but no form option matches"
+            return picked, f"brain: immediate availability mapped to the form's {picked!r}"
+        return options[0], f"brain: immediate availability - earliest option {options[0]!r}"
     return None, ""
 
 
@@ -937,6 +966,9 @@ def _links(low, identity, job, options, target, why):
         if any(n in low for n in needles):
             if value:
                 return value, f"brain: {what} from the resume"
+            alt = identity.github or identity.portfolio or identity.linkedin
+            if alt and not options:
+                return alt, f"brain: resume has no {what}; gave the closest profile link instead"
             return None, f"brain: this candidate's resume has no {what}"
     return None, ""
 
@@ -1147,7 +1179,7 @@ def auto_decide(label: str, identity, job=None, options: list[str] | None = None
         if value:
             return value, "auto-decided: best available profile link"
     if any(w in low for w in ("notice", "join", "start", "available")):
-        return "10 days", "auto-decided: standard 10-day notice"
+        return "Immediately", "auto-decided: candidate can join immediately"
     if any(w in low for w in ("location", "city", "where", "address", "based")):
         return identity.location or identity.city, "auto-decided: resume location"
     if low.startswith(("are you", "do you", "can you", "will you", "would you", "have you",

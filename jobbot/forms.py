@@ -785,7 +785,29 @@ def plan_fields(
             ))
             continue
 
+        # Ashby's SMS-consent radio sits under the phone label. Consenting to
+        # recruiter texts is harmless and some forms reject a blank group.
+        if kind == "radio" and semantic == "phone" and options:
+            yes = [o for o in options if re.search(r"\b(yes|i consent|i agree|agree)\b", _lower(o))
+                   and not re.search(r"\b(not|don't|do not|no)\b", _lower(o))]
+            if yes:
+                plans.append(FieldPlan(
+                    kind=kind, label=label, semantic="question", required=required,
+                    value=yes[0], action="fill", reason="phone SMS consent - recruiter texts are fine",
+                    locator=el, meta={"name": name, "id": el_id, "options": options},
+                ))
+                continue
         value, reason = resolve_value(label, semantic, identity, answers, job, options or None)
+
+        # A checkbox IS one option of a group ("Gurugram", "Jaipur"). A text
+        # answer like 'Gurugram, Haryana, India' must become tick / no-tick for
+        # THIS option - otherwise every box is unticked and the form rejects.
+        if kind == "checkbox" and value and not _YESNO_RE.match(_lower(value)):
+            option = label.split(" - ")[-1].strip()
+            if _option_matches(option, value, identity):
+                value, reason = "Yes", f"ticked - matches '{value}' ({reason})"
+            else:
+                value, reason = "No", f"left unticked - '{option}' is not '{value}'"
 
         # Some boards mark EEO/demographic dropdowns as required. We never invent
         # personal characteristics, but "decline to self-identify" is a real,
@@ -815,7 +837,59 @@ def plan_fields(
             locator=el, meta={"name": name, "id": el_id, "options": options},
         ))
 
+    # Kept per plan (workers are threads) so a dropdown whose list only shows
+    # up after typing can still be answered from the options it reveals.
+    _ensure_required_groups(plans, identity)
+    for p in plans:
+        if p.meta is not None:
+            p.meta["ctx"] = (identity, job)
     return plans
+
+
+_YESNO_RE = re.compile(r"^(yes|no|y|n|true|false|agree|accept|i agree|i accept|i confirm)\b")
+
+
+def _option_matches(option: str, value: str, identity) -> bool:
+    """Does checkbox option text describe the same thing as our answer?"""
+    o, v = _lower(option), _lower(value)
+    if not o:
+        return False
+    if o in v or v in o:
+        return True
+    parts = [p.strip() for p in re.split(r"[,/|]", v) if len(p.strip()) >= 3]
+    if any(p == o or o.startswith(p) or p.startswith(o) for p in parts):
+        return True
+    home = _lower(getattr(identity, "location", "") or "")
+    if any(w in home for w in ("gurugram", "gurgaon")) and re.search(r"\b(gurgaon|gurugram|delhi|ncr|noida)\b", o):
+        return True
+    return False
+
+
+_GROUP_PREFER = re.compile(r"\b(remote|anywhere|india|delhi|ncr|gurgaon|gurugram|noida|open to|any location|flexible|willing to relocate)\b")
+
+
+def _ensure_required_groups(plans, identity) -> None:
+    """A required checkbox group must end with at least one box ticked.
+
+    If none of our answers matched an option (e.g. office cities that do not
+    include ours), tick the closest honest one: remote/India/NCR/'open to
+    relocate' first, else the first option (the candidate is willing to
+    relocate, per profile).
+    """
+    groups: dict[str, list] = {}
+    for p in plans:
+        if p.kind != "checkbox" or not p.required or p.semantic == "eeo":
+            continue
+        key = p.label.split(" - ")[0] if " - " in p.label else f"__{(p.meta or {}).get('name') or p.semantic}"
+        groups.setdefault(key, []).append(p)
+    for members in groups.values():
+        if len(members) < 2:
+            continue
+        if any(m.value and _lower(m.value).startswith(("y", "t", "a", "1")) for m in members):
+            continue
+        pick = next((m for m in members if _GROUP_PREFER.search(_lower(m.label.split(" - ")[-1]))), members[0])
+        pick.value, pick.action = "Yes", "fill"
+        pick.reason = "required group had no matching option - ticked the closest honest one (willing to relocate)"
 
 
 def _fill_text(el: Locator, value: str) -> bool:
@@ -1131,6 +1205,37 @@ def _combobox_queries(value: str) -> list[str]:
     return seen
 
 
+def _fallback_queries(value: str) -> list[str]:
+    """Last-resort queries for a location value, matched STRICTLY.
+
+    Some 'Location' boxes are really country lists (ElevenLabs) or only carry
+    big metros; for 'Gurugram, Haryana, India' we then try the NCR capital and
+    finally the country itself, accepting only an exact option so a city list
+    can never turn 'India' into 'Indore, India'.
+    """
+    parts = [p.strip() for p in (value or "").split(",") if p.strip()]
+    if len(parts) < 2:
+        return []
+    out: list[str] = []
+    if parts[0].lower() in {"gurugram", "gurgaon", "noida", "faridabad", "ghaziabad"}:
+        out += ["New Delhi", "Delhi"]
+    out.append(parts[-1])
+    return [q for q in out if q.lower() != parts[0].lower()]
+
+
+def _strict_option(options: list[Locator], query: str):
+    """Exact option, or one that is the query plus a qualifier ('Delhi, India')."""
+    want = _lower(query)
+    pairs = [(_lower(_option_text(o)), o) for o in options]
+    for text, opt in pairs:
+        if text == want:
+            return opt, text
+    for text, opt in pairs:
+        if text.startswith((want + ",", want + " (", want + " -")):
+            return opt, text
+    return None, ""
+
+
 def _option_text(opt: Locator) -> str:
     try:
         return _norm(opt.inner_text(timeout=1500))
@@ -1269,6 +1374,8 @@ def _dismiss_menu(page: Page, el: Locator) -> None:
 def _fill_combobox(page: Page, el: Locator, value: str) -> bool:
     """React-select / autocomplete: click, type, then choose from the listbox."""
     queries = _combobox_queries(value)
+    strict = set(q for q in _fallback_queries(value) if q not in queries)
+    queries = queries + [q for q in _fallback_queries(value) if q in strict]
     # Options must be hunted inside THIS field's own select container. A global
     # search also sees the phone widget's dial-code menu, which is how typing
     # 'India' into Country* ended up committing the dial code +91 instead.
@@ -1318,7 +1425,10 @@ def _fill_combobox(page: Page, el: Locator, value: str) -> bool:
             continue
         saw_options = True
 
-        target, text = _best_option(options, value, query)
+        if query in strict:
+            target, text = _strict_option(options, query)
+        else:
+            target, text = _best_option(options, value, query)
         if target is None:
             # Options exist but none of them is our answer. Guessing here would
             # put a wrong country or city on a real application, so we do not.
@@ -1503,6 +1613,12 @@ def apply_plan(page: Page, plans: list[FieldPlan]) -> dict[str, Any]:
                         plan.reason = f"{plan.reason}; list lacked '{plan.value}', chose '{alt}'"
                         plan.value = alt
                         break
+            if not ok:
+                chosen = _discover_and_choose(page, plan)
+                if chosen and _fill_combobox(page, plan.locator, chosen):
+                    ok = True
+                    plan.reason = f"{plan.reason}; picked '{chosen}' from the form's own list"
+                    plan.value = chosen
         elif plan.kind == "checkbox":
             ok = _set_checkbox(plan.locator, plan.value)
         elif plan.kind == "buttons":
@@ -1603,6 +1719,100 @@ def _combobox_fallbacks(plan: FieldPlan) -> list[str]:
     if plan.required:
         return ["Other"]
     return []
+
+
+_DISCOVERY_PROBES = ("INR", "a", "e", "i", "o", "1", "2", "0", "Other", "Yes", "No")
+
+
+def _discover_options(page: Page, el: Locator, plan: FieldPlan) -> list[str]:
+    """Reveal a dropdown's list when it only appears after typing.
+
+    Ashby's salary/'how did you hear' boxes show nothing on click and nothing
+    for '14-15 LPA'; typing '1' or 'INR' reveals the real brackets. Collect the
+    texts the form itself offers so the answer can be chosen from them.
+    """
+    scope = _select_scope(el)
+    words = [w for w in re.split(r"[^A-Za-z0-9]+", plan.value or "") if len(w) >= 2][:3]
+    probes = [""] + words + list(_DISCOVERY_PROBES)
+    found: list[str] = []
+    for probe in probes:
+        # Snapshot what is already on the page BEFORE touching this box, so
+        # other questions' options never leak into this one's list.
+        try:
+            _dismiss_menu(page, el)
+            baseline = {_option_text(o) for o in _visible_options(page)} if scope is None else set()
+        except Exception:
+            baseline = set()
+        try:
+            el.scroll_into_view_if_needed(timeout=3000)
+            (_control_root(el) or el).click(timeout=4000)
+        except Exception:
+            break
+        try:
+            el.fill("", timeout=2000)
+            if probe:
+                el.type(probe, delay=20, timeout=5000)
+        except Exception:
+            pass
+        options: list[Locator] = []
+        for _ in range(8):
+            page.wait_for_timeout(300)
+            if scope is not None:
+                options = _visible_options(page, scope)
+            else:
+                options = [o for o in _visible_options(page) if _option_text(o) not in baseline]
+            if options:
+                break
+        for o in options:
+            t = _option_text(o)
+            if t and t not in found and len(t) < 160:
+                found.append(t)
+        _dismiss_menu(page, el)
+        if len(found) >= 25:
+            break
+    try:
+        el.fill("", timeout=2000)
+    except Exception:
+        pass
+    return found
+
+
+def _discover_and_choose(page: Page, plan: FieldPlan) -> str | None:
+    """Pick our answer from the options the box reveals (brain, then auto).
+
+    Places are never auto-guessed: a wrong city/school is worse than a gap.
+    """
+    ctx = (plan.meta or {}).get("ctx")
+    if not ctx:
+        return None
+    identity, job = ctx
+    try:
+        opts = _discover_options(page, plan.locator, plan)
+    except Exception:
+        return None
+    opts = [o for o in opts if not _HAS_DIAL.search(o)]
+    if not opts:
+        return None
+    try:
+        value, _ = brain.answer(plan.label, identity, job, opts)
+    except Exception:
+        value = None
+    if not value or value not in opts:
+        picked = brain.choose_option(plan.value, opts) if plan.value else None
+        value = picked if picked in opts else None
+    low = _lower(plan.label)
+    place = plan.semantic in ("school", "location") or any(
+        k in low for k in ("location", "city", "country", "based", "school", "university", "college"))
+    if not value and plan.required and not place:
+        try:
+            value, _ = brain.auto_decide(plan.label, identity, job, opts)
+        except Exception:
+            value = None
+        if value not in opts:
+            value = None
+    if value and _claims_other_city(value, identity):
+        return None
+    return value
 
 
 def _relocate(page: Page, plan: FieldPlan) -> Locator:

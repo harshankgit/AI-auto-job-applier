@@ -373,7 +373,16 @@ def apply_to_job(
         # move like a person, and resubmit once before giving up.
         if not _has_phrase(after, CONFIRM_PHRASES) and forms.captcha_present(page)[0]:
             after = _captcha_second_chance(page, container, after)
+        # Slow boards (Ashby uploading the resume, network lag) can show the success
+        # banner well after our polling window - give it one more long look and
+        # re-read the page right before deciding, so a real submit is never logged
+        # as an error.
+        if not _has_phrase(after, CONFIRM_PHRASES) and not _has_phrase(after, VALIDATION_HINTS):
+            after = _wait_for_outcome(page, timeout_s=30.0) or after
         post_shot = browser.shoot(page, f"after-{job.company_token}-{job.job_id}")
+        final = _page_text(page)
+        if _has_phrase(final, CONFIRM_PHRASES) or _has_phrase(final, ALREADY_PHRASES):
+            after = final
         confirm = _has_phrase(after, CONFIRM_PHRASES)
 
         if confirm:

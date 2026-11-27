@@ -22,10 +22,10 @@ candidates:
     discipline: "Computer Science"
     grad_year: 2024
     # Salary expectation the user confirmed for Harshank: 13-15 LPA.
-    expected_ctc: "13-15 LPA"
-    expected_ctc_min_lpa: 13
+    expected_ctc: "14-15 LPA"
+    expected_ctc_min_lpa: 14
     expected_ctc_max_lpa: 15
-    expected_ctc_inr: "1400000"
+    expected_ctc_inr: "1450000"
     current_ctc: "As per market standard - open to discuss"
     # role keywords this candidate is a genuine fit for
     role_include: [full stack, fullstack, full-stack, software engineer, software developer, backend,

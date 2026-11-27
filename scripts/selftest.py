@@ -77,6 +77,17 @@ def running(pattern: str) -> bool:
     return subprocess.run(["pgrep", "-f", pattern], stdout=subprocess.DEVNULL).returncode == 0
 
 
+def cloud_live() -> bool:
+    """True while the GitHub runner is applying (the Mac bot then yields on purpose)."""
+    py = ROOT / ".venv" / "bin" / "python"
+    try:
+        return subprocess.run([str(py), "scripts/cloud.py", "cloud_running"], cwd=ROOT, env=ENV,
+                              timeout=60, stdout=subprocess.DEVNULL,
+                              stderr=subprocess.DEVNULL).returncode == 0
+    except subprocess.TimeoutExpired:
+        return False
+
+
 class Run:
     def __init__(self) -> None:
         self.checks: list[dict[str, object]] = []
@@ -123,6 +134,9 @@ def check_bot(r: Run) -> None:
     elif stopped and not alive:
         r.check("bot running", True, "stopped by user (data/STOP) - left alone")
         return
+    elif not alive and cloud_live():
+        r.check("bot running", True, "GitHub runner is applying - Mac bot yields (backup only)")
+        return
     else:
         r.check("bot running", False, f"alive={alive} log age={int(age)}s")
         r.fix("start_bot.sh watchdog (restart / unfreeze bot)")
@@ -166,13 +180,13 @@ def check_vercel(r: Run) -> None:
         r.check(f"vercel page {page}", code == 200, f"HTTP {code}")
     code, headers, body = http(f"{SITE}/api/health", key=True)
     link = headers.get("x-jobbot-link", "?")
-    if r.check("vercel -> Mac live link", code == 200 and link == "live", f"HTTP {code} link={link}"):
+    if r.check("vercel -> live link", code == 200 and link in ("live", "cloud"), f"HTTP {code} link={link}"):
         return
     r.fix("republishing tunnel URL to ntfy")
     (ROOT / "data" / "tunnel_republish").touch()
     time.sleep(75)  # tunnel loop wakes every 30s, Vercel caches the URL 60s
     code, headers, _ = http(f"{SITE}/api/health", key=True)
-    r.check("vercel live link after fix", headers.get("x-jobbot-link") == "live", f"HTTP {code}")
+    r.check("vercel live link after fix", headers.get("x-jobbot-link") in ("live", "cloud"), f"HTTP {code}")
 
 
 def check_browser(r: Run) -> None:
@@ -200,9 +214,10 @@ def check_browser(r: Run) -> None:
             text = badge.inner_text()
             r.check("browser: badge says Live", "Live" in text, text)
             body = page.inner_text("main")
-            bot_up = running(r"jobbot\.cli (apply|run)")
+            bot_up = running(r"jobbot\.cli (apply|run)") or "cloud" in text.lower()
             expected = "running" if bot_up else "idle"
-            r.check("browser: dashboard shows bot status", expected in body.lower(),
+            words = ("running", "applying") if bot_up else ("idle", "stopped")
+            r.check("browser: dashboard shows bot status", any(w in body.lower() for w in words),
                     f"expected '{expected}' on page")
             for path in ("/applications", "/results", "/report"):
                 page.goto(SITE + path, wait_until="networkidle", timeout=60_000)

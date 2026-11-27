@@ -128,9 +128,13 @@ def cmd_apply(args) -> int:
             india_or_remote_only=args.india_remote_only,
         )
         log(f"=== {ident.full_name}: {len(ranked)} eligible jobs, applying to at most {args.limit} ===")
-        if not ranked:
+        keep_going = bool(getattr(args, "continuous", False)) or int(getattr(args, "target_submitted", 0) or 0) > 0
+        if not ranked and not keep_going:
             log(f"  [{cid}] nothing cleared the score threshold")
             return
+        if not ranked:
+            log(f"  [{cid}] 0 eligible jobs right now (network down or boards empty) - "
+                "continuous mode keeps retrying instead of exiting")
 
         def _flush(result):
             # Rewrite from the full DB history so reports always show every
@@ -180,7 +184,7 @@ def cmd_apply(args) -> int:
         log(f"  {ident.full_name}: {len(out)} attempts recorded")
         log("")
 
-    jobs_state = {"jobs": jobs, "at": time.time()}
+    jobs_state = {"jobs": jobs, "at": time.time() if jobs else 0.0}
     jobs_lock = threading.Lock()
 
     def _fresh_jobs(max_age: float):
@@ -189,9 +193,15 @@ def cmd_apply(args) -> int:
                 log("[target] re-discovering job boards for new postings...")
                 try:
                     new_jobs, new_stats = _discover(args)
-                    jobs_state["jobs"], jobs_state["at"] = new_jobs, time.time()
+                    if new_jobs or not jobs_state["jobs"]:
+                        jobs_state["jobs"] = new_jobs
+                    else:
+                        log("[target] discovery returned 0 postings (network?) - keeping the previous job list")
+                    # an empty result is usually a network blip: try again in ~2 min, not 30
+                    jobs_state["at"] = time.time() if new_jobs else time.time() - max(0.0, max_age - 120)
                     stats.update(new_stats)
                 except Exception as exc:
+                    jobs_state["at"] = time.time() - max(0.0, max_age - 120)
                     log(f"[target] re-discovery failed: {exc}")
             return jobs_state["jobs"]
 
@@ -245,6 +255,13 @@ def cmd_apply(args) -> int:
         while not reached():
             rnd += 1
             pool = _fresh_jobs(max_age=1800 if idle_rounds == 0 else 0)
+            if not pool:
+                log(f"[{tag}] no job postings reachable (internet down?) - retrying in 60s")
+                for _ in range(6):
+                    if reached():
+                        break
+                    time.sleep(10)
+                continue
             ranked = matcher.rank(
                 pool, cand, min_score=min_score, require_ai=args.ai_only,
                 india_or_remote_only=args.india_remote_only,
@@ -455,7 +472,14 @@ def build_parser() -> argparse.ArgumentParser:
     rp.set_defaults(func=cmd_report)
     sub.add_parser("sheet", help="check Google Sheets credentials").set_defaults(func=cmd_sheet)
     sub.add_parser("profiles", help="show the resume data that will be used").set_defaults(func=cmd_profiles)
+    sub.add_parser("mcp", help="run the MCP server (stdio) for Claude Desktop / Claude Code").set_defaults(func=cmd_mcp)
     return p
+
+
+def cmd_mcp(args) -> int:
+    from .mcp_server import main as mcp_main
+    mcp_main()
+    return 0
 
 
 def main(argv=None) -> int:
