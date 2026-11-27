@@ -89,6 +89,8 @@ def _candidates() -> dict[str, list[tuple[str, str]]]:
     # SmartRecruiters tokens are case-insensitive, so the lowercase variants
     # would just duplicate requests there.
     sr = [(t, n) for t, n in pairs if t == n.replace(" ", "").replace(".", "")]
+    # SR company ids are often the brand plus a suffix (BoschGroup, ...India)
+    sr += [(t + suf, n) for t, n in list(sr) for suf in ("Group", "India", "Inc", "Technologies")]
     return {
         "smartrecruiters": sr,
         "ashby": pairs,

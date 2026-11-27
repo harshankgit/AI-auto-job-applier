@@ -1,0 +1,429 @@
+# Extra company names probed daily by jobbot/boards.py on SmartRecruiters,
+# Ashby, Workable and Recruitee. A board is kept only if it has jobs located
+# in India; nonexistent tokens are dropped automatically.
+- Western Digital
+- WesternDigital
+- Eurofins
+- Equinix
+- IKEA
+- Skechers
+- Sodexo
+- Atos
+- Avery Dennison
+- Canon
+- Colt
+- Informa
+- Kantar
+- Mondelez
+- Sutherland
+- TELUS International
+- Teleperformance
+- Yokogawa
+- Zuhlke
+- NTT Data
+- NTTData
+- Fujitsu
+- Hitachi
+- Synechron
+- Hexaware
+- Birlasoft
+- CitiusTech
+- Happiest Minds
+- HappiestMinds
+- Infogain
+- Sonata Software
+- Mastek
+- Cyient
+- KPIT
+- Tata Elxsi
+- LTTS
+- QuEST Global
+- UST
+- UST Global
+- Virtusa
+- Ness
+- Altimetrik
+- Searce
+- Quinnox
+- Talentica
+- Josh Technology
+- Cybage
+- Clarivate
+- Gartner
+- Moodys
+- SPGlobal
+- MSCI
+- Morningstar
+- Fidelity
+- BlackRock
+- Barclays
+- Deutsche Bank
+- HSBC
+- Standard Chartered
+- UBS
+- Optum
+- ZS
+- ZS Associates
+- Axtria
+- Course5
+- Course5i
+- Nineleaps
+- Zeotap
+- Wingify
+- Appsmith
+- Hevo
+- HevoData
+- Fyle
+- Rupeek
+- Jar
+- Khatabook
+- OkCredit
+- Vyapar
+- Instamojo
+- InCred
+- Ripplr
+- Vegrow
+- Country Delight
+- CaratLane
+- FirstCry
+- Mamaearth
+- Honasa
+- Purplle
+- Bewakoof
+- Composio
+- Ema
+- Deel
+- Sprinto
+- Scrut
+- Setu
+- Decentro
+- Razorpay X
+- Credgenics
+- Mintoak
+- Yubi
+- CredAvenue
+- Groyyo
+- Shipsy
+- Pickrr
+- ClickPost
+- Unicommerce
+- Increff
+- Bizom
+- Mobisy
+- Salesken
+- Gnani
+- Observe.AI
+- Skit
+- Murf
+- Rephrase.ai
+- Pixis
+- Uniphore
+- Tekion
+- Toast
+- Icertis
+- Amagi
+- Hasura
+- Postman
+- Lambdatest
+- LambdaTest
+- Testsigma
+- Keka
+- greytHR
+- Zimyo
+- Springworks
+- Darwinbox
+- Lucid
+- Exponent
+- Smartprix
+- Paisabazaar
+- Dhan
+- Groww
+- INDmoney
+- Scripbox
+- Kuvera
+- Dezerv
+- Wint Wealth
+- Stockgro
+- Sensibull
+- Tickertape
+- Quicko
+- ClearTax
+- Clear
+- Zoomcar
+- Park+
+- Yulu
+- Bounce
+- Euler Motors
+- Ather Energy
+- Exponent Energy
+- Log9
+- SolarSquare
+- Ecozen
+- Agrostar
+- Arya
+- Jai Kisan
+- Bijak
+- Cityflo
+- Chalo
+- Shuttl
+- Blackbuck
+- Vahak
+- TruckX
+- Lori
+- Fleetx
+- Zinka
+- Dunzo Daily
+- Zepto Now
+- Swiggy Genie
+- Rebel Foods
+- Box8
+- EatSure
+- Chaayos
+- Third Wave Coffee
+- Wakefit
+- Pepperfry
+- Urban Ladder
+- Furlenco
+- Rentomojo
+- Cult
+- HealthKart
+- Tata Health
+- MediBuddy
+- Mfine
+- Innovaccer
+- Qure.ai
+- Qure
+- Niramai
+- SigTuple
+- Tricog
+- Cloudphysician
+- Eka Care
+- Even Healthcare
+- Onsurity
+- Riskcovry
+- Turtlemint
+- InsuranceDekho
+- Coverfox
+- RenewBuy
+- Ditto
+- Kenko
+- Toplyne
+- Sprinklr
+- Hiver
+- Gainsight
+- Freshservice
+- Zendesk
+- HubSpot
+- Atlassian
+- Canva
+- Miro
+- Notion
+- Figma
+- Stripe
+- Coinbase
+- CoinDCX
+- CoinSwitch
+- WazirX
+- Polygon
+- Biconomy
+- Push Protocol
+- Router Protocol
+- Instadapp
+- Hike
+- ShareChat
+- Glance
+- Roposo
+- Kutumb
+- Koo
+- Pratilipi
+- Inshorts
+- Dailyhunt
+- VerSe
+- JioCinema
+- Hotstar
+- Disney Star
+- SonyLIV
+- Zee5
+- ZEE
+- Times Internet
+- InfoEdge
+- Naukri
+- Shaadi
+- People Group
+- Apna
+- WorkIndia
+- Internshala
+- Unstop
+- HackerEarth
+- HackerRank
+- Coding Ninjas
+- InterviewBit
+- GeeksforGeeks
+- Programiz
+- AlmaBetter
+- Crio
+- Codeyoung
+- Cuemath
+- Toppr
+- Doubtnut
+- Embibe
+- Adda247
+- Seekho
+- Stage
+- STAGE OTT
+- Frontier Markets
+- Zolve
+- Niyo
+- Fello
+- Uni Cards
+- OneCard
+- FPL Technologies
+- Kiwi
+- Freo
+- MoneyTap
+- EarlySalary
+- Refyne
+- Jupiter Money
+- Open Financial
+- Open
+- RazorpayX
+- Easebuzz
+- Paytm Money
+- Ola Money
+- MobiKwik
+- Freecharge
+- Airtel Payments Bank
+- Fino
+- Spice Money
+- Eko
+- PayNearby
+- Tata Digital
+- Tata Neu
+- Reliance Retail
+- Reliance Jio
+- Jio Platforms
+- Adani
+- Mahindra
+- Tata Motors
+- Maruti Suzuki
+- Hero MotoCorp
+- TVS Motor
+- Bajaj
+- Bajaj Finserv
+- Godrej
+- Asian Paints
+- ITC
+- HUL
+- Unilever
+- Nestle
+- PepsiCo
+- Coca-Cola
+- Diageo
+- AB InBev
+- ABInBev
+- Procter & Gamble
+- PG
+- Johnson & Johnson
+- Pfizer
+- Novartis
+- Sanofi
+- GSK
+- AstraZeneca
+- Roche
+- Bayer
+- BASF
+- Shell
+- BP
+- Chevron
+- ExxonMobil
+- Schlumberger
+- SLB
+- Halliburton
+- Baker Hughes
+- GE
+- GE HealthCare
+- GE Vernova
+- Rolls-Royce
+- Airbus
+- Boeing
+- Collins Aerospace
+- Safran
+- Thales
+- Dassault Systemes
+- Autodesk
+- Ansys
+- Synopsys
+- Cadence
+- Mentor
+- Qualcomm
+- Intel
+- AMD
+- Nvidia
+- Micron
+- Texas Instruments
+- NXP
+- Infineon
+- STMicroelectronics
+- Renesas
+- Analog Devices
+- Marvell
+- Broadcom
+- MediaTek
+- Samsung
+- LG
+- Sony
+- Panasonic
+- Dell
+- HP
+- HPE
+- Lenovo
+- IBM
+- Red Hat
+- Kyndryl
+- DXC
+- Unisys
+- NetApp
+- Pure Storage
+- Commvault
+- Veritas
+- Rubrik
+- Cohesity
+- Druva
+- Databricks
+- Snowflake
+- Confluent
+- MongoDB
+- Elastic
+- Redis
+- Couchbase
+- Postgres
+- Yugabyte
+- YugabyteDB
+- CockroachDB
+- SingleStore
+- Clickhouse
+- ClickHouse
+- Hashicorp
+- GitLab
+- GitHub
+- JetBrains
+- Datadog
+- New Relic
+- Dynatrace
+- Splunk
+- Sumo Logic
+- PagerDuty
+- Freshping
+- Cloudflare
+- Akamai
+- Fastly
+- DigitalOcean
+- Vultr
+- Linode
+- E2E Networks
+- Yotta
+- CtrlS
+- Sify
+- Tata Communications
+- Tata Consultancy Services
+- TCS
