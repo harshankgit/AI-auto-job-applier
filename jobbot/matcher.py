@@ -240,7 +240,10 @@ def score_job(job: Job, cand: dict) -> Match:
         role_score = 26.0
         reasons.append(f"adjacent role '{adjacent}'")
     else:
-        custom = _has(title, [r.lower() for r in (cand.get("role_include") or [])])
+        # Seniority words ('junior', 'associate', 'graduate') are not a role on their
+        # own: 'Retail Associate' must not match a software candidate.
+        generic = {"junior", "associate", "graduate", "intern", "trainee", "entry", "fresher", "new grad"}
+        custom = _has(title, [r.lower() for r in (cand.get("role_include") or []) if r.lower().strip() not in generic])
         if custom:
             role_score = 20.0
             reasons.append(f"profile role keyword '{custom}'")
