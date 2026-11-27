@@ -82,3 +82,15 @@ jobs:
             git pull --rebase -X theirs origin main && git push origin HEAD:main && break
             sleep 10
           done
+
+      # GitHub's */30 cron is best-effort and often skips hours, so each run
+      # queues its successor itself (a PAT is needed: runs started with the
+      # built-in github.token never trigger workflows). Skipped while paused.
+      - name: Chain next run
+        if: always() && steps.gate.outputs.go == '1'
+        env:
+          GH_TOKEN: ${{ secrets.JOBBOT_GH_PAT }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then echo "no JOBBOT_GH_PAT secret -> rely on cron"; exit 0; fi
+          if uv run python scripts/cloud.py paused; then echo "paused from the site -> not chaining"; exit 0; fi
+          gh workflow run apply.yml -R "$JOBBOT_REPO" -f minutes=300 && echo "next run queued"
