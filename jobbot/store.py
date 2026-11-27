@@ -348,17 +348,22 @@ def submitted_companies(candidate_id: str) -> set[str]:
     return {r["c"] for r in rows if r["c"]}
 
 
-def blocked_companies(candidate_id: str, min_fails: int = 2) -> set[str]:
+def blocked_companies(candidate_id: str, min_fails: int = 2, since_utc: str | None = None) -> set[str]:
     """Companies (lower-cased names) where this candidate hit >= min_fails
     failed/captcha/error attempts and never submitted - the same blocker
     (required GitHub, captcha, foreign work-auth) repeats on every role there,
-    so target mode moves on to fresh companies instead."""
+    so target mode moves on to fresh companies instead.
+
+    With `since_utc`, only form failures after that time count; captcha
+    blocks stay permanent (no code change solves a puzzle). Older form
+    failures expire because the filler keeps learning new answers."""
     with closing(_connect()) as conn:
         rows = conn.execute(
             "SELECT lower(trim(company)) AS co, "
-            "SUM(status IN ('FAILED_VALIDATION','CAPTCHA_BLOCKED','ERROR')) AS bad, "
+            "SUM(status IN ('FAILED_VALIDATION','ERROR') AND (? IS NULL OR applied_at>=?)) "
+            "+ SUM(status='CAPTCHA_BLOCKED') AS bad, "
             "SUM(status='SUBMITTED') AS ok FROM attempts WHERE candidate_id=? GROUP BY co",
-            (candidate_id,),
+            (since_utc, since_utc, candidate_id),
         ).fetchall()
     return {r["co"] for r in rows if r["co"] and (r["ok"] or 0) == 0 and (r["bad"] or 0) >= min_fails}
 

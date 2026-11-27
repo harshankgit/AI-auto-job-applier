@@ -153,6 +153,12 @@ def _merge_tree(extracted: Path) -> dict:
         out["new_rows"] = _merge_db(db)
     for name in ("learned_answers.json", "private_profile.json"):
         _merge_json(extracted / name, DATA / name)
+    # boards discovered on another machine: take the newer list so the cloud runner
+    # applies on them right away instead of re-probing first
+    boards = extracted / "discovered_boards.yaml"
+    if boards.exists() and (not (DATA / boards.name).exists()
+                            or boards.stat().st_mtime > (DATA / boards.name).stat().st_mtime):
+        shutil.copy2(boards, DATA / boards.name)
     res = extracted / "resumes"
     if res.is_dir():
         (DATA / "resumes").mkdir(parents=True, exist_ok=True)
@@ -172,7 +178,7 @@ def _bundle(tmp: Path) -> Path:
     src.backup(dst)
     dst.close()
     src.close()
-    for name in ("learned_answers.json", "private_profile.json"):
+    for name in ("learned_answers.json", "private_profile.json", "discovered_boards.yaml"):
         if (DATA / name).exists():
             shutil.copy2(DATA / name, stage / name)
     if (DATA / "resumes").is_dir():

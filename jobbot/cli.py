@@ -280,7 +280,11 @@ def cmd_apply(args) -> int:
                 india_or_remote_only=args.india_remote_only,
             )
             done_cos = store.submitted_companies(cid)
-            blocked = store.blocked_companies(cid, 2)
+            # form failures expire after 3 days: the filler keeps learning answers,
+            # so a company that failed last week deserves a fresh try (captcha
+            # blocks never expire)
+            blocked = store.blocked_companies(
+                cid, 2, time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime(time.time() - 3 * 86400)))
             try:
                 from . import learn as _learn
                 # taught companies get retried - but only until they fail twice
