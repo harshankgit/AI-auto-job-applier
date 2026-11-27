@@ -785,6 +785,24 @@ def plan_fields(
                 in_autofill = False
             if in_autofill:
                 continue
+            # A photo/avatar slot (SmartRecruiters ships one that accepts only
+            # images) must never receive the resume PDF - the form rejects it
+            # with 'file format is not supported' and the submit never lands.
+            try:
+                accept = _lower(el.get_attribute("accept") or "")
+            except Exception:
+                accept = ""
+            slot_text = _lower(f"{el_id} {name} {label}")
+            image_only = bool(accept) and "pdf" not in accept and (
+                "image" in accept or any(x in accept for x in (".png", ".jpg", ".jpeg", ".gif", ".webp")))
+            if image_only or any(w in slot_text for w in ("photo", "avatar", "picture", "profile image", "headshot")):
+                plans.append(FieldPlan(
+                    kind="file", label=label or "Photo", semantic="photo",
+                    required=required, value="", action="skip",
+                    reason="photo/image upload - the resume PDF does not belong here",
+                    locator=el, meta={"name": name, "id": el_id, "sig": a.get("sig", "")},
+                ))
+                continue
             # Greenhouse ships #resume AND #cover_letter as file inputs that are
             # BOTH labelled 'Attach', so the label cannot tell them apart. Route
             # on id/name instead: the resume goes to the resume input, and an
@@ -1132,8 +1150,16 @@ def _fill_text(el: Locator, value: str) -> bool:
             el.fill("", timeout=6000)
             el.type(value, delay=6 if attempt == 1 else 0, timeout=12000)
             current = el.input_value(timeout=4000)
-            if _norm(current):
+            if _norm(current) == _norm(value):
                 return True
+            # Typed on top of a value the form re-inserted (SR's email box
+            # ended up 'x@gmail.como259@gmail.com') - set it wholesale.
+            el.fill(value, timeout=6000)
+            current = el.input_value(timeout=4000)
+            if _norm(current) == _norm(value):
+                return True
+            if attempt == 2 and _norm(current):
+                return True   # masked/formatted input (phone, dates) - keep it
         except Exception:
             try:
                 el.fill(value, timeout=6000)
@@ -2034,6 +2060,22 @@ def apply_plan(page: Page, plans: list[FieldPlan]) -> dict[str, Any]:
         # Don't count a field we could not verify as "filled".
         filled = max(0, filled - 1)
 
+    # 'Confirm your email' validates against the main email only on its own
+    # input/blur events. SmartRecruiters showed 'Provided emails do not match'
+    # with two identical values because the confirm box was validated before
+    # the main box settled - so re-type every confirm-email box last and blur.
+    for plan in plans:
+        if plan.action == "skip" or plan.semantic != "email" or not plan.value:
+            continue
+        if not re.search(r"confirm|re-?enter|re-?type|verify|repeat|again", _lower(plan.label)):
+            continue
+        try:
+            el = _relocate(page, plan)
+            _fill_text(el, plan.value)
+            el.press("Tab", timeout=3000)
+        except Exception:
+            pass
+
     return {
         "filled": filled,
         "skipped": skipped,
@@ -2302,6 +2344,9 @@ def _readback(plan: FieldPlan, el: Locator | None = None) -> bool:
         if plan.kind == "select":
             return bool((target.input_value() or "").strip())
         current = (target.input_value() or "").strip()
+        if current and plan.semantic == "email" and plan.value \
+                and current.lower() != str(plan.value).strip().lower():
+            return False   # corrupted address - repair it
         if current:
             return True
         # A plain text input that react-select swapped for a chip.
