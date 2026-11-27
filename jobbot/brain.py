@@ -1041,21 +1041,42 @@ def compose_statement(identity, job) -> str:
         tech for tech in _STACK_PROBE
         if _low(tech) in low_desc and _knows(identity, tech)
     ]
+    # Also the candidate's OWN resume keywords that this posting mentions
+    # (e.g. Supabase, Tailwind, JWT, RBAC) - both sides are real text.
+    seen = {_low(t) for t in overlap}
+    for kw in skills:
+        pretty = _PRETTY.get(kw, kw if len(kw) > 4 else kw.upper())
+        if len(kw) < 3 or _low(pretty) in seen or kw in seen:
+            continue
+        if re.search(rf"(?<![a-z0-9]){re.escape(kw)}(?![a-z0-9])", low_desc):
+            overlap.append(pretty)
+            seen.add(_low(pretty))
 
     years = int(getattr(identity, "years_experience", 0) or 0)
     role = identity.current_title or "Software Developer"
+    employer = _norm(getattr(identity, "current_company", ""))
+    at = f" at {employer}" if employer else ""
+
+    low_title = _low(title)
+    if "front" in low_title or "ui" in low_title.split():
+        focus = "building fast, accessible React and Next.js interfaces"
+    elif "back" in low_title or "api" in low_title.split():
+        focus = "designing Node.js and Express APIs backed by MongoDB"
+    else:
+        focus = "owning features end to end, from the React UI to the Node.js API"
 
     lines = [
-        f"I am applying for the {title} role at {company}.",
-        f"I am a {role} with {years} year{'s' if years != 1 else ''} of "
+        f"I am applying for the {title} role at {company} because it matches the "
+        f"work I do every day: {focus}.",
+        f"I am currently a {role}{at} with {years} year{'s' if years != 1 else ''} of "
         "professional experience building production web applications on the "
         "MERN stack (React, Next.js, Node.js, Express and MongoDB).",
     ]
     if overlap:
         lines.append(
             "Your posting calls out "
-            + ", ".join(overlap[:4])
-            + ", which is the stack I work in daily."
+            + ", ".join(overlap[:5])
+            + ", all of which are on my resume and part of my current work."
         )
     if identity.education_line:
         lines.append(
@@ -1067,6 +1088,16 @@ def compose_statement(identity, job) -> str:
             f"I am based in {identity.location or identity.country} and my resume is attached."
         )
     return " ".join(lines)
+
+
+_PRETTY = {
+    "react": "React", "next.js": "Next.js", "node": "Node.js", "express": "Express",
+    "mongodb": "MongoDB", "mongoose": "Mongoose", "javascript": "JavaScript",
+    "typescript": "TypeScript", "redux": "Redux", "rest api": "REST APIs",
+    "supabase": "Supabase", "html": "HTML", "css": "CSS", "git": "Git",
+    "rbac": "RBAC", "authentication": "authentication", "tailwind": "Tailwind CSS",
+    "jwt": "JWT", "vite": "Vite", "formik": "Formik",
+}
 
 
 def _norm(text: Any) -> str:
