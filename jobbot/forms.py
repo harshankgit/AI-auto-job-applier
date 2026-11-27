@@ -1003,6 +1003,9 @@ def _numeric_answer(label: str, value: str, identity) -> str | None:
             if re.search(r"lpa|lakh", low):
                 return str(round(inr / 100000, 1)).rstrip("0").rstrip(".")
             return str(inr)
+    # notice period answered 'Immediate' -> 0 days/weeks in a number box
+    if re.search(r"notice|join|start|days|weeks", low) and re.search(r"immediate|right away|asap", _lower(value)):
+        return "0"
     m = re.search(r"\d+(\.\d+)?", str(value))
     return m.group(0) if m else None
 
