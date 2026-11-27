@@ -1,19 +1,19 @@
 # Why applications failed
 
-_Generated 2026-11-27 00:14:47_
+_Generated 2026-11-27 02:51:54_
 
 ## Harshank
 
-Submitted: **112** (103 companies) | Failed: **820**
+Submitted: **112** (103 companies) | Failed: **847**
 
 | Reason | Count |
 |---|---|
-| Needs an answer from you | 493 |
+| Needs an answer from you | 515 |
 | Captcha | 152 |
-| Form rejected | 101 |
+| Form rejected | 105 |
 | Page error | 28 |
 | Job closed | 24 |
-| No confirmation / OTP | 22 |
+| No confirmation / OTP | 23 |
 
 ### Questions waiting for your answer
 

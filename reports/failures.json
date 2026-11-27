@@ -1,17 +1,17 @@
 {
- "generated_at": "2026-11-27 00:14:47",
+ "generated_at": "2026-11-27 02:51:54",
  "candidates": {
   "harshank": {
    "submitted": 112,
    "submitted_companies": 103,
-   "failed": 820,
+   "failed": 847,
    "reasons": {
-    "needs_answer": 493,
+    "needs_answer": 515,
     "captcha": 152,
-    "form_rejected": 101,
+    "form_rejected": 105,
     "error": 28,
     "closed": 24,
-    "unconfirmed": 22
+    "unconfirmed": 23
    },
    "successes": [
     {
@@ -1191,6 +1191,414 @@
      "title": "Developer Experience Engineer",
      "location": "Remote",
      "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:33:59",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/d16a7ad6-ffbd-4655-8716-4872263f99ce",
+     "source": "ashby",
+     "score": 45.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Developer Experience Engineer",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:33:42",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/d16a7ad6-ffbd-4655-8716-4872263f99ce",
+     "source": "ashby",
+     "score": 45.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenAPI",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:32:42",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/108c99e6-ba2b-44a0-b830-7d535e14a152",
+     "source": "ashby",
+     "score": 64.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenAPI",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:32:25",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/108c99e6-ba2b-44a0-b830-7d535e14a152",
+     "source": "ashby",
+     "score": 64.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer (Frontend Leaning) - Studio",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:32:07",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/e6924f60-c8cc-42b3-9d05-2442ec30e12d",
+     "source": "ashby",
+     "score": 64.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenCreative Enterprise",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:31:50",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/34dbe44c-9815-40b2-81f4-91c607fd84b2",
+     "source": "ashby",
+     "score": 68.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer (Frontend Leaning) - Studio",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:31:33",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/e6924f60-c8cc-42b3-9d05-2442ec30e12d",
+     "source": "ashby",
+     "score": 64.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenCreative Enterprise",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:31:16",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/34dbe44c-9815-40b2-81f4-91c607fd84b2",
+     "source": "ashby",
+     "score": 68.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Ads Engine",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:30:58",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/3abf96ca-2937-4290-9d23-5208aece08b2",
+     "source": "ashby",
+     "score": 68.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Developer",
+     "location": "Remote - Illinois",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:30:42",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/cec2db23-b91d-42a6-9b8f-043c773faf56",
+     "source": "ashby",
+     "score": 57.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What is your desired compensation? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenMusic",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:30:19",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/0547cf3a-856f-4db2-8307-73db634c4096",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Ads Engine",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:29:56",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/3abf96ca-2937-4290-9d23-5208aece08b2",
+     "source": "ashby",
+     "score": 68.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Developer",
+     "location": "Remote - Illinois",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:29:40",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/cec2db23-b91d-42a6-9b8f-043c773faf56",
+     "source": "ashby",
+     "score": 57.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What is your desired compensation? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - ElevenMusic",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:29:17",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/0547cf3a-856f-4db2-8307-73db634c4096",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer (Backend Leaning) - Payments Engineering",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:28:54",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II- ROR",
+     "location": "Jaipur",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:28:28",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/7b4a7246-d679-4c1c-81da-0ac4d75fec39",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Creative Agents ",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:27:49",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe",
+     "source": "ashby",
+     "score": 72.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Mobile Engineering - Android",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:27:32",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:27:18",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426",
+     "source": "ashby",
+     "score": 60.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Full Stack",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:26:39",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer (Backend Leaning) - Payments Engineering",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:26:23",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/e4e0450f-d139-4f8e-b210-2f326a680d90",
+     "source": "ashby",
+     "score": 69.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II- ROR",
+     "location": "Jaipur",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:25:49",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/7b4a7246-d679-4c1c-81da-0ac4d75fec39",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Creative Agents ",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:25:00",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe",
+     "source": "ashby",
+     "score": 72.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Location (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Mobile Engineering - Android",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:24:36",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II",
+     "location": "Gurugram",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:23:55",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426",
+     "source": "ashby",
+     "score": 60.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Full Stack",
+     "location": "Bengaluru",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 02:23:04",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2",
+     "source": "ashby",
+     "score": 84.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "What are your fixed salary expectations? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Developer Experience Engineer",
+     "location": "Remote",
+     "status": "FAILED_VALIDATION",
      "applied_at": "2026-11-26 19:36:10",
      "url": "https://jobs.ashbyhq.com/ElevenLabs/d16a7ad6-ffbd-4655-8716-4872263f99ce",
      "source": "ashby",
@@ -1605,6 +2013,20 @@
      "score": 70.0,
      "category": "captcha",
      "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II-Golang",
+     "location": "Gurugram",
+     "status": "ERROR",
+     "applied_at": "2026-11-26 15:48:54",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "unconfirmed",
+     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
      "blocking": [],
      "company_later_succeeded": false
     },
@@ -6905,439 +7327,6 @@
       "What is your notice period?"
      ],
      "company_later_succeeded": false
-    },
-    {
-     "company": "NETGEAR",
-     "title": "  SASE Firewall QA Automation Engineer",
-     "location": "Bengaluru, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:22:36",
-     "url": "https://jobs.ashbyhq.com/netgear/b272ca70-fb78-4db1-87d7-ef5852394544",
-     "source": "ashby",
-     "score": 50.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Contact Phone Number",
-      "Contact Phone Number"
-     ],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "PAR Technology",
-     "title": "Software Engineer II",
-     "location": "Gurugram",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:22:27",
-     "url": "https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426",
-     "source": "ashby",
-     "score": 60.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Phone Number"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "TSMG",
-     "title": "Software Developer I (Technical Support Specialist I)",
-     "location": "Hyderabad",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:22:18",
-     "url": "https://jobs.lever.co/tsmg/07f5c7da-2cc3-440c-83a1-79264b4a8943",
-     "source": "lever",
-     "score": 55.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "I would like to receive information about training opportunities and courses from TSMG Academy in addition to recruitment-related communication ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Onehouse",
-     "title": "Backend Engineer- Kubernetes Infrastructure (India)",
-     "location": "India-Remote",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:22:04",
-     "url": "https://jobs.lever.co/Onehouse/02defd5a-e1d8-46b4-8e3b-7bac65b0f59a",
-     "source": "lever",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Tenna",
-     "title": "Web Developer (Back-End)",
-     "location": "Remote - Nationwide",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:22:02",
-     "url": "https://jobs.lever.co/tenna/b7281f96-bf3e-4851-ad91-9db4c746c6f1",
-     "source": "lever",
-     "score": 52.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Date available for work ✱",
-      "What is the highest level of education that you have completed? ✱",
-      "As of the date you are submitting this application, which of the following best describes your situation? Responses are used solely to determine employment eligibility and work-location requirements, and will not be used to discriminate on any basis prohibited by law. ✱",
-      "Do you have hands-on technical experience building and maintaining sites in Elementor? ✱",
-      "Do you have direct experience owning website security tasks such as hardening, vulnerability management, or incident response? ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Swarm Aero",
-     "title": "Software Engineer, Autonomy ",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:21:36",
-     "url": "https://jobs.ashbyhq.com/swarmaero/b9081408-93dc-40c0-b0b5-37aa5522f0fa",
-     "source": "ashby",
-     "score": 52.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Do you meet the citizenship requirements to obtain a U.S. security clearance?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Ramp",
-     "title": "Software Engineer, Backend, Comms Platform",
-     "location": "Remote (US)",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:21:23",
-     "url": "https://jobs.ashbyhq.com/ramp/939892e5-5273-4bfc-8c41-a6c51cabb228",
-     "source": "ashby",
-     "score": 52.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Phone",
-      "Phone",
-      "Where do you plan on working from (for payroll tax purposes)?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Lingaro",
-     "title": "Front End Developer",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:21:15",
-     "url": "https://jobs.lever.co/lingarogroup/a208f821-9dd8-4b35-b784-55313784c5db",
-     "source": "lever",
-     "score": 55.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Choose your currency: ✱",
-      "Choose your salary period ✱",
-      "Gross or net? ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "PointClickCare",
-     "title": "Canada- Jr Software Engineer (SRE)",
-     "location": "Remote or Mississauga",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:21:15",
-     "url": "https://jobs.lever.co/pointclickcare/e56d6df3-16fb-4652-9d97-c6140700d2e0",
-     "source": "lever",
-     "score": 52.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "ShyftLabs",
-     "title": "Software Developer",
-     "location": "Noida, Uttar Pradesh",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:20:37",
-     "url": "https://jobs.lever.co/shyftlabs/4547a228-9cd7-4af6-9588-5cd4c8ae1612",
-     "source": "lever",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Parallel Domain",
-     "title": "Product Engineer",
-     "location": "Remote",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:20:21",
-     "url": "https://jobs.lever.co/paralleldomain/f55d52d6-027f-43ef-a0bb-ee23e50d9b14",
-     "source": "lever",
-     "score": 52.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "fal",
-     "title": "Software Engineer, Distributed Systems ",
-     "location": "Remote - Global",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:19:49",
-     "url": "https://jobs.ashbyhq.com/fal-ai/0acf2909-a4c4-4ad5-a0fb-61fba66eb89e",
-     "source": "ashby",
-     "score": 52.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What is your preferred coding language?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Universe",
-     "title": "Data Platform Engineer ",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:19:39",
-     "url": "https://jobs.ashbyhq.com/universe/720f76e0-2cf0-4d58-833a-9e8a167ae5bf",
-     "source": "ashby",
-     "score": 52.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Які маєш фінансові очікування, на яку суму орієнтуєшся? ($ в gross, тобто до сплати податків)",
-      "Поділись, будь ласка, своїм контактом в Телеграм.",
-      "Чи знав/-ла про Universe до подачі на цю роль?",
-      "Як ти дізнався/-лась про Universe?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "SKELAR",
-     "title": "Full-stack Marketing Designer",
-     "location": "Ukraine, Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:19:33",
-     "url": "https://jobs.ashbyhq.com/SKELAR/097f08ad-4d39-4f63-8308-7c73b9b45a5e",
-     "source": "ashby",
-     "score": 52.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Please specify your salary expectations (gross, in $) (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Virtualitics, Inc",
-     "title": "Full Stack Engineer",
-     "location": "Remote",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:19:29",
-     "url": "https://jobs.lever.co/virtualitics/b74f87bc-59ad-49cf-a6c5-9361e3bbb19b",
-     "source": "lever",
-     "score": 56.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Raya",
-     "title": "Full-Stack Engineer, Internal Tools",
-     "location": "Remote",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:19:18",
-     "url": "https://jobs.lever.co/raya/44b34caa-4959-408f-bedf-df398039502a",
-     "source": "lever",
-     "score": 52.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "BIO",
-     "title": "Product Engineer",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:18:30",
-     "url": "https://jobs.ashbyhq.com/bio/a40c8d4d-c2e2-45eb-97a3-4d95f9846794",
-     "source": "ashby",
-     "score": 52.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Vesta Innovations Inc.",
-     "title": "Software Engineer - Fullstack",
-     "location": "Remote",
-     "status": "ERROR",
-     "applied_at": "2026-11-20 12:18:13",
-     "url": "https://jobs.ashbyhq.com/vesta/ca4bfe22-b7f4-4150-8f6f-fb01f1fe4477",
-     "source": "ashby",
-     "score": 57.0,
-     "category": "unconfirmed",
-     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Virta Health",
-     "title": "Software Engineer",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:17:42",
-     "url": "https://jobs.ashbyhq.com/virtahealth/0cd02f05-28be-4d24-abb6-46fddc487971",
-     "source": "ashby",
-     "score": 56.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Phone Number",
-      "Select a response that accurately describes your level of experience with AI tools",
-      "Do you have any familial relationships with current Virta employees?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Turnkey",
-     "title": "Engineering - Backend",
-     "location": "Remote",
-     "status": "CLOSED",
-     "applied_at": "2026-11-20 12:17:32",
-     "url": "https://jobs.ashbyhq.com/turnkey/346afd67-a6b9-4fb4-b3fb-19e54baf71e0",
-     "source": "ashby",
-     "score": 57.0,
-     "category": "closed",
-     "why": "The job was already closed when the bot opened it.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Realm",
-     "title": "Software Engineer - New Grad",
-     "location": "Remote",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:17:28",
-     "url": "https://jobs.ashbyhq.com/realmalliance/56d8b433-31ad-43a2-997e-b8538f5f2c9f",
-     "source": "ashby",
-     "score": 57.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "webAI",
-     "title": "Peer to Peer Software Engineer - Product",
-     "location": "Remote Office",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:16:50",
-     "url": "https://jobs.ashbyhq.com/webAI/96678445-0459-48fe-8266-59518805b0f8",
-     "source": "ashby",
-     "score": 57.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Authorization"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Sibill Srl",
-     "title": "Software Engineer",
-     "location": "Italy - Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:16:37",
-     "url": "https://jobs.ashbyhq.com/sibill/fb0bd868-8733-4ff9-bd72-9c2d389558ef",
-     "source": "ashby",
-     "score": 57.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Cognome",
-      "This is an Italy-based company. Are you based in Italy and fluent in italian? (this is a mandatory requirement for us)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "MCA Connect",
-     "title": "D365 CE & Power Platform Engineer",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:16:29",
-     "url": "https://jobs.lever.co/mcaconnect/1388838b-97d0-4871-a58e-eff18a64a29c",
-     "source": "lever",
-     "score": 57.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Please provide your FULL home address including zip code ✱",
-      "This position is a full-time W2 role. It is NOT open to contractors or C2C arrangements. Do you meet this requirement? ✱"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "HavocAI",
-     "title": "Field Software Engineer ",
-     "location": "Remote ",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:16:17",
-     "url": "https://jobs.ashbyhq.com/havocai/f7e2a1b3-8999-40ae-93d7-fc3ed79750f5",
-     "source": "ashby",
-     "score": 57.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you currently a US Citizen?",
-      "Are you eligible for a US security clearance?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Camunda",
-     "title": "Software Engineer, Backend - Engineering Operations",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:16:12",
-     "url": "https://jobs.ashbyhq.com/camunda/327f13d9-6054-46e5-96cd-bd757554f478",
-     "source": "ashby",
-     "score": 57.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "How do you currently use AI in your engineering work?",
-      "If you are eligible, please select the status that allows you to work and live in that Country",
-      "What is the first line of your address?",
-      "Post Code"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Reteam",
-     "title": "Backend Engineer",
-     "location": "EU - Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:15:56",
-     "url": "https://jobs.ashbyhq.com/reteam/8123c705-74fe-42e9-b190-23375928f64b",
-     "source": "ashby",
-     "score": 57.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "How did you first hear about us?",
-      "Take Home Submission"
-     ],
-     "company_later_succeeded": false
     }
    ],
    "questions": [
@@ -8714,27 +8703,27 @@
    "form_control_issues": [
     {
      "question": "Location",
-     "count": 32
+     "count": 48
+    },
+    {
+     "question": "What are your fixed salary expectations?",
+     "count": 17
     },
     {
      "question": "Please respond truthfully. How much hands-on experience do you have with MCP servers (such as GitHub MCP Server) and agent-based workflow automation? ✱",
      "count": 14
     },
     {
-     "question": "What are your fixed salary expectations?",
-     "count": 13
-    },
-    {
      "question": "Location (City)*",
      "count": 8
     },
     {
-     "question": "Have you shipped at least one production mobile app used by real users?",
+     "question": "What is your desired compensation?",
      "count": 6
     },
     {
-     "question": "What is your desired compensation?",
-     "count": 4
+     "question": "Have you shipped at least one production mobile app used by real users?",
+     "count": 6
     },
     {
      "question": "For iOS: Swift / iOS",
