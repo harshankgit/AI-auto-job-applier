@@ -1,18 +1,18 @@
 # Why applications failed
 
-_Generated 2026-11-27 14:01:38_
+_Generated 2026-11-27 14:31:26_
 
 ## Harshank
 
-Submitted: **143** (134 companies) | Failed: **949**
+Submitted: **146** (137 companies) | Failed: **963**
 
 | Reason | Count |
 |---|---|
-| Needs an answer from you | 542 |
-| Captcha | 172 |
+| Needs an answer from you | 543 |
+| Captcha | 174 |
 | Form rejected | 142 |
-| Page error | 37 |
-| No confirmation / OTP | 32 |
+| Page error | 47 |
+| No confirmation / OTP | 33 |
 | Job closed | 24 |
 
 ### Questions waiting for your answer
@@ -37,14 +37,14 @@ Submitted: **143** (134 companies) | Failed: **949**
 - (4x) Please check any of the boxes that describe your skill set: - Familiarity with modern AI tooling & frameworks (LangChain, LlamaIndex, etc.) - Crux
 - (4x) What is your most recent bonus pay/unvested stock option? (in INR)* - IMC Trading
 - (4x) What is your non - compete period? (in months)* - IMC Trading -> answered (saved privately)
+- (4x) Which industries are you interested in? - Consumer - SignalFire
+- (4x) Which industries are you interested in? - Cyber - SignalFire
+- (4x) Which industries are you interested in? - Enterprise SaaS - SignalFire
 - (4x) Чи знав/-ла про Universe до подачі на цю роль? - Universe
 - (3x) If so, what type of visa are you currently on and when does it expire? - Kong
 - (3x) Total & Relevant Experience in Software Engineering? ✱ - Allata -> answered (saved privately)
 - (3x) What color is the sky - Blue - Protegrity
 - (3x) What color is the sky - Orange - Protegrity
-- (3x) Which industries are you interested in? - Consumer - SignalFire
-- (3x) Which industries are you interested in? - Cyber - SignalFire
-- (3x) Which industries are you interested in? - Enterprise SaaS - SignalFire
 - (2x) A “U.S. person” is a citizen, legal permanent resident, or legal temporary resident (i.e., a refugee or asylee) of the United States. Which of the following best describes your “U.S. person” status? - Snowflake
 - (2x) AI/ML - ValGenesis
 - (2x) Address - Ncontracts
@@ -60,15 +60,15 @@ Submitted: **143** (134 companies) | Failed: **949**
 
 ## Divya
 
-Submitted: **132** (125 companies) | Failed: **789**
+Submitted: **143** (136 companies) | Failed: **800**
 
 | Reason | Count |
 |---|---|
-| Needs an answer from you | 441 |
-| Captcha | 187 |
-| Form rejected | 89 |
+| Needs an answer from you | 443 |
+| Captcha | 191 |
+| Form rejected | 90 |
 | No confirmation / OTP | 28 |
-| Page error | 23 |
+| Page error | 27 |
 | Job closed | 21 |
 
 ### Questions waiting for your answer
@@ -96,6 +96,9 @@ Submitted: **132** (125 companies) | Failed: **789**
 - (3x) Are you able to do a full-time internship for 6 months (24 weeks)?* - Agoda -> answered (saved privately)
 - (3x) Do you allow us to provide you TEXT/SMS updates of your interview process? We may engage with a service provider to do so.* - Agoda -> answered (saved privately)
 - (3x) Total & Relevant Experience in Software Engineering? ✱ - Allata -> answered (saved privately)
+- (3x) Which industries are you interested in? - Consumer - SignalFire
+- (3x) Which industries are you interested in? - Cyber - SignalFire
+- (3x) Which industries are you interested in? - Enterprise SaaS - SignalFire
 - (2x) <1 Yrs - Model N
 - (2x) <15 Days - Model N
 - (2x) AI/ML - ValGenesis
@@ -110,6 +113,3 @@ Submitted: **132** (125 companies) | Failed: **789**
 - (2x) Are you currently an intern, freelancer, or employee at WPP or one of its agencies?* - VML Enterprise Solutions -> answered (saved privately)
 - (2x) Are you currently based in the United States or Canada? - OpenRouter
 - (2x) Are you currently based in the United States? - Brigit
-- (2x) Are you currently legally entitled to work in Canada? - Spellbook
-- (2x) Are you currently living in Hyderabad? ✱ - Zeta
-- (2x) Are you currently on an OPT or H4 visa? - Talkiatry

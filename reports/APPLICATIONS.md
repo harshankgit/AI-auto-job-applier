@@ -1,10 +1,10 @@
 # AI Job Application Report
 
-**Report updated (UTC):** 2026-11-27 14:01:38
-**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-27 14:00:35
-**Companies applied to (all candidates):** 270
-**Applications submitted (page-confirmed):** 275
-**Total attempts logged:** 2044
+**Report updated (UTC):** 2026-11-27 14:31:26
+**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-27 14:17:37
+**Companies applied to (all candidates):** 284
+**Applications submitted (page-confirmed):** 289
+**Total attempts logged:** 2083
 
 > Only applications the job site itself confirmed are counted as done.
 > Every form value came from the candidate's own resume or their
@@ -14,8 +14,8 @@
 
 | Candidate | Companies done | Applications submitted | Total attempts | Not gone through | Dry runs |
 | --- | --- | --- | --- | --- | --- |
-| **Harshank Kanungo** | **140** | 143 | 1108 | 949 | 10 |
-| **Divya Kanungo** | **130** | 132 | 936 | 789 | 10 |
+| **Harshank Kanungo** | **143** | 146 | 1125 | 963 | 10 |
+| **Divya Kanungo** | **141** | 143 | 958 | 800 | 10 |
 
 ## Every company applied to - full details
 
@@ -291,22 +291,36 @@
 | 268 | Divya Kanungo | **Unstructured** | Software Engineer - Public Sector | Remote | Tech | 2026-11-27 13:54:47 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 12 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/unstructured/8db76ba9-7c3a-451c-8e6d-c3447e6cbe75/application) |
 | 269 | Divya Kanungo | **Phantom** | Software Engineer, Backend (Trading) | Remote | Tech | 2026-11-27 13:55:54 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 11 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/phantom/d8ee7f59-0f80-437f-908e-bfe603cb078a/application) |
 | 270 | Divya Kanungo | **pod network** | QA Engineer | UK & Europe,Turkey & Eastern Europe,South Africa,UAE / Gulf region,India | Tech | 2026-11-27 13:59:38 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 4 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/pod-network/60fffc28-e1ed-45f9-aca0-b38f6535df5b/application) |
+| 271 | Harshank Kanungo | **Eurofins** | .Net Fullstack Developer | Bengaluru, KA, India | Tech | 2026-11-27 14:02:25 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 30 | [APPLIED] SUBMITTED | [open](https://jobs.smartrecruiters.com/Eurofins/744000163285909) |
+| 272 | Divya Kanungo | **Shipsy** | Software Engineer (Fullstack/NodeJs/ReactJs) | Gurugram, HR, India | Tech | 2026-11-27 14:03:05 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 20 | [APPLIED] SUBMITTED | [open](https://jobs.smartrecruiters.com/Shipsy/744000002694405) |
+| 273 | Divya Kanungo | **Eurofins** | .Net Fullstack Developer | Bengaluru, KA, India | Tech | 2026-11-27 14:03:15 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 30 | [APPLIED] SUBMITTED | [open](https://jobs.smartrecruiters.com/Eurofins/744000163285909) |
+| 274 | Divya Kanungo | **Quest Global Technologies** | Node.js Developer | Indore, Madhya Pradesh, India (Remote) | Tech | 2026-11-27 14:03:26 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 11 | [APPLIED] SUBMITTED | [open](https://jobs.smartrecruiters.com/QuESTGlobalTechnologies/743999738287709) |
+| 275 | Divya Kanungo | **InterviewBit** | Software Engineer | Pune, MH, India | Tech | 2026-11-27 14:03:46 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 11 | [APPLIED] SUBMITTED | [open](https://jobs.smartrecruiters.com/InterviewBit/108121718) |
+| 276 | Divya Kanungo | **SearchApi** | Frontend Engineer & UI Designer (Developer Tooling) | Remote - Lithuania | Tech | 2026-11-27 14:03:58 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 9 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/SearchApi/597a1f05-d9bd-4827-82f1-794c0d861fff/application) |
+| 277 | Harshank Kanungo | **Rwazi, Inc.** | AI Engineer – Marketing & GTM Systems | Global (Remote) | Tech | 2026-11-27 14:04:02 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 17 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/rwazi/21ca2582-5797-4488-b46f-5103f9d77226/application) |
+| 278 | Divya Kanungo | **Sibill Srl** | Software Engineer | Italy - Remote | Tech | 2026-11-27 14:04:27 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 6 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/sibill/fb0bd868-8733-4ff9-bd72-9c2d389558ef/application) |
+| 279 | Divya Kanungo | **Rwazi, Inc.** | AI Engineer – Marketing & GTM Systems | Global (Remote) | Tech | 2026-11-27 14:05:40 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 17 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/rwazi/21ca2582-5797-4488-b46f-5103f9d77226/application) |
+| 280 | Divya Kanungo | **Diagrid** | Developer Advocate | Remote India | Tech | 2026-11-27 14:09:51 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 21 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/Diagrid/4b1828b2-2265-4610-8f3c-5c4fcaed0b2c/application) |
+| 281 | Divya Kanungo | **Hopper** | Ingénieur(e) IA en déploiement avancé, Travel Intelligence// Forward Deployed AI Engineer, Travel Intelligence | Montréal - Remote | Tech | 2026-11-27 14:10:20 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 8 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/hopper/2dfa4941-c72f-4154-83f4-2fd4354e7259/application) |
+| 282 | Divya Kanungo | **Augrade Inc** | Forward Deployed Engineer (Design + Modeling) | Bangalore | Tech | 2026-11-27 14:12:02 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 5 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/augrade/a5772a05-3579-4ae7-ae42-7476d64ed0f7/application) |
+| 283 | Divya Kanungo | **Clipboard** | Technical Support Engineer | Remote (APAC) | Tech | 2026-11-27 14:13:19 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 12 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/clipboard/64936960-e9e5-4294-b09b-194a562d09f0/application) |
+| 284 | Harshank Kanungo | **Thumbtack** | (2027 Talent Pool) Software Engineer, AI/ML Infrastructure | Remote, Ontario | Tech | 2026-11-27 14:15:02 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 8 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/thumbtack/fc9f96bc-bd4e-4883-95a8-91d25833fa35/application) |
 
 ## Outcome summary (all runs)
 
 | Outcome | Count | Meaning |
 | --- | --- | --- |
-| [INCOMPLETE] FAILED_VALIDATION | 1214 | Form asked something we had no resume fact for - not submitted |
-| [CAPTCHA] CAPTCHA_BLOCKED | 359 | Form was filled but a captcha needs a human to clear it |
-| [APPLIED] SUBMITTED | 275 | Application sent and confirmed by the company's site |
-| [ERROR] ERROR | 120 | Technical failure - not submitted |
+| [INCOMPLETE] FAILED_VALIDATION | 1218 | Form asked something we had no resume fact for - not submitted |
+| [CAPTCHA] CAPTCHA_BLOCKED | 365 | Form was filled but a captcha needs a human to clear it |
+| [APPLIED] SUBMITTED | 289 | Application sent and confirmed by the company's site |
+| [ERROR] ERROR | 135 | Technical failure - not submitted |
 | [CLOSED] CLOSED | 45 | Posting was closed by the time we opened it |
 | [DRY RUN] SKIPPED | 20 | Dry run - filled but deliberately not submitted |
 | [DUPLICATE] ALREADY_APPLIED | 11 | Company site says this candidate already applied |
 
 ---
 
-## Harshank Kanungo - 140 companies done
+## Harshank Kanungo - 143 companies done
 
 ### Contact details used on every form
 
@@ -324,7 +338,7 @@
 | Experience | 3 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2024) |
 
-### Companies done: 140 (149 applications out of 1108 attempts)
+### Companies done: 143 (152 applications out of 1125 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -477,6 +491,9 @@
 | 147 | 2026-11-27 13:48:24 | **pod network** | QA Engineer | UK & Europe,Turkey & Eastern Europe,South Africa,UAE / Gulf region,India | ashby | Tech | 46 | attached | 4 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/pod-network/60fffc28-e1ed-45f9-aca0-b38f6535df5b/application) |
 | 148 | 2026-11-27 13:50:13 | **Mento** | AI Engineer | Remote | ashby | Tech | 46 | attached | 11 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/mento/16bc640e-7f26-4ef6-9071-0f34b554d82b/application) |
 | 149 | 2026-11-27 13:50:27 | **Breakmark** | Forward Deployed Engineer | Anywhere in Latin America | ashby | Tech | 42 | attached | 4 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/breakmark/ff72bb5b-7ae1-4c63-817f-e5ca6fa6ee23/application) |
+| 150 | 2026-11-27 14:02:25 | **Eurofins** | .Net Fullstack Developer | Bengaluru, KA, India | smartrecruiters | Tech | 55 | attached | 30 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.smartrecruiters.com/Eurofins/744000163285909) |
+| 151 | 2026-11-27 14:04:02 | **Rwazi, Inc.** | AI Engineer – Marketing & GTM Systems | Global (Remote) | ashby | Tech | 46 | attached | 17 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/rwazi/21ca2582-5797-4488-b46f-5103f9d77226/application) |
+| 152 | 2026-11-27 14:15:02 | **Thumbtack** | (2027 Talent Pool) Software Engineer, AI/ML Infrastructure | Remote, Ontario | ashby | Tech | 65 | attached | 8 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/thumbtack/fc9f96bc-bd4e-4883-95a8-91d25833fa35/application) |
 
 #### Why each of those jobs was chosen
 
@@ -629,6 +646,9 @@
 147. **pod network - QA Engineer** (score 46): adjacent role 'qa engineer'; 2 resume skills in posting (javascript, typescript); India location (UK & Europe,Turkey & Eastern Europe,South Africa,UAE / Gulf region,India)
 148. **Mento - AI Engineer** (score 46): adjacent role 'ai engineer'; 1 resume skills in posting (typescript); AI role keyword 'ai'; remote, no country restriction stated (Remote)
 149. **Breakmark - Forward Deployed Engineer** (score 42): adjacent role 'forward deployed'; 1 resume skills in posting (rest api); AI mentioned in description; remote, globally open (Anywhere in Latin America)
+150. **Eurofins - .Net Fullstack Developer** (score 55): core role match 'fullstack'; India location (Bengaluru, KA, India)
+151. **Rwazi, Inc. - AI Engineer – Marketing & GTM Systems** (score 46): adjacent role 'ai engineer'; 1 resume skills in posting (typescript); AI role keyword 'ai'; remote, globally open (Global (Remote))
+152. **Thumbtack - (2027 Talent Pool) Software Engineer, AI/ML Infrastructure** (score 65): core role match 'software engineer'; seniority suits candidate ('2'); 1 resume skills in posting (express); AI role keyword 'ai'; remote, no country restriction stated (Remote, Ontario)
 
 #### Confirmation text shown by the company site
 
@@ -774,8 +794,11 @@
 - **pod network**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Mento**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Breakmark**: plication Success Your application was successfully submitted. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Eurofins**: nataka, India .Net Fullstack Developer Application submitted! Your application for .Net Fullstack Developer at Eurofins GSC IT DC has been submitted successfully. You’ll receive a confirmation email
+- **Rwazi, Inc.**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Thumbtack**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 
-### Attempts that did not go through (959)
+### Attempts that did not go through (973)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1738,6 +1761,20 @@
 | 2026-11-27 13:56:51 | Hopper | Ingénieur(e) IA en déploiement avancé, Travel Intelligence// Forward Deployed AI Engineer, Travel Intelligence | Montréal - Remote | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 9 | Which best describes your hands-on experience fine-tuning models? (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/hopper/2dfa4941-c72f-4154-83f4-2fd4354e7259/application) | after-hopper-2dfa4941-c72f-4154-83f4-2fd4354e7259.png |
 | 2026-11-27 13:58:46 | Hopper | L'ingénieur(e) en déploiement avancé// Forward Deployed Enginee Applied ML and Data | Montréal - Remote | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 10 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/hopper/01f96f61-a4c5-49e4-afcc-cbe39a098969/application) | after-hopper-01f96f61-a4c5-49e4-afcc-cbe39a098969.png |
 | 2026-11-27 14:00:35 | Applied | Electrical Integration Engineer | Bangalore | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Education History | 10 | Education History (could not set), Education History (could not set), Education History (could not set), Education History (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/applied/2ffcb384-3729-450c-8363-25818c76f2c7/application) | missing-applied.png |
+| 2026-11-27 14:02:50 | HackerRank | Software Engineer | Kurnool, AP, India (Remote) | [ERROR] ERROR | form filled but no submit button found | 11 | Upload profile image (photo/image upload - the resume PDF does not belong here), Facebook (brain: no resume fact or job fact grounds this question), X (fka Twitter) (brain: no resume fact or job fact grounds this question), Let the company know about your interest working there (optional free-text question with no grounded answer - left blank) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/HackerRank/743999791095679) | filled-HackerRank-743999791095679.png |
+| 2026-11-27 14:03:16 | Sutherland | Software Full stack Developer | Bengaluru, KA, India | [ERROR] ERROR | form filled but no submit button found | 9 | Upload profile image (photo/image upload - the resume PDF does not belong here) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/Sutherland/744000161998729) | filled-Sutherland-744000161998729.png |
+| 2026-11-27 14:05:04 | Traversal | Solutions Engineer - West | Remote | [ERROR] ERROR | clicked submit but the page never confirmed - treating as NOT submitted | 8 | Cover Letter (optional cover-letter upload - the resume belongs in the resume slot) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/traversal/db825a84-eea5-4595-b69b-71e443ce0416/application) | after-traversal-db825a84-eea5-4595-b69b-71e443ce0416.png |
+| 2026-11-27 14:05:28 | Sutherland | Platform Engineer & Cloud Ops Engineer | Hyderabad, //TS, India (Remote) | [ERROR] ERROR | form filled but no submit button found | 9 | Upload profile image (photo/image upload - the resume PDF does not belong here) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/Sutherland/744000152885943) | filled-Sutherland-744000152885943.png |
+| 2026-11-27 14:05:54 | HackerRank | Software Engineer | Kurnool, AP, India (Remote) | [ERROR] ERROR | form filled but no submit button found | 11 | Upload profile image (photo/image upload - the resume PDF does not belong here), Facebook (brain: no resume fact or job fact grounds this question), X (fka Twitter) (brain: no resume fact or job fact grounds this question), Let the company know about your interest working there (optional free-text question with no grounded answer - left blank) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/HackerRank/743999791095679) | filled-HackerRank-743999791095679.png |
+| 2026-11-27 14:13:00 | Shipsy | Software Engineer (Fullstack/NodeJs/ReactJs) | Gurugram, HR, India | [ERROR] ERROR | no form fields found on the apply page (form found in embedded frame: https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAQo66HG1k-lAABJtlzA%3D%3D& | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/Shipsy/744000002694405) | noform-Shipsy.png |
+| 2026-11-27 14:13:05 | Quest Global Technologies | Node.js Developer | Indore, Madhya Pradesh, India (Remote) | [ERROR] ERROR | no form fields found on the apply page (form found in embedded frame: https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAQo66HG1k-lAABJtlzA%3D%3D& | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/QuESTGlobalTechnologies/743999738287709) | noform-QuESTGlobalTechnologies.png |
+| 2026-11-27 14:13:10 | InterviewBit | Software Engineer | Pune, MH, India | [ERROR] ERROR | no form fields found on the apply page (form found in embedded frame: https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAQo66HG1k-lAABJtlzA%3D%3D& | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/InterviewBit/108121718) | noform-InterviewBit.png |
+| 2026-11-27 14:14:07 | Spellbook | Product Engineer | Remote - Ontario | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 9 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/spellbook.com/381788d0-507c-4232-b9ca-8c5b39070276/application) | after-spellbook.com-381788d0-507c-4232-b9ca-8c5b39070276.png |
+| 2026-11-27 14:15:33 | SignalFire | Forward Deployed Engineer (FDE) - VC Backed Startups | Remote - No Preference | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Which industries are you interested in? - Consumer, Which industries are you interested in? - | 14 | Which industries are you interested in? - Consumer (brain: no resume fact or job fact grounds this question), Which industries are you interested in? - Cyber (brain: no resume fact or job fact grounds this question), Which industries are you interested in? - Enterprise SaaS (brain: no resume fact or job fact grounds this question), Which industries are you interested in? - FinTech (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/SignalFire/ecfd70ab-44a8-4e78-a7ae-5a4efe187e4d/application) | missing-signalfire.png |
+| 2026-11-27 14:17:21 | Vesta Innovations Inc. | Software Engineer - Platform | Remote | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 10 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/vesta/deee60e6-d180-41aa-8d0e-f7e9e4baf0ba/application) | after-vesta-deee60e6-d180-41aa-8d0e-f7e9e4baf0ba.png |
+| 2026-11-27 14:17:27 | Shipsy | Software Engineer (Fullstack/NodeJs/ReactJs) | Gurugram, HR, India | [ERROR] ERROR | no form fields found on the apply page (form found in embedded frame: https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAQo66HG1k-lAABJtlzA%3D%3D& | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/Shipsy/744000002694405) | noform-Shipsy.png |
+| 2026-11-27 14:17:32 | Quest Global Technologies | Node.js Developer | Indore, Madhya Pradesh, India (Remote) | [ERROR] ERROR | no form fields found on the apply page (form found in embedded frame: https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAQo66HG1k-lAABJtlzA%3D%3D& | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/QuESTGlobalTechnologies/743999738287709) | noform-QuESTGlobalTechnologies.png |
+| 2026-11-27 14:17:37 | InterviewBit | Software Engineer | Pune, MH, India | [ERROR] ERROR | no form fields found on the apply page (form found in embedded frame: https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAQo66HG1k-lAABJtlzA%3D%3D& | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/InterviewBit/108121718) | noform-InterviewBit.png |
 
 ### Companies touched for this candidate
 
@@ -1793,6 +1830,7 @@
 | SPAN | ashby | no | 4 | 1 | DONE |
 | Certa | ashby | no | 4 | 0 | not yet |
 | Protegrity | ashby | no | 4 | 0 | not yet |
+| Spellbook | ashby | no | 4 | 0 | not yet |
 | Techtorch | ashby | no | 4 | 0 | not yet |
 | Silver.dev | ashby | no | 4 | 1 | DONE |
 | Talkiatry | ashby | no | 4 | 0 | not yet |
@@ -1803,13 +1841,16 @@
 | Crux | ashby | no | 4 | 0 | not yet |
 | Mudflap | ashby | no | 4 | 0 | not yet |
 | Second Front Systems | ashby | no | 4 | 0 | not yet |
+| Thumbtack | ashby | no | 4 | 1 | DONE |
 | Forward Financing | ashby | no | 4 | 0 | not yet |
+| SignalFire | ashby | no | 4 | 0 | not yet |
 | Rain | ashby | no | 4 | 0 | not yet |
 | Reteam | ashby | no | 4 | 0 | not yet |
 | Camunda | ashby | no | 4 | 0 | not yet |
 | HavocAI | ashby | no | 4 | 1 | DONE |
 | webAI | ashby | no | 4 | 0 | not yet |
 | Virta Health | ashby | no | 4 | 0 | not yet |
+| Vesta Innovations Inc. | ashby | no | 4 | 0 | not yet |
 | Universe | ashby | no | 4 | 0 | not yet |
 | Neural Concept | ashby | no | 4 | 0 | not yet |
 | Breakmark | ashby | no | 4 | 1 | DONE |
@@ -1834,20 +1875,18 @@
 | Nightfall AI | ashby | no | 3 | 0 | not yet |
 | CertifyOS | ashby | no | 3 | 0 | not yet |
 | Granica | ashby | no | 3 | 1 | DONE |
-| Spellbook | ashby | no | 3 | 0 | not yet |
 | SearchApi | ashby | no | 3 | 1 | DONE |
 | The Job Sauce | ashby | no | 3 | 1 | DONE |
 | Wormhole Labs | ashby | no | 3 | 1 | DONE |
 | Constructor | ashby | no | 3 | 1 | DONE |
-| Thumbtack | ashby | no | 3 | 0 | not yet |
-| SignalFire | ashby | no | 3 | 0 | not yet |
 | Sibill Srl | ashby | no | 3 | 1 | DONE |
-| Vesta Innovations Inc. | ashby | no | 3 | 0 | not yet |
 | BIO | ashby | no | 3 | 1 | DONE |
 | SKELAR | ashby | no | 3 | 1 | DONE |
 | fal | ashby | no | 3 | 1 | DONE |
 | Swarm Aero | ashby | no | 3 | 1 | DONE |
 | Mento | ashby | no | 3 | 1 | DONE |
+| Rwazi, Inc. | ashby | no | 3 | 1 | DONE |
+| Traversal | ashby | no | 3 | 0 | not yet |
 | pod network | ashby | no | 3 | 1 | DONE |
 | Clipboard | ashby | no | 3 | 0 | not yet |
 | Starburst | greenhouse | no | 2 | 0 | not yet |
@@ -1969,9 +2008,7 @@
 | Tenna | lever | no | 2 | 0 | not yet |
 | Zencore | lever | no | 2 | 0 | not yet |
 | Exa | ashby | no | 2 | 0 | not yet |
-| Rwazi, Inc. | ashby | no | 2 | 0 | not yet |
 | Jeeves | lever | no | 2 | 0 | not yet |
-| Traversal | ashby | no | 2 | 0 | not yet |
 | Payabli | ashby | no | 2 | 1 | DONE |
 | HRS | ashby | no | 2 | 0 | DONE |
 | Hevo Data | lever | yes | 2 | 0 | not yet |
@@ -1989,6 +2026,11 @@
 | Endava | smartrecruiters | no | 2 | 0 | not yet |
 | GRID eSports GmbH | recruitee | no | 2 | 0 | not yet |
 | Holepunch | recruitee | no | 2 | 0 | not yet |
+| HackerRank | smartrecruiters | no | 2 | 0 | not yet |
+| Sutherland | smartrecruiters | no | 2 | 0 | not yet |
+| Shipsy | smartrecruiters | no | 2 | 0 | not yet |
+| Quest Global Technologies | smartrecruiters | no | 2 | 0 | not yet |
+| InterviewBit | smartrecruiters | no | 2 | 0 | not yet |
 | LangChain | ashby | no | 1 | 1 | DONE |
 | Baseten | ashby | no | 1 | 0 | not yet |
 | Mercury | greenhouse | no | 1 | 0 | not yet |
@@ -2097,10 +2139,11 @@
 | Unacademy | smartrecruiters | no | 1 | 0 | not yet |
 | Lendingkart | smartrecruiters | no | 1 | 0 | not yet |
 | ServiceNow | smartrecruiters | no | 1 | 0 | not yet |
+| Eurofins | smartrecruiters | no | 1 | 1 | DONE |
 
 ---
 
-## Divya Kanungo - 130 companies done
+## Divya Kanungo - 141 companies done
 
 ### Contact details used on every form
 
@@ -2118,7 +2161,7 @@
 | Experience | 1 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2026) |
 
-### Companies done: 130 (137 applications out of 936 attempts)
+### Companies done: 141 (148 applications out of 958 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -2259,6 +2302,17 @@
 | 135 | 2026-11-27 13:54:47 | **Unstructured** | Software Engineer - Public Sector | Remote | ashby | Tech | 66 | attached | 12 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/unstructured/8db76ba9-7c3a-451c-8e6d-c3447e6cbe75/application) |
 | 136 | 2026-11-27 13:55:54 | **Phantom** | Software Engineer, Backend (Trading) | Remote | ashby | Tech | 56 | attached | 11 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/phantom/d8ee7f59-0f80-437f-908e-bfe603cb078a/application) |
 | 137 | 2026-11-27 13:59:38 | **pod network** | QA Engineer | UK & Europe,Turkey & Eastern Europe,South Africa,UAE / Gulf region,India | ashby | Tech | 46 | attached | 4 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/pod-network/60fffc28-e1ed-45f9-aca0-b38f6535df5b/application) |
+| 138 | 2026-11-27 14:03:05 | **Shipsy** | Software Engineer (Fullstack/NodeJs/ReactJs) | Gurugram, HR, India | smartrecruiters | Tech | 65 | attached | 20 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.smartrecruiters.com/Shipsy/744000002694405) |
+| 139 | 2026-11-27 14:03:15 | **Eurofins** | .Net Fullstack Developer | Bengaluru, KA, India | smartrecruiters | Tech | 55 | attached | 30 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.smartrecruiters.com/Eurofins/744000163285909) |
+| 140 | 2026-11-27 14:03:26 | **Quest Global Technologies** | Node.js Developer | Indore, Madhya Pradesh, India (Remote) | smartrecruiters | Tech | 60 | attached | 11 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.smartrecruiters.com/QuESTGlobalTechnologies/743999738287709) |
+| 141 | 2026-11-27 14:03:46 | **InterviewBit** | Software Engineer | Pune, MH, India | smartrecruiters | Tech | 55 | attached | 11 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.smartrecruiters.com/InterviewBit/108121718) |
+| 142 | 2026-11-27 14:03:58 | **SearchApi** | Frontend Engineer & UI Designer (Developer Tooling) | Remote - Lithuania | ashby | Tech | 77 | attached | 9 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/SearchApi/597a1f05-d9bd-4827-82f1-794c0d861fff/application) |
+| 143 | 2026-11-27 14:04:27 | **Sibill Srl** | Software Engineer | Italy - Remote | ashby | Tech | 57 | attached | 6 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/sibill/fb0bd868-8733-4ff9-bd72-9c2d389558ef/application) |
+| 144 | 2026-11-27 14:05:40 | **Rwazi, Inc.** | AI Engineer – Marketing & GTM Systems | Global (Remote) | ashby | Tech | 46 | attached | 17 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/rwazi/21ca2582-5797-4488-b46f-5103f9d77226/application) |
+| 145 | 2026-11-27 14:09:51 | **Diagrid** | Developer Advocate | Remote India | ashby | Tech | 45 | attached | 21 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/Diagrid/4b1828b2-2265-4610-8f3c-5c4fcaed0b2c/application) |
+| 146 | 2026-11-27 14:10:20 | **Hopper** | Ingénieur(e) IA en déploiement avancé, Travel Intelligence// Forward Deployed AI Engineer, Travel Intelligence | Montréal - Remote | ashby | Tech | 46 | attached | 8 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/hopper/2dfa4941-c72f-4154-83f4-2fd4354e7259/application) |
+| 147 | 2026-11-27 14:12:02 | **Augrade Inc** | Forward Deployed Engineer (Design + Modeling) | Bangalore | ashby | Tech | 44 | attached | 5 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/augrade/a5772a05-3579-4ae7-ae42-7476d64ed0f7/application) |
+| 148 | 2026-11-27 14:13:19 | **Clipboard** | Technical Support Engineer | Remote (APAC) | ashby | Tech | 41 | attached | 12 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/clipboard/64936960-e9e5-4294-b09b-194a562d09f0/application) |
 
 #### Why each of those jobs was chosen
 
@@ -2399,6 +2453,17 @@
 135. **Unstructured - Software Engineer - Public Sector** (score 66): core role match 'software engineer'; 2 resume skills in posting (express, html); AI mentioned in description; remote, no country restriction stated (Remote)
 136. **Phantom - Software Engineer, Backend (Trading)** (score 56): core role match 'software engineer'; AI mentioned in description; remote, no country restriction stated (Remote)
 137. **pod network - QA Engineer** (score 46): adjacent role 'qa engineer'; 2 resume skills in posting (javascript, typescript); India location (UK & Europe,Turkey & Eastern Europe,South Africa,UAE / Gulf region,India)
+138. **Shipsy - Software Engineer (Fullstack/NodeJs/ReactJs)** (score 65): core role match 'software engineer'; 2 resume skills in posting (node, react); India location (Gurugram, HR, India)
+139. **Eurofins - .Net Fullstack Developer** (score 55): core role match 'fullstack'; India location (Bengaluru, KA, India)
+140. **Quest Global Technologies - Node.js Developer** (score 60): core role match 'node'; 1 resume skills in posting (node); remote within India (Indore, Madhya Pradesh, India (Remote))
+141. **InterviewBit - Software Engineer** (score 55): core role match 'software engineer'; India location (Pune, MH, India)
+142. **SearchApi - Frontend Engineer & UI Designer (Developer Tooling)** (score 77): core role match 'frontend'; 5 resume skills in posting (css, html, javascript, react, tailwind); remote, no country restriction stated (Remote - Lithuania)
+143. **Sibill Srl - Software Engineer** (score 57): core role match 'software engineer'; 1 resume skills in posting (typescript); remote, no country restriction stated (Italy - Remote)
+144. **Rwazi, Inc. - AI Engineer – Marketing & GTM Systems** (score 46): adjacent role 'ai engineer'; 1 resume skills in posting (typescript); AI role keyword 'ai'; remote, globally open (Global (Remote))
+145. **Diagrid - Developer Advocate** (score 45): adjacent role 'developer advocate'; 1 resume skills in posting (typescript); AI mentioned in description; remote within India (Remote India)
+146. **Hopper - Ingénieur(e) IA en déploiement avancé, Travel Intelligence// Forward Deployed AI Engineer, Travel Intelligence** (score 46): adjacent role 'forward deployed'; 1 resume skills in posting (vite); AI role keyword 'ai'; remote, no country restriction stated (Montréal - Remote)
+147. **Augrade Inc - Forward Deployed Engineer (Design + Modeling)** (score 44): adjacent role 'forward deployed'; AI role keyword 'model'; India location (Bangalore)
+148. **Clipboard - Technical Support Engineer** (score 41): adjacent role 'technical support engineer'; 1 resume skills in posting (react); remote within India (Remote (APAC))
 
 #### Confirmation text shown by the company site
 
@@ -2534,8 +2599,19 @@
 - **Unstructured**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Phantom**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **pod network**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Shipsy**: are Engineer (Fullstack/NodeJs/ReactJs) Application submitted! Your application for Software Engineer (Fullstack/NodeJs/ReactJs) at Shipsy has been submitted successfully. You’ll receive a confirmati
+- **Eurofins**: nataka, India .Net Fullstack Developer Application submitted! Your application for .Net Fullstack Developer at Eurofins GSC IT DC has been submitted successfully. You’ll receive a confirmation email
+- **Quest Global Technologies**: adhya Pradesh, India Node.js Developer Application submitted! Your application for Node.js Developer at Quest Global Technologies has been submitted successfully. You’ll receive a confirmation email
+- **InterviewBit**: ngineer Pune, India Software Engineer Application submitted! Your application for Software Engineer at InterviewBit has been submitted successfully. You’ll receive a confirmation email shortly. po
+- **SearchApi**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Sibill Srl**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Rwazi, Inc.**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Diagrid**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Hopper**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Augrade Inc**: terest in Augrade! Your application was successfully submitted, and we'll contact you if there's a fit. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Clipboard**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 
-### Attempts that did not go through (799)
+### Attempts that did not go through (810)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -3338,6 +3414,17 @@
 | 2026-11-27 13:54:29 | Crux | AI Product Engineer | Remote (US) | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Please check any of the boxes that describe your skill set: - Experience building AI agents,  | 9 | Please check any of the boxes that describe your skill set: - Experience building AI agents (brain: no resume fact or job fact grounds this question), Please check any of the boxes that describe your skill set: - Experience building engineering teams from 0 to 1 (brain: no resume fact or job fact grounds this question), Please check any of the boxes that describe your skill set: - Familiarity with modern AI tooling & frameworks (LangChain, LlamaIndex, etc.) (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/cruxclimate/de7fb381-026b-420a-8366-f04dffd64f61/application) | missing-cruxclimate.png |
 | 2026-11-27 13:57:59 | PAR Technology | Software Developer | Remote - Illinois | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 16 | Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/PAR%20Technology/cec2db23-b91d-42a6-9b8f-043c773faf56/application) | after-par_technology-cec2db23-b91d-42a6-9b8f-043c773faf56.png |
 | 2026-11-27 13:59:05 | Plotline | Technical Support Engineer | Bengaluru Office | [ERROR] ERROR | clicked submit but the page never confirmed - treating as NOT submitted | 7 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/plotlineso/f20b5b6c-0792-43ed-adc2-b750fa94f2b2/application) | after-plotlineso-f20b5b6c-0792-43ed-adc2-b750fa94f2b2.png |
+| 2026-11-27 14:03:40 | HackerRank | Software Engineer | Kurnool, AP, India (Remote) | [ERROR] ERROR | form filled but no submit button found | 11 | Upload profile image (photo/image upload - the resume PDF does not belong here), Facebook (brain: no resume fact or job fact grounds this question), X (fka Twitter) (brain: no resume fact or job fact grounds this question), Let the company know about your interest working there (optional free-text question with no grounded answer - left blank) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.smartrecruiters.com/HackerRank/743999791095679) | filled-HackerRank-743999791095679.png |
+| 2026-11-27 14:04:05 | Sutherland | Software Full stack Developer | Bengaluru, KA, India | [ERROR] ERROR | form filled but no submit button found | 9 | Upload profile image (photo/image upload - the resume PDF does not belong here) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.smartrecruiters.com/Sutherland/744000161998729) | filled-Sutherland-744000161998729.png |
+| 2026-11-27 14:04:55 | Universe | Data Platform Engineer | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Які маєш фінансові очікування, на яку суму орієнтуєшся? ($ в gross, тобто до сплати податків) | 6 | Який формат роботи розглядаєш для себе? - Гібрид або full-office в Києві (brain: no resume fact or job fact grounds this question), Який формат роботи розглядаєш для себе? - Гібрид або full-office у Варшаві (brain: no resume fact or job fact grounds this question), Чи розглядаєш для себе гібридну роботу з офісу в Києві? 2-3 на тиждень в нашому комфортному офісі на Подолі. (brain: no resume fact or job fact grounds this question), Які маєш фінансові очікування, на яку суму орієнтуєшся? ($ в gross, тобто до сплати податків) (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/universe/720f76e0-2cf0-4d58-833a-9e8a167ae5bf/application) | missing-universe.png |
+| 2026-11-27 14:06:03 | Sutherland | Platform Engineer & Cloud Ops Engineer | Hyderabad, //TS, India (Remote) | [ERROR] ERROR | form filled but no submit button found | 9 | Upload profile image (photo/image upload - the resume PDF does not belong here) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.smartrecruiters.com/Sutherland/744000152885943) | filled-Sutherland-744000152885943.png |
+| 2026-11-27 14:06:08 | Oneleet | Fullstack Engineer, AI Implementation | US/EU - Remote | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 9 | Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/oneleet/e178bb4b-b402-4630-aaba-89a3c2841518/application) | after-oneleet-e178bb4b-b402-4630-aaba-89a3c2841518.png |
+| 2026-11-27 14:06:29 | HackerRank | Software Engineer | Kurnool, AP, India (Remote) | [ERROR] ERROR | form filled but no submit button found | 11 | Upload profile image (photo/image upload - the resume PDF does not belong here), Facebook (brain: no resume fact or job fact grounds this question), X (fka Twitter) (brain: no resume fact or job fact grounds this question), Let the company know about your interest working there (optional free-text question with no grounded answer - left blank) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.smartrecruiters.com/HackerRank/743999791095679) | filled-HackerRank-743999791095679.png |
+| 2026-11-27 14:08:14 | Reliable Robotics Corporation | Build Software Engineer | Remote | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 10 | GitHub (not present in resume (github) - skipped, never faked), How did you hear about us? (could not set), If other, please specify. (conditional follow-up field - not applicable to our answers), Gender (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/reliable-robotics/2d5a10d4-0644-41fa-91ed-4abde2e13bf9/application) | after-reliable-robotics-2d5a10d4-0644-41fa-91ed-4abde2e13bf9.png |
+| 2026-11-27 14:08:43 | SignalFire | Forward Deployed Engineer (FDE) - VC Backed Startups | Remote - No Preference | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Which industries are you interested in? - Consumer, Which industries are you interested in? - | 14 | Which industries are you interested in? - Consumer (brain: no resume fact or job fact grounds this question), Which industries are you interested in? - Cyber (brain: no resume fact or job fact grounds this question), Which industries are you interested in? - Enterprise SaaS (brain: no resume fact or job fact grounds this question), Which industries are you interested in? - FinTech (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/SignalFire/ecfd70ab-44a8-4e78-a7ae-5a4efe187e4d/application) | missing-signalfire.png |
+| 2026-11-27 14:11:38 | Camunda | AI Process Forward Deployed Engineer | Remote | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 23 | What are your pronouns for others to use when referring to you? (EEO/demographic field - intentionally not answered), If you have discussed this role with a current Camunda employee, please enter their full name here (brain: no resume fact or job fact grounds this question), What is the second line of your address (if relevant)? (brain: no resume fact or job fact grounds this question), State/Region (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/camunda/987fb6e0-1e22-45e5-b152-57acbcb59cb2/application) | after-camunda-987fb6e0-1e22-45e5-b152-57acbcb59cb2.png |
+| 2026-11-27 14:14:09 | Snowflake | Forward Deployed Engineer, Frontier Engineering | IN-Bangalore-MSO | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 16 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/snowflake/a276eb40-644b-4384-9d9a-bae1c263baa6/application) | after-snowflake-a276eb40-644b-4384-9d9a-bae1c263baa6.png |
+| 2026-11-27 14:15:20 | Snowflake | Forward Deployed Engineer, Frontier Engineering | IN-Bangalore-MSO | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 16 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/snowflake/a276eb40-644b-4384-9d9a-bae1c263baa6/application) | after-snowflake-a276eb40-644b-4384-9d9a-bae1c263baa6.png |
 
 ### Companies touched for this candidate
 
@@ -3388,24 +3475,32 @@
 | Parspec | ashby | no | 4 | 1 | DONE |
 | Gen Digital Inc. | ashby | no | 4 | 0 | not yet |
 | Protegrity | ashby | no | 4 | 0 | not yet |
+| SearchApi | ashby | no | 4 | 1 | DONE |
 | Talkiatry | ashby | no | 4 | 0 | not yet |
 | Ncontracts | ashby | no | 4 | 0 | not yet |
 | Crux | ashby | no | 4 | 0 | not yet |
+| Oneleet | ashby | no | 4 | 0 | not yet |
 | Techtorch | ashby | no | 4 | 0 | not yet |
 | Silver.dev | ashby | no | 4 | 1 | DONE |
 | TensorWave | ashby | no | 4 | 0 | not yet |
+| Reliable Robotics Corporation | ashby | no | 4 | 0 | not yet |
+| SignalFire | ashby | no | 4 | 0 | not yet |
 | Constructor | ashby | no | 4 | 0 | not yet |
 | Second Front Systems | ashby | no | 4 | 1 | DONE |
 | Turnkey | ashby | no | 4 | 0 | not yet |
 | Mudflap | ashby | no | 4 | 0 | not yet |
 | Reteam | ashby | no | 4 | 0 | not yet |
 | Vesta Innovations Inc. | ashby | no | 4 | 0 | not yet |
+| Sibill Srl | ashby | no | 4 | 1 | DONE |
 | webAI | ashby | no | 4 | 0 | not yet |
+| Camunda | ashby | no | 4 | 0 | not yet |
 | BIO | ashby | no | 4 | 0 | not yet |
 | PAR Technology | ashby | no | 4 | 0 | not yet |
 | Rain | ashby | no | 4 | 0 | not yet |
+| Universe | ashby | no | 4 | 0 | not yet |
 | fal | ashby | no | 4 | 0 | not yet |
 | Neural Concept | ashby | no | 4 | 1 | DONE |
+| Snowflake | ashby | no | 4 | 0 | not yet |
 | Payabli | ashby | no | 4 | 0 | not yet |
 | Starburst | greenhouse | no | 3 | 0 | not yet |
 | Smallest AI | ashby | yes | 3 | 0 | not yet |
@@ -3425,26 +3520,24 @@
 | Nightfall AI | ashby | no | 3 | 1 | DONE |
 | Onehouse | lever | no | 3 | 0 | not yet |
 | Spellbook | ashby | no | 3 | 1 | DONE |
-| SearchApi | ashby | no | 3 | 0 | not yet |
-| Oneleet | ashby | no | 3 | 0 | not yet |
 | CertifyOS | ashby | no | 3 | 0 | not yet |
 | MultiplyMii | ashby | no | 3 | 0 | not yet |
 | The Job Sauce | ashby | no | 3 | 1 | DONE |
 | OpenRouter | ashby | no | 3 | 1 | DONE |
 | Thumbtack | ashby | no | 3 | 0 | not yet |
-| Reliable Robotics Corporation | ashby | no | 3 | 0 | not yet |
-| SignalFire | ashby | no | 3 | 0 | not yet |
 | Wormhole Labs | ashby | no | 3 | 1 | DONE |
 | Realm | ashby | no | 3 | 0 | not yet |
 | HavocAI | ashby | no | 3 | 0 | not yet |
-| Sibill Srl | ashby | no | 3 | 0 | not yet |
 | Virta Health | ashby | no | 3 | 0 | not yet |
-| Camunda | ashby | no | 3 | 0 | not yet |
 | SKELAR | ashby | no | 3 | 0 | not yet |
-| Universe | ashby | no | 3 | 0 | not yet |
 | Swarm Aero | ashby | no | 3 | 0 | not yet |
 | Mento | ashby | no | 3 | 1 | DONE |
+| Rwazi, Inc. | ashby | no | 3 | 1 | DONE |
 | pod network | ashby | no | 3 | 1 | DONE |
+| Diagrid | ashby | no | 3 | 1 | DONE |
+| Hopper | ashby | no | 3 | 1 | DONE |
+| Augrade Inc | ashby | no | 3 | 1 | DONE |
+| Clipboard | ashby | no | 3 | 1 | DONE |
 | Endava | smartrecruiters | no | 3 | 0 | not yet |
 | Bosch Group | smartrecruiters | no | 3 | 1 | DONE |
 | Scale AI | greenhouse | yes | 2 | 0 | not yet |
@@ -3548,7 +3641,6 @@
 | Tenna | lever | no | 2 | 0 | not yet |
 | Zencore | lever | no | 2 | 0 | not yet |
 | Exa | ashby | no | 2 | 0 | not yet |
-| Rwazi, Inc. | ashby | no | 2 | 0 | not yet |
 | Jeeves | lever | no | 2 | 0 | not yet |
 | Paytm Payments Services | lever | no | 2 | 0 | not yet |
 | Wahed | lever | no | 2 | 0 | not yet |
@@ -3557,13 +3649,8 @@
 | Riveron | ashby | no | 2 | 0 | not yet |
 | Alt Platform Inc | ashby | no | 2 | 0 | not yet |
 | Cognition | ashby | no | 2 | 1 | DONE |
-| Diagrid | ashby | no | 2 | 0 | not yet |
-| Hopper | ashby | no | 2 | 0 | not yet |
 | 100ms | lever | no | 2 | 0 | not yet |
-| Augrade Inc | ashby | no | 2 | 0 | not yet |
 | Clipbook | ashby | no | 2 | 0 | not yet |
-| Clipboard | ashby | no | 2 | 0 | not yet |
-| Snowflake | ashby | no | 2 | 0 | not yet |
 | Dozee | lever | no | 2 | 0 | not yet |
 | Array Behavioral Care | ashby | no | 2 | 0 | not yet |
 | Protege | ashby | no | 2 | 0 | not yet |
@@ -3573,6 +3660,8 @@
 | Wonderful | ashby | no | 2 | 0 | not yet |
 | FamPay | lever | no | 2 | 0 | not yet |
 | NielsenIQ | smartrecruiters | no | 2 | 0 | not yet |
+| HackerRank | smartrecruiters | no | 2 | 0 | not yet |
+| Sutherland | smartrecruiters | no | 2 | 0 | not yet |
 | Baseten | ashby | yes | 1 | 1 | DONE |
 | Planetscale | greenhouse | no | 1 | 0 | not yet |
 | Adyen | greenhouse | no | 1 | 1 | DONE |
@@ -3676,6 +3765,10 @@
 | Holepunch | recruitee | no | 1 | 0 | not yet |
 | GRID eSports GmbH | recruitee | no | 1 | 0 | not yet |
 | Cars24 | smartrecruiters | no | 1 | 0 | not yet |
+| Shipsy | smartrecruiters | no | 1 | 1 | DONE |
+| Eurofins | smartrecruiters | no | 1 | 1 | DONE |
+| Quest Global Technologies | smartrecruiters | no | 1 | 1 | DONE |
+| InterviewBit | smartrecruiters | no | 1 | 1 | DONE |
 
 ---
 
