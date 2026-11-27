@@ -1,10 +1,10 @@
 # AI Job Application Report
 
-**Report updated (UTC):** 2026-11-27 13:00:12
-**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-27 10:47:22
-**Companies applied to (all candidates):** 232
-**Applications submitted (page-confirmed):** 237
-**Total attempts logged:** 1829
+**Report updated (UTC):** 2026-11-27 13:31:16
+**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-27 13:31:15
+**Companies applied to (all candidates):** 255
+**Applications submitted (page-confirmed):** 260
+**Total attempts logged:** 1955
 
 > Only applications the job site itself confirmed are counted as done.
 > Every form value came from the candidate's own resume or their
@@ -14,8 +14,8 @@
 
 | Candidate | Companies done | Applications submitted | Total attempts | Not gone through | Dry runs |
 | --- | --- | --- | --- | --- | --- |
-| **Harshank Kanungo** | **119** | 122 | 999 | 861 | 10 |
-| **Divya Kanungo** | **113** | 115 | 830 | 700 | 10 |
+| **Harshank Kanungo** | **136** | 139 | 1069 | 914 | 10 |
+| **Divya Kanungo** | **119** | 121 | 886 | 750 | 10 |
 
 ## Every company applied to - full details
 
@@ -253,22 +253,45 @@
 | 230 | Harshank Kanungo | **BoschGroup** | Full Stack Developer | Bangalore, India | Tech | 2026-11-27 09:20:48 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 20 | [APPLIED] SUBMITTED | [open](https://jobs.smartrecruiters.com/BoschGroup/744000160600719) |
 | 231 | Divya Kanungo | **Continental** | Java Full Stack Developer | Electronic City,  Bengaluru, Karnataka, India | Tech | 2026-11-27 10:26:21 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 17 | [APPLIED] SUBMITTED | [open](https://jobs.smartrecruiters.com/Continental/744000154002299) |
 | 232 | Divya Kanungo | **Bosch Group** | Full Stack Software Developer with AI expertise, Pune | hosur road bangalore, , India | Tech | 2026-11-27 10:45:42 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 23 | [APPLIED] SUBMITTED | [open](https://jobs.smartrecruiters.com/BoschGroup/744000155451389) |
+| 233 | Harshank Kanungo | **Sardine** | Software Engineer - Backend | India | Tech | 2026-11-27 13:04:10 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 13 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/sardine/2524d206-42cb-4202-8d85-59e47c72d704/application) |
+| 234 | Divya Kanungo | **Sardine** | Software Engineer - Backend | India | Tech | 2026-11-27 13:04:11 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 12 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/sardine/2524d206-42cb-4202-8d85-59e47c72d704/application) |
+| 235 | Harshank Kanungo | **3Y Health** | AI Product Engineer | Remote – India | Tech | 2026-11-27 13:06:25 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 10 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/3y-health/7fcd0173-7424-44b1-9a79-0063b36504d5/application) |
+| 236 | Divya Kanungo | **Metaforms** | Product Engineer | Bengaluru | Tech | 2026-11-27 13:06:41 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 6 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/metaforms/fbaa4289-1ec2-4e48-a83f-ddd090715cd6/application) |
+| 237 | Harshank Kanungo | **Kong** | Software Engineer 2, Managed Gateways | Bangalore, India | Tech | 2026-11-27 13:08:44 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 12 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/kong/c394bebf-d83e-47d9-acd1-78cfebd0affc/application) |
+| 238 | Harshank Kanungo | **Granica** | Software Engineer, Data Platform (Bengaluru) | Bengaluru Urban | Tech | 2026-11-27 13:11:31 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 3 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/granica/8712e354-0bd6-4706-8d30-45b6ff4bf7d4/application) |
+| 239 | Harshank Kanungo | **fal** | Technical Support Engineer - APAC/EMEA | India | Tech | 2026-11-27 13:12:15 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 12 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/fal-ai/dc65f96a-c4a4-47f1-bdeb-af8d131d3e65/application) |
+| 240 | Divya Kanungo | **Paxos** | Data Platform Engineer | Remote - India | Tech | 2026-11-27 13:12:15 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 8 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/paxos/f8cbcedf-5b3a-463c-82d1-0d80b9c34e42/application) |
+| 241 | Harshank Kanungo | **Paxos** | Data Platform Engineer | Remote - India | Tech | 2026-11-27 13:12:50 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 8 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/paxos/f8cbcedf-5b3a-463c-82d1-0d80b9c34e42/application) |
+| 242 | Divya Kanungo | **Spellbook** | Product Engineer | Remote - Ontario | Tech | 2026-11-27 13:15:16 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 9 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/spellbook.com/381788d0-507c-4232-b9ca-8c5b39070276/application) |
+| 243 | Harshank Kanungo | **SearchApi** | Frontend Engineer & UI Designer (Developer Tooling) | Remote - Lithuania | Tech | 2026-11-27 13:16:45 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 9 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/SearchApi/597a1f05-d9bd-4827-82f1-794c0d861fff/application) |
+| 244 | Harshank Kanungo | **Wormhole Labs** | Full-Stack Blockchain Engineer | Remote | Tech | 2026-11-27 13:18:34 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 7 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/wormholelabs/1f13ccfb-be18-46e7-9b9f-52f7f343c4d9/application) |
+| 245 | Divya Kanungo | **OpenRouter** | Software Engineer, Enterprise | Remote (US) | Tech | 2026-11-27 13:19:05 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 8 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/openrouter/0c6bbb7f-ea09-45b6-b185-8a17a8de214d/application) |
+| 246 | Harshank Kanungo | **Constructor** | Platform Engineer: Platform Enablement | Remote | Tech | 2026-11-27 13:19:19 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 9 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/constructor/fe2b4f29-b0d8-4944-bf3a-89596746a9c9/application) |
+| 247 | Harshank Kanungo | **Sibill Srl** | Software Engineer | Italy - Remote | Tech | 2026-11-27 13:20:55 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 6 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/sibill/fb0bd868-8733-4ff9-bd72-9c2d389558ef/application) |
+| 248 | Divya Kanungo | **Wormhole Labs** | Full-Stack Blockchain Engineer | Remote | Tech | 2026-11-27 13:21:15 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 6 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/wormholelabs/1f13ccfb-be18-46e7-9b9f-52f7f343c4d9/application) |
+| 249 | Harshank Kanungo | **BIO** | Product Engineer | Remote | Tech | 2026-11-27 13:25:13 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 7 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/bio/a40c8d4d-c2e2-45eb-97a3-4d95f9846794/application) |
+| 250 | Harshank Kanungo | **SKELAR** | Full-stack Marketing Designer | Ukraine, Remote | Tech | 2026-11-27 13:25:47 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 6 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/SKELAR/097f08ad-4d39-4f63-8308-7c73b9b45a5e/application) |
+| 251 | Harshank Kanungo | **Swarm Aero** | Software Engineer, Autonomy | Remote | Tech | 2026-11-27 13:27:22 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 8 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/swarmaero/b9081408-93dc-40c0-b0b5-37aa5522f0fa/application) |
+| 252 | Harshank Kanungo | **SPAN** | Device - Software Engineer (Functional Safety) | Bengaluru | Tech | 2026-11-27 13:27:26 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 11 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/span/98107b13-239e-4c8e-9597-350ab676239e/application) |
+| 253 | Harshank Kanungo | **OpenRouter** | Software Engineer, Enterprise | Remote (US) | Tech | 2026-11-27 13:28:51 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 8 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/openrouter/0c6bbb7f-ea09-45b6-b185-8a17a8de214d/application) |
+| 254 | Harshank Kanungo | **TensorWave** | Software Engineer (Front-End) | Remote | Tech | 2026-11-27 13:29:08 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 10 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/TensorWave/31e9b0a4-d5fe-4227-9714-1d0885cbe2b7/application) |
+| 255 | Harshank Kanungo | **Silver.dev** | Arrouya - Product Engineer | Remote | Tech | 2026-11-27 13:29:25 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 18 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/Silver/d3752d86-6e1d-4b4b-ab01-ff890ebe18e3/application) |
 
 ## Outcome summary (all runs)
 
 | Outcome | Count | Meaning |
 | --- | --- | --- |
-| [INCOMPLETE] FAILED_VALIDATION | 1107 | Form asked something we had no resume fact for - not submitted |
-| [CAPTCHA] CAPTCHA_BLOCKED | 315 | Form was filled but a captcha needs a human to clear it |
-| [APPLIED] SUBMITTED | 237 | Application sent and confirmed by the company's site |
-| [ERROR] ERROR | 94 | Technical failure - not submitted |
+| [INCOMPLETE] FAILED_VALIDATION | 1175 | Form asked something we had no resume fact for - not submitted |
+| [CAPTCHA] CAPTCHA_BLOCKED | 333 | Form was filled but a captcha needs a human to clear it |
+| [APPLIED] SUBMITTED | 260 | Application sent and confirmed by the company's site |
+| [ERROR] ERROR | 111 | Technical failure - not submitted |
 | [CLOSED] CLOSED | 45 | Posting was closed by the time we opened it |
 | [DRY RUN] SKIPPED | 20 | Dry run - filled but deliberately not submitted |
 | [DUPLICATE] ALREADY_APPLIED | 11 | Company site says this candidate already applied |
 
 ---
 
-## Harshank Kanungo - 119 companies done
+## Harshank Kanungo - 136 companies done
 
 ### Contact details used on every form
 
@@ -286,7 +309,7 @@
 | Experience | 3 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2024) |
 
-### Companies done: 119 (128 applications out of 999 attempts)
+### Companies done: 136 (145 applications out of 1069 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -418,6 +441,23 @@
 | 126 | 2026-11-27 04:50:49 | **vitvio** | Product Engineer | Remote | ashby | Tech | 71 | attached | 9 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/vitvio/99db843a-9609-4bab-a788-faacf6d5643e/application) |
 | 127 | 2026-11-27 04:52:26 | **atomic-financial** | Automation Engineer | Remote | ashby | Tech | 58 | attached | 13 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/atomic-financial/7e781781-c559-4dde-a006-32f6da25937f/application) |
 | 128 | 2026-11-27 09:20:48 | **BoschGroup** | Full Stack Developer | Bangalore, India | smartrecruiters | Tech | 80 | attached | 20 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.smartrecruiters.com/BoschGroup/744000160600719) |
+| 129 | 2026-11-27 13:04:10 | **Sardine** | Software Engineer - Backend | India | ashby | Tech | 70 | attached | 13 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/sardine/2524d206-42cb-4202-8d85-59e47c72d704/application) |
+| 130 | 2026-11-27 13:06:25 | **3Y Health** | AI Product Engineer | Remote – India | ashby | Tech | 83 | attached | 10 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/3y-health/7fcd0173-7424-44b1-9a79-0063b36504d5/application) |
+| 131 | 2026-11-27 13:08:44 | **Kong** | Software Engineer 2, Managed Gateways | Bangalore, India | ashby | Tech | 60 | attached | 12 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/kong/c394bebf-d83e-47d9-acd1-78cfebd0affc/application) |
+| 132 | 2026-11-27 13:11:31 | **Granica** | Software Engineer, Data Platform (Bengaluru) | Bengaluru Urban | ashby | Tech | 55 | attached | 3 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/granica/8712e354-0bd6-4706-8d30-45b6ff4bf7d4/application) |
+| 133 | 2026-11-27 13:12:15 | **fal** | Technical Support Engineer - APAC/EMEA | India | ashby | Tech | 55 | attached | 12 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/fal-ai/dc65f96a-c4a4-47f1-bdeb-af8d131d3e65/application) |
+| 134 | 2026-11-27 13:12:50 | **Paxos** | Data Platform Engineer | Remote - India | ashby | Tech | 60 | attached | 8 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/paxos/f8cbcedf-5b3a-463c-82d1-0d80b9c34e42/application) |
+| 135 | 2026-11-27 13:16:45 | **SearchApi** | Frontend Engineer & UI Designer (Developer Tooling) | Remote - Lithuania | ashby | Tech | 77 | attached | 9 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/SearchApi/597a1f05-d9bd-4827-82f1-794c0d861fff/application) |
+| 136 | 2026-11-27 13:18:34 | **Wormhole Labs** | Full-Stack Blockchain Engineer | Remote | ashby | Tech | 65 | attached | 7 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/wormholelabs/1f13ccfb-be18-46e7-9b9f-52f7f343c4d9/application) |
+| 137 | 2026-11-27 13:19:19 | **Constructor** | Platform Engineer: Platform Enablement | Remote | ashby | Tech | 62 | attached | 9 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/constructor/fe2b4f29-b0d8-4944-bf3a-89596746a9c9/application) |
+| 138 | 2026-11-27 13:20:55 | **Sibill Srl** | Software Engineer | Italy - Remote | ashby | Tech | 57 | attached | 6 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/sibill/fb0bd868-8733-4ff9-bd72-9c2d389558ef/application) |
+| 139 | 2026-11-27 13:25:13 | **BIO** | Product Engineer | Remote | ashby | Tech | 52 | attached | 7 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/bio/a40c8d4d-c2e2-45eb-97a3-4d95f9846794/application) |
+| 140 | 2026-11-27 13:25:47 | **SKELAR** | Full-stack Marketing Designer | Ukraine, Remote | ashby | Tech | 52 | attached | 6 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/SKELAR/097f08ad-4d39-4f63-8308-7c73b9b45a5e/application) |
+| 141 | 2026-11-27 13:27:22 | **Swarm Aero** | Software Engineer, Autonomy | Remote | ashby | Tech | 52 | attached | 8 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/swarmaero/b9081408-93dc-40c0-b0b5-37aa5522f0fa/application) |
+| 142 | 2026-11-27 13:27:26 | **SPAN** | Device - Software Engineer (Functional Safety) | Bengaluru | ashby | Tech | 60 | attached | 11 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/span/98107b13-239e-4c8e-9597-350ab676239e/application) |
+| 143 | 2026-11-27 13:28:51 | **OpenRouter** | Software Engineer, Enterprise | Remote (US) | ashby | Tech | 71 | attached | 8 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/openrouter/0c6bbb7f-ea09-45b6-b185-8a17a8de214d/application) |
+| 144 | 2026-11-27 13:29:08 | **TensorWave** | Software Engineer (Front-End) | Remote | ashby | Tech | 67 | attached | 10 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/TensorWave/31e9b0a4-d5fe-4227-9714-1d0885cbe2b7/application) |
+| 145 | 2026-11-27 13:29:25 | **Silver.dev** | Arrouya - Product Engineer | Remote | ashby | Tech | 66 | attached | 18 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/Silver/d3752d86-6e1d-4b4b-ab01-ff890ebe18e3/application) |
 
 #### Why each of those jobs was chosen
 
@@ -549,6 +589,23 @@
 126. **vitvio - Product Engineer** (score 71): core role match 'product engineer'; 3 resume skills in posting (git, react, typescript); AI mentioned in description; remote, no country restriction stated (Remote)
 127. **atomic-financial - Automation Engineer** (score 58): adjacent role 'automation engineer'; 9 resume skills in posting (authentication, css, git, html, javascript); remote, no country restriction stated (Remote)
 128. **BoschGroup - Full Stack Developer** (score 80): live SmartRecruiters test
+129. **Sardine - Software Engineer - Backend** (score 70): core role match 'software engineer'; 3 resume skills in posting (node, react, typescript); India location (India)
+130. **3Y Health - AI Product Engineer** (score 83): core role match 'product engineer'; 4 resume skills in posting (git, next.js, react, typescript); AI role keyword 'ai'; remote within India (Remote – India)
+131. **Kong - Software Engineer 2, Managed Gateways** (score 60): core role match 'software engineer'; seniority suits candidate ('2'); 1 resume skills in posting (git); India location (Bangalore, India)
+132. **Granica - Software Engineer, Data Platform (Bengaluru)** (score 55): core role match 'software engineer'; India location (Bengaluru Urban)
+133. **fal - Technical Support Engineer - APAC/EMEA** (score 55): adjacent role 'technical support engineer'; 3 resume skills in posting (authentication, git, rest api); AI mentioned in description; India location (India)
+134. **Paxos - Data Platform Engineer** (score 60): core role match 'platform engineer'; 1 resume skills in posting (git); remote within India (Remote - India)
+135. **SearchApi - Frontend Engineer & UI Designer (Developer Tooling)** (score 77): core role match 'frontend'; 5 resume skills in posting (css, git, html, javascript, react); remote, no country restriction stated (Remote - Lithuania)
+136. **Wormhole Labs - Full-Stack Blockchain Engineer** (score 65): core role match 'full-stack'; 1 resume skills in posting (typescript); AI role keyword 'ai'; remote, no country restriction stated (Remote)
+137. **Constructor - Platform Engineer: Platform Enablement** (score 62): core role match 'platform engineer'; 2 resume skills in posting (express, git); remote, no country restriction stated (Remote)
+138. **Sibill Srl - Software Engineer** (score 57): core role match 'software engineer'; 1 resume skills in posting (typescript); remote, no country restriction stated (Italy - Remote)
+139. **BIO - Product Engineer** (score 52): core role match 'product engineer'; remote, no country restriction stated (Remote)
+140. **SKELAR - Full-stack Marketing Designer** (score 52): core role match 'full-stack'; remote, no country restriction stated (Ukraine, Remote)
+141. **Swarm Aero - Software Engineer, Autonomy** (score 52): core role match 'software engineer'; remote, no country restriction stated (Remote)
+142. **SPAN - Device - Software Engineer (Functional Safety)** (score 60): core role match 'software engineer'; 1 resume skills in posting (react); India location (Bengaluru)
+143. **OpenRouter - Software Engineer, Enterprise** (score 71): core role match 'software engineer'; 3 resume skills in posting (next.js, react, typescript); AI mentioned in description; remote, no country restriction stated (Remote (US))
+144. **TensorWave - Software Engineer (Front-End)** (score 67): core role match 'software engineer'; 3 resume skills in posting (css, react, typescript); remote, no country restriction stated (Remote)
+145. **Silver.dev - Arrouya - Product Engineer** (score 66): core role match 'product engineer'; 2 resume skills in posting (next.js, react); AI mentioned in description; remote, no country restriction stated (Remote)
 
 #### Confirmation text shown by the company site
 
@@ -673,8 +730,25 @@
 - **vitvio**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **atomic-financial**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **BoschGroup**: application submitted
+- **Sardine**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **3Y Health**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Kong**: interest in Kong! Your application was successfully submitted. We'll contact you if your background aligns to our candidate profile and if there are next steps. Powered by Privacy PolicySecurityVu
+- **Granica**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **fal**: ineering Overview Application Success Thank you for applying to fal! Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulne
+- **Paxos**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **SearchApi**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Wormhole Labs**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Constructor**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Sibill Srl**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **BIO**: nt Tech Overview Application Success Thanks for applying - we appreciate your interest! We'll contact you if there are next steps, have a great day! Powered by Privacy PolicySecurityVulnerabilit
+- **SKELAR**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Swarm Aero**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **SPAN**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **OpenRouter**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **TensorWave**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Silver.dev**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 
-### Attempts that did not go through (871)
+### Attempts that did not go through (924)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1549,6 +1623,59 @@
 | 2026-11-27 10:29:30 | ServiceNow | Software Engineer (Go & Kubernetes) | Hyderabad, , India | [ERROR] ERROR | clicked submit but the page never confirmed - treating as NOT submitted | 31 | Facebook (brain: no resume fact or job fact grounds this question), X (fka Twitter) (brain: no resume fact or job fact grounds this question), Let the company know about your interest working there (optional free-text question with no grounded answer - left blank), Facebook (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/ServiceNow/744000163146999) | after-ServiceNow-744000163146999.png |
 | 2026-11-27 10:30:26 | Endava | Full Stack Java Developer | Pune, MH, India | [INCOMPLETE] FAILED_VALIDATION | step 3: required questions we have no resume fact or confirmed answer for: Do you currently have the legal right to work in the country where the job is based? | 28 | Facebook (brain: no resume fact or job fact grounds this question), X (fka Twitter) (brain: no resume fact or job fact grounds this question), Let the company know about your interest working there (optional free-text question with no grounded answer - left blank), Facebook (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/Endava/744000162668429) | missing-Endava.png |
 | 2026-11-27 10:36:45 | NielsenIQ | Software Engineer | Chennai, TN, India | [ERROR] ERROR | clicked submit but the page never confirmed - treating as NOT submitted | 29 | Facebook (brain: no resume fact or job fact grounds this question), X (fka Twitter) (brain: no resume fact or job fact grounds this question), Let the company know about your interest working there (optional free-text question with no grounded answer - left blank), Facebook (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/NielsenIQ/744000162730608) | after-NielsenIQ-744000162730608.png |
+| 2026-11-27 13:03:55 | Smallest AI | Software Engineer - Systems and Reliablity | Bengaluru | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 6 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/smallest/f0879803-4119-4278-bcfc-4f0b25df943b/application) | after-smallest-f0879803-4119-4278-bcfc-4f0b25df943b.png |
+| 2026-11-27 13:03:58 | Atlys | Backend Engineer AI | Delhi HQ | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 9 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/atlys/bef534e3-4ab4-4c61-a93c-5182d1d70e8c/application) | after-atlys-bef534e3-4ab4-4c61-a93c-5182d1d70e8c.png |
+| 2026-11-27 13:05:31 | G2 | AI Engineer | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location, How many days is your notice period? | 6 | Location (could not set), Cover Letter (Optional) (optional cover-letter upload - the resume belongs in the resume slot), How many days is your notice period? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/G2/70a1442d-d5bc-4dca-9c4e-c7d41ac9b0c0/application) | missing-g2.png |
+| 2026-11-27 13:05:34 | Commure | Software Engineer (India) | Bengaluru, India | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/Commure/b7f99d0b-e511-41ba-a585-ce636f454e99/application) | noform-commure.png |
+| 2026-11-27 13:05:37 | Neural Concept | Platform Engineer - Security & Reliability | Pune | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/neuralconcept/c93995c1-84a7-4a73-a12c-e167090c36b2/application) | noform-neuralconcept.png |
+| 2026-11-27 13:05:53 | Provenir | Full-Stack Software Engineer | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Please upload cover letter or work sample (optional cover-letter upload - the resume belongs in the resume slot) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ProvenirInc/d5773a1e-c403-4413-ac2b-c61c35823cf8/application) | after-provenirinc-d5773a1e-c403-4413-ac2b-c61c35823cf8.png |
+| 2026-11-27 13:06:08 | SPAN | Backend Engineer | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 11 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/span/67453505-6717-4eb4-aad7-791470a01198/application) | after-span-67453505-6717-4eb4-aad7-791470a01198.png |
+| 2026-11-27 13:06:44 | Merge Money Ltd. | Frontend Developer - Payments Fintech | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Are you willing to work from our Bangalore office (at Church Street, near MG Road & St. Marks | 15 | Are you willing to work from our Bangalore office (at Church Street, near MG Road & St. Marks) five days a week? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/mergemoney/763a7a53-07c6-401f-8a48-61f429a5de78/application) | missing-mergemoney.png |
+| 2026-11-27 13:07:19 | Socure | Software Engineer -II | Hub - Bangalore | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 18 | Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/socure/5fd23982-574e-4213-9b99-9eab3cd43902/application) | after-socure-5fd23982-574e-4213-9b99-9eab3cd43902.png |
+| 2026-11-27 13:08:06 | Gen Digital Inc. | Princ Software Engineer - Mobile | IND - Chennai | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 18 | Home Address - Line 2 (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/gen-digital/17ade73e-17cd-4d21-a8ba-91368fefef13/application) | after-gen-digital-17ade73e-17cd-4d21-a8ba-91368fefef13.png |
+| 2026-11-27 13:09:04 | Anyone AI | Full-Stack Developer - AI Trainer (India) | India | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 7 | Which programming language (or library) would you like to use for your interview? (brain: no resume fact or job fact grounds this question), What is your domain expertise? (brain: no resume fact or job fact grounds this question), What is your expected hourly rate (USD) for working on a remote project? (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/anyone-ai/e825df23-e721-465b-87d7-04a569f7269e/application) | after-anyone-ai-e825df23-e721-465b-87d7-04a569f7269e.png |
+| 2026-11-27 13:09:12 | Bjak | Android Software Engineer - AI Finance Agent | India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Have you shipped at least one production mobile app used by real users?, Do you have 3+ years | 11 | Do you need a work visa? (brain: no resume fact or job fact grounds this question), Have you shipped at least one production mobile app used by real users? (could not set), Do you have 3+ years of professional mobile development experience in this platform? For Android: Kotlin / Android, For iOS: Swift / iOS (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/bjakcareer/8ae8267f-b14a-4762-af95-0a933eea9fcf/application) | missing-bjakcareer.png |
+| 2026-11-27 13:09:15 | Certa | Forward Deployed Engineer | India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 10 | If yes, please give the name and contact details of the person that referred you! (conditional follow-up field - not applicable to our answers), Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/certa/0b101c4d-6e2e-4711-9a70-6302d0c094e1/application) | after-certa-0b101c4d-6e2e-4711-9a70-6302d0c094e1.png |
+| 2026-11-27 13:09:46 | Secfix | Backend Engineer – GTM Engineering (Fresh grad, India) | Remote - India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What is your final bachelor CGPA? Please convert it to the 10-point scale (e.g. 9.2 / 10). If | 8 | What is your final bachelor CGPA? Please convert it to the 10-point scale (e.g. 9.2 / 10). If you haven't graduated yet, state your current CGPA. (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/secfix/583140f4-b26c-47b4-a9be-c7a88dc3c0f5/application) | missing-secfix.png |
+| 2026-11-27 13:10:28 | Cardboard | Backend Engineer | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Optional: If you'd like, record and send us a quick video : ) (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/cardboard/71a37ec3-d1df-4769-b018-a1c8f986bc1f/application) | after-cardboard-71a37ec3-d1df-4769-b018-a1c8f986bc1f.png |
+| 2026-11-27 13:11:21 | CertifyOS | SDET | Bengaluru, India | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 15 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/certifyos/3ac954c0-376b-41ad-953b-e3df7e835114/application) | after-certifyos-3ac954c0-376b-41ad-953b-e3df7e835114.png |
+| 2026-11-27 13:12:05 | Nightfall AI | Backend Software Engineer | Bengaluru | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 7 | Cover Letter (optional cover-letter upload - the resume belongs in the resume slot) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/nightfall-ai/084baf9b-70ad-498d-8474-c656efdf4cad/application) | after-nightfall-ai-084baf9b-70ad-498d-8474-c656efdf4cad.png |
+| 2026-11-27 13:12:55 | Techtorch | Forward Deployed Engineer | India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 8 | Data Modeling & SCD Experience ? (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/techtorch/db625e79-1dc4-495e-8a16-aa0f4a962a2d/application) | after-techtorch-db625e79-1dc4-495e-8a16-aa0f4a962a2d.png |
+| 2026-11-27 13:13:34 | Silver.dev | Siena - Fullstack Engineer | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 18 | Communications - I opt out of receiving email job alerts and any other communication not related to this specific job. (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/Silver/f69efa5f-3be5-4a6c-addd-6e5f43811e4f/application) | after-silver-f69efa5f-3be5-4a6c-addd-6e5f43811e4f.png |
+| 2026-11-27 13:13:37 | MultiplyMii | Full Stack Developer | Remote Philippines | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/multiplymii/c2034ab4-c455-4d22-bc49-a8cb403071e7/application) | noform-multiplymii.png |
+| 2026-11-27 13:14:18 | TensorWave | Software Engineer (Full Stack) | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 10 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/TensorWave/e10b179f-c569-46ff-a0d9-01d20f731d30/application) | after-tensorwave-e10b179f-c569-46ff-a0d9-01d20f731d30.png |
+| 2026-11-27 13:14:55 | OpenRouter | Software Engineer, Trust & Safety | Remote (US) | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 8 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/openrouter/cd5340a1-e787-4916-abb8-a08ab1bb229b/application) | after-openrouter-cd5340a1-e787-4916-abb8-a08ab1bb229b.png |
+| 2026-11-27 13:14:58 | Notion | Forward Deployed Engineer, India | Hyderabad, India | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 15 | What pronouns would you like our team to use when addressing you? (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/notion/79c18580-c927-456c-9d5f-72efbc6c43cb/application) | after-notion-79c18580-c927-456c-9d5f-72efbc6c43cb.png |
+| 2026-11-27 13:15:14 | CUBE | QA Engineer | Bangalore | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Notice period | 5 | Notice period (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/CUBE/d047c79a-f461-4702-a54d-1437ba9b992f/application) | missing-cube.png |
+| 2026-11-27 13:15:53 | Protegrity | Software Engineer, Big Data (829) | Navi Mumbai | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What color is the sky - Orange, What color is the sky - Blue, What color is the sky - White,  | 17 | What's APP Number (could not set), What color is the sky - Orange (brain: no resume fact or job fact grounds this question), What color is the sky - Blue (brain: no resume fact or job fact grounds this question), What color is the sky - White (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/protegrity/132ede34-6b5d-422d-a45b-df400294aacb/application) | missing-protegrity.png |
+| 2026-11-27 13:15:56 | Sophos | Software Engineer 1 (Java Developer) | India | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/sophos/6b42a0ac-2500-4559-a813-2bfa43eb2ea6/application) | noform-sophos.png |
+| 2026-11-27 13:16:32 | Spellbook | Product Engineer | Remote - Ontario | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/spellbook.com/381788d0-507c-4232-b9ca-8c5b39070276/application) | after-spellbook.com-381788d0-507c-4232-b9ca-8c5b39070276.png |
+| 2026-11-27 13:17:02 | Quora | Full Stack Software Engineer, New Grad - Quora (Remote) | Remote - Multiple Locations | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 18 | School Name (could not set), Cover Letter (optional cover-letter upload - the resume belongs in the resume slot), If you selected "Other", please provide additional information. (conditional follow-up field - not applicable to our answers), How would you describe your gender identity? (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/quora/5494e6a1-a973-46af-b9f3-57208eb91b52/application) | after-quora-5494e6a1-a973-46af-b9f3-57208eb91b52.png |
+| 2026-11-27 13:17:46 | Talkiatry | Software Engineer DOLCE | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 12 | Are you happy for Metaview to transcribe your interviews? (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/talkiatry/4343b2d6-b89f-4534-b208-515963523015/application) | after-talkiatry-4343b2d6-b89f-4534-b208-515963523015.png |
+| 2026-11-27 13:17:49 | Ncontracts | Software Developer L5 | Remote | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ncontracts/142b0d39-5d02-45b5-a835-5cb74f3590bf/application) | noform-ncontracts.png |
+| 2026-11-27 13:18:16 | Mudflap | Software Engineer, Ruby on Rails | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 12 | Cover Letter (optional cover-letter upload - the resume belongs in the resume slot) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/mudflap/6d599ccc-4566-4cd3-9721-2273601acba6/application) | after-mudflap-6d599ccc-4566-4cd3-9721-2273601acba6.png |
+| 2026-11-27 13:18:30 | Crux | AI Product Engineer | Remote (US) | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Please check any of the boxes that describe your skill set: - Experience building AI agents,  | 9 | Please check any of the boxes that describe your skill set: - Experience building AI agents (brain: no resume fact or job fact grounds this question), Please check any of the boxes that describe your skill set: - Experience building engineering teams from 0 to 1 (brain: no resume fact or job fact grounds this question), Please check any of the boxes that describe your skill set: - Familiarity with modern AI tooling & frameworks (LangChain, LlamaIndex, etc.) (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/cruxclimate/de7fb381-026b-420a-8366-f04dffd64f61/application) | missing-cruxclimate.png |
+| 2026-11-27 13:19:21 | Second Front Systems | AI Software Engineer | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 14 | Another Location (could not set), For Virginia Residents Only (in accordance with Section 40.1-11.1 of the Code of Virginia): Are you legally eligible for employment in the United States? (brain: no resume fact or job fact grounds this question), Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/Second-Front-Systems/e75017ca-8bfb-4c2f-bdce-b0f0cc8bf4ef/application) | after-second-front-systems-e75017ca-8bfb-4c2f-bdce-b0f0cc8bf4ef.png |
+| 2026-11-27 13:19:22 | Forward Financing | Software Engineer II | Remote - Dominican Republic | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/Forward%20Financing/7b412410-8710-4d54-a342-fcf464568170/application) | noform-forward_financing.png |
+| 2026-11-27 13:19:25 | Rain | Software Engineer - Wallets | Remote | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/rain/6393bceb-88cf-4806-a51c-401be580c59e/application) | noform-rain.png |
+| 2026-11-27 13:20:32 | Reteam | Backend Engineer | EU - Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('please complete') | 21 | Cover Letter (optional cover-letter upload - the resume belongs in the resume slot), Cover Letter (optional cover-letter upload - the resume belongs in the resume slot), What in your career are you most proud of? (brain: no resume fact or job fact grounds this question), Location (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/reteam/8123c705-74fe-42e9-b190-23375928f64b/application) | after-reteam-8123c705-74fe-42e9-b190-23375928f64b.png |
+| 2026-11-27 13:21:02 | Thumbtack | (2027 Talent Pool) Software Engineer, AI/ML Infrastructure | Remote, Ontario | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 8 | Cover Letter (optional cover-letter upload - the resume belongs in the resume slot), If you selected "Location not listed" above, please use the text box below to let us know where you intend to work from. (conditional follow-up field - not applicable to our answers) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/thumbtack/fc9f96bc-bd4e-4883-95a8-91d25833fa35/application) | after-thumbtack-fc9f96bc-bd4e-4883-95a8-91d25833fa35.png |
+| 2026-11-27 13:22:16 | SignalFire | Forward Deployed Engineer (FDE) - VC Backed Startups | Remote - No Preference | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Which industries are you interested in? - Consumer, Which industries are you interested in? - | 14 | Which industries are you interested in? - Consumer (brain: no resume fact or job fact grounds this question), Which industries are you interested in? - Cyber (brain: no resume fact or job fact grounds this question), Which industries are you interested in? - Enterprise SaaS (brain: no resume fact or job fact grounds this question), Which industries are you interested in? - FinTech (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/SignalFire/ecfd70ab-44a8-4e78-a7ae-5a4efe187e4d/application) | missing-signalfire.png |
+| 2026-11-27 13:22:23 | webAI | Peer to Peer Software Engineer - Product | Remote Office | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/webAI/96678445-0459-48fe-8266-59518805b0f8/application) | after-webai-96678445-0459-48fe-8266-59518805b0f8.png |
+| 2026-11-27 13:23:59 | Phantom | Software Engineer, Backend (Trading) | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 11 | Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/phantom/d8ee7f59-0f80-437f-908e-bfe603cb078a/application) | after-phantom-d8ee7f59-0f80-437f-908e-bfe603cb078a.png |
+| 2026-11-27 13:24:00 | Virta Health | Software Engineer | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location | 10 | Location (could not set), Cover Letter (optional cover-letter upload - the resume belongs in the resume slot), Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/virtahealth/0cd02f05-28be-4d24-abb6-46fddc487971/application) | missing-virtahealth.png |
+| 2026-11-27 13:25:18 | Camunda | Software Engineer - Engineering Operations | Remote | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 23 | What are your pronouns for others to use when referring to you? (EEO/demographic field - intentionally not answered), If you have discussed this role with a current Camunda employee, please enter their full name here (brain: no resume fact or job fact grounds this question), What is the second line of your address (if relevant)? (brain: no resume fact or job fact grounds this question), State/Region (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/camunda/327f13d9-6054-46e5-96cd-bd757554f478/application) | after-camunda-327f13d9-6054-46e5-96cd-bd757554f478.png |
+| 2026-11-27 13:26:15 | HavocAI | Field Software Engineer | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 5 | Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/havocai/f7e2a1b3-8999-40ae-93d7-fc3ed79750f5/application) | after-havocai-f7e2a1b3-8999-40ae-93d7-fc3ed79750f5.png |
+| 2026-11-27 13:26:18 | Universe | Data Platform Engineer | Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Які маєш фінансові очікування, на яку суму орієнтуєшся? ($ в gross, тобто до сплати податків) | 6 | Який формат роботи розглядаєш для себе? - Гібрид або full-office в Києві (brain: no resume fact or job fact grounds this question), Який формат роботи розглядаєш для себе? - Гібрид або full-office у Варшаві (brain: no resume fact or job fact grounds this question), Чи розглядаєш для себе гібридну роботу з офісу в Києві? 2-3 на тиждень в нашому комфортному офісі на Подолі. (brain: no resume fact or job fact grounds this question), Які маєш фінансові очікування, на яку суму орієнтуєшся? ($ в gross, тобто до сплати податків) (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/universe/720f76e0-2cf0-4d58-833a-9e8a167ae5bf/application) | missing-universe.png |
+| 2026-11-27 13:27:06 | Ramp | Software Engineer, Backend, Comms Platform | Remote (US) | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | What have you built recently? (optional free-text question with no grounded answer - left blank) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/ramp/939892e5-5273-4bfc-8c41-a6c51cabb228/application) | after-ramp-939892e5-5273-4bfc-8c41-a6c51cabb228.png |
+| 2026-11-27 13:27:14 | Neural Concept | Platform Engineer - Release and Distribution | Pune | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 11 | Cite references that inspire you daily in what you do and want to achieve (could be people, products, books, past experiences, etc) (optional free-text question with no grounded answer - left blank) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/neuralconcept/d55dc112-aa6c-49ae-a088-20c4ecef6fc8/application) | after-neuralconcept-d55dc112-aa6c-49ae-a088-20c4ecef6fc8.png |
+| 2026-11-27 13:27:53 | Atlys | Backend Engineer | Delhi HQ | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/atlys/a2158e46-0991-4235-aeec-758b1832c5fb/application) | after-atlys-a2158e46-0991-4235-aeec-758b1832c5fb.png |
+| 2026-11-27 13:28:02 | G2 | Data Platform Engineer II | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: How many days is your notice period? | 8 | Cover Letter (Optional) (optional cover-letter upload - the resume belongs in the resume slot), How many days is your notice period? (could not set) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/G2/c40ad14e-1f6e-4d90-9cb5-598335c54244/application) | missing-g2.png |
+| 2026-11-27 13:28:33 | Certa | Software Development Engineer II (SDE-2) Backend | India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 6 | If yes, please give the name and contact details of the person that referred you! (conditional follow-up field - not applicable to our answers), Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/certa/7045409d-3a8f-493f-b76f-113b849db8a4/application) | after-certa-7045409d-3a8f-493f-b76f-113b849db8a4.png |
+| 2026-11-27 13:28:37 | Cardboard | Product Engineer (Mobile) | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Optional: If you'd like, record and send us a quick video : ) (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/cardboard/a18a5b6c-8b4a-4418-be14-55235744313f/application) | after-cardboard-a18a5b6c-8b4a-4418-be14-55235744313f.png |
+| 2026-11-27 13:29:38 | Plotline | Founding SDET | Bengaluru Office | [ERROR] ERROR | clicked submit but the page never confirmed - treating as NOT submitted | 8 | Which of these have you personally written automated tests for in a production codebase? - Web Applications (brain: no resume fact or job fact grounds this question), Which of these have you personally written automated tests for in a production codebase? - Backend APIs (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/plotlineso/a1b58fd5-ea48-4be1-9dd8-e8119d19e933/application) | after-plotlineso-a1b58fd5-ea48-4be1-9dd8-e8119d19e933.png |
+| 2026-11-27 13:31:01 | webAI | CRDT Software Engineer - Product | Remote Office | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/webAI/ac849bd2-1fd6-4fef-bbbb-a903d3813214/application) | after-webai-ac849bd2-1fd6-4fef-bbbb-a903d3813214.png |
+| 2026-11-27 13:31:15 | Reteam | Backend Engineer (Remote) | EU - Remote | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Cover Letter | 14 | Cover Letter (optional cover-letter upload - the resume belongs in the resume slot), Nasdfdsfsdfsdme (brain: no resume fact or job fact grounds this question), Cover Letter (optional cover-letter upload - the resume belongs in the resume slot), Nasdfdsfsdfsdme (brain: no resume fact or job fact grounds this question) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/reteam/714121ad-59e8-49b1-ad56-244a89de574c/application) | missing-reteam.png |
 
 ### Companies touched for this candidate
 
@@ -1561,8 +1688,8 @@
 | NETGEAR | ashby | no | 23 | 1 | DONE |
 | ShyftLabs | lever | no | 22 | 0 | not yet |
 | MongoDB | greenhouse | no | 15 | 0 | not yet |
+| Bjak | ashby | no | 15 | 0 | not yet |
 | Cursor (Anysphere) | ashby | no | 14 | 0 | not yet |
-| Bjak | ashby | no | 14 | 0 | not yet |
 | Smart Working Solutions | lever | no | 14 | 0 | not yet |
 | OpenGov | ashby | no | 13 | 1 | DONE |
 | Mactores | lever | no | 12 | 0 | not yet |
@@ -1582,29 +1709,83 @@
 | GitLab | greenhouse | no | 4 | 0 | not yet |
 | Sarvam AI | ashby | yes | 4 | 2 | DONE |
 | IMC Trading | greenhouse | no | 4 | 0 | not yet |
+| Atlys | ashby | no | 4 | 0 | not yet |
+| Plotline | ashby | no | 4 | 0 | not yet |
+| G2 | ashby | no | 4 | 0 | not yet |
 | Parspec | ashby | no | 4 | 1 | DONE |
+| Cardboard | ashby | no | 4 | 0 | not yet |
+| Kong | ashby | no | 4 | 1 | DONE |
+| SPAN | ashby | no | 4 | 1 | DONE |
+| Certa | ashby | no | 4 | 0 | not yet |
+| Silver.dev | ashby | no | 4 | 1 | DONE |
+| TensorWave | ashby | no | 4 | 1 | DONE |
+| OpenRouter | ashby | no | 4 | 1 | DONE |
+| Reteam | ashby | no | 4 | 0 | not yet |
+| webAI | ashby | no | 4 | 0 | not yet |
+| Neural Concept | ashby | no | 4 | 0 | not yet |
 | Dust | ashby | no | 3 | 0 | not yet |
 | Scale AI | greenhouse | no | 3 | 0 | not yet |
+| Quora | ashby | no | 3 | 0 | not yet |
 | Unstructured | ashby | no | 3 | 1 | DONE |
 | Sigmoid | greenhouse | yes | 3 | 1 | DONE |
+| Smallest AI | ashby | yes | 3 | 0 | not yet |
 | Vonage | greenhouse | no | 3 | 0 | not yet |
 | Tekion | ashby | no | 3 | 1 | DONE |
+| Phantom | ashby | no | 3 | 0 | not yet |
+| Paxos | ashby | no | 3 | 1 | DONE |
 | Rubrik | greenhouse | no | 3 | 0 | not yet |
+| Notion | ashby | no | 3 | 0 | not yet |
+| Sophos | ashby | no | 3 | 0 | not yet |
 | Thoughtworks | ashby | no | 3 | 0 | not yet |
+| Ramp | ashby | no | 3 | 0 | not yet |
 | Pear VC | ashby | no | 3 | 1 | DONE |
+| Provenir | ashby | no | 3 | 0 | not yet |
+| 3Y Health | ashby | no | 3 | 1 | DONE |
 | Plane Software, Inc. | ashby | no | 3 | 1 | DONE |
-| Plotline | ashby | no | 3 | 0 | not yet |
+| Merge Money Ltd. | ashby | no | 3 | 0 | not yet |
+| Anyone AI | ashby | no | 3 | 0 | not yet |
+| Sardine | ashby | no | 3 | 1 | DONE |
+| Secfix | ashby | no | 3 | 0 | not yet |
+| Commure | ashby | no | 3 | 0 | not yet |
+| Socure | ashby | no | 3 | 0 | not yet |
 | Litmus | ashby | no | 3 | 1 | DONE |
 | Allata | lever | no | 3 | 0 | not yet |
-| Kong | ashby | no | 3 | 0 | not yet |
+| CUBE | ashby | no | 3 | 0 | not yet |
+| Gen Digital Inc. | ashby | no | 3 | 0 | not yet |
+| Nightfall AI | ashby | no | 3 | 0 | not yet |
+| CertifyOS | ashby | no | 3 | 0 | not yet |
+| Granica | ashby | no | 3 | 1 | DONE |
+| Protegrity | ashby | no | 3 | 0 | not yet |
+| Spellbook | ashby | no | 3 | 0 | not yet |
+| SearchApi | ashby | no | 3 | 1 | DONE |
+| Techtorch | ashby | no | 3 | 0 | not yet |
+| Talkiatry | ashby | no | 3 | 0 | not yet |
+| Ncontracts | ashby | no | 3 | 0 | not yet |
+| MultiplyMii | ashby | no | 3 | 0 | not yet |
 | The Job Sauce | ashby | no | 3 | 1 | DONE |
+| Crux | ashby | no | 3 | 0 | not yet |
+| Mudflap | ashby | no | 3 | 0 | not yet |
+| Wormhole Labs | ashby | no | 3 | 1 | DONE |
+| Second Front Systems | ashby | no | 3 | 0 | not yet |
+| Constructor | ashby | no | 3 | 1 | DONE |
+| Thumbtack | ashby | no | 3 | 0 | not yet |
+| Forward Financing | ashby | no | 3 | 0 | not yet |
+| SignalFire | ashby | no | 3 | 0 | not yet |
+| Rain | ashby | no | 3 | 0 | not yet |
+| Camunda | ashby | no | 3 | 0 | not yet |
+| HavocAI | ashby | no | 3 | 0 | not yet |
+| Sibill Srl | ashby | no | 3 | 1 | DONE |
+| Virta Health | ashby | no | 3 | 0 | not yet |
+| BIO | ashby | no | 3 | 1 | DONE |
+| SKELAR | ashby | no | 3 | 1 | DONE |
+| Universe | ashby | no | 3 | 0 | not yet |
+| fal | ashby | no | 3 | 1 | DONE |
+| Swarm Aero | ashby | no | 3 | 1 | DONE |
 | Starburst | greenhouse | no | 2 | 0 | not yet |
 | Coinbase | greenhouse | no | 2 | 0 | not yet |
 | Databricks | greenhouse | no | 2 | 0 | not yet |
 | Suno | ashby | no | 2 | 0 | not yet |
-| Quora | ashby | no | 2 | 0 | not yet |
 | Floqast | lever | no | 2 | 0 | not yet |
-| Smallest AI | ashby | yes | 2 | 0 | not yet |
 | CloudSEK | greenhouse | yes | 2 | 0 | not yet |
 | TrueFoundry | greenhouse | yes | 2 | 1 | DONE |
 | Sumo Logic | greenhouse | no | 2 | 0 | not yet |
@@ -1612,15 +1793,10 @@
 | Togetherai | greenhouse | no | 2 | 0 | not yet |
 | Truveta | greenhouse | no | 2 | 2 | DONE |
 | Mindtickle | lever | no | 2 | 0 | not yet |
-| Phantom | ashby | no | 2 | 0 | not yet |
 | Okta | greenhouse | no | 2 | 0 | not yet |
-| Paxos | ashby | no | 2 | 0 | not yet |
 | Paytm | lever | no | 2 | 0 | not yet |
 | HighRadius | greenhouse | yes | 2 | 2 | DONE |
-| Notion | ashby | no | 2 | 0 | not yet |
-| Sophos | ashby | no | 2 | 0 | not yet |
 | Zeta | lever | no | 2 | 0 | not yet |
-| Ramp | ashby | no | 2 | 0 | not yet |
 | Twilio | greenhouse | no | 2 | 0 | not yet |
 | Sauce Labs Inc. | greenhouse | no | 2 | 0 | not yet |
 | WIN Home Inspection | greenhouse | no | 2 | 0 | not yet |
@@ -1630,7 +1806,6 @@
 | NK Securities Research | greenhouse | no | 2 | 0 | not yet |
 | Brevo | lever | no | 2 | 0 | not yet |
 | Capco | greenhouse | no | 2 | 0 | not yet |
-| Atlys | ashby | no | 2 | 0 | not yet |
 | Anaplan | greenhouse | no | 2 | 0 | not yet |
 | PayPay India | greenhouse | no | 2 | 0 | not yet |
 | Portcast | lever | no | 2 | 0 | not yet |
@@ -1644,9 +1819,7 @@
 | Celonis | greenhouse | no | 2 | 0 | not yet |
 | Hyperproof | greenhouse | no | 2 | 0 | not yet |
 | Extreme Networks | lever | no | 2 | 0 | not yet |
-| Provenir | ashby | no | 2 | 0 | not yet |
 | Razorpay Software Private Limited | greenhouse | no | 2 | 0 | not yet |
-| 3Y Health | ashby | no | 2 | 0 | not yet |
 | Avathon | greenhouse | no | 2 | 0 | not yet |
 | CrashPlan | greenhouse | no | 2 | 0 | not yet |
 | Particle41 | greenhouse | no | 2 | 0 | not yet |
@@ -1658,36 +1831,29 @@
 | Drivetrain | lever | no | 2 | 0 | not yet |
 | Energy Exemplar | greenhouse | no | 2 | 0 | not yet |
 | GHX | greenhouse | no | 2 | 0 | not yet |
-| Merge Money Ltd. | ashby | no | 2 | 0 | not yet |
 | Piston Technologies | greenhouse | no | 2 | 0 | not yet |
 | Veeam Software | greenhouse | no | 2 | 0 | not yet |
 | iCapital | greenhouse | no | 2 | 0 | not yet |
 | Entrata | lever | no | 2 | 0 | not yet |
 | G-P | greenhouse | no | 2 | 0 | not yet |
 | Skild AI | greenhouse | no | 2 | 0 | not yet |
-| Anyone AI | ashby | no | 2 | 0 | not yet |
 | logicmonitor | greenhouse | no | 2 | 0 | not yet |
 | Cin7 | lever | no | 2 | 0 | not yet |
 | Platform Science | greenhouse | no | 2 | 0 | not yet |
-| Sardine | ashby | no | 2 | 0 | not yet |
 | Syndigo | greenhouse | no | 2 | 0 | not yet |
 | tamara | greenhouse | no | 2 | 0 | not yet |
 | Abnormal | greenhouse | no | 2 | 0 | not yet |
 | C3 AI | greenhouse | no | 2 | 0 | not yet |
-| G2 | ashby | no | 2 | 0 | not yet |
 | Instead | greenhouse | no | 2 | 0 | not yet |
 | Point72 | greenhouse | no | 2 | 0 | not yet |
-| Secfix | ashby | no | 2 | 0 | not yet |
 | Squarepoint Capital | greenhouse | no | 2 | 0 | not yet |
 | Invisible Agency | greenhouse | no | 2 | 0 | not yet |
 | Bloomreach | greenhouse | no | 2 | 1 | DONE |
 | Brillio | lever | no | 2 | 0 | not yet |
 | Cleo (India) | greenhouse | no | 2 | 1 | DONE |
-| Commure | ashby | no | 2 | 0 | not yet |
 | Model N | lever | no | 2 | 0 | not yet |
 | Onit, Inc. | lever | no | 2 | 0 | not yet |
 | Pippin Technologies India | greenhouse | no | 2 | 0 | not yet |
-| Socure | ashby | no | 2 | 0 | not yet |
 | Talkdesk | greenhouse | no | 2 | 0 | not yet |
 | Appian Corporation | greenhouse | no | 2 | 0 | not yet |
 | Doxel | lever | no | 2 | 0 | not yet |
@@ -1697,83 +1863,44 @@
 | Zimperium | lever | no | 2 | 0 | not yet |
 | OutcomesAI | lever | no | 2 | 0 | not yet |
 | Bureau | ashby | no | 2 | 0 | not yet |
-| CUBE | ashby | no | 2 | 0 | not yet |
-| Cardboard | ashby | no | 2 | 0 | not yet |
 | verifone | greenhouse | no | 2 | 0 | not yet |
-| Gen Digital Inc. | ashby | no | 2 | 0 | not yet |
 | PDI Technologies | lever | no | 2 | 0 | not yet |
-| SPAN | ashby | no | 2 | 0 | not yet |
-| Nightfall AI | ashby | no | 2 | 0 | not yet |
 | Smarsh | lever | no | 2 | 0 | not yet |
 | Beghou Consulting | lever | no | 2 | 0 | not yet |
 | Careway Health | ashby | no | 2 | 1 | DONE |
 | Acceldata | lever | no | 2 | 0 | not yet |
-| Certa | ashby | no | 2 | 0 | not yet |
-| CertifyOS | ashby | no | 2 | 0 | not yet |
-| Granica | ashby | no | 2 | 0 | not yet |
 | Kobie | lever | no | 2 | 0 | not yet |
 | Glomopay | ashby | no | 2 | 0 | not yet |
 | Lingaro | lever | no | 2 | 0 | not yet |
 | LinkedIn Partner Sandbox - RSC testing | lever | no | 2 | 0 | not yet |
 | Perforce | lever | no | 2 | 0 | not yet |
 | Neuron 7 | lever | no | 2 | 0 | not yet |
-| Protegrity | ashby | no | 2 | 0 | not yet |
 | Saviynt | lever | no | 2 | 0 | not yet |
 | Onehouse | lever | no | 2 | 0 | not yet |
 | Spreetail | lever | no | 2 | 0 | not yet |
 | TSMG | lever | no | 2 | 0 | not yet |
 | Universal Electronics Inc. | lever | no | 2 | 0 | not yet |
 | Turvo | lever | no | 2 | 0 | not yet |
-| Spellbook | ashby | no | 2 | 0 | not yet |
-| SearchApi | ashby | no | 2 | 0 | not yet |
-| Techtorch | ashby | no | 2 | 0 | not yet |
 | Oneleet | ashby | no | 2 | 1 | DONE |
-| Silver.dev | ashby | no | 2 | 0 | not yet |
 | SimSpace Corporation | ashby | no | 2 | 0 | not yet |
-| Talkiatry | ashby | no | 2 | 0 | not yet |
 | Clasp | ashby | no | 2 | 1 | DONE |
-| Ncontracts | ashby | no | 2 | 0 | not yet |
-| MultiplyMii | ashby | no | 2 | 0 | not yet |
-| TensorWave | ashby | no | 2 | 0 | not yet |
-| OpenRouter | ashby | no | 2 | 0 | not yet |
-| Crux | ashby | no | 2 | 0 | not yet |
 | Brigit | ashby | no | 2 | 0 | not yet |
 | Metabase | lever | no | 2 | 0 | not yet |
 | Growly | ashby | no | 2 | 0 | not yet |
-| Mudflap | ashby | no | 2 | 0 | not yet |
-| Wormhole Labs | ashby | no | 2 | 0 | not yet |
-| Second Front Systems | ashby | no | 2 | 0 | not yet |
-| Constructor | ashby | no | 2 | 0 | not yet |
-| Thumbtack | ashby | no | 2 | 0 | not yet |
-| Forward Financing | ashby | no | 2 | 0 | not yet |
 | Egen | lever | no | 2 | 0 | not yet |
 | Zeely Inc. | ashby | no | 2 | 0 | not yet |
-| SignalFire | ashby | no | 2 | 0 | not yet |
 | Entefy | lever | no | 2 | 0 | not yet |
-| Rain | ashby | no | 2 | 0 | not yet |
 | PlantingSpace | ashby | no | 2 | 0 | not yet |
-| Reteam | ashby | no | 2 | 0 | not yet |
-| Camunda | ashby | no | 2 | 0 | not yet |
-| HavocAI | ashby | no | 2 | 0 | not yet |
 | MCA Connect | lever | no | 2 | 0 | not yet |
-| Sibill Srl | ashby | no | 2 | 0 | not yet |
-| webAI | ashby | no | 2 | 0 | not yet |
 | Realm | ashby | no | 2 | 1 | DONE |
-| Virta Health | ashby | no | 2 | 0 | not yet |
 | Vesta Innovations Inc. | ashby | no | 2 | 0 | not yet |
-| BIO | ashby | no | 2 | 0 | not yet |
 | Raya | lever | no | 2 | 0 | not yet |
 | Virtualitics, Inc | lever | no | 2 | 0 | not yet |
-| SKELAR | ashby | no | 2 | 0 | not yet |
-| Universe | ashby | no | 2 | 0 | not yet |
-| fal | ashby | no | 2 | 0 | not yet |
 | Parallel Domain | lever | no | 2 | 0 | not yet |
 | PointClickCare | lever | no | 2 | 0 | not yet |
-| Swarm Aero | ashby | no | 2 | 0 | not yet |
 | Tenna | lever | no | 2 | 0 | not yet |
 | Zencore | lever | no | 2 | 0 | not yet |
 | Exa | ashby | no | 2 | 0 | not yet |
-| Neural Concept | ashby | no | 2 | 0 | not yet |
 | Breakmark | ashby | no | 2 | 0 | not yet |
 | Mento | ashby | no | 2 | 0 | not yet |
 | Rwazi, Inc. | ashby | no | 2 | 0 | not yet |
@@ -1911,7 +2038,7 @@
 
 ---
 
-## Divya Kanungo - 113 companies done
+## Divya Kanungo - 119 companies done
 
 ### Contact details used on every form
 
@@ -1929,7 +2056,7 @@
 | Experience | 1 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2026) |
 
-### Companies done: 113 (120 applications out of 830 attempts)
+### Companies done: 119 (126 applications out of 886 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -2053,6 +2180,12 @@
 | 118 | 2026-11-27 04:54:18 | **Mastra** | AI Engineer | Remote | ashby | Tech | 46 | attached | 4 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/Mastra/531a3fe8-556f-4b83-bee7-20374f67f980/application) |
 | 119 | 2026-11-27 10:26:21 | **Continental** | Java Full Stack Developer | Electronic City,  Bengaluru, Karnataka, India | smartrecruiters | Tech | 55 | attached | 17 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.smartrecruiters.com/Continental/744000154002299) |
 | 120 | 2026-11-27 10:45:42 | **Bosch Group** | Full Stack Software Developer with AI expertise, Pune | hosur road bangalore, , India | smartrecruiters | Tech | 63 | attached | 23 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.smartrecruiters.com/BoschGroup/744000155451389) |
+| 121 | 2026-11-27 13:04:11 | **Sardine** | Software Engineer - Backend | India | ashby | Tech | 70 | attached | 12 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/sardine/2524d206-42cb-4202-8d85-59e47c72d704/application) |
+| 122 | 2026-11-27 13:06:41 | **Metaforms** | Product Engineer | Bengaluru | ashby | Tech | 65 | attached | 6 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/metaforms/fbaa4289-1ec2-4e48-a83f-ddd090715cd6/application) |
+| 123 | 2026-11-27 13:12:15 | **Paxos** | Data Platform Engineer | Remote - India | ashby | Tech | 55 | attached | 8 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/paxos/f8cbcedf-5b3a-463c-82d1-0d80b9c34e42/application) |
+| 124 | 2026-11-27 13:15:16 | **Spellbook** | Product Engineer | Remote - Ontario | ashby | Tech | 81 | attached | 9 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/spellbook.com/381788d0-507c-4232-b9ca-8c5b39070276/application) |
+| 125 | 2026-11-27 13:19:05 | **OpenRouter** | Software Engineer, Enterprise | Remote (US) | ashby | Tech | 71 | attached | 8 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/openrouter/0c6bbb7f-ea09-45b6-b185-8a17a8de214d/application) |
+| 126 | 2026-11-27 13:21:15 | **Wormhole Labs** | Full-Stack Blockchain Engineer | Remote | ashby | Tech | 65 | attached | 6 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/wormholelabs/1f13ccfb-be18-46e7-9b9f-52f7f343c4d9/application) |
 
 #### Why each of those jobs was chosen
 
@@ -2176,6 +2309,12 @@
 118. **Mastra - AI Engineer** (score 46): adjacent role 'ai engineer'; 1 resume skills in posting (typescript); AI role keyword 'ai'; remote, no country restriction stated (Remote)
 119. **Continental - Java Full Stack Developer** (score 55): core role match 'full stack'; India location (Electronic City,  Bengaluru, Karnataka, India)
 120. **Bosch Group - Full Stack Software Developer with AI expertise, Pune** (score 63): core role match 'software developer'; AI role keyword 'ai'; India location (hosur road bangalore, , India)
+121. **Sardine - Software Engineer - Backend** (score 70): core role match 'software engineer'; 3 resume skills in posting (node, react, typescript); India location (India)
+122. **Metaforms - Product Engineer** (score 65): core role match 'product engineer'; 2 resume skills in posting (react, typescript); India location (Bengaluru)
+123. **Paxos - Data Platform Engineer** (score 55): core role match 'platform engineer'; remote within India (Remote - India)
+124. **Spellbook - Product Engineer** (score 81): core role match 'product engineer'; 5 resume skills in posting (express, mongodb, node, react, typescript); AI mentioned in description; remote, no country restriction stated (Remote - Ontario)
+125. **OpenRouter - Software Engineer, Enterprise** (score 71): core role match 'software engineer'; 3 resume skills in posting (next.js, react, typescript); AI mentioned in description; remote, no country restriction stated (Remote (US))
+126. **Wormhole Labs - Full-Stack Blockchain Engineer** (score 65): core role match 'full-stack'; 1 resume skills in posting (typescript); AI role keyword 'ai'; remote, no country restriction stated (Remote)
 
 #### Confirmation text shown by the company site
 
@@ -2294,8 +2433,14 @@
 - **Mastra**: plication Success Your application was successfully submitted! Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Continental**: ataka, India Java Full Stack Developer Application submitted! Your application for Java Full Stack Developer at Continental has been submitted successfully. You’ll receive a confirmation email short
 - **Bosch Group**: tware Developer with AI expertise, Pune Application submitted! Your application for Full Stack Software Developer with AI expertise, Pune at Bosch Group has been submitted successfully. You’ll receiv
+- **Sardine**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Metaforms**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Paxos**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Spellbook**: ineering Overview Application Success Thanks for applying to Spellbook! Your application has been received. We review each and every resume that comes in and will reach out if there is a fit. Power
+- **OpenRouter**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Wormhole Labs**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 
-### Attempts that did not go through (710)
+### Attempts that did not go through (760)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -3009,6 +3154,56 @@
 | 2026-11-27 10:35:26 | Endava | Full Stack Java Developer | Pune, MH, India | [INCOMPLETE] FAILED_VALIDATION | step 3: required questions we have no resume fact or confirmed answer for: Do you currently have the legal right to work in the country where the job is based? | 28 | Facebook (brain: no resume fact or job fact grounds this question), X (fka Twitter) (brain: no resume fact or job fact grounds this question), Let the company know about your interest working there (optional free-text question with no grounded answer - left blank), Facebook (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.smartrecruiters.com/Endava/744000162668429) | missing-Endava.png |
 | 2026-11-27 10:43:06 | Bosch Group | AI & Backend Software Engineer – Intellectual Property Rights(Python / FastAPI / GenAI) | bengaluru, , India | [INCOMPLETE] FAILED_VALIDATION | step 3: required questions we have no resume fact or confirmed answer for: Which of the following REST API frameworks do you have hands-on production experience | 33 | Facebook (brain: no resume fact or job fact grounds this question), X (fka Twitter) (brain: no resume fact or job fact grounds this question), Let the company know about your interest working there (optional free-text question with no grounded answer - left blank), Facebook (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.smartrecruiters.com/BoschGroup/744000162220979) | missing-BoschGroup.png |
 | 2026-11-27 10:47:22 | Cars24 | Retail Associate | Mumbai, MH, India | [ERROR] ERROR | clicked submit but the page never confirmed - treating as NOT submitted | 12 | Facebook (brain: no resume fact or job fact grounds this question), X (fka Twitter) (brain: no resume fact or job fact grounds this question), Let the company know about your interest working there (optional free-text question with no grounded answer - left blank) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.smartrecruiters.com/Cars24/743999664899164) | after-Cars24-743999664899164.png |
+| 2026-11-27 13:03:55 | Smallest AI | Software Engineer - Systems and Reliablity | Bengaluru | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 6 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/smallest/f0879803-4119-4278-bcfc-4f0b25df943b/application) | after-smallest-f0879803-4119-4278-bcfc-4f0b25df943b.png |
+| 2026-11-27 13:03:57 | Atlys | Backend Engineer AI | Delhi HQ | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 9 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/atlys/bef534e3-4ab4-4c61-a93c-5182d1d70e8c/application) | after-atlys-bef534e3-4ab4-4c61-a93c-5182d1d70e8c.png |
+| 2026-11-27 13:05:25 | G2 | AI Engineer | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Location, How many days is your notice period? | 6 | Location (could not set), Cover Letter (Optional) (optional cover-letter upload - the resume belongs in the resume slot), How many days is your notice period? (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/G2/70a1442d-d5bc-4dca-9c4e-c7d41ac9b0c0/application) | missing-g2.png |
+| 2026-11-27 13:05:25 | Provenir | Full-Stack Software Engineer | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | Please upload cover letter or work sample (optional cover-letter upload - the resume belongs in the resume slot) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/ProvenirInc/d5773a1e-c403-4413-ac2b-c61c35823cf8/application) | after-provenirinc-d5773a1e-c403-4413-ac2b-c61c35823cf8.png |
+| 2026-11-27 13:05:56 | Commure | Software Engineer (India) | Bengaluru, India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 13 | Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/Commure/b7f99d0b-e511-41ba-a585-ce636f454e99/application) | after-commure-b7f99d0b-e511-41ba-a585-ce636f454e99.png |
+| 2026-11-27 13:05:59 | Plane Software, Inc. | Software Engineer, Frontend (React) | India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 12 | Do you have hands-on experience with AI coding agents (e.g., Claude Code, Cursor, GitHub Copilot) as part of your development workflow? (rule needs ANSWER_GITHUB but resume lacks it - skipped) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/plane/15cf6387-af74-4616-924f-3659fb76de01/application) | after-plane-15cf6387-af74-4616-924f-3659fb76de01.png |
+| 2026-11-27 13:07:04 | Plotline | Frontend Engineer (SDE-2) | Bengaluru Office | [ERROR] ERROR | clicked submit but the page never confirmed - treating as NOT submitted | 6 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/plotlineso/6f9ce704-359c-4eba-9423-e6b356a78e9c/application) | after-plotlineso-6f9ce704-359c-4eba-9423-e6b356a78e9c.png |
+| 2026-11-27 13:07:40 | SPAN | Backend Engineer | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 11 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/span/67453505-6717-4eb4-aad7-791470a01198/application) | after-span-67453505-6717-4eb4-aad7-791470a01198.png |
+| 2026-11-27 13:07:53 | 3Y Health | AI Product Engineer | Remote – India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 10 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/3y-health/7fcd0173-7424-44b1-9a79-0063b36504d5/application) | after-3y-health-7fcd0173-7424-44b1-9a79-0063b36504d5.png |
+| 2026-11-27 13:08:38 | Merge Money Ltd. | Frontend Developer - Payments Fintech | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 16 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/mergemoney/763a7a53-07c6-401f-8a48-61f429a5de78/application) | after-mergemoney-763a7a53-07c6-401f-8a48-61f429a5de78.png |
+| 2026-11-27 13:09:42 | Neural Concept | Platform Engineer - Release and Distribution | Pune | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 11 | Cite references that inspire you daily in what you do and want to achieve (could be people, products, books, past experiences, etc) (optional free-text question with no grounded answer - left blank) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/neuralconcept/d55dc112-aa6c-49ae-a088-20c4ecef6fc8/application) | after-neuralconcept-d55dc112-aa6c-49ae-a088-20c4ecef6fc8.png |
+| 2026-11-27 13:09:45 | Gen Digital Inc. | Princ Software Engineer - Mobile | IND - Chennai | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/gen-digital/17ade73e-17cd-4d21-a8ba-91368fefef13/application) | noform-gen-digital.png |
+| 2026-11-27 13:09:52 | Anyone AI | Full-Stack Developer - AI Trainer (India) | India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 6 | GitHub (not present in resume (github) - skipped, never faked), Which programming language (or library) would you like to use for your interview? (brain: no resume fact or job fact grounds this question), What is your domain expertise? (brain: no resume fact or job fact grounds this question), What is your expected hourly rate (USD) for working on a remote project? (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/anyone-ai/e825df23-e721-465b-87d7-04a569f7269e/application) | after-anyone-ai-e825df23-e721-465b-87d7-04a569f7269e.png |
+| 2026-11-27 13:09:55 | Bjak | Android Software Engineer - AI Finance Agent | India | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/bjakcareer/8ae8267f-b14a-4762-af95-0a933eea9fcf/application) | noform-bjakcareer.png |
+| 2026-11-27 13:10:28 | Secfix | Backend Engineer – GTM Engineering (Fresh grad, India) | Remote - India | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What is your final bachelor CGPA? Please convert it to the 10-point scale (e.g. 9.2 / 10). If | 8 | What is your final bachelor CGPA? Please convert it to the 10-point scale (e.g. 9.2 / 10). If you haven't graduated yet, state your current CGPA. (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/secfix/583140f4-b26c-47b4-a9be-c7a88dc3c0f5/application) | missing-secfix.png |
+| 2026-11-27 13:10:47 | fal | Technical Support Engineer - APAC/EMEA | India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 12 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/fal-ai/dc65f96a-c4a4-47f1-bdeb-af8d131d3e65/application) | after-fal-ai-dc65f96a-c4a4-47f1-bdeb-af8d131d3e65.png |
+| 2026-11-27 13:11:15 | Cardboard | Backend Engineer | Bengaluru | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | Optional: If you'd like, record and send us a quick video : ) (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/cardboard/71a37ec3-d1df-4769-b018-a1c8f986bc1f/application) | after-cardboard-71a37ec3-d1df-4769-b018-a1c8f986bc1f.png |
+| 2026-11-27 13:11:30 | CUBE | QA Engineer | Bangalore | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: Notice period | 5 | Notice period (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/CUBE/d047c79a-f461-4702-a54d-1437ba9b992f/application) | missing-cube.png |
+| 2026-11-27 13:12:51 | CertifyOS | SDET | Bengaluru, India | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 15 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/certifyos/3ac954c0-376b-41ad-953b-e3df7e835114/application) | after-certifyos-3ac954c0-376b-41ad-953b-e3df7e835114.png |
+| 2026-11-27 13:12:55 | Protegrity | Software Engineer, Big Data (829) | Navi Mumbai | [INCOMPLETE] FAILED_VALIDATION | required questions we have no resume fact or confirmed answer for: What color is the sky - Green, What color is the sky - Other, What's APP Number | 20 | What's APP Number (could not set), What color is the sky - Green (brain: no resume fact or job fact grounds this question), What color is the sky - Other (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/protegrity/132ede34-6b5d-422d-a45b-df400294aacb/application) | missing-protegrity.png |
+| 2026-11-27 13:13:33 | Techtorch | Forward Deployed Engineer | India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 8 | Data Modeling & SCD Experience ? (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/techtorch/db625e79-1dc4-495e-8a16-aa0f4a962a2d/application) | after-techtorch-db625e79-1dc4-495e-8a16-aa0f4a962a2d.png |
+| 2026-11-27 13:14:01 | Sophos | Software Engineer 1 (Java Developer) | India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/sophos/6b42a0ac-2500-4559-a813-2bfa43eb2ea6/application) | after-sophos-6b42a0ac-2500-4559-a813-2bfa43eb2ea6.png |
+| 2026-11-27 13:14:11 | Silver.dev | Siena - Fullstack Engineer | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 18 | Communications - I opt out of receiving email job alerts and any other communication not related to this specific job. (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/Silver/f69efa5f-3be5-4a6c-addd-6e5f43811e4f/application) | after-silver-f69efa5f-3be5-4a6c-addd-6e5f43811e4f.png |
+| 2026-11-27 13:14:49 | Supabase | Software Engineer - Storage | Remote, Global | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 10 | Twitter / X profile (brain: no resume fact or job fact grounds this question), Have you made any open source contributions in the past that you'd like to share with us? (optional free-text question with no grounded answer - left blank) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/supabase/9f2ba0b2-6d3b-43ea-990f-5b4bf3930520/application) | after-supabase-9f2ba0b2-6d3b-43ea-990f-5b4bf3930520.png |
+| 2026-11-27 13:14:56 | Notion | Forward Deployed Engineer, India | Hyderabad, India | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 15 | What pronouns would you like our team to use when addressing you? (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/notion/79c18580-c927-456c-9d5f-72efbc6c43cb/application) | after-notion-79c18580-c927-456c-9d5f-72efbc6c43cb.png |
+| 2026-11-27 13:15:48 | SearchApi | Frontend Engineer & UI Designer (Developer Tooling) | Remote - Lithuania | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 9 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/SearchApi/597a1f05-d9bd-4827-82f1-794c0d861fff/application) | after-searchapi-597a1f05-d9bd-4827-82f1-794c0d861fff.png |
+| 2026-11-27 13:15:51 | ElevenLabs | Full-Stack Engineer - Creative Agents | Remote | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe/application) | noform-elevenlabs.png |
+| 2026-11-27 13:16:45 | Talkiatry | Software Engineer DOLCE | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 12 | Are you happy for Metaview to transcribe your interviews? (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/talkiatry/4343b2d6-b89f-4534-b208-515963523015/application) | after-talkiatry-4343b2d6-b89f-4534-b208-515963523015.png |
+| 2026-11-27 13:17:01 | MultiplyMii | Full Stack Developer | Remote Philippines | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 11 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/multiplymii/c2034ab4-c455-4d22-bc49-a8cb403071e7/application) | after-multiplymii-c2034ab4-c455-4d22-bc49-a8cb403071e7.png |
+| 2026-11-27 13:18:26 | TensorWave | Software Engineer (Full Stack) | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 10 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/TensorWave/e10b179f-c569-46ff-a0d9-01d20f731d30/application) | after-tensorwave-e10b179f-c569-46ff-a0d9-01d20f731d30.png |
+| 2026-11-27 13:19:17 | Ncontracts | Software Developer L5 | Remote | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 17 | What are your preferred pronouns? (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/ncontracts/142b0d39-5d02-45b5-a835-5cb74f3590bf/application) | after-ncontracts-142b0d39-5d02-45b5-a835-5cb74f3590bf.png |
+| 2026-11-27 13:19:20 | Crux | AI Product Engineer | Remote (US) | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/cruxclimate/de7fb381-026b-420a-8366-f04dffd64f61/application) | noform-cruxclimate.png |
+| 2026-11-27 13:19:24 | Oneleet | Fullstack Engineer, AI Implementation | US/EU - Remote | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/oneleet/e178bb4b-b402-4630-aaba-89a3c2841518/application) | noform-oneleet.png |
+| 2026-11-27 13:20:30 | Unstructured | Software Engineer - Public Sector | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 12 | Twitter (brain: no resume fact or job fact grounds this question), GitHub (not present in resume (github) - skipped, never faked), Other (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/unstructured/8db76ba9-7c3a-451c-8e6d-c3447e6cbe75/application) | after-unstructured-8db76ba9-7c3a-451c-8e6d-c3447e6cbe75.png |
+| 2026-11-27 13:20:58 | Quora | Full Stack Software Engineer, New Grad - Quora (Remote) | Remote - Multiple Locations | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 18 | School Name (could not set), Cover Letter (optional cover-letter upload - the resume belongs in the resume slot), If you selected "Other", please provide additional information. (conditional follow-up field - not applicable to our answers), How would you describe your gender identity? (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/quora/5494e6a1-a973-46af-b9f3-57208eb91b52/application) | after-quora-5494e6a1-a973-46af-b9f3-57208eb91b52.png |
+| 2026-11-27 13:21:19 | Constructor | BackEnd Engineer: Experiments | Remote | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/constructor/4e7cfde4-c2ba-4251-b95f-7bcf9793984a/application) | noform-constructor.png |
+| 2026-11-27 13:22:30 | Mudflap | Software Engineer, Ruby on Rails | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 12 | Cover Letter (optional cover-letter upload - the resume belongs in the resume slot) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/mudflap/6d599ccc-4566-4cd3-9721-2273601acba6/application) | after-mudflap-6d599ccc-4566-4cd3-9721-2273601acba6.png |
+| 2026-11-27 13:22:53 | Thumbtack | (2027 Talent Pool) Software Engineer, AI/ML Infrastructure | Remote, Ontario | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 8 | Cover Letter (optional cover-letter upload - the resume belongs in the resume slot), If you selected "Location not listed" above, please use the text box below to let us know where you intend to work from. (conditional follow-up field - not applicable to our answers) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/thumbtack/fc9f96bc-bd4e-4883-95a8-91d25833fa35/application) | after-thumbtack-fc9f96bc-bd4e-4883-95a8-91d25833fa35.png |
+| 2026-11-27 13:22:56 | Reliable Robotics Corporation | Build Software Engineer | Remote | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/reliable-robotics/2d5a10d4-0644-41fa-91ed-4abde2e13bf9/application) | noform-reliable-robotics.png |
+| 2026-11-27 13:22:59 | SignalFire | Forward Deployed Engineer (FDE) - VC Backed Startups | Remote - No Preference | [ERROR] ERROR | no form fields found on the apply page (form on main page) | 0 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/SignalFire/ecfd70ab-44a8-4e78-a7ae-5a4efe187e4d/application) | noform-signalfire.png |
+| 2026-11-27 13:23:38 | Reteam | Backend Engineer | EU - Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('please complete') | 21 | Cover Letter (optional cover-letter upload - the resume belongs in the resume slot), Cover Letter (optional cover-letter upload - the resume belongs in the resume slot), What in your career are you most proud of? (brain: no resume fact or job fact grounds this question), Location (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/reteam/8123c705-74fe-42e9-b190-23375928f64b/application) | after-reteam-8123c705-74fe-42e9-b190-23375928f64b.png |
+| 2026-11-27 13:24:21 | Sibill Srl | Software Engineer | Italy - Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 6 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/sibill/fb0bd868-8733-4ff9-bd72-9c2d389558ef/application) | after-sibill-fb0bd868-8733-4ff9-bd72-9c2d389558ef.png |
+| 2026-11-27 13:25:13 | webAI | Peer to Peer Software Engineer - Product | Remote Office | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('must be') | 9 | Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/webAI/96678445-0459-48fe-8266-59518805b0f8/application) | after-webai-96678445-0459-48fe-8266-59518805b0f8.png |
+| 2026-11-27 13:25:22 | Realm | Software Engineer - Intern | Remote | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 11 | Location (could not set) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/realmalliance/a8a2f78e-1c28-4b52-a77a-c2b2ad9b7a8a/application) | after-realmalliance-a8a2f78e-1c28-4b52-a77a-c2b2ad9b7a8a.png |
+| 2026-11-27 13:26:12 | Second Front Systems | AI Software Engineer | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 13 | Another Location (could not set), GitHub (not present in resume (github) - skipped, never faked), For Virginia Residents Only (in accordance with Section 40.1-11.1 of the Code of Virginia): Are you legally eligible for employment in the United States? (brain: no resume fact or job fact grounds this question), Gender (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/Second-Front-Systems/e75017ca-8bfb-4c2f-bdce-b0f0cc8bf4ef/application) | after-second-front-systems-e75017ca-8bfb-4c2f-bdce-b0f0cc8bf4ef.png |
+| 2026-11-27 13:27:49 | HavocAI | Field Software Engineer | Remote | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 5 | Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/havocai/f7e2a1b3-8999-40ae-93d7-fc3ed79750f5/application) | after-havocai-f7e2a1b3-8999-40ae-93d7-fc3ed79750f5.png |
+| 2026-11-27 13:28:01 | Virta Health | Software Engineer | Remote | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 12 | Cover Letter (optional cover-letter upload - the resume belongs in the resume slot), Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/virtahealth/0cd02f05-28be-4d24-abb6-46fddc487971/application) | after-virtahealth-0cd02f05-28be-4d24-abb6-46fddc487971.png |
+| 2026-11-27 13:28:49 | Payabli | Integration Engineer | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 8 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/payabli/6d4498a8-51bb-45c3-be57-528006b34591/application) | after-payabli-6d4498a8-51bb-45c3-be57-528006b34591.png |
+| 2026-11-27 13:29:28 | Phantom | Software Engineer, Backend (Trading) | Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 11 | Gender (EEO/demographic field - intentionally not answered), Race (EEO/demographic field - intentionally not answered), Veteran Status (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/phantom/d8ee7f59-0f80-437f-908e-bfe603cb078a/application) | after-phantom-d8ee7f59-0f80-437f-908e-bfe603cb078a.png |
+| 2026-11-27 13:30:46 | BIO | Product Engineer | Remote | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 7 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/bio/a40c8d4d-c2e2-45eb-97a3-4d95f9846794/application) | after-bio-a40c8d4d-c2e2-45eb-97a3-4d95f9846794.png |
 
 ### Companies touched for this candidate
 
@@ -3017,12 +3212,12 @@
 | Warner Music Group | lever | no | 41 | 0 | not yet |
 | ShyftLabs | lever | no | 28 | 0 | not yet |
 | NETGEAR | ashby | no | 27 | 1 | DONE |
+| Supabase | ashby | no | 20 | 0 | not yet |
 | Cursor (Anysphere) | ashby | no | 19 | 0 | not yet |
-| Supabase | ashby | no | 19 | 0 | not yet |
 | Kobie | lever | no | 15 | 0 | not yet |
+| ElevenLabs | ashby | no | 14 | 0 | not yet |
 | ION Group | lever | no | 14 | 0 | not yet |
-| ElevenLabs | ashby | no | 13 | 0 | not yet |
-| Bjak | ashby | no | 13 | 0 | not yet |
+| Bjak | ashby | no | 14 | 0 | not yet |
 | Perforce | lever | no | 13 | 0 | not yet |
 | Rox Data Corp | ashby | no | 12 | 1 | DONE |
 | Mercor | ashby | yes | 10 | 2 | DONE |
@@ -3031,10 +3226,10 @@
 | Handshake | ashby | no | 7 | 1 | DONE |
 | Horizon3 AI | ashby | no | 7 | 1 | DONE |
 | Stripe | greenhouse | no | 6 | 0 | not yet |
+| SPAN | ashby | no | 6 | 0 | not yet |
 | Turing | greenhouse | no | 5 | 1 | DONE |
 | OpenAI | ashby | yes | 5 | 2 | DONE |
 | Rubrik | greenhouse | no | 5 | 0 | not yet |
-| SPAN | ashby | no | 5 | 0 | not yet |
 | LangChain | ashby | yes | 4 | 0 | not yet |
 | Writer | ashby | yes | 4 | 0 | not yet |
 | TrueFoundry | greenhouse | yes | 4 | 2 | DONE |
@@ -3043,25 +3238,74 @@
 | Parspec | ashby | no | 4 | 1 | DONE |
 | Turnkey | ashby | no | 4 | 0 | not yet |
 | Starburst | greenhouse | no | 3 | 0 | not yet |
+| Smallest AI | ashby | yes | 3 | 0 | not yet |
 | Agoda | greenhouse | no | 3 | 0 | not yet |
+| Quora | ashby | no | 3 | 0 | not yet |
+| Unstructured | ashby | no | 3 | 0 | not yet |
 | MongoDB | greenhouse | no | 3 | 0 | not yet |
 | GitLab | greenhouse | no | 3 | 0 | not yet |
+| Phantom | ashby | no | 3 | 0 | not yet |
+| Paxos | ashby | no | 3 | 1 | DONE |
+| Sophos | ashby | no | 3 | 0 | not yet |
+| Notion | ashby | no | 3 | 0 | not yet |
+| Atlys | ashby | no | 3 | 0 | not yet |
 | Pear VC | ashby | no | 3 | 1 | DONE |
+| Provenir | ashby | no | 3 | 0 | not yet |
+| Plane Software, Inc. | ashby | no | 3 | 0 | not yet |
+| Plotline | ashby | no | 3 | 0 | not yet |
+| 3Y Health | ashby | no | 3 | 0 | not yet |
+| Merge Money Ltd. | ashby | no | 3 | 0 | not yet |
+| Anyone AI | ashby | no | 3 | 0 | not yet |
 | Certa | ashby | no | 3 | 1 | DONE |
+| Sardine | ashby | no | 3 | 1 | DONE |
+| G2 | ashby | no | 3 | 0 | not yet |
+| Commure | ashby | no | 3 | 0 | not yet |
+| Metaforms | ashby | no | 3 | 1 | DONE |
 | Litmus | ashby | no | 3 | 1 | DONE |
+| Secfix | ashby | no | 3 | 0 | not yet |
+| CUBE | ashby | no | 3 | 0 | not yet |
+| Cardboard | ashby | no | 3 | 0 | not yet |
 | Allata | lever | no | 3 | 0 | not yet |
+| Gen Digital Inc. | ashby | no | 3 | 0 | not yet |
 | Kong | ashby | no | 3 | 1 | DONE |
 | Nightfall AI | ashby | no | 3 | 1 | DONE |
+| Protegrity | ashby | no | 3 | 0 | not yet |
 | Onehouse | lever | no | 3 | 0 | not yet |
+| Spellbook | ashby | no | 3 | 1 | DONE |
+| SearchApi | ashby | no | 3 | 0 | not yet |
+| Talkiatry | ashby | no | 3 | 0 | not yet |
+| Ncontracts | ashby | no | 3 | 0 | not yet |
+| Crux | ashby | no | 3 | 0 | not yet |
+| Oneleet | ashby | no | 3 | 0 | not yet |
+| CertifyOS | ashby | no | 3 | 0 | not yet |
+| Techtorch | ashby | no | 3 | 0 | not yet |
+| Silver.dev | ashby | no | 3 | 0 | not yet |
+| MultiplyMii | ashby | no | 3 | 0 | not yet |
+| TensorWave | ashby | no | 3 | 0 | not yet |
 | The Job Sauce | ashby | no | 3 | 1 | DONE |
+| OpenRouter | ashby | no | 3 | 1 | DONE |
+| Thumbtack | ashby | no | 3 | 0 | not yet |
+| Reliable Robotics Corporation | ashby | no | 3 | 0 | not yet |
+| SignalFire | ashby | no | 3 | 0 | not yet |
+| Wormhole Labs | ashby | no | 3 | 1 | DONE |
+| Constructor | ashby | no | 3 | 0 | not yet |
+| Realm | ashby | no | 3 | 0 | not yet |
+| Second Front Systems | ashby | no | 3 | 0 | not yet |
+| HavocAI | ashby | no | 3 | 0 | not yet |
+| Mudflap | ashby | no | 3 | 0 | not yet |
+| Reteam | ashby | no | 3 | 0 | not yet |
+| Sibill Srl | ashby | no | 3 | 0 | not yet |
+| webAI | ashby | no | 3 | 0 | not yet |
+| Virta Health | ashby | no | 3 | 0 | not yet |
+| BIO | ashby | no | 3 | 0 | not yet |
+| fal | ashby | no | 3 | 0 | not yet |
+| Neural Concept | ashby | no | 3 | 0 | not yet |
+| Payabli | ashby | no | 3 | 0 | not yet |
 | Endava | smartrecruiters | no | 3 | 0 | not yet |
 | Bosch Group | smartrecruiters | no | 3 | 1 | DONE |
 | Scale AI | greenhouse | yes | 2 | 0 | not yet |
 | Suno | ashby | yes | 2 | 0 | not yet |
-| Smallest AI | ashby | yes | 2 | 0 | not yet |
 | Databricks | greenhouse | yes | 2 | 0 | not yet |
-| Quora | ashby | no | 2 | 0 | not yet |
-| Unstructured | ashby | no | 2 | 0 | not yet |
 | Anyscale | ashby | no | 2 | 2 | DONE |
 | Mindtickle | lever | no | 2 | 0 | not yet |
 | Coinbase | greenhouse | no | 2 | 0 | not yet |
@@ -3070,15 +3314,11 @@
 | Truveta | greenhouse | no | 2 | 2 | DONE |
 | Hevo Data | lever | yes | 2 | 0 | not yet |
 | Bolna AI | ashby | yes | 2 | 2 | DONE |
-| Phantom | ashby | no | 2 | 0 | not yet |
-| Paxos | ashby | no | 2 | 0 | not yet |
 | Paytm | lever | no | 2 | 0 | not yet |
 | Scopely | greenhouse | no | 2 | 0 | not yet |
 | Singlestore | greenhouse | no | 2 | 0 | not yet |
-| Sophos | ashby | no | 2 | 0 | not yet |
 | Thoughtworks | ashby | no | 2 | 0 | not yet |
 | Ramp | ashby | no | 2 | 0 | not yet |
-| Notion | ashby | no | 2 | 0 | not yet |
 | Sauce Labs Inc. | greenhouse | no | 2 | 0 | not yet |
 | GLG | greenhouse | no | 2 | 0 | not yet |
 | Graviton Research Capital LLP | greenhouse | no | 2 | 0 | not yet |
@@ -3087,7 +3327,6 @@
 | Brevo | lever | no | 2 | 0 | not yet |
 | WIN Home Inspection | greenhouse | no | 2 | 0 | not yet |
 | Capco | greenhouse | no | 2 | 0 | not yet |
-| Atlys | ashby | no | 2 | 0 | not yet |
 | Level AI | lever | yes | 2 | 0 | not yet |
 | Ownwell | greenhouse | no | 2 | 0 | not yet |
 | PayPay India | greenhouse | no | 2 | 0 | not yet |
@@ -3095,32 +3334,22 @@
 | Weekday (recruiter) | lever | no | 2 | 0 | not yet |
 | Z1 Tech | lever | no | 2 | 0 | not yet |
 | Celonis | greenhouse | no | 2 | 0 | not yet |
-| Provenir | ashby | no | 2 | 0 | not yet |
 | CrashPlan | greenhouse | no | 2 | 0 | not yet |
 | Particle41 | greenhouse | no | 2 | 0 | not yet |
-| Plane Software, Inc. | ashby | no | 2 | 0 | not yet |
-| Plotline | ashby | no | 2 | 0 | not yet |
 | VML Enterprise Solutions | greenhouse | no | 2 | 0 | not yet |
 | Razorpay Software Private Limited | greenhouse | no | 2 | 0 | not yet |
-| 3Y Health | ashby | no | 2 | 0 | not yet |
 | Hyperproof | greenhouse | no | 2 | 0 | not yet |
 | Smartsheet | greenhouse | no | 2 | 0 | not yet |
 | Avathon | greenhouse | no | 2 | 0 | not yet |
 | Drivetrain | lever | no | 2 | 0 | not yet |
-| Merge Money Ltd. | ashby | no | 2 | 0 | not yet |
 | Entrata | lever | no | 2 | 0 | not yet |
 | Instead | greenhouse | no | 2 | 0 | not yet |
 | Skild AI | greenhouse | no | 2 | 0 | not yet |
-| Anyone AI | ashby | no | 2 | 0 | not yet |
 | Cin7 | lever | no | 2 | 0 | not yet |
-| Sardine | ashby | no | 2 | 0 | not yet |
-| G2 | ashby | no | 2 | 0 | not yet |
 | Point72 | greenhouse | no | 2 | 0 | not yet |
 | Squarepoint Capital | greenhouse | no | 2 | 0 | not yet |
 | Invisible Agency | greenhouse | no | 2 | 0 | not yet |
 | AiDASH, Inc. | greenhouse | no | 2 | 0 | not yet |
-| Commure | ashby | no | 2 | 0 | not yet |
-| Metaforms | ashby | no | 2 | 0 | not yet |
 | Model N | lever | no | 2 | 0 | not yet |
 | Onit, Inc. | lever | no | 2 | 0 | not yet |
 | Piston Technologies | greenhouse | no | 2 | 0 | not yet |
@@ -3130,7 +3359,6 @@
 | C3 AI | greenhouse | no | 2 | 0 | not yet |
 | Doxel | lever | no | 2 | 0 | not yet |
 | Jobgether | lever | no | 2 | 0 | not yet |
-| Secfix | ashby | no | 2 | 0 | not yet |
 | verifone | greenhouse | no | 2 | 0 | not yet |
 | EnCharge AI | greenhouse | no | 2 | 0 | not yet |
 | Mactores | lever | no | 2 | 0 | not yet |
@@ -3140,8 +3368,6 @@
 | logicmonitor | greenhouse | no | 2 | 0 | not yet |
 | Bureau | ashby | no | 2 | 0 | not yet |
 | Black Duck Software, Inc. | greenhouse | no | 2 | 0 | not yet |
-| CUBE | ashby | no | 2 | 0 | not yet |
-| Cardboard | ashby | no | 2 | 0 | not yet |
 | Cordance | greenhouse | no | 2 | 0 | not yet |
 | Addepar | greenhouse | no | 2 | 0 | not yet |
 | Beghou Consulting | lever | no | 2 | 0 | not yet |
@@ -3150,57 +3376,29 @@
 | ValGenesis | lever | no | 2 | 0 | not yet |
 | Zimperium | lever | no | 2 | 0 | not yet |
 | Acceldata | lever | no | 2 | 0 | not yet |
-| Gen Digital Inc. | ashby | no | 2 | 0 | not yet |
 | Glomopay | ashby | no | 2 | 0 | not yet |
 | Lingaro | lever | no | 2 | 0 | not yet |
 | LinkedIn Partner Sandbox - RSC testing | lever | no | 2 | 0 | not yet |
 | Ethernovia, Inc. | greenhouse | no | 2 | 0 | not yet |
 | Motive | greenhouse | no | 2 | 1 | DONE |
-| Protegrity | ashby | no | 2 | 0 | not yet |
 | Saviynt | lever | no | 2 | 0 | not yet |
 | Neuron 7 | lever | no | 2 | 0 | not yet |
 | Universal Electronics Inc. | lever | no | 2 | 0 | not yet |
-| Spellbook | ashby | no | 2 | 0 | not yet |
-| SearchApi | ashby | no | 2 | 0 | not yet |
-| Talkiatry | ashby | no | 2 | 0 | not yet |
-| Ncontracts | ashby | no | 2 | 0 | not yet |
 | Smarsh | lever | no | 2 | 0 | not yet |
-| Crux | ashby | no | 2 | 0 | not yet |
 | TSMG | lever | no | 2 | 0 | not yet |
-| Oneleet | ashby | no | 2 | 0 | not yet |
 | Turvo | lever | no | 2 | 0 | not yet |
-| CertifyOS | ashby | no | 2 | 0 | not yet |
-| Techtorch | ashby | no | 2 | 0 | not yet |
 | SimSpace Corporation | ashby | no | 2 | 0 | not yet |
 | Rare Candy | ashby | no | 2 | 1 | DONE |
-| Silver.dev | ashby | no | 2 | 0 | not yet |
-| MultiplyMii | ashby | no | 2 | 0 | not yet |
 | Metabase | lever | no | 2 | 0 | not yet |
-| TensorWave | ashby | no | 2 | 0 | not yet |
-| OpenRouter | ashby | no | 2 | 0 | not yet |
-| Thumbtack | ashby | no | 2 | 0 | not yet |
 | Brigit | ashby | no | 2 | 0 | not yet |
 | Growly | ashby | no | 2 | 0 | not yet |
-| Reliable Robotics Corporation | ashby | no | 2 | 0 | not yet |
-| SignalFire | ashby | no | 2 | 0 | not yet |
-| Wormhole Labs | ashby | no | 2 | 0 | not yet |
 | Allium | ashby | no | 2 | 0 | not yet |
 | PlantingSpace | ashby | no | 2 | 0 | not yet |
-| Constructor | ashby | no | 2 | 0 | not yet |
 | Egen | lever | no | 2 | 0 | not yet |
-| Realm | ashby | no | 2 | 0 | not yet |
-| Second Front Systems | ashby | no | 2 | 0 | not yet |
-| HavocAI | ashby | no | 2 | 0 | not yet |
-| Mudflap | ashby | no | 2 | 0 | not yet |
-| Reteam | ashby | no | 2 | 0 | not yet |
 | Vesta Innovations Inc. | ashby | no | 2 | 0 | not yet |
-| Sibill Srl | ashby | no | 2 | 0 | not yet |
-| webAI | ashby | no | 2 | 0 | not yet |
 | Virtualitics, Inc | lever | no | 2 | 0 | not yet |
-| Virta Health | ashby | no | 2 | 0 | not yet |
 | Zeely Inc. | ashby | no | 2 | 0 | not yet |
 | Camunda | ashby | no | 2 | 0 | not yet |
-| BIO | ashby | no | 2 | 0 | not yet |
 | MCA Connect | lever | no | 2 | 0 | not yet |
 | PAR Technology | ashby | no | 2 | 0 | not yet |
 | Entefy | lever | no | 2 | 0 | not yet |
@@ -3210,7 +3408,6 @@
 | SKELAR | ashby | no | 2 | 0 | not yet |
 | PointClickCare | lever | no | 2 | 0 | not yet |
 | Universe | ashby | no | 2 | 0 | not yet |
-| fal | ashby | no | 2 | 0 | not yet |
 | Swarm Aero | ashby | no | 2 | 0 | not yet |
 | Tenna | lever | no | 2 | 0 | not yet |
 | Zencore | lever | no | 2 | 0 | not yet |
@@ -3222,7 +3419,6 @@
 | Wahed | lever | no | 2 | 0 | not yet |
 | Zeta | lever | no | 2 | 0 | not yet |
 | Stable Money | lever | no | 2 | 0 | not yet |
-| Neural Concept | ashby | no | 2 | 0 | not yet |
 | Riveron | ashby | no | 2 | 0 | not yet |
 | Alt Platform Inc | ashby | no | 2 | 0 | not yet |
 | pod network | ashby | no | 2 | 0 | not yet |
@@ -3234,7 +3430,6 @@
 | Clipbook | ashby | no | 2 | 0 | not yet |
 | Clipboard | ashby | no | 2 | 0 | not yet |
 | Snowflake | ashby | no | 2 | 0 | not yet |
-| Payabli | ashby | no | 2 | 0 | not yet |
 | Dozee | lever | no | 2 | 0 | not yet |
 | Array Behavioral Care | ashby | no | 2 | 0 | not yet |
 | Protege | ashby | no | 2 | 0 | not yet |

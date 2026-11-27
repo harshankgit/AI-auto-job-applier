@@ -1,18 +1,18 @@
 # Why applications failed
 
-_Generated 2026-11-27 13:00:12_
+_Generated 2026-11-27 13:31:16_
 
 ## Harshank
 
-Submitted: **122** (113 companies) | Failed: **861**
+Submitted: **139** (130 companies) | Failed: **914**
 
 | Reason | Count |
 |---|---|
-| Needs an answer from you | 522 |
-| Captcha | 153 |
-| Form rejected | 105 |
-| No confirmation / OTP | 29 |
-| Page error | 28 |
+| Needs an answer from you | 534 |
+| Captcha | 160 |
+| Form rejected | 131 |
+| Page error | 35 |
+| No confirmation / OTP | 30 |
 | Job closed | 24 |
 
 ### Questions waiting for your answer
@@ -29,13 +29,22 @@ Submitted: **122** (113 companies) | Failed: **861**
 - (9x) University Name ✱ - ION Group -> answered (saved privately)
 - (6x) Are you on location (BLR) or willing to move? - Rox Data Corp -> answered (saved privately)
 - (5x) Are you currently able to legally work for any employer in either France, Belgium or Spain? - Alan -> answered (saved privately)
+- (4x) Cover Letter - Reteam
 - (4x) Do you have a minimum of 3 years of experience as a Software Engineer? - Alan -> answered (saved privately)
 - (4x) Do you opt-in to receive WhatsApp messages from Stripe Recruiting?* - Stripe -> answered (saved privately)
 - (4x) What is your most recent bonus pay/unvested stock option? (in INR)* - IMC Trading
 - (4x) What is your non - compete period? (in months)* - IMC Trading -> answered (saved privately)
 - (4x) Чи знав/-ла про Universe до подачі на цю роль? - Universe
 - (3x) If so, what type of visa are you currently on and when does it expire? - Kong
+- (3x) Please check any of the boxes that describe your skill set: - Experience building AI agents - Crux
+- (3x) Please check any of the boxes that describe your skill set: - Experience building engineering teams from 0 to 1 - Crux
+- (3x) Please check any of the boxes that describe your skill set: - Familiarity with modern AI tooling & frameworks (LangChain, LlamaIndex, etc.) - Crux
 - (3x) Total & Relevant Experience in Software Engineering? ✱ - Allata -> answered (saved privately)
+- (3x) What color is the sky - Blue - Protegrity
+- (3x) What color is the sky - Orange - Protegrity
+- (3x) Which industries are you interested in? - Consumer - SignalFire
+- (3x) Which industries are you interested in? - Cyber - SignalFire
+- (3x) Which industries are you interested in? - Enterprise SaaS - SignalFire
 - (2x) A “U.S. person” is a citizen, legal permanent resident, or legal temporary resident (i.e., a refugee or asylee) of the United States. Which of the following best describes your “U.S. person” status? - Snowflake
 - (2x) AI/ML - ValGenesis
 - (2x) Address - Ncontracts
@@ -48,28 +57,19 @@ Submitted: **122** (113 companies) | Failed: **861**
 - (2x) Are you already on Notice period? ✱ - Mactores -> answered (saved privately)
 - (2x) Are you comfortable participating in interviews and conducting business entirely in English? - SimSpace Corporation
 - (2x) Are you comfortable working the fixed shift hours of 12 PM – 9:30 PM IST (Summer) and 1 PM – 10:30 PM IST (Winter), Monday to Friday? ✱ - Smart Working Solutions -> answered (saved privately)
-- (2x) Are you currently a Tekion employee? (If "yes" - please apply via Greenhouse Internal Job Board) - Tekion -> answered (saved privately)
-- (2x) Are you currently a US Citizen? - HavocAI
-- (2x) Are you currently able to legally work for any employer in either France, Belgium, Spain or Canada ? - Alan -> answered (saved privately)
-- (2x) Are you currently an intern, freelancer, or employee at WPP or one of its agencies?* - VML Enterprise Solutions -> answered (saved privately)
-- (2x) Are you currently based in the United States or Canada? - OpenRouter
-- (2x) Are you currently based in the United States? - Brigit
-- (2x) Are you currently legally entitled to work in Canada? - Spellbook
-- (2x) Are you currently living in Bengaluru? If not, are you planning on moving to Bengaluru? - SPAN
-- (2x) Are you currently on an OPT or H4 visa? - Talkiatry
 
 ## Divya
 
-Submitted: **115** (108 companies) | Failed: **700**
+Submitted: **121** (114 companies) | Failed: **751**
 
 | Reason | Count |
 |---|---|
-| Needs an answer from you | 429 |
-| Captcha | 162 |
-| Form rejected | 51 |
-| No confirmation / OTP | 25 |
+| Needs an answer from you | 433 |
+| Captcha | 174 |
+| Form rejected | 77 |
+| No confirmation / OTP | 26 |
 | Job closed | 21 |
-| Page error | 12 |
+| Page error | 20 |
 
 ### Questions waiting for your answer
 
