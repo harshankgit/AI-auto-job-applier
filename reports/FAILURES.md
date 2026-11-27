@@ -1,19 +1,19 @@
 # Why applications failed
 
-_Generated 2026-11-27 03:04:00_
+_Generated 2026-11-27 11:42:37_
 
 ## Harshank
 
-Submitted: **112** (103 companies) | Failed: **847**
+Submitted: **122** (113 companies) | Failed: **861**
 
 | Reason | Count |
 |---|---|
-| Needs an answer from you | 515 |
-| Captcha | 152 |
+| Needs an answer from you | 522 |
+| Captcha | 153 |
 | Form rejected | 105 |
+| No confirmation / OTP | 29 |
 | Page error | 28 |
 | Job closed | 24 |
-| No confirmation / OTP | 23 |
 
 ### Questions waiting for your answer
 
@@ -60,15 +60,15 @@ Submitted: **112** (103 companies) | Failed: **847**
 
 ## Divya
 
-Submitted: **106** (99 companies) | Failed: **686**
+Submitted: **115** (108 companies) | Failed: **700**
 
 | Reason | Count |
 |---|---|
-| Needs an answer from you | 421 |
-| Captcha | 161 |
+| Needs an answer from you | 429 |
+| Captcha | 162 |
 | Form rejected | 51 |
+| No confirmation / OTP | 25 |
 | Job closed | 21 |
-| No confirmation / OTP | 20 |
 | Page error | 12 |
 
 ### Questions waiting for your answer

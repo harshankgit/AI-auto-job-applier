@@ -1,19 +1,129 @@
 {
- "generated_at": "2026-11-27 03:04:00",
+ "generated_at": "2026-11-27 11:42:37",
  "candidates": {
   "harshank": {
-   "submitted": 112,
-   "submitted_companies": 103,
-   "failed": 847,
+   "submitted": 122,
+   "submitted_companies": 113,
+   "failed": 861,
    "reasons": {
-    "needs_answer": 515,
-    "captcha": 152,
+    "needs_answer": 522,
+    "captcha": 153,
     "form_rejected": 105,
+    "unconfirmed": 29,
     "error": 28,
-    "closed": 24,
-    "unconfirmed": 23
+    "closed": 24
    },
    "successes": [
+    {
+     "company": "BoschGroup",
+     "title": "Full Stack Developer",
+     "location": "Bangalore, India",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 09:20:48",
+     "url": "https://jobs.smartrecruiters.com/BoschGroup/744000160600719",
+     "source": "smartrecruiters",
+     "score": 80.0
+    },
+    {
+     "company": "atomic-financial",
+     "title": "Automation Engineer",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:52:26",
+     "url": "https://jobs.ashbyhq.com/atomic-financial/7e781781-c559-4dde-a006-32f6da25937f",
+     "source": "ashby",
+     "score": 58.0
+    },
+    {
+     "company": "vitvio",
+     "title": "Product Engineer",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:50:49",
+     "url": "https://jobs.ashbyhq.com/vitvio/99db843a-9609-4bab-a788-faacf6d5643e",
+     "source": "ashby",
+     "score": 71.0
+    },
+    {
+     "company": "Anima",
+     "title": "Product Engineer (all levels)",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:50:17",
+     "url": "https://jobs.ashbyhq.com/Anima/785441b7-54ea-4840-bf27-b5e8bf71430c",
+     "source": "ashby",
+     "score": 76.0
+    },
+    {
+     "company": "Mastra",
+     "title": "AI Engineer ",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:49:13",
+     "url": "https://jobs.ashbyhq.com/Mastra/531a3fe8-556f-4b83-bee7-20374f67f980",
+     "source": "ashby",
+     "score": 51.0
+    },
+    {
+     "company": "voltai.careers",
+     "title": "Field Application Engineer (Europe)",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:48:59",
+     "url": "https://jobs.ashbyhq.com/voltai.careers/b38102b3-1e83-4d6f-ad18-c8435dc8097b",
+     "source": "ashby",
+     "score": 52.0
+    },
+    {
+     "company": "neo-tax",
+     "title": "Solutions Engineer",
+     "location": "Neo.Tax HQ (Remote, Pacific Time Zone)",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:48:42",
+     "url": "https://jobs.ashbyhq.com/neo-tax/e782fb94-ebc2-48ca-914d-cbc6088cc101",
+     "source": "ashby",
+     "score": 53.0
+    },
+    {
+     "company": "unto-labs",
+     "title": "Product Engineer",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:48:24",
+     "url": "https://jobs.ashbyhq.com/unto-labs/975ca589-15dd-4e33-a442-db1d41656247",
+     "source": "ashby",
+     "score": 67.0
+    },
+    {
+     "company": "ElevenLabs",
+     "title": "Full-Stack Engineer - Creative Agents ",
+     "location": "Remote",
+     "status": "ALREADY_APPLIED",
+     "applied_at": "2026-11-27 03:39:52",
+     "url": "https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe",
+     "source": "ashby",
+     "score": 72.0
+    },
+    {
+     "company": "SurveyMonkey",
+     "title": "Software Engineer II - Full Stack",
+     "location": "Bengaluru",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 03:37:37",
+     "url": "https://jobs.ashbyhq.com/surveymonkey/ef79b729-ceb3-4725-ab3c-1314c55c1cb2",
+     "source": "ashby",
+     "score": 84.0
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II-Golang",
+     "location": "Gurugram",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-26 15:48:54",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c",
+     "source": "ashby",
+     "score": 70.0
+    },
     {
      "company": "NETGEAR",
      "title": "SASE Desktop Client Software Developer",
@@ -1187,6 +1297,223 @@
    ],
    "failures": [
     {
+     "company": "NielsenIQ",
+     "title": "Software Engineer",
+     "location": "Chennai, TN, India",
+     "status": "ERROR",
+     "applied_at": "2026-11-27 10:36:45",
+     "url": "https://jobs.smartrecruiters.com/NielsenIQ/744000162730608",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "unconfirmed",
+     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Endava",
+     "title": "Full Stack Java Developer",
+     "location": "Pune, MH, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:30:26",
+     "url": "https://jobs.smartrecruiters.com/Endava/744000162668429",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Do you currently have the legal right to work in the country where the job is based? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ServiceNow",
+     "title": "Software Engineer (Go & Kubernetes)",
+     "location": "Hyderabad, , India",
+     "status": "ERROR",
+     "applied_at": "2026-11-27 10:29:30",
+     "url": "https://jobs.smartrecruiters.com/ServiceNow/744000163146999",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "unconfirmed",
+     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Holepunch",
+     "title": "P2P Node.js Engineer (100% Remote, Worldwide)",
+     "location": "Remote job",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-27 10:29:10",
+     "url": "https://holepunch.recruitee.com/o/p2p-nodejs-engineer",
+     "source": "recruitee",
+     "score": 62.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "GRID eSports GmbH",
+     "title": "Backend Engineer - Real-Time Esports Data (m/f/x)",
+     "location": "Remote job",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:27:37",
+     "url": "https://grid.recruitee.com/o/backend-engineer-real-time-esports-data-mfx",
+     "source": "recruitee",
+     "score": 62.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Are you comfortable participating in an out-of-hours program? * (bot could not click/type it)",
+      "Are you able to work on a B2B contract? * (bot could not click/type it)",
+      "Are you able to work in the European timezone? * (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Tether Operations Limited",
+     "title": "Frontend Desktop Engineer",
+     "location": "Remote job",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:26:53",
+     "url": "https://tether.recruitee.com/o/frontend-desktop-engineer-nigeria",
+     "source": "recruitee",
+     "score": 77.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Which of the following best describes your experience working with React/Preact and JavaScript/TypeScript? * (bot could not click/type it)",
+      "Which of the following best describes your experience with state management libraries such as Redux, Redux Toolkit, Zustand, or similar? * (bot could not click/type it)",
+      "Which of the following best describes your experience developing cross-platform desktop applications using technologies such as Electron, Tauri, or similar runtimes? * (bot could not click/type it)",
+      "Do you have experience working with peer-to-peer (P2P) technologies or distributed systems? * (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Lendingkart",
+     "title": "Backend Developer",
+     "location": "Bengaluru, , India",
+     "status": "ERROR",
+     "applied_at": "2026-11-27 10:25:43",
+     "url": "https://jobs.smartrecruiters.com/Lendingkart/82097348",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "unconfirmed",
+     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Holepunch",
+     "title": "P2P Node.js Engineer (100% Remote, Worldwide)",
+     "location": "Remote job",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:25:40",
+     "url": "https://holepunch.recruitee.com/o/p2p-nodejs-engineer",
+     "source": "recruitee",
+     "score": 62.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "How do you rate your own skills with native programming such as C++? * (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "GRID eSports GmbH",
+     "title": "Backend Engineer - Real-Time Esports Data (m/f/x)",
+     "location": "Remote job",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:24:48",
+     "url": "https://grid.recruitee.com/o/backend-engineer-real-time-esports-data-mfx",
+     "source": "recruitee",
+     "score": 62.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Are you comfortable participating in an out-of-hours program? * (bot could not click/type it)",
+      "Are you able to work on a B2B contract? * (bot could not click/type it)",
+      "Are you able to work in the European timezone? * (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Endava",
+     "title": "Full Stack Developer",
+     "location": "Bengaluru, Karnataka, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:24:08",
+     "url": "https://jobs.smartrecruiters.com/Endava/744000163812389",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Do you currently have the legal right to work in the country where the job is based? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Tether Operations Limited",
+     "title": "Fullstack Engineer - AgenticOps (100% Remote)",
+     "location": "Remote job",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:24:06",
+     "url": "https://tether.recruitee.com/o/fullstack-engineer-agenticops-100-remote-15",
+     "source": "recruitee",
+     "score": 80.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "How did you hear about this opportunity? * (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "NielsenIQ",
+     "title": "Software Engineer (Python, GenAI, FastAPi)",
+     "location": "Chennai, TN, India",
+     "status": "ERROR",
+     "applied_at": "2026-11-27 10:23:12",
+     "url": "https://jobs.smartrecruiters.com/NielsenIQ/744000163292094",
+     "source": "smartrecruiters",
+     "score": 63.0,
+     "category": "unconfirmed",
+     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Unacademy",
+     "title": "Software Engineer, Backend",
+     "location": "Bengaluru, KA, India",
+     "status": "ERROR",
+     "applied_at": "2026-11-27 10:23:08",
+     "url": "https://jobs.smartrecruiters.com/Unacademy/743999672726735",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "unconfirmed",
+     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Continental",
+     "title": "Java Full Stack Developer",
+     "location": "Electronic City,  Bengaluru, Karnataka, India",
+     "status": "ERROR",
+     "applied_at": "2026-11-27 10:21:34",
+     "url": "https://jobs.smartrecruiters.com/Continental/744000154002299",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "unconfirmed",
+     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
      "company": "ElevenLabs",
      "title": "Developer Experience Engineer",
      "location": "Remote",
@@ -1344,7 +1671,7 @@
      "blocking": [
       "What is your desired compensation? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -1392,7 +1719,7 @@
      "blocking": [
       "What is your desired compensation? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -1438,7 +1765,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -1470,7 +1797,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -1484,7 +1811,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "SurveyMonkey",
@@ -1500,7 +1827,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -1530,7 +1857,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -1562,7 +1889,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -1576,7 +1903,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "SurveyMonkey",
@@ -1592,7 +1919,21 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
+    },
+    {
+     "company": "PAR Technology",
+     "title": "Software Engineer II-Golang",
+     "location": "Gurugram",
+     "status": "ERROR",
+     "applied_at": "2026-11-26 15:48:54",
+     "url": "https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c",
+     "source": "ashby",
+     "score": 70.0,
+     "category": "unconfirmed",
+     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
+     "blocking": [],
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -1752,7 +2093,7 @@
      "blocking": [
       "What is your desired compensation? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -1800,7 +2141,7 @@
      "blocking": [
       "What is your desired compensation? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -1830,7 +2171,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -1860,7 +2201,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -1892,7 +2233,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -1906,7 +2247,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "SurveyMonkey",
@@ -1922,7 +2263,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -1970,7 +2311,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -1984,7 +2325,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "SurveyMonkey",
@@ -2000,7 +2341,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -2014,21 +2355,7 @@
      "category": "captcha",
      "why": "The site showed a captcha (robot check) that only a human can solve.",
      "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "PAR Technology",
-     "title": "Software Engineer II-Golang",
-     "location": "Gurugram",
-     "status": "ERROR",
-     "applied_at": "2026-11-26 15:48:54",
-     "url": "https://jobs.ashbyhq.com/PAR%20Technology/0cc4109c-dfe0-44f9-9191-d2ed723a409c",
-     "source": "ashby",
-     "score": 70.0,
-     "category": "unconfirmed",
-     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
-     "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -2044,7 +2371,7 @@
      "blocking": [
       "What is your desired compensation? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -2074,7 +2401,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -2120,7 +2447,7 @@
      "category": "error",
      "why": "The page crashed or timed out: could not load https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d/application",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -2134,7 +2461,7 @@
      "category": "error",
      "why": "The page crashed or timed out: could not load https://jobs.ashbyhq.com/PAR%20Technology/1ca0ca4f-94c0-42c4-96be-21a13b621426/application",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "SurveyMonkey",
@@ -2150,7 +2477,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -2164,7 +2491,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -2212,7 +2539,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -2226,7 +2553,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "SurveyMonkey",
@@ -2242,7 +2569,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -2256,7 +2583,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -2304,7 +2631,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -2318,7 +2645,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "SurveyMonkey",
@@ -2334,7 +2661,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -2348,7 +2675,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -2394,7 +2721,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "SurveyMonkey",
@@ -2410,7 +2737,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -2424,7 +2751,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "SurveyMonkey",
@@ -2440,7 +2767,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Warner Music Group",
@@ -2518,7 +2845,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -2532,7 +2859,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "SurveyMonkey",
@@ -2548,7 +2875,7 @@
      "blocking": [
       "What are your fixed salary expectations? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -2562,7 +2889,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Smart Working Solutions",
@@ -2592,7 +2919,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -2648,7 +2975,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -2662,7 +2989,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Turnkey",
@@ -2732,7 +3059,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ION Group",
@@ -2760,7 +3087,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -2816,7 +3143,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -2830,7 +3157,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "NETGEAR",
@@ -2972,7 +3299,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ION Group",
@@ -3072,7 +3399,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Warner Music Group",
@@ -3102,7 +3429,7 @@
      "blocking": [
       "What is your notice period?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -3116,7 +3443,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Turnkey",
@@ -3204,7 +3531,7 @@
      "blocking": [
       "What is your notice period?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ION Group",
@@ -3234,7 +3561,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -3308,7 +3635,7 @@
      "blocking": [
       "What is your notice period?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -3322,7 +3649,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ShyftLabs",
@@ -3482,7 +3809,7 @@
      "blocking": [
       "What is your notice period?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ION Group",
@@ -3570,7 +3897,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ION Group",
@@ -3600,7 +3927,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Wonderful",
@@ -3710,7 +4037,7 @@
      "blocking": [
       "What is your notice period?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ShyftLabs",
@@ -3738,7 +4065,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Smart Working Solutions",
@@ -3884,7 +4211,7 @@
      "blocking": [
       "What is your notice period?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ShyftLabs",
@@ -3972,7 +4299,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -4032,7 +4359,7 @@
      "blocking": [
       "What is your notice period?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "PAR Technology",
@@ -4046,7 +4373,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "NETGEAR",
@@ -4220,7 +4547,7 @@
      "blocking": [
       "What is your notice period?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ION Group",
@@ -4308,7 +4635,7 @@
      "category": "form_rejected",
      "why": "The form refused the submission because a required field was still empty.",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Atlan",
@@ -5256,7 +5583,7 @@
       "Phone Number",
       "What is your desired compensation? (bot could not click/type it)"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -5358,7 +5685,7 @@
      "category": "error",
      "why": "The page crashed or timed out: could not load https://jobs.ashbyhq.com/PAR%20Technology/cec2db23-b91d-42a6-9b8f-043c773faf56/application",
      "blocking": [],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "ElevenLabs",
@@ -5451,7 +5778,7 @@
      "blocking": [
       "Phone Number"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Jeeves",
@@ -5601,7 +5928,7 @@
      "blocking": [
       "Phone Number"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Mento",
@@ -5845,7 +6172,7 @@
      "blocking": [
       "What is your notice period?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Neural Concept",
@@ -5877,7 +6204,7 @@
      "blocking": [
       "Phone Number"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Exa",
@@ -6821,7 +7148,7 @@
      "blocking": [
       "What is your notice period?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Certa",
@@ -6913,7 +7240,7 @@
      "blocking": [
       "Phone Number"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "NETGEAR",
@@ -7098,234 +7425,6 @@
      "category": "captcha",
      "why": "The site showed a captcha (robot check) that only a human can solve.",
      "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "MCA Connect",
-     "title": "Power Platform Engineer - CX Services",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:25:43",
-     "url": "https://jobs.lever.co/mcaconnect/2965dbc8-7714-4a33-ab17-33e46151d6e9",
-     "source": "lever",
-     "score": 57.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Please provide your FULL home address including zip code ✱",
-      "This position is a full-time W2 role. It is NOT open to contractors or C2C arrangements. Do you meet this requirement? ✱",
-      "Which of the following AI tools do you use frequently to perform daily tasks?? ✱ - Claude",
-      "Which of the following AI tools do you use frequently to perform daily tasks?? ✱ - Microsoft 365 Copilot",
-      "Which of the following AI tools do you use frequently to perform daily tasks?? ✱ - Other"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Horizon3 AI",
-     "title": "WebApp Offensive Security Software Engineer",
-     "location": "US, Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:25:20",
-     "url": "https://jobs.ashbyhq.com/horizon3ai/169d3dde-b8e7-4545-a5a4-cd5cc882c101",
-     "source": "ashby",
-     "score": 61.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Phone",
-      "Phone"
-     ],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "webAI",
-     "title": "CRDT Software Engineer - Product",
-     "location": "Remote Office",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:25:06",
-     "url": "https://jobs.ashbyhq.com/webAI/ac849bd2-1fd6-4fef-bbbb-a903d3813214",
-     "source": "ashby",
-     "score": 57.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Authorization"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Ncontracts",
-     "title": "Software Developer - L4",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:25:05",
-     "url": "https://jobs.ashbyhq.com/ncontracts/26450edb-10ca-4286-81f6-7203f177c122",
-     "source": "ashby",
-     "score": 62.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Address",
-      "Desired Salary: (bot could not click/type it)",
-      "Referral Source?",
-      "I certify that I, the undersigned applicant, have personally completed this application. I further certify that I have not knowingly withheld any information that might adversely affect my changes for employment and that the answers given by me are true and complete to the best of my knowledge. I understand that any omission or misstatement of fact on this application, or in any interview or document used to secure employment shall be grounds for rejection of this application or for immediate discharge if I am employed, regardless of the time elapsed before discovery. I hereby authorize Ncontracts and any of its subsidiaries (the “Company”) to investigate all statements given in this application, including my references, work record, and educations as well as all other matters related to my suitability for employment, and unless otherwise noted, to contact my present and former employers. I also authorize the references and employers I have listed to disclose to the Company any and all documents and other information related to my work records and employment, without giving me prior notice of disclosure. In addition, I hereby release the Company, my present and former employers and all other persons and entities from any and all claims, demands or liabilities arising out of or in any way related to such investigation or disclosure. I understand that nothing in this application or communicated during any interview creates a contract for employment between me and Ncontracts or any of its subsidiaries (the “Company”). I further understand that if hired, my employment with the company is at will, and that I or the Company may terminate my employment at any time without notice and without any reason. I understand that no promises or representations to the contrary are binding on the Company unless made in writing and signed by me and the CEO or an authorized representative of Ncontracts."
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Constructor",
-     "title": "BackEnd Engineer: Experiments",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:24:50",
-     "url": "https://jobs.ashbyhq.com/constructor/4e7cfde4-c2ba-4251-b95f-7bcf9793984a",
-     "source": "ashby",
-     "score": 61.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "ElevenLabs",
-     "title": "Full-Stack Engineer (Backend Leaning) - Creative Agents ",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:24:47",
-     "url": "https://jobs.ashbyhq.com/ElevenLabs/35813150-a851-4821-b732-a037b4e6c4fe",
-     "source": "ashby",
-     "score": 72.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What is your current notice period?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Plotline",
-     "title": "Founding SDET",
-     "location": "Bengaluru Office",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:24:32",
-     "url": "https://jobs.ashbyhq.com/plotlineso/a1b58fd5-ea48-4be1-9dd8-e8119d19e933",
-     "source": "ashby",
-     "score": 55.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Beghou Consulting",
-     "title": "Software Developer - .Net",
-     "location": "Pune",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:24:02",
-     "url": "https://jobs.lever.co/beghouconsulting/e8a22a2b-5a87-4519-b6db-f5d1ec1b60b4",
-     "source": "lever",
-     "score": 59.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Experience with Azure cloud services? ✱ - Yes",
-      "Experience with Azure cloud services? ✱ - No"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Warner Music Group",
-     "title": "Backend Engineer",
-     "location": "Bangalore",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:23:44",
-     "url": "https://jobs.lever.co/wmg/bd93e552-e497-44a2-bbae-4f2dc318b2f4",
-     "source": "lever",
-     "score": 60.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Silver.dev",
-     "title": "Serie B - Fintech Company - Software Engineer",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:23:42",
-     "url": "https://jobs.ashbyhq.com/Silver/d9623c22-88a7-456c-9fef-b6935d570e92",
-     "source": "ashby",
-     "score": 62.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you Physically located in Argentina?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "TensorWave",
-     "title": "Software Engineer (Front-End)",
-     "location": "Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:23:29",
-     "url": "https://jobs.ashbyhq.com/TensorWave/31e9b0a4-d5fe-4227-9714-1d0885cbe2b7",
-     "source": "ashby",
-     "score": 67.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Will you now or in the future require authorization to work in the United States?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "OpenGov",
-     "title": "Software Engineer II (DevX team)",
-     "location": "India | Pune",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:22:59",
-     "url": "https://jobs.ashbyhq.com/opengov/3d6d4ac3-d645-410e-bacf-3395b7da4838",
-     "source": "ashby",
-     "score": 70.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Current Location:"
-     ],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "OpenRouter",
-     "title": "Software Engineer, Enterprise",
-     "location": "Remote (US)",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:22:48",
-     "url": "https://jobs.ashbyhq.com/openrouter/0c6bbb7f-ea09-45b6-b185-8a17a8de214d",
-     "source": "ashby",
-     "score": 71.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you currently based in the United States or Canada?",
-      "Have you interviewed with Stripe in the last year?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "SurveyMonkey",
-     "title": "Software Engineer II - Mobile Engineering - Android",
-     "location": "Bengaluru",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:22:45",
-     "url": "https://jobs.ashbyhq.com/surveymonkey/f6222e24-96f9-4515-b519-2ab2cd38449d",
-     "source": "ashby",
-     "score": 84.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "What is your notice period?"
-     ],
      "company_later_succeeded": false
     }
    ],
@@ -8798,6 +8897,22 @@
      "count": 3
     },
     {
+     "question": "Do you currently have the legal right to work in the country where the job is based?",
+     "count": 2
+    },
+    {
+     "question": "Are you comfortable participating in an out-of-hours program? *",
+     "count": 2
+    },
+    {
+     "question": "Are you able to work on a B2B contract? *",
+     "count": 2
+    },
+    {
+     "question": "Are you able to work in the European timezone? *",
+     "count": 2
+    },
+    {
      "question": "What is your expected compensation per year in USD?",
      "count": 2
     },
@@ -8844,38 +8959,112 @@
     {
      "question": "What is your preferred work location?*",
      "count": 2
-    },
-    {
-     "question": "Please select the region you are currently located in*",
-     "count": 2
-    },
-    {
-     "question": "Please select your immigration status (Singapore and Hong Kong Applicants only)*",
-     "count": 2
-    },
-    {
-     "question": "Will you now, or in the future, require work sponsorship for your preferred location by the Company/Squarepoint Group?*",
-     "count": 2
-    },
-    {
-     "question": "Are you currently eligible to work in the country where this role is posted without visa sponsorship?*",
-     "count": 2
     }
    ]
   },
   "divya": {
-   "submitted": 106,
-   "submitted_companies": 99,
-   "failed": 686,
+   "submitted": 115,
+   "submitted_companies": 108,
+   "failed": 700,
    "reasons": {
-    "needs_answer": 421,
-    "captcha": 161,
+    "needs_answer": 429,
+    "captcha": 162,
     "form_rejected": 51,
+    "unconfirmed": 25,
     "closed": 21,
-    "unconfirmed": 20,
     "error": 12
    },
    "successes": [
+    {
+     "company": "Bosch Group",
+     "title": "Full Stack Software Developer with AI expertise, Pune",
+     "location": "hosur road bangalore, , India",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 10:45:42",
+     "url": "https://jobs.smartrecruiters.com/BoschGroup/744000155451389",
+     "source": "smartrecruiters",
+     "score": 63.0
+    },
+    {
+     "company": "Continental",
+     "title": "Java Full Stack Developer",
+     "location": "Electronic City,  Bengaluru, Karnataka, India",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 10:26:21",
+     "url": "https://jobs.smartrecruiters.com/Continental/744000154002299",
+     "source": "smartrecruiters",
+     "score": 55.0
+    },
+    {
+     "company": "Mastra",
+     "title": "AI Engineer ",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:54:18",
+     "url": "https://jobs.ashbyhq.com/Mastra/531a3fe8-556f-4b83-bee7-20374f67f980",
+     "source": "ashby",
+     "score": 46.0
+    },
+    {
+     "company": "neo-tax",
+     "title": "Solutions Engineer",
+     "location": "Neo.Tax HQ (Remote, Pacific Time Zone)",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:54:01",
+     "url": "https://jobs.ashbyhq.com/neo-tax/e782fb94-ebc2-48ca-914d-cbc6088cc101",
+     "source": "ashby",
+     "score": 48.0
+    },
+    {
+     "company": "voltai.careers",
+     "title": "Field Application Engineer (Europe)",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:53:47",
+     "url": "https://jobs.ashbyhq.com/voltai.careers/b38102b3-1e83-4d6f-ad18-c8435dc8097b",
+     "source": "ashby",
+     "score": 52.0
+    },
+    {
+     "company": "unto-labs",
+     "title": "Product Engineer",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:53:16",
+     "url": "https://jobs.ashbyhq.com/unto-labs/975ca589-15dd-4e33-a442-db1d41656247",
+     "source": "ashby",
+     "score": 62.0
+    },
+    {
+     "company": "atomic-financial",
+     "title": "Automation Engineer",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:52:26",
+     "url": "https://jobs.ashbyhq.com/atomic-financial/7e781781-c559-4dde-a006-32f6da25937f",
+     "source": "ashby",
+     "score": 58.0
+    },
+    {
+     "company": "vitvio",
+     "title": "Product Engineer",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:50:48",
+     "url": "https://jobs.ashbyhq.com/vitvio/99db843a-9609-4bab-a788-faacf6d5643e",
+     "source": "ashby",
+     "score": 66.0
+    },
+    {
+     "company": "Anima",
+     "title": "Product Engineer (all levels)",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-27 04:50:16",
+     "url": "https://jobs.ashbyhq.com/Anima/785441b7-54ea-4840-bf27-b5e8bf71430c",
+     "source": "ashby",
+     "score": 76.0
+    },
     {
      "company": "NETGEAR",
      "title": "SASE Desktop Client Software Developer",
@@ -9988,6 +10177,223 @@
     }
    ],
    "failures": [
+    {
+     "company": "Cars24",
+     "title": "Retail Associate",
+     "location": "Mumbai, MH, India",
+     "status": "ERROR",
+     "applied_at": "2026-11-27 10:47:22",
+     "url": "https://jobs.smartrecruiters.com/Cars24/743999664899164",
+     "source": "smartrecruiters",
+     "score": 44.0,
+     "category": "unconfirmed",
+     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Bosch Group",
+     "title": "AI & Backend Software Engineer – Intellectual Property Rights(Python / FastAPI / GenAI)",
+     "location": "bengaluru, , India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:43:06",
+     "url": "https://jobs.smartrecruiters.com/BoschGroup/744000162220979",
+     "source": "smartrecruiters",
+     "score": 63.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Which of the following REST API frameworks do you have hands-on production experience with? (Select all that apply) (bot could not click/type it)",
+      "Which of the following technologies do you have experience with? (Select all that apply) (bot could not click/type it)"
+     ],
+     "company_later_succeeded": true
+    },
+    {
+     "company": "Endava",
+     "title": "Full Stack Java Developer",
+     "location": "Pune, MH, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:35:26",
+     "url": "https://jobs.smartrecruiters.com/Endava/744000162668429",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Do you currently have the legal right to work in the country where the job is based? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Endava",
+     "title": "Full Stack Developer",
+     "location": "Bengaluru, Karnataka, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:34:30",
+     "url": "https://jobs.smartrecruiters.com/Endava/744000163812389",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Do you currently have the legal right to work in the country where the job is based? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "NielsenIQ",
+     "title": "Software Engineer",
+     "location": "Chennai, TN, India",
+     "status": "ERROR",
+     "applied_at": "2026-11-27 10:32:20",
+     "url": "https://jobs.smartrecruiters.com/NielsenIQ/744000162730608",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "unconfirmed",
+     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "GRID eSports GmbH",
+     "title": "Backend Engineer - Real-Time Esports Data (m/f/x)",
+     "location": "Remote job",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:30:52",
+     "url": "https://grid.recruitee.com/o/backend-engineer-real-time-esports-data-mfx",
+     "source": "recruitee",
+     "score": 57.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Are you able to work on a B2B contract? * (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Holepunch",
+     "title": "P2P Node.js Engineer (100% Remote, Worldwide)",
+     "location": "Remote job",
+     "status": "CAPTCHA_BLOCKED",
+     "applied_at": "2026-11-27 10:30:10",
+     "url": "https://holepunch.recruitee.com/o/p2p-nodejs-engineer",
+     "source": "recruitee",
+     "score": 62.0,
+     "category": "captcha",
+     "why": "The site showed a captcha (robot check) that only a human can solve.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "ServiceNow",
+     "title": "Software Engineer (Go & Kubernetes)",
+     "location": "Hyderabad, , India",
+     "status": "ERROR",
+     "applied_at": "2026-11-27 10:29:15",
+     "url": "https://jobs.smartrecruiters.com/ServiceNow/744000163146999",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "unconfirmed",
+     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Tether Operations Limited",
+     "title": "Frontend Desktop Engineer",
+     "location": "Remote job",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:28:34",
+     "url": "https://tether.recruitee.com/o/frontend-desktop-engineer-nigeria",
+     "source": "recruitee",
+     "score": 77.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Which of the following best describes your experience working with React/Preact and JavaScript/TypeScript? * (bot could not click/type it)",
+      "Which of the following best describes your experience with state management libraries such as Redux, Redux Toolkit, Zustand, or similar? * (bot could not click/type it)",
+      "Which of the following best describes your experience developing cross-platform desktop applications using technologies such as Electron, Tauri, or similar runtimes? * (bot could not click/type it)",
+      "Do you have experience working with peer-to-peer (P2P) technologies or distributed systems? * (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Unacademy",
+     "title": "Software Engineer, Backend",
+     "location": "Bengaluru, KA, India",
+     "status": "ERROR",
+     "applied_at": "2026-11-27 10:27:54",
+     "url": "https://jobs.smartrecruiters.com/Unacademy/743999672726735",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "unconfirmed",
+     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Bosch Group",
+     "title": "AI & Backend Software Engineer – Intellectual Property Rights(Python / FastAPI / GenAI)",
+     "location": "bengaluru, , India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:25:58",
+     "url": "https://jobs.smartrecruiters.com/BoschGroup/744000162220979",
+     "source": "smartrecruiters",
+     "score": 63.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Which of the following REST API frameworks do you have hands-on production experience with? (Select all that apply) (bot could not click/type it)",
+      "Which of the following technologies do you have experience with? (Select all that apply) (bot could not click/type it)"
+     ],
+     "company_later_succeeded": true
+    },
+    {
+     "company": "Lendingkart",
+     "title": "Backend Developer",
+     "location": "Bengaluru, , India",
+     "status": "ERROR",
+     "applied_at": "2026-11-27 10:25:42",
+     "url": "https://jobs.smartrecruiters.com/Lendingkart/82097348",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "unconfirmed",
+     "why": "Submit was clicked but the site never showed a confirmation (often an email security code / OTP step).",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Endava",
+     "title": "Full Stack Developer",
+     "location": "Bengaluru, Karnataka, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:24:08",
+     "url": "https://jobs.smartrecruiters.com/Endava/744000163812389",
+     "source": "smartrecruiters",
+     "score": 55.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "Do you currently have the legal right to work in the country where the job is based? (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "NielsenIQ",
+     "title": "Software Engineer (Python, GenAI, FastAPi)",
+     "location": "Chennai, TN, India",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-27 10:23:11",
+     "url": "https://jobs.smartrecruiters.com/NielsenIQ/744000163292094",
+     "source": "smartrecruiters",
+     "score": 63.0,
+     "category": "needs_answer",
+     "why": "Required questions that are not in the resume - answer them below once.",
+     "blocking": [
+      "City* (bot could not click/type it)"
+     ],
+     "company_later_succeeded": false
+    },
     {
      "company": "Warner Music Group",
      "title": "Software Engineer - Data Platform",
@@ -15995,229 +16401,6 @@
       "Acknowledgment of Data Transfer* (bot could not click/type it)"
      ],
      "company_later_succeeded": false
-    },
-    {
-     "company": "Motive",
-     "title": "Software Engineer - Android",
-     "location": "Hybrid - Bangalore",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:37:27",
-     "url": "https://job-boards.greenhouse.io/gomotive/jobs/8109192002",
-     "source": "greenhouse",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "Redwood Software",
-     "title": "Software Engineer – AI CoE",
-     "location": "Hyderabad, Telangana, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:37:05",
-     "url": "https://job-boards.greenhouse.io/redwoodsoftware/jobs/4451141009",
-     "source": "greenhouse",
-     "score": 63.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Are you legally permitted to work in the country where the job is located?* (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "LinkedIn Partner Sandbox - RSC testing",
-     "title": "Software Engineer IV",
-     "location": "Bangalore",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:36:45",
-     "url": "https://jobs.lever.co/linkedin/31cb9434-6fc3-4ab8-8998-e878d0742ad7",
-     "source": "lever",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "EnCharge AI",
-     "title": "AI Software Engineer, Agent Harness",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:36:40",
-     "url": "https://job-boards.greenhouse.io/enchargeai36/jobs/4409175009",
-     "source": "greenhouse",
-     "score": 63.0,
-     "category": "form_rejected",
-     "why": "The form refused the submission because a required field was still empty.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Glomopay",
-     "title": "Software Engineer, Infrastructure",
-     "location": "Bengaluru HQ",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:36:01",
-     "url": "https://jobs.ashbyhq.com/glomo/aaaa687a-468a-485b-ae7f-3f761dcaa522",
-     "source": "ashby",
-     "score": 55.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Tentative Salary (bot could not click/type it)",
-      "Do you have any experience in building payments product in past ?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "C3 AI",
-     "title": "Software Engineer - Customer support",
-     "location": "Bengaluru, Karnataka, India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:35:54",
-     "url": "https://c3.ai/job-description/8760309002?gh_jid=8760309002",
-     "source": "greenhouse",
-     "score": 64.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Ethernovia, Inc.",
-     "title": "Software Engineer, Frameworks",
-     "location": "India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:35:44",
-     "url": "https://job-boards.greenhouse.io/ethernovia/jobs/4087366007",
-     "source": "greenhouse",
-     "score": 55.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Allata",
-     "title": "Application Support Engineer (L2/L3) - .NET Fullstack",
-     "location": "Pune - Maharashtra",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:35:11",
-     "url": "https://jobs.lever.co/Allata/dc3a98e8-c789-4363-b74d-69eab457f87f",
-     "source": "lever",
-     "score": 55.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Total & Relevant Experience in Software Engineering? ✱",
-      "Which programming languages you've worked with? ✱ - .Net",
-      "Which programming languages you've worked with? ✱ - Java",
-      "Which programming languages you've worked with? ✱ - Python",
-      "Which programming languages you've worked with? ✱ - Node.js"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Abnormal",
-     "title": "Software Engineer 1 - Platform & Infrastructure",
-     "location": "Hybrid - Bangalore, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:34:53",
-     "url": "https://abnormal.ai/careers/jobs/8016870003?gh_jid=8016870003",
-     "source": "greenhouse",
-     "score": 64.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Zip Code/Postal Code*",
-      "Are you currently eligible to work in the country in which this job is posted?* (bot could not click/type it)",
-      "Are you currently an employee or contractor at Abnormal? (if Yes, please add your Abnormal email in the email section of the application page) * (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Handshake",
-     "title": "Forward Deployed Engineer I",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:34:40",
-     "url": "https://jobs.ashbyhq.com/handshake/f632f0c3-0b9c-49a7-984b-de92e18e6d0b",
-     "source": "ashby",
-     "score": 56.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Phone number"
-     ],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "Syndigo",
-     "title": "Software Engineer",
-     "location": "Bengaluru, Karnataka, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:34:17",
-     "url": "https://syndigo.com/open-positions/?gh_jid=6128477004",
-     "source": "greenhouse",
-     "score": 65.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Which Azure services have you worked with?*"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Instawork",
-     "title": "Video Platform Engineer - E3",
-     "location": "Bengaluru, Karnataka, India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:34:08",
-     "url": "https://job-boards.greenhouse.io/instawork/jobs/4713756006",
-     "source": "greenhouse",
-     "score": 59.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Which programming languages are you comfortable with? * - Python",
-      "Which programming languages are you comfortable with? * - Java",
-      "Which programming languages are you comfortable with? * - GoLang",
-      "Which programming languages are you comfortable with? * - Javascript",
-      "Which programming languages are you comfortable with? * - Others"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Dscout",
-     "title": "Software Engineer - India",
-     "location": "Remote - India",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 11:33:57",
-     "url": "https://job-boards.greenhouse.io/dscout/jobs/4370266009",
-     "source": "greenhouse",
-     "score": 59.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "Invisible Agency",
-     "title": "JavaScript Coding Specialist - Freelance AI Trainer Project",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 11:33:40",
-     "url": "https://job-boards.eu.greenhouse.io/agency/jobs/4633542101",
-     "source": "greenhouse",
-     "score": 68.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "If you are currently based in United States, please confirm your current state of residence. If you are based outside of the United States, select \"I am not located in the United States\".* (bot could not click/type it)"
-     ],
-     "company_later_succeeded": false
     }
    ],
    "questions": [
@@ -17660,6 +17843,10 @@
      "count": 4
     },
     {
+     "question": "Do you currently have the legal right to work in the country where the job is based?",
+     "count": 3
+    },
+    {
      "question": "Are you subject to any employment agreements and/or post-employment restrictions with your current employer or a past employer?*",
      "count": 3
     },
@@ -17674,6 +17861,14 @@
     {
      "question": "Phone*",
      "count": 3
+    },
+    {
+     "question": "Which of the following REST API frameworks do you have hands-on production experience with? (Select all that apply)",
+     "count": 2
+    },
+    {
+     "question": "Which of the following technologies do you have experience with? (Select all that apply)",
+     "count": 2
     },
     {
      "question": "Does the listed salary meet your compensation requirements?",
@@ -17741,18 +17936,6 @@
     },
     {
      "question": "By submitting your application, you are providing consent: *",
-     "count": 2
-    },
-    {
-     "question": "Please select the region you are currently located in*",
-     "count": 2
-    },
-    {
-     "question": "Please select your immigration status (Singapore and Hong Kong Applicants only)*",
-     "count": 2
-    },
-    {
-     "question": "Will you now, or in the future, require work sponsorship for your preferred location by the Company/Squarepoint Group?*",
      "count": 2
     }
    ]
