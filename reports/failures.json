@@ -1,19 +1,29 @@
 {
- "generated_at": "2026-11-28 04:04:11",
+ "generated_at": "2026-11-28 04:34:51",
  "candidates": {
   "harshank": {
-   "submitted": 146,
-   "submitted_companies": 137,
-   "failed": 963,
+   "submitted": 147,
+   "submitted_companies": 138,
+   "failed": 965,
    "reasons": {
     "needs_answer": 543,
     "captcha": 174,
-    "form_rejected": 142,
+    "form_rejected": 144,
     "error": 47,
     "unconfirmed": 33,
     "closed": 24
    },
    "successes": [
+    {
+     "company": "Protege",
+     "title": "Founding Platform Engineer",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-28 04:28:24",
+     "url": "https://jobs.ashbyhq.com/protege/4df379fc-49c6-4695-ab32-721d1663d800",
+     "source": "ashby",
+     "score": 52.0
+    },
     {
      "company": "Thumbtack",
      "title": "(2027 Talent Pool) Software Engineer, AI/ML Infrastructure",
@@ -1536,6 +1546,34 @@
     }
    ],
    "failures": [
+    {
+     "company": "Array Behavioral Care",
+     "title": "Automation Software Engineer",
+     "location": "Nationwide Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-28 04:29:01",
+     "url": "https://jobs.ashbyhq.com/array-behavioral-care/25961085-3e73-4dad-87b8-18bde439eb6a",
+     "source": "ashby",
+     "score": 67.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Array Behavioral Care",
+     "title": "Automation Software Engineer",
+     "location": "Nationwide Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-28 04:27:24",
+     "url": "https://jobs.ashbyhq.com/array-behavioral-care/25961085-3e73-4dad-87b8-18bde439eb6a",
+     "source": "ashby",
+     "score": 67.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
     {
      "company": "InterviewBit",
      "title": "Software Engineer",
@@ -6506,7 +6544,7 @@
       "Have you deployed software into customer VPCs, private clouds, or restricted environments?",
       "Have you converted bespoke customer deployments into an automated, scalable platform?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Array Behavioral Care",
@@ -6542,7 +6580,7 @@
       "Have you deployed software into customer VPCs, private clouds, or restricted environments?",
       "Have you converted bespoke customer deployments into an automated, scalable platform?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Array Behavioral Care",
@@ -7502,42 +7540,6 @@
      "category": "captcha",
      "why": "The site showed a captcha (robot check) that only a human can solve.",
      "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "PAR Technology",
-     "title": "Software Engineer II- ROR",
-     "location": "Jaipur",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:57:10",
-     "url": "https://jobs.ashbyhq.com/PAR%20Technology/7b4a7246-d679-4c1c-81da-0ac4d75fec39",
-     "source": "ashby",
-     "score": 70.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Phone Number"
-     ],
-     "company_later_succeeded": true
-    },
-    {
-     "company": "Jeeves",
-     "title": "AI Engineer",
-     "location": "India",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:56:44",
-     "url": "https://jobs.lever.co/tryjeeves/ded9e04e-f18e-4d4c-ae43-4b7882c6200b",
-     "source": "lever",
-     "score": 44.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "How would you rate your professional English fluency? ✱",
-      "Which additional language(s) do you speak at a professional level? (Select all that apply) ✱ - Spanish — professional / native fluency",
-      "Which additional language(s) do you speak at a professional level? (Select all that apply) ✱ - Portuguese — professional / native fluency",
-      "Which additional language(s) do you speak at a professional level? (Select all that apply) ✱ - Spanish — conversational only",
-      "Which additional language(s) do you speak at a professional level? (Select all that apply) ✱ - Portuguese — conversational only"
-     ],
      "company_later_succeeded": false
     }
    ],
@@ -9076,18 +9078,28 @@
    ]
   },
   "divya": {
-   "submitted": 143,
-   "submitted_companies": 136,
-   "failed": 800,
+   "submitted": 144,
+   "submitted_companies": 137,
+   "failed": 802,
    "reasons": {
     "needs_answer": 443,
     "captcha": 191,
-    "form_rejected": 90,
+    "form_rejected": 92,
     "unconfirmed": 28,
     "error": 27,
     "closed": 21
    },
    "successes": [
+    {
+     "company": "Protege",
+     "title": "Founding Platform Engineer",
+     "location": "Remote",
+     "status": "SUBMITTED",
+     "applied_at": "2026-11-28 04:28:24",
+     "url": "https://jobs.ashbyhq.com/protege/4df379fc-49c6-4695-ab32-721d1663d800",
+     "source": "ashby",
+     "score": 52.0
+    },
     {
      "company": "Clipboard",
      "title": "Technical Support Engineer",
@@ -10570,6 +10582,34 @@
     }
    ],
    "failures": [
+    {
+     "company": "Array Behavioral Care",
+     "title": "Automation Software Engineer",
+     "location": "Nationwide Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-28 04:29:01",
+     "url": "https://jobs.ashbyhq.com/array-behavioral-care/25961085-3e73-4dad-87b8-18bde439eb6a",
+     "source": "ashby",
+     "score": 57.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
+    {
+     "company": "Array Behavioral Care",
+     "title": "Automation Software Engineer",
+     "location": "Nationwide Remote",
+     "status": "FAILED_VALIDATION",
+     "applied_at": "2026-11-28 04:27:21",
+     "url": "https://jobs.ashbyhq.com/array-behavioral-care/25961085-3e73-4dad-87b8-18bde439eb6a",
+     "source": "ashby",
+     "score": 57.0,
+     "category": "form_rejected",
+     "why": "The form refused the submission because a required field was still empty.",
+     "blocking": [],
+     "company_later_succeeded": false
+    },
     {
      "company": "Snowflake",
      "title": "Forward Deployed Engineer, Frontier Engineering",
@@ -14093,7 +14133,7 @@
       "Have you deployed software into customer VPCs, private clouds, or restricted environments?",
       "Have you converted bespoke customer deployments into an automated, scalable platform?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Array Behavioral Care",
@@ -14129,7 +14169,7 @@
       "Have you deployed software into customer VPCs, private clouds, or restricted environments?",
       "Have you converted bespoke customer deployments into an automated, scalable platform?"
      ],
-     "company_later_succeeded": false
+     "company_later_succeeded": true
     },
     {
      "company": "Array Behavioral Care",
@@ -16599,36 +16639,6 @@
       "Поділись, будь ласка, своїм контактом в Телеграм.",
       "Чи знав/-ла про Universe до подачі на цю роль?",
       "Як ти дізнався/-лась про Universe?"
-     ],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "PointClickCare",
-     "title": "Canada- Jr Software Engineer (SRE)",
-     "location": "Remote or Mississauga",
-     "status": "CAPTCHA_BLOCKED",
-     "applied_at": "2026-11-20 12:13:54",
-     "url": "https://jobs.lever.co/pointclickcare/e56d6df3-16fb-4652-9d97-c6140700d2e0",
-     "source": "lever",
-     "score": 52.0,
-     "category": "captcha",
-     "why": "The site showed a captcha (robot check) that only a human can solve.",
-     "blocking": [],
-     "company_later_succeeded": false
-    },
-    {
-     "company": "SKELAR",
-     "title": "Full-stack Marketing Designer",
-     "location": "Ukraine, Remote",
-     "status": "FAILED_VALIDATION",
-     "applied_at": "2026-11-20 12:13:50",
-     "url": "https://jobs.ashbyhq.com/SKELAR/097f08ad-4d39-4f63-8308-7c73b9b45a5e",
-     "source": "ashby",
-     "score": 52.0,
-     "category": "needs_answer",
-     "why": "Required questions that are not in the resume - answer them below once.",
-     "blocking": [
-      "Please specify your salary expectations (gross, in $) (bot could not click/type it)"
      ],
      "company_later_succeeded": false
     }

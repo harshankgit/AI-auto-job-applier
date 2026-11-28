@@ -1,10 +1,10 @@
 # AI Job Application Report
 
-**Report updated (UTC):** 2026-11-28 04:04:10
-**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-27 14:17:37
-**Companies applied to (all candidates):** 284
-**Applications submitted (page-confirmed):** 289
-**Total attempts logged:** 2083
+**Report updated (UTC):** 2026-11-28 04:34:51
+**History covered (UTC):** 2026-11-19 11:01:21 -> 2026-11-28 04:29:01
+**Companies applied to (all candidates):** 286
+**Applications submitted (page-confirmed):** 291
+**Total attempts logged:** 2089
 
 > Only applications the job site itself confirmed are counted as done.
 > Every form value came from the candidate's own resume or their
@@ -14,8 +14,8 @@
 
 | Candidate | Companies done | Applications submitted | Total attempts | Not gone through | Dry runs |
 | --- | --- | --- | --- | --- | --- |
-| **Harshank Kanungo** | **143** | 146 | 1125 | 963 | 10 |
-| **Divya Kanungo** | **141** | 143 | 958 | 800 | 10 |
+| **Harshank Kanungo** | **144** | 147 | 1128 | 965 | 10 |
+| **Divya Kanungo** | **142** | 144 | 961 | 802 | 10 |
 
 ## Every company applied to - full details
 
@@ -305,14 +305,16 @@
 | 282 | Divya Kanungo | **Augrade Inc** | Forward Deployed Engineer (Design + Modeling) | Bangalore | Tech | 2026-11-27 14:12:02 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 5 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/augrade/a5772a05-3579-4ae7-ae42-7476d64ed0f7/application) |
 | 283 | Divya Kanungo | **Clipboard** | Technical Support Engineer | Remote (APAC) | Tech | 2026-11-27 14:13:19 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 12 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/clipboard/64936960-e9e5-4294-b09b-194a562d09f0/application) |
 | 284 | Harshank Kanungo | **Thumbtack** | (2027 Talent Pool) Software Engineer, AI/ML Infrastructure | Remote, Ontario | Tech | 2026-11-27 14:15:02 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 8 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/thumbtack/fc9f96bc-bd4e-4883-95a8-91d25833fa35/application) |
+| 285 | Harshank Kanungo | **Protege** | Founding Platform Engineer | Remote | Tech | 2026-11-28 04:28:24 | harshankkanungo259@gmail.com | +91 8109774968 | Gurugram, Haryana, India | https://linkedin.com/in/harshank-kanungo-a4b178251 | https://github.com/harshankgit | `Harshank_Kanungo_Full_Stack_Developer_ATS.pdf` (attached) | 17 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/protege/4df379fc-49c6-4695-ab32-721d1663d800/application) |
+| 286 | Divya Kanungo | **Protege** | Founding Platform Engineer | Remote | Tech | 2026-11-28 04:28:24 | divyakanungo008@gmail.com | +91 9109625701 | Gurugram, Haryana, India | https://linkedin.com/in/divya-kanungo-29b407339 | - | `Divya_Kanungo_MERN_Stack_Developer.pdf` (attached) | 17 | [APPLIED] SUBMITTED | [open](https://jobs.ashbyhq.com/protege/4df379fc-49c6-4695-ab32-721d1663d800/application) |
 
 ## Outcome summary (all runs)
 
 | Outcome | Count | Meaning |
 | --- | --- | --- |
-| [INCOMPLETE] FAILED_VALIDATION | 1218 | Form asked something we had no resume fact for - not submitted |
+| [INCOMPLETE] FAILED_VALIDATION | 1222 | Form asked something we had no resume fact for - not submitted |
 | [CAPTCHA] CAPTCHA_BLOCKED | 365 | Form was filled but a captcha needs a human to clear it |
-| [APPLIED] SUBMITTED | 289 | Application sent and confirmed by the company's site |
+| [APPLIED] SUBMITTED | 291 | Application sent and confirmed by the company's site |
 | [ERROR] ERROR | 135 | Technical failure - not submitted |
 | [CLOSED] CLOSED | 45 | Posting was closed by the time we opened it |
 | [DRY RUN] SKIPPED | 20 | Dry run - filled but deliberately not submitted |
@@ -320,7 +322,7 @@
 
 ---
 
-## Harshank Kanungo - 143 companies done
+## Harshank Kanungo - 144 companies done
 
 ### Contact details used on every form
 
@@ -338,7 +340,7 @@
 | Experience | 3 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2024) |
 
-### Companies done: 143 (152 applications out of 1125 attempts)
+### Companies done: 144 (153 applications out of 1128 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -494,6 +496,7 @@
 | 150 | 2026-11-27 14:02:25 | **Eurofins** | .Net Fullstack Developer | Bengaluru, KA, India | smartrecruiters | Tech | 55 | attached | 30 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.smartrecruiters.com/Eurofins/744000163285909) |
 | 151 | 2026-11-27 14:04:02 | **Rwazi, Inc.** | AI Engineer – Marketing & GTM Systems | Global (Remote) | ashby | Tech | 46 | attached | 17 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/rwazi/21ca2582-5797-4488-b46f-5103f9d77226/application) |
 | 152 | 2026-11-27 14:15:02 | **Thumbtack** | (2027 Talent Pool) Software Engineer, AI/ML Infrastructure | Remote, Ontario | ashby | Tech | 65 | attached | 8 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/thumbtack/fc9f96bc-bd4e-4883-95a8-91d25833fa35/application) |
+| 153 | 2026-11-28 04:28:24 | **Protege** | Founding Platform Engineer | Remote | ashby | Tech | 52 | attached | 17 | harshankkanungo259@gmail.com | +91 8109774968 | SUBMITTED | [open](https://jobs.ashbyhq.com/protege/4df379fc-49c6-4695-ab32-721d1663d800/application) |
 
 #### Why each of those jobs was chosen
 
@@ -649,6 +652,7 @@
 150. **Eurofins - .Net Fullstack Developer** (score 55): core role match 'fullstack'; India location (Bengaluru, KA, India)
 151. **Rwazi, Inc. - AI Engineer – Marketing & GTM Systems** (score 46): adjacent role 'ai engineer'; 1 resume skills in posting (typescript); AI role keyword 'ai'; remote, globally open (Global (Remote))
 152. **Thumbtack - (2027 Talent Pool) Software Engineer, AI/ML Infrastructure** (score 65): core role match 'software engineer'; seniority suits candidate ('2'); 1 resume skills in posting (express); AI role keyword 'ai'; remote, no country restriction stated (Remote, Ontario)
+153. **Protege - Founding Platform Engineer** (score 52): core role match 'platform engineer'; remote, no country restriction stated (Remote)
 
 #### Confirmation text shown by the company site
 
@@ -797,8 +801,9 @@
 - **Eurofins**: nataka, India .Net Fullstack Developer Application submitted! Your application for .Net Fullstack Developer at Eurofins GSC IT DC has been submitted successfully. You’ll receive a confirmation email
 - **Rwazi, Inc.**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Thumbtack**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Protege**: for your interest! Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 
-### Attempts that did not go through (973)
+### Attempts that did not go through (975)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1775,6 +1780,8 @@
 | 2026-11-27 14:17:27 | Shipsy | Software Engineer (Fullstack/NodeJs/ReactJs) | Gurugram, HR, India | [ERROR] ERROR | no form fields found on the apply page (form found in embedded frame: https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAQo66HG1k-lAABJtlzA%3D%3D& | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/Shipsy/744000002694405) | noform-Shipsy.png |
 | 2026-11-27 14:17:32 | Quest Global Technologies | Node.js Developer | Indore, Madhya Pradesh, India (Remote) | [ERROR] ERROR | no form fields found on the apply page (form found in embedded frame: https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAQo66HG1k-lAABJtlzA%3D%3D& | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/QuESTGlobalTechnologies/743999738287709) | noform-QuESTGlobalTechnologies.png |
 | 2026-11-27 14:17:37 | InterviewBit | Software Engineer | Pune, MH, India | [ERROR] ERROR | no form fields found on the apply page (form found in embedded frame: https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAQo66HG1k-lAABJtlzA%3D%3D& | 0 | - | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.smartrecruiters.com/InterviewBit/108121718) | noform-InterviewBit.png |
+| 2026-11-28 04:27:24 | Array Behavioral Care | Automation Software Engineer | Nationwide Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 10 | What is your current age? (brain: no resume fact or job fact grounds this question), What is your gender identity? (EEO/demographic field - intentionally not answered), Do you identify as transgender? (EEO/demographic field - intentionally not answered), How do you identify your sexual orientation? Please select all that apply. - Bisexual (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/array-behavioral-care/25961085-3e73-4dad-87b8-18bde439eb6a/application) | after-array-behavioral-care-25961085-3e73-4dad-87b8-18bde439eb6a.png |
+| 2026-11-28 04:29:01 | Array Behavioral Care | Automation Software Engineer | Nationwide Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 10 | What is your current age? (brain: no resume fact or job fact grounds this question), What is your gender identity? (EEO/demographic field - intentionally not answered), Do you identify as transgender? (EEO/demographic field - intentionally not answered), How do you identify your sexual orientation? Please select all that apply. - Bisexual (EEO/demographic field - intentionally not answered) | harshankkanungo259@gmail.com | +91 8109774968 | [open](https://jobs.ashbyhq.com/array-behavioral-care/25961085-3e73-4dad-87b8-18bde439eb6a/application) | after-array-behavioral-care-25961085-3e73-4dad-87b8-18bde439eb6a.png |
 
 ### Companies touched for this candidate
 
@@ -1855,6 +1862,7 @@
 | Neural Concept | ashby | no | 4 | 0 | not yet |
 | Breakmark | ashby | no | 4 | 1 | DONE |
 | Applied | ashby | no | 4 | 0 | not yet |
+| Array Behavioral Care | ashby | no | 4 | 0 | not yet |
 | Dust | ashby | no | 3 | 0 | not yet |
 | Scale AI | greenhouse | no | 3 | 0 | not yet |
 | Unstructured | ashby | no | 3 | 1 | DONE |
@@ -1889,6 +1897,7 @@
 | Traversal | ashby | no | 3 | 0 | not yet |
 | pod network | ashby | no | 3 | 1 | DONE |
 | Clipboard | ashby | no | 3 | 0 | not yet |
+| Protege | ashby | no | 3 | 1 | DONE |
 | Starburst | greenhouse | no | 2 | 0 | not yet |
 | Coinbase | greenhouse | no | 2 | 0 | not yet |
 | Databricks | greenhouse | no | 2 | 0 | not yet |
@@ -2015,8 +2024,6 @@
 | 100ms | lever | no | 2 | 0 | not yet |
 | Gushwork | lever | no | 2 | 0 | not yet |
 | Dozee | lever | no | 2 | 0 | not yet |
-| Array Behavioral Care | ashby | no | 2 | 0 | not yet |
-| Protege | ashby | no | 2 | 0 | not yet |
 | Snowflake | ashby | no | 2 | 0 | not yet |
 | Vendavo | lever | no | 2 | 0 | not yet |
 | Atlan | ashby | no | 2 | 0 | not yet |
@@ -2143,7 +2150,7 @@
 
 ---
 
-## Divya Kanungo - 141 companies done
+## Divya Kanungo - 142 companies done
 
 ### Contact details used on every form
 
@@ -2161,7 +2168,7 @@
 | Experience | 1 year(s) |
 | Education | Bachelor's Degree Computer Science, Medi-Caps University, Indore (2026) |
 
-### Companies done: 141 (148 applications out of 958 attempts)
+### Companies done: 142 (149 applications out of 961 attempts)
 
 | # | Applied At (UTC) | Company | Job Title | Job Location | Source | Company Type | Match | Resume | Fields Filled | Email Used | Phone Used | Status | Apply Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -2313,6 +2320,7 @@
 | 146 | 2026-11-27 14:10:20 | **Hopper** | Ingénieur(e) IA en déploiement avancé, Travel Intelligence// Forward Deployed AI Engineer, Travel Intelligence | Montréal - Remote | ashby | Tech | 46 | attached | 8 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/hopper/2dfa4941-c72f-4154-83f4-2fd4354e7259/application) |
 | 147 | 2026-11-27 14:12:02 | **Augrade Inc** | Forward Deployed Engineer (Design + Modeling) | Bangalore | ashby | Tech | 44 | attached | 5 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/augrade/a5772a05-3579-4ae7-ae42-7476d64ed0f7/application) |
 | 148 | 2026-11-27 14:13:19 | **Clipboard** | Technical Support Engineer | Remote (APAC) | ashby | Tech | 41 | attached | 12 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/clipboard/64936960-e9e5-4294-b09b-194a562d09f0/application) |
+| 149 | 2026-11-28 04:28:24 | **Protege** | Founding Platform Engineer | Remote | ashby | Tech | 52 | attached | 17 | divyakanungo008@gmail.com | +91 9109625701 | SUBMITTED | [open](https://jobs.ashbyhq.com/protege/4df379fc-49c6-4695-ab32-721d1663d800/application) |
 
 #### Why each of those jobs was chosen
 
@@ -2464,6 +2472,7 @@
 146. **Hopper - Ingénieur(e) IA en déploiement avancé, Travel Intelligence// Forward Deployed AI Engineer, Travel Intelligence** (score 46): adjacent role 'forward deployed'; 1 resume skills in posting (vite); AI role keyword 'ai'; remote, no country restriction stated (Montréal - Remote)
 147. **Augrade Inc - Forward Deployed Engineer (Design + Modeling)** (score 44): adjacent role 'forward deployed'; AI role keyword 'model'; India location (Bangalore)
 148. **Clipboard - Technical Support Engineer** (score 41): adjacent role 'technical support engineer'; 1 resume skills in posting (react); remote within India (Remote (APAC))
+149. **Protege - Founding Platform Engineer** (score 52): core role match 'platform engineer'; remote, no country restriction stated (Remote)
 
 #### Confirmation text shown by the company site
 
@@ -2610,8 +2619,9 @@
 - **Hopper**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Augrade Inc**: terest in Augrade! Your application was successfully submitted, and we'll contact you if there's a fit. Powered by Privacy PolicySecurityVulnerability Disclosure
 - **Clipboard**: plication Success Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
+- **Protege**: for your interest! Your application was successfully submitted. We'll contact you if there are next steps. Powered by Privacy PolicySecurityVulnerability Disclosure
 
-### Attempts that did not go through (810)
+### Attempts that did not go through (812)
 
 | Attempted At (UTC) | Company | Job Title | Job Location | Outcome | What happened | Fields Filled | Unanswered Fields | Email Used | Phone Used | Job Link | Screenshot |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -3425,6 +3435,8 @@
 | 2026-11-27 14:11:38 | Camunda | AI Process Forward Deployed Engineer | Remote | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 23 | What are your pronouns for others to use when referring to you? (EEO/demographic field - intentionally not answered), If you have discussed this role with a current Camunda employee, please enter their full name here (brain: no resume fact or job fact grounds this question), What is the second line of your address (if relevant)? (brain: no resume fact or job fact grounds this question), State/Region (brain: no resume fact or job fact grounds this question) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/camunda/987fb6e0-1e22-45e5-b152-57acbcb59cb2/application) | after-camunda-987fb6e0-1e22-45e5-b152-57acbcb59cb2.png |
 | 2026-11-27 14:14:09 | Snowflake | Forward Deployed Engineer, Frontier Engineering | IN-Bangalore-MSO | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 16 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/snowflake/a276eb40-644b-4384-9d9a-bae1c263baa6/application) | after-snowflake-a276eb40-644b-4384-9d9a-bae1c263baa6.png |
 | 2026-11-27 14:15:20 | Snowflake | Forward Deployed Engineer, Frontier Engineering | IN-Bangalore-MSO | [CAPTCHA] CAPTCHA_BLOCKED | no confirmation and a captcha challenge is showing after submit (recaptcha challenge visible (400x580)) - a human must clear it | 16 | - | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/snowflake/a276eb40-644b-4384-9d9a-bae1c263baa6/application) | after-snowflake-a276eb40-644b-4384-9d9a-bae1c263baa6.png |
+| 2026-11-28 04:27:21 | Array Behavioral Care | Automation Software Engineer | Nationwide Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 10 | What is your current age? (brain: no resume fact or job fact grounds this question), What is your gender identity? (EEO/demographic field - intentionally not answered), Do you identify as transgender? (EEO/demographic field - intentionally not answered), How do you identify your sexual orientation? Please select all that apply. - Bisexual (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/array-behavioral-care/25961085-3e73-4dad-87b8-18bde439eb6a/application) | after-array-behavioral-care-25961085-3e73-4dad-87b8-18bde439eb6a.png |
+| 2026-11-28 04:29:01 | Array Behavioral Care | Automation Software Engineer | Nationwide Remote | [INCOMPLETE] FAILED_VALIDATION | form rejected the submission ('required field') | 10 | What is your current age? (brain: no resume fact or job fact grounds this question), What is your gender identity? (EEO/demographic field - intentionally not answered), Do you identify as transgender? (EEO/demographic field - intentionally not answered), How do you identify your sexual orientation? Please select all that apply. - Bisexual (EEO/demographic field - intentionally not answered) | divyakanungo008@gmail.com | +91 9109625701 | [open](https://jobs.ashbyhq.com/array-behavioral-care/25961085-3e73-4dad-87b8-18bde439eb6a/application) | after-array-behavioral-care-25961085-3e73-4dad-87b8-18bde439eb6a.png |
 
 ### Companies touched for this candidate
 
@@ -3502,6 +3514,7 @@
 | Neural Concept | ashby | no | 4 | 1 | DONE |
 | Snowflake | ashby | no | 4 | 0 | not yet |
 | Payabli | ashby | no | 4 | 0 | not yet |
+| Array Behavioral Care | ashby | no | 4 | 0 | not yet |
 | Starburst | greenhouse | no | 3 | 0 | not yet |
 | Smallest AI | ashby | yes | 3 | 0 | not yet |
 | Agoda | greenhouse | no | 3 | 0 | not yet |
@@ -3538,6 +3551,7 @@
 | Hopper | ashby | no | 3 | 1 | DONE |
 | Augrade Inc | ashby | no | 3 | 1 | DONE |
 | Clipboard | ashby | no | 3 | 1 | DONE |
+| Protege | ashby | no | 3 | 1 | DONE |
 | Endava | smartrecruiters | no | 3 | 0 | not yet |
 | Bosch Group | smartrecruiters | no | 3 | 1 | DONE |
 | Scale AI | greenhouse | yes | 2 | 0 | not yet |
@@ -3652,8 +3666,6 @@
 | 100ms | lever | no | 2 | 0 | not yet |
 | Clipbook | ashby | no | 2 | 0 | not yet |
 | Dozee | lever | no | 2 | 0 | not yet |
-| Array Behavioral Care | ashby | no | 2 | 0 | not yet |
-| Protege | ashby | no | 2 | 0 | not yet |
 | Aera Technology | lever | no | 2 | 0 | not yet |
 | Vendavo | lever | no | 2 | 0 | not yet |
 | Atlan | ashby | no | 2 | 0 | not yet |
